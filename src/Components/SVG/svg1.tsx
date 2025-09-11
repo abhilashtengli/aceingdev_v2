@@ -1,0 +1,18 @@
+import type { SVGProps } from "react";
+
+export const TrailSvg = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    width={1425}
+    height={670}
+    viewBox="0 0 1425 670"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path
+      id="Vector 1"
+      d="M3.03922 1C1185.04 103.5 1425.37 312.5 1423.54 330M3.03922 669.5C1191.52 615.913 1373.84 462.711 1423.54 389M1423.54 361C1370.59 429.631 -74.8729 285.76 3.03922 361"
+      stroke="black"
+    />
+  </svg>
+);
