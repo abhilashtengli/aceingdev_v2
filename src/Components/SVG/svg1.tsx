@@ -1,58 +1,71 @@
 import type { SVGProps } from "react";
-
+import { motion } from "motion/react";
 export const TrailSvg = (props: SVGProps<SVGSVGElement>) => (
-  //   <svg
-  //     width={1425}
-  //     height={670}
-  //     viewBox="0 0 1425 670"
-  //     fill="none"
-  //     xmlns="http://www.w3.org/2000/svg"
-  //     {...props}
-  //   >
-  //     <path
-  //       id="Vector 1"
-  //       d="M3.03922 1C1185.04 103.5 1425.37 312.5 1423.54 330M3.03922 669.5C1191.52 615.913 1373.84 462.711 1423.54 389M1423.54 361C1370.59 429.631 -74.8729 285.76 3.03922 361"
-  //       stroke="black"
-  //     />
-  //   </svg>
   <svg
-    width={968}
-    height={703}
-    viewBox="0 0 968 703"
+    width={52}
+    height={239}
+    viewBox="0 0 52 239"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     {...props}
-    className="from-transparent-[90%] rounded-lg border border-red-200 bg-gradient-to-r via-neutral-100/10 to-transparent"
   >
+    <defs>
+      <motion.linearGradient
+        id="gradient-red-line"
+        gradientUnits="userSpaceOnUse"
+        x1="0%"
+        x2="0%"
+        y1="100%" // start at bottom
+        y2="110%" // small offset
+        initial={{ y1: "100%", y2: "110%" }} // bottom
+        animate={{ y1: "-10%", y2: "0%" }} // move upward
+        transition={{
+          duration: 1.5,
+          repeat: Infinity,
+          ease: "linear",
+          repeatType: "loop",
+          repeatDelay: 2,
+        }}
+      >
+        <stop stopColor="var(--color-neutral-100)" />
+        <stop offset="0.55" stopColor="red" />
+        <stop offset="0.66" stopColor="red" />
+        <stop offset="1" stopColor="var(--color-neutral-100)" />
+      </motion.linearGradient>
+      <motion.linearGradient
+        id="gradient-purple-line"
+        gradientUnits="userSpaceOnUse"
+        x1="0%"
+        x2="0%"
+        y1="100%" // start at bottom
+        y2="110%" // small offset
+        initial={{ y1: "100%", y2: "110%" }} // bottom
+        animate={{ y1: "-10%", y2: "0%" }} // move upward
+        transition={{
+          duration: 1.5,
+          repeat: Infinity,
+          ease: "linear",
+          repeatType: "loop",
+          repeatDelay: 2,
+        }}
+      >
+        <stop stopColor="var(--color-neutral-100)" />
+        <stop offset="0.55" stopColor="purple" />
+        <stop offset="0.66" stopColor="purple" />
+        <stop offset="1" stopColor="var(--color-neutral-100)" />
+      </motion.linearGradient>
+    </defs>
     <path
-      d="M0.5 232.5H202.593C251.162 232.5 298.366 216.428 336.843 186.79L425.5 118.5V254.5C425.5 261.127 420.127 266.5 413.5 266.5H106.5L84 294V432H12.5C5.87258 432 0.5 437.373 0.5 444V606C0.5 612.627 5.87258 618 12.5 618H138.598C144.838 618 150.72 620.912 154.503 625.874L180.997 660.626C184.78 665.588 190.662 668.5 196.902 668.5H332.5C339.127 668.5 344.5 663.127 344.5 656.5V536.5L371.5 512.5V423.5"
-      stroke="black"
+      //   d="M0 1H335.53C337.797 1 340.018 1.64227 341.935 2.85242L406.565 43.6476C408.482 44.8577 410.703 45.5 412.97 45.5H720.5"
+      //   d="M1 239V147.5L51.5 117V0.5"
+      d="M1 239V154.271C1 150.069 3.19866 146.172 6.79616 143.999L45.7038 120.501C49.3013 118.328 51.5 114.431 51.5 110.229V0.5"
+      stroke="url(#gradient-red-line)"
+      strokeWidth={2}
     />
     <path
-      d="M329 265V386.734C329 392.825 332.081 398.503 337.187 401.824L416.025 453.09C418.946 454.989 422.354 456 425.838 456H455C461.627 456 467 450.627 467 444V114C467 107.373 461.627 102 455 102H222.5C218.634 102 215.5 98.866 215.5 95V68.8591C215.5 64.8817 217.471 61.1627 220.762 58.9294L238.238 47.0706C241.529 44.8373 243.5 41.1183 243.5 37.1409V1"
-      stroke="#EE1D1D"
-    />
-    <path
-      d="M84 431V530C84 536.627 89.3726 542 96 542H177.5L204 510.5V367.5L228 342.5H329"
-      stroke="#1225FA"
-    />
-    <path d="M87 577H345M258.5 469V703" stroke="black" />
-    <path
-      d="M967.5 231.5H765.407C716.838 231.5 669.634 215.428 631.157 185.79L542.5 117.5V253.5C542.5 260.127 547.873 265.5 554.5 265.5H861.5L884 293V431H955.5C962.127 431 967.5 436.373 967.5 443V605C967.5 611.627 962.127 617 955.5 617H829.402C823.162 617 817.28 619.912 813.497 624.874L787.003 659.626C783.22 664.588 777.338 667.5 771.098 667.5H635.5C628.873 667.5 623.5 662.127 623.5 655.5V535.5L596.5 511.5V422.5"
-      stroke="black"
-    />
-    <path
-      d="M639 264V385.734C639 391.825 635.919 397.503 630.813 400.824L551.975 452.09C549.054 453.989 545.646 455 542.162 455H513C506.373 455 501 449.627 501 443V113C501 106.373 506.373 101 513 101H745.5C749.366 101 752.5 97.866 752.5 94V67.8591C752.5 63.8817 750.529 60.1627 747.238 57.9294L729.762 46.0706C726.471 43.8373 724.5 40.1183 724.5 36.1409V0"
-      stroke="#EE1D1D"
-    />
-    <path
-      d="M884 430V529C884 535.627 878.627 541 872 541H790.5L764 509.5V366.5L740 341.5H639"
-      stroke="#1225FA"
-    />
-    <path d="M886 576H624.5M709.5 468V702" stroke="black" />
-    <path
-      d="M420.5 456V502.498C420.5 507.088 423.118 511.275 427.244 513.286L452.756 525.714C456.882 527.725 459.5 531.912 459.5 536.502V656C459.5 659.314 462.186 662 465.5 662H496C499.314 662 502 659.314 502 656V613.5H520V535C520 531.686 522.686 529 526 529H538C541.314 529 544 526.314 544 523V456"
-      stroke="black"
+      d="M51.5 238.5V153.771C51.5 149.569 49.3013 145.672 45.7038 143.499L6.79617 120.001C3.19866 117.828 1 113.931 1 109.729V0"
+      stroke="url(#gradient-purple-line)"
+      strokeWidth={2}
     />
   </svg>
 );
