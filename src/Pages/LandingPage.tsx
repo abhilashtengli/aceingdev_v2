@@ -1,9 +1,9 @@
-import { SvgFinalComponent } from "../Components/SVG/heroFinalSvg";
+import HeroSection from "../Components/HeroSection";
 
 const LandingPage = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center text-3xl">
-      <SvgFinalComponent />
+    <div className="mx-auto flex h-full w-full items-center justify-center">
+      <HeroSection />
     </div>
   );
 };
