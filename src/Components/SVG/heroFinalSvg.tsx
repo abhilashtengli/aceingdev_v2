@@ -1,7 +1,10 @@
 import type { SVGProps } from "react";
 import { motion } from "motion/react";
 
-export const SvgFinalComponent = (props: SVGProps<SVGSVGElement>) => (
+export const SvgFinalComponent = ({
+  className,
+  ...props
+}: SVGProps<SVGSVGElement>) => (
   <svg
     // width={1438}
     // height={911}
@@ -9,7 +12,7 @@ export const SvgFinalComponent = (props: SVGProps<SVGSVGElement>) => (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     {...props}
-    className="h-fit w-fit"
+    className={` ${className} h-fit w-fit`}
   >
     <defs>
       <motion.linearGradient
