@@ -31,7 +31,9 @@ const HeroSection = () => {
               Solving Business problems With{" "}
               <span className="relative z-20 inline-flex items-center overflow-hidden rounded-sm bg-neutral-50 px-[1.5px] py-0.5 align-middle">
                 <span className="relative z-20 flex h-full w-full items-center rounded-[3px] bg-white px-1">
-                  Code;
+                  <span className="bg-gradient-to-r from-purple-600 via-neutral-400 to-red-300 bg-clip-text text-transparent text-shadow-black">
+                    Code;
+                  </span>
                 </span>
                 {/* yellow spinning gradient */}
                 <span className="absolute inset-0 h-full w-full scale-[4] animate-spin [background-image:conic-gradient(at_center,transparent,var(--color-yellow-300)_20%,transparent_30%)] [animation-duration:3.5s]"></span>
@@ -70,14 +72,56 @@ const HeroSection = () => {
       {/* Right box with SVG */}
       <div className="relative flex items-start justify-center bg-white">
         <SvgFinalComponent className="max-h-full max-w-full" />
-        <div className="absolute grid h-full w-full grid-cols-[1.35fr_1.65fr] place-content-center justify-items-center border border-red-500">
-          <div className="mt-2 space-y-6">
-            <div className="h-[25rem] w-[25rem] rounded-xl border border-neutral-400">
-              <div className="grid-cols- grid gap-3">
-                <PlanSvg /> <ProductSvg />
+        <div className="absolute grid h-full w-full grid-cols-[1.35fr_1.65fr] place-content-center justify-items-center border-red-500">
+          <div className="mt-2 space-y-6 perspective-distant transform-3d">
+            <div className="h-[25rem] w-[25rem] rounded-xl border border-neutral-300 bg-[radial-gradient(var(--color-neutral-300)_1px,transparent_1px)] [background-size:15px_15px] shadow-lg">
+              <div className="h-fit w-full gap-y-2 border-b border-neutral-100 py-3 text-center">
+                <h1 className="text-lg font-semibold tracking-widest">
+                  Journey to Success
+                </h1>
+                <p>From concept to Reality</p>
               </div>
-              <div className="grid grid-cols-1 gap-3">
-                <BuildSvg /> <LaunchSvg />
+              <div className="grid h-fit grid-cols-2 place-content-center justify-items-center py-1">
+                <div className="grid grid-cols-1 gap-8">
+                  <div className="group/bulb flex h-full w-full cursor-pointer flex-col items-center justify-between gap-1 rounded-xl border border-neutral-300 p-2 hover:bg-white">
+                    <div className="transform transition duration-200 group-hover/bulb:scale-120 group-hover/bulb:-rotate-x-360 group-hover/bulb:-rotate-y-180 group-hover/bulb:bg-transparent">
+                      <PlanSvg className="group-hover/bulb:text-yellow-500 group-hover/bulb:drop-shadow-[0_0_24px_#FFFF00]" />
+                    </div>
+                    <div className="flex flex-col items-center justify-center pl-0.5">
+                      <h1 className="font-semibold">Idea</h1>
+                      <p className="text-">Spark of Innovation</p>
+                    </div>
+                  </div>{" "}
+                  <div className="flex h-full w-full flex-col items-center justify-between gap-1 rounded-xl border border-neutral-300 p-2">
+                    <div className="">
+                      <ProductSvg />
+                    </div>
+                    <div className="flex flex-col items-center justify-center pl-0.5">
+                      <h1 className="font-semibold">Product</h1>
+                      <p className="text-md">Ready to Shape</p>
+                    </div>
+                  </div>{" "}
+                </div>
+                <div className="grid grid-cols-1 gap-8">
+                  <div className="flex h-full w-full flex-col items-center justify-between gap-1 rounded-xl border border-neutral-300 p-2">
+                    <div className="">
+                      <BuildSvg />
+                    </div>
+                    <div className="flex flex-col items-center justify-center">
+                      <h1 className="font-semibold">Build</h1>
+                      <p className="text-md">Crafting the Version</p>
+                    </div>
+                  </div>{" "}
+                  <div className="flex h-full w-full flex-col items-center justify-between gap-1 rounded-xl border border-neutral-300 p-2">
+                    <div className="">
+                      <LaunchSvg />
+                    </div>
+                    <div className="flex flex-col items-center justify-center">
+                      <h1 className="font-semibold">Launch</h1>
+                      <p className="text-md">Into the World</p>
+                    </div>
+                  </div>{" "}
+                </div>
               </div>
             </div>
             <div className="h-[25rem] w-[25rem] rounded-xl border border-neutral-400"></div>
