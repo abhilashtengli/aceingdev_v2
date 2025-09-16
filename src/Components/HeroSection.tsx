@@ -2,6 +2,10 @@ import { useEffect, useState } from "react";
 import { SvgFinalComponent } from "./SVG/heroFinalSvg";
 import { motion, AnimatePresence } from "motion/react";
 import { LineSvg } from "./SVG/lineSvg";
+import { ProductSvg } from "./SVG/PlanToProduct/ProductSvg";
+import { LaunchSvg } from "./SVG/PlanToProduct/LaunchSvg";
+import { BuildSvg } from "./SVG/PlanToProduct/BuildSvg";
+import { PlanSvg } from "./SVG/PlanToProduct/PlanSvg";
 
 const HeroSection = () => {
   const delivery = ["Value", "Quality", "Results"];
@@ -25,12 +29,14 @@ const HeroSection = () => {
 
             <span className="relative z-10">
               Solving Business problems With{" "}
-              <span className="relative z-20 inline-flex items-center overflow-hidden rounded-sm bg-neutral-100 p-0.5 py-1 align-middle">
+              <span className="relative z-20 inline-flex items-center overflow-hidden rounded-sm bg-neutral-50 px-[1.5px] py-0.5 align-middle">
                 <span className="relative z-20 flex h-full w-full items-center rounded-[3px] bg-white px-1">
                   Code;
                 </span>
+                {/* yellow spinning gradient */}
+                <span className="absolute inset-0 h-full w-full scale-[4] animate-spin [background-image:conic-gradient(at_center,transparent,var(--color-yellow-300)_20%,transparent_30%)] [animation-duration:3.5s]"></span>
                 {/* Red spinning gradient */}
-                <span className="absolute inset-0 h-full w-full scale-[1.4] animate-spin [background-image:conic-gradient(at_center,transparent,var(--color-purple-300)_20%,transparent_30%)] [animation-delay:0.5s]"></span>
+                <span className="absolute inset-0 h-full w-full scale-[4] animate-spin [background-image:conic-gradient(at_center,transparent,var(--color-red-300)_20%,transparent_30%)] [animation-delay:1.5s] [animation-duration:3.5s]"></span>
               </span>
             </span>
           </h1>
@@ -62,13 +68,24 @@ const HeroSection = () => {
       </div>
 
       {/* Right box with SVG */}
-      <div className="relative flex items-start justify-center bg-white pt-24">
+      <div className="relative flex items-start justify-center bg-white">
         <SvgFinalComponent className="max-h-full max-w-full" />
-        <div className="absolute grid w-full grid-cols-2 place-content-center justify-items-center gap-12 border-red-500 md:mt-72">
-          <div className="h-[25rem] w-[25rem] rounded-xl border border-neutral-400"></div>
-          <div className="h-[25rem] w-[25rem] rounded-xl border border-neutral-400"></div>
-          <div className="h-[10rem] w-[25rem] rounded-xl border border-neutral-400"></div>
-          <div className="h-[10rem] w-[25rem] rounded-xl border border-neutral-400"></div>
+        <div className="absolute grid h-full w-full grid-cols-[1.35fr_1.65fr] place-content-center justify-items-center border border-red-500">
+          <div className="mt-2 space-y-6">
+            <div className="h-[25rem] w-[25rem] rounded-xl border border-neutral-400">
+              <div className="grid-cols- grid gap-3">
+                <PlanSvg /> <ProductSvg />
+              </div>
+              <div className="grid grid-cols-1 gap-3">
+                <BuildSvg /> <LaunchSvg />
+              </div>
+            </div>
+            <div className="h-[25rem] w-[25rem] rounded-xl border border-neutral-400"></div>
+          </div>
+          <div className="mt-32 space-y-6">
+            <div className="h-[25rem] w-[25rem] rounded-xl border border-neutral-400"></div>
+            <div className="h-[10rem] w-[25rem] rounded-xl border border-neutral-400"></div>
+          </div>
         </div>
       </div>
     </section>
