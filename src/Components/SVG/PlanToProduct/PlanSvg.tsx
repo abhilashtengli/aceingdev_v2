@@ -8,11 +8,11 @@ export const PlanSvg = ({ className, ...props }: SVGProps<SVGSVGElement>) => (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     {...props}
-    className={className}
+    className={`${className} text-neutral-400 transition-colors duration-300 ease-in-out`}
   >
     <path
       d="M101.5 242C69 121 194 33 293 103.5M114.5 267C114.5 267 136.5 294 146.5 304C153.734 311.234 157 328 157 328M157 328H281M157 328V361.75M281 328C281 328 285.522 311.341 293 304C359.833 238.397 354.5 179 315 121M281 328V361.75M175 395.5H162C159.239 395.5 157 393.261 157 390.5V361.75M175 395.5V419.5C175 427.784 181.716 434.5 190 434.5H250.5C258.784 434.5 265.5 427.784 265.5 419.5V395.5M175 395.5H265.5M265.5 395.5H276C278.762 395.5 281 393.261 281 390.5V361.75M157 361.75H231.5M281 361.75H257"
-      stroke="black"
+      stroke="currentColor"
       strokeWidth={10}
       fill="none"
     />

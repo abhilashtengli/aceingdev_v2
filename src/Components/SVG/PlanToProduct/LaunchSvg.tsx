@@ -1,6 +1,6 @@
 import type { SVGProps } from "react";
 
-export const LaunchSvg = (props: SVGProps<SVGSVGElement>) => (
+export const LaunchSvg = ({ className, ...props }: SVGProps<SVGSVGElement>) => (
   <svg
     width={60}
     height={60}
@@ -8,55 +8,56 @@ export const LaunchSvg = (props: SVGProps<SVGSVGElement>) => (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     {...props}
+    className={` ${className} text-neutral-400 transition-colors duration-300 ease-in-out `}
   >
     <path
       d="M4.5 212H277M388.5 212H370M277 4.5V108.25M277 212V108.25M277 212H300M277 108.25H388.5M300 212C300.38 193.879 304.235 185.635 316 173.5M300 212H370M351.5 173.5C364.029 184.253 368.323 192.487 370 212"
-      stroke="black"
+      stroke="currentColor"
       strokeWidth={10}
     />
     <path
       d="M333.5 127C348.062 127 360 139.014 360 154C360 168.986 348.062 181 333.5 181C318.938 181 307 168.986 307 154C307 139.014 318.938 127 333.5 127Z"
-      stroke="black"
+      stroke="currentColor"
       strokeWidth={10}
     />
     <path
       d="M164.5 274.5L148.5 338.5H131.5H246M263.5 338.5H246M246 338.5L229 274.5M206 59.5L221.135 68.4862C221.679 68.8094 222.038 69.3713 222.103 70.0011L225.442 102.44C225.48 102.806 225.618 103.155 225.841 103.448L233.238 113.156C233.405 113.375 233.656 113.516 233.93 113.545L247.514 114.95C247.623 114.961 247.638 115.112 247.534 115.145L233.5 119.5L225.769 126.748C225.595 126.911 225.486 127.13 225.459 127.367L222.081 157.767C222.029 158.24 221.809 158.679 221.462 159.005L206 173.5"
-      stroke="black"
+      stroke="currentColor"
       strokeWidth={10}
     />
     <path
       d="M386.5 5H8C6.34315 5 5 6.34315 5 8V270.5C5 272.157 6.34316 273.5 8.00001 273.5H386.5C388.157 273.5 389.5 272.157 389.5 270.5V8C389.5 6.34315 388.157 5 386.5 5Z"
-      stroke="black"
+      stroke="currentColor"
       strokeWidth={10}
     />
     <path
       d="M79.5 59L64.3654 67.9862C63.821 68.3094 63.4618 68.8713 63.3969 69.5011L60.0576 101.94C60.0199 102.306 59.882 102.655 59.659 102.948L52.2622 112.656C52.0949 112.875 51.8443 113.016 51.5697 113.045L37.9857 114.45C37.8775 114.461 37.8624 114.612 37.9664 114.645L52 119L59.7308 126.248C59.9045 126.411 60.0144 126.63 60.0407 126.867L63.4185 157.267C63.4711 157.74 63.6909 158.179 64.0384 158.505L79.5 173"
-      stroke="black"
+      stroke="currentColor"
       strokeWidth={10}
     />
     <path
       d="M98.5 83.5H146.5M167 83.5H188.5M94.5 115.5H117.5M135.5 115.5H188.5M94.5 147.5H188.5"
-      stroke="black"
+      stroke="currentColor"
       strokeWidth={10}
     />
     <path
       d="M198.5 234.5C202.892 234.5 206.5 238.278 206.5 243C206.5 247.722 202.892 251.5 198.5 251.5C194.108 251.5 190.5 247.722 190.5 243C190.5 238.278 194.108 234.5 198.5 234.5Z"
-      fill="black"
-      stroke="black"
+      fill="currentColor"
+      stroke="currentColor"
     />
     <path
       d="M333.5 24C348.062 24 360 36.0138 360 51C360 65.9862 348.062 78 333.5 78C318.938 78 307 65.9862 307 51C307 36.0138 318.938 24 333.5 24Z"
-      stroke="black"
+      stroke="currentColor"
       strokeWidth={10}
     />
     <path
       d="M351 70C363.529 80.7532 367.823 88.9866 369.5 108.5"
-      stroke="black"
+      stroke="currentColor"
       strokeWidth={10}
     />
     <path
       d="M299 112.5C299.38 94.3788 303.235 86.1354 315 74"
-      stroke="black"
+      stroke="currentColor"
       strokeWidth={10}
     />
   </svg>

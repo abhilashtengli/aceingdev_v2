@@ -6,28 +6,82 @@ import { ProductSvg } from "./SVG/PlanToProduct/ProductSvg";
 import { LaunchSvg } from "./SVG/PlanToProduct/LaunchSvg";
 import { BuildSvg } from "./SVG/PlanToProduct/BuildSvg";
 import { PlanSvg } from "./SVG/PlanToProduct/PlanSvg";
+import { TopLine } from "./SVG/topLineSvg";
+import { BottomLine } from "./SVG/bottomLineSvg";
+import { SlantLineSvg } from "./SVG/SlantLineSvg";
 
 const HeroSection = () => {
   const delivery = ["Value", "Quality", "Results"];
   const [index, setIndex] = useState(0);
-  const [scope, animate] = useAnimate();
+  const [ideaScope, ideaAnimate] = useAnimate();
+  const [productScope, productAnimate] = useAnimate();
+  const [buildScope, buildAnimate] = useAnimate();
+  const [launchScope, launchAnimate] = useAnimate();
   const ideaText = "Spark of Innovation";
-  const startAnimating = async () => {
+  const productText = "Ready to Shape";
+  const buildText = "Crafting the Version";
+  const LaunchText = "Into the World";
+  const startIdeaAnimating = async () => {
     // Very subtle reset - just enough to trigger re-animation
-    await animate(
+    await ideaAnimate(
       "span",
       { opacity: 0, y: 10, scale: 0.98, filter: "blur(5px)" },
       { duration: 0.05 },
     );
 
     // Then animate back with stagger
-    await animate(
+    await ideaAnimate(
       "span",
       { opacity: 1, y: 0, scale: 1, filter: "blur(0px)" },
       { duration: 0.5, ease: "easeOut", delay: stagger(0.1) },
     );
   };
-   
+  const startProductAnimating = async () => {
+    // Very subtle reset - just enough to trigger re-animation
+    await productAnimate(
+      "span",
+      { opacity: 0, y: 10, scale: 0.98, filter: "blur(5px)" },
+      { duration: 0.05 },
+    );
+
+    // Then animate back with stagger
+    await productAnimate(
+      "span",
+      { opacity: 1, y: 0, scale: 1, filter: "blur(0px)" },
+      { duration: 0.5, ease: "easeOut", delay: stagger(0.1) },
+    );
+  };
+  const startBuildAnimating = async () => {
+    // Very subtle reset - just enough to trigger re-animation
+    await buildAnimate(
+      "span",
+      { opacity: 0, y: 10, scale: 0.98, filter: "blur(5px)" },
+      { duration: 0.05 },
+    );
+
+    // Then animate back with stagger
+    await buildAnimate(
+      "span",
+      { opacity: 1, y: 0, scale: 1, filter: "blur(0px)" },
+      { duration: 0.5, ease: "easeOut", delay: stagger(0.1) },
+    );
+  };
+  const startLaunchAnimating = async () => {
+    // Very subtle reset - just enough to trigger re-animation
+    await launchAnimate(
+      "span",
+      { opacity: 0, y: 10, scale: 0.98, filter: "blur(5px)" },
+      { duration: 0.05 },
+    );
+
+    // Then animate back with stagger
+    await launchAnimate(
+      "span",
+      { opacity: 1, y: 0, scale: 1, filter: "blur(0px)" },
+      { duration: 0.5, ease: "easeOut", delay: stagger(0.1) },
+    );
+  };
+
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % delivery.length);
@@ -91,80 +145,149 @@ const HeroSection = () => {
         <SvgFinalComponent className="mt-12 max-h-full max-w-full" />
         <div className="absolute grid h-full w-full grid-cols-[1.35fr_1.65fr] place-content-center justify-items-center border-red-500">
           <div className="mt-2 space-y-6 perspective-distant transform-3d">
-            <div className="h-[25rem] w-[25rem] rounded-xl border border-neutral-300 bg-white/[0.7] bg-[radial-gradient(var(--color-neutral-300)_1px,transparent_1px)] [background-size:15px_15px] shadow-lg">
-              <div className="h-fit w-full gap-y-2 border-b border-neutral-100 py-3 text-center">
-                <h1 className="text-lg font-semibold tracking-widest">
-                  Journey to Success
-                </h1>
-                <p>From concept to Reality</p>
-              </div>
-              <div className="grid h-fit grid-cols-2 place-content-center justify-items-center py-1">
-                <div className="grid grid-cols-1 gap-8">
-                  <motion.div
-                    onHoverStart={startAnimating}
-                    className="group/bulb flex h-full w-full cursor-pointer flex-col items-center justify-between gap-1 rounded-xl border border-neutral-300 p-2 hover:bg-white"
-                  >
-                    <div className="transform transition duration-200 group-hover/bulb:scale-110 group-hover/bulb:rotate-6 group-hover/bulb:bg-transparent">
-                      <PlanSvg className="group-hover/bulb:text-yellow-500 group-hover/bulb:drop-shadow-[0_0_24px_#facc15]" />
-                    </div>
-
-                    <div className="flex flex-col items-center justify-center pl-0.5">
-                      <h1 className="font-semibold">Idea</h1>
-                      <div ref={scope}>
-                        {ideaText.split(" ").map((word, idx) => (
-                          <motion.span
-                            key={word + idx}
-                            className="text-md inline-block"
-                            style={{
-                              display: "inline-block",
-                              opacity: 1,
-                              transform: "translateY(0px)",
-                            }}
-                          >
-                            {word}&nbsp;
-                          </motion.span>
-                        ))}
+            <div className="h-[25rem] w-[75rem] rounded-xl border border-neutral-400"></div>
+            <div className="relative w-fit rounded-2xl border border-neutral-200 bg-gradient-to-r from-transparent via-neutral-50 to-neutral-100 p-2">
+              <div className="h-[25rem] w-[35rem] rounded-xl border border-neutral-300 bg-white/[0.7] bg-[radial-gradient(var(--color-neutral-300)_1px,transparent_1px)] [background-size:15px_15px] shadow-lg">
+                <div className="h-fit w-full gap-y-2 border-b border-neutral-100 py-3 text-center">
+                  <h1 className="text-lg font-semibold tracking-widest">
+                    Journey to Success
+                  </h1>
+                  <p>From concept to Reality</p>
+                </div>
+                <div className="grid h-fit grid-cols-2 place-content-center justify-items-center py-1 ">
+                  <div className="relative grid grid-cols-1 gap-8">
+                    <motion.div
+                      onHoverStart={startIdeaAnimating}
+                      className="group/bulb flex h-full w-full cursor-pointer flex-col items-center justify-between gap-1 rounded-xl border border-neutral-300 p-2 hover:bg-white"
+                    >
+                      <div className="transform transition duration-200 group-hover/bulb:scale-110 group-hover/bulb:rotate-6 group-hover/bulb:bg-transparent">
+                        <PlanSvg className="group-hover/bulb:text-yellow-500 group-hover/bulb:drop-shadow-[0_0_24px_#facc15]" />
                       </div>
-                    </div>
-                  </motion.div>
-                  <div className="flex h-full w-full flex-col items-center justify-between gap-1 rounded-xl border border-neutral-300 p-2">
-                    <div className="">
-                      <ProductSvg />
-                    </div>
-                    <div className="flex flex-col items-center justify-center pl-0.5">
-                      <h1 className="font-semibold">Product</h1>
-                      <p className="text-md">Ready to Shape</p>
-                    </div>
-                  </div>{" "}
-                </div>
-                <div className="grid grid-cols-1 gap-8">
-                  <div className="flex h-full w-full flex-col items-center justify-between gap-1 rounded-xl border border-neutral-300 p-2">
-                    <div className="">
-                      <BuildSvg />
-                    </div>
-                    <div className="flex flex-col items-center justify-center">
-                      <h1 className="font-semibold">Build</h1>
-                      <p className="text-md">Crafting the Version</p>
-                    </div>
-                  </div>{" "}
-                  <div className="flex h-full w-full flex-col items-center justify-between gap-1 rounded-xl border border-neutral-300 p-2">
-                    <div className="">
-                      <LaunchSvg />
-                    </div>
-                    <div className="flex flex-col items-center justify-center">
-                      <h1 className="font-semibold">Launch</h1>
-                      <p className="text-md">Into the World</p>
-                    </div>
-                  </div>{" "}
+
+                      <div className="flex flex-col items-center justify-center pl-0.5">
+                        <h1 className="font-semibold text-neutral-500">Idea</h1>
+                        <div ref={ideaScope}>
+                          {ideaText.split(" ").map((word, idx) => (
+                            <motion.span
+                              key={word + idx}
+                              className="text-md inline-block text-neutral-500"
+                              style={{
+                                display: "inline-block",
+                                opacity: 1,
+                                transform: "translateY(0px)",
+                              }}
+                            >
+                              {word}&nbsp;
+                            </motion.span>
+                          ))}
+                        </div>
+                      </div>
+                    </motion.div>
+                    <motion.div
+                      onHoverStart={startProductAnimating}
+                      className="group/product flex h-full w-full cursor-pointer flex-col items-center justify-between gap-1 rounded-xl border border-neutral-300 p-2 hover:bg-white"
+                    >
+                      <div className="transform transition duration-200 group-hover/product:scale-110 group-hover/product:rotate-6 group-hover/product:bg-transparent group-hover/product:drop-shadow-[0_0_28px_#86EFAC]">
+                        <ProductSvg className="transition-colors duration-300 ease-in-out group-hover/product:text-green-300" />
+                      </div>
+
+                      <div className="flex flex-col items-center justify-center pl-0.5">
+                        <h1 className="font-semibold text-neutral-500">
+                          Product
+                        </h1>
+                        <div ref={productScope}>
+                          {productText.split(" ").map((word, idx) => (
+                            <motion.span
+                              key={word + idx}
+                              className="text-md inline-block text-neutral-500"
+                              style={{
+                                display: "inline-block",
+                                opacity: 1,
+                                transform: "translateY(0px)",
+                              }}
+                            >
+                              {word}&nbsp;
+                            </motion.span>
+                          ))}
+                        </div>
+                      </div>
+                    </motion.div>
+
+                    <TopLine className="absolute top-16 left-42.5 w-28" />
+                    <SlantLineSvg className="absolute top-32.5 left-36" />
+                  </div>
+                  <div className="relative grid grid-cols-1 gap-8">
+                    <motion.div
+                      onHoverStart={startBuildAnimating}
+                      className="group/build flex h-full w-full cursor-pointer flex-col items-center justify-between gap-1 rounded-xl border border-neutral-300 p-2 hover:bg-white"
+                    >
+                      <div className="transform transition duration-200 group-hover/build:scale-110 group-hover/build:rotate-6 group-hover/build:bg-transparent group-hover/build:drop-shadow-[0_0_28px_#DBEAFE]">
+                        <BuildSvg className="transition-colors duration-300 ease-in-out group-hover/build:text-blue-300" />
+                      </div>
+
+                      <div className="flex flex-col items-center justify-center pl-0.5">
+                        <h1 className="font-semibold text-neutral-500">
+                          Build
+                        </h1>
+                        <div ref={buildScope}>
+                          {buildText.split(" ").map((word, idx) => (
+                            <motion.span
+                              key={word + idx}
+                              className="text-md inline-block text-neutral-500"
+                              style={{
+                                display: "inline-block",
+                                opacity: 1,
+                                transform: "translateY(0px)",
+                              }}
+                            >
+                              {word}&nbsp;
+                            </motion.span>
+                          ))}
+                        </div>
+                      </div>
+                    </motion.div>
+                    <motion.div
+                      onHoverStart={startLaunchAnimating}
+                      className="group/launch flex h-full w-full cursor-pointer flex-col items-center justify-between gap-1 rounded-xl border border-neutral-300 p-2 hover:bg-white"
+                    >
+                      <div className="transform transition duration-200 group-hover/launch:scale-110 group-hover/launch:rotate-6 group-hover/launch:bg-transparent group-hover/launch:drop-shadow-[0_0_28px_#EDE9FE]">
+                        <LaunchSvg className="transition-colors duration-300 ease-in-out group-hover/launch:text-purple-300" />
+                      </div>
+
+                      <div className="flex flex-col items-center justify-center pl-0.5">
+                        <h1 className="font-semibold text-neutral-500">
+                          Launch
+                        </h1>
+                        <div ref={launchScope}>
+                          {LaunchText.split(" ").map((word, idx) => (
+                            <motion.span
+                              key={word + idx}
+                              className="text-md inline-block text-neutral-500"
+                              style={{
+                                display: "inline-block",
+                                opacity: 1,
+                                transform: "translateY(0px)",
+                              }}
+                            >
+                              {word}&nbsp;
+                            </motion.span>
+                          ))}
+                        </div>
+                      </div>
+                    </motion.div>
+
+                    <BottomLine className="absolute bottom-15 -left-27 w-27.5" />
+                  </div>
                 </div>
               </div>
+
+              <div className="absolute right-0 bottom-0 left-0 h-1 w-full bg-gradient-to-r from-transparent via-purple-300 to-transparent"></div>
             </div>
-            <div className="h-[25rem] w-[25rem] rounded-xl border border-neutral-400"></div>
           </div>
-          <div className="mt-32 space-y-6">
+          {/* <div className="mt-32 space-y-6">
             <div className="h-[25rem] w-[25rem] rounded-xl border border-neutral-400"></div>
             <div className="h-[10rem] w-[25rem] rounded-xl border border-neutral-400"></div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
