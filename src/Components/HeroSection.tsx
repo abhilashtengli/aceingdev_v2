@@ -16,7 +16,7 @@ const HeroSection = () => {
     // Very subtle reset - just enough to trigger re-animation
     await animate(
       "span",
-      { opacity: 0, y: 10, scale: 0.98 },
+      { opacity: 0, y: 10, scale: 0.98, filter: "blur(5px)" },
       { duration: 0.05 },
     );
 
