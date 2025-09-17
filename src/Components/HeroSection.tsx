@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { SvgFinalComponent } from "./SVG/heroFinalSvg";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence, useAnimate, stagger } from "motion/react";
 import { LineSvg } from "./SVG/lineSvg";
 import { ProductSvg } from "./SVG/PlanToProduct/ProductSvg";
 import { LaunchSvg } from "./SVG/PlanToProduct/LaunchSvg";
@@ -10,7 +10,24 @@ import { PlanSvg } from "./SVG/PlanToProduct/PlanSvg";
 const HeroSection = () => {
   const delivery = ["Value", "Quality", "Results"];
   const [index, setIndex] = useState(0);
+  const [scope, animate] = useAnimate();
+  const ideaText = "Spark of Innovation";
+  const startAnimating = async () => {
+    // Very subtle reset - just enough to trigger re-animation
+    await animate(
+      "span",
+      { opacity: 0, y: 10, scale: 0.98 },
+      { duration: 0.05 },
+    );
 
+    // Then animate back with stagger
+    await animate(
+      "span",
+      { opacity: 1, y: 0, scale: 1, filter: "blur(0px)" },
+      { duration: 0.5, ease: "easeOut", delay: stagger(0.1) },
+    );
+  };
+   
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % delivery.length);
@@ -74,7 +91,7 @@ const HeroSection = () => {
         <SvgFinalComponent className="mt-12 max-h-full max-w-full" />
         <div className="absolute grid h-full w-full grid-cols-[1.35fr_1.65fr] place-content-center justify-items-center border-red-500">
           <div className="mt-2 space-y-6 perspective-distant transform-3d">
-            <div className="h-[25rem] w-[25rem] rounded-xl border border-neutral-300 bg-[radial-gradient(var(--color-neutral-300)_1px,transparent_1px)] [background-size:15px_15px] shadow-lg">
+            <div className="h-[25rem] w-[25rem] rounded-xl border border-neutral-300 bg-white/[0.7] bg-[radial-gradient(var(--color-neutral-300)_1px,transparent_1px)] [background-size:15px_15px] shadow-lg">
               <div className="h-fit w-full gap-y-2 border-b border-neutral-100 py-3 text-center">
                 <h1 className="text-lg font-semibold tracking-widest">
                   Journey to Success
@@ -83,15 +100,33 @@ const HeroSection = () => {
               </div>
               <div className="grid h-fit grid-cols-2 place-content-center justify-items-center py-1">
                 <div className="grid grid-cols-1 gap-8">
-                  <div className="group/bulb flex h-full w-full cursor-pointer flex-col items-center justify-between gap-1 rounded-xl border border-neutral-300 p-2 hover:bg-white">
-                    <div className="transform transition duration-200 group-hover/bulb:scale-120 group-hover/bulb:-rotate-x-360 group-hover/bulb:-rotate-y-180 group-hover/bulb:bg-transparent">
-                      <PlanSvg className="group-hover/bulb:text-yellow-500 group-hover/bulb:drop-shadow-[0_0_24px_#FFFF00]" />
+                  <motion.div
+                    onHoverStart={startAnimating}
+                    className="group/bulb flex h-full w-full cursor-pointer flex-col items-center justify-between gap-1 rounded-xl border border-neutral-300 p-2 hover:bg-white"
+                  >
+                    <div className="transform transition duration-200 group-hover/bulb:scale-110 group-hover/bulb:rotate-6 group-hover/bulb:bg-transparent">
+                      <PlanSvg className="group-hover/bulb:text-yellow-500 group-hover/bulb:drop-shadow-[0_0_24px_#facc15]" />
                     </div>
+
                     <div className="flex flex-col items-center justify-center pl-0.5">
                       <h1 className="font-semibold">Idea</h1>
-                      <p className="text-">Spark of Innovation</p>
+                      <div ref={scope}>
+                        {ideaText.split(" ").map((word, idx) => (
+                          <motion.span
+                            key={word + idx}
+                            className="text-md inline-block"
+                            style={{
+                              display: "inline-block",
+                              opacity: 1,
+                              transform: "translateY(0px)",
+                            }}
+                          >
+                            {word}&nbsp;
+                          </motion.span>
+                        ))}
+                      </div>
                     </div>
-                  </div>{" "}
+                  </motion.div>
                   <div className="flex h-full w-full flex-col items-center justify-between gap-1 rounded-xl border border-neutral-300 p-2">
                     <div className="">
                       <ProductSvg />
