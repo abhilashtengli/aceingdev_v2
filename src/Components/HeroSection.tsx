@@ -305,7 +305,7 @@ const HeroSection = () => {
             </div>
 
             <div className="mt-32 space-y-6">
-              <div className="flex h-[35rem] w-[32rem] justify-center items-end rounded-xl  border-neutral-400 p-3 pt-6">
+              <div className="flex h-[35rem] w-[32rem] items-end justify-center rounded-xl border-neutral-400 p-3 pt-6">
                 <WritingCodeAnimationComponent />
               </div>
               <div className="group/ct rounded-[11px] border border-neutral-500 bg-gradient-to-l from-purple-200 via-neutral-50 to-neutral-100 px-2 py-2">

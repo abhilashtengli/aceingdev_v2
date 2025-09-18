@@ -1,3 +1,5 @@
+"use client";
+
 import {
   IconBraces,
   IconBrandCss3,
@@ -14,6 +16,7 @@ import {
 import { motion } from "framer-motion";
 import { Highlight, themes } from "prism-react-renderer";
 import type { PrismTheme, Language, RenderProps } from "prism-react-renderer";
+import { useState, useEffect } from "react";
 
 const code = `
 import React from "react";
@@ -24,14 +27,32 @@ export default function App() {
       <h1>Build. Launch. Scale. 🚀</h1>
       <p>Turning ideas into products quickly
          and efficiently.</p>
-    </div>
+    </div>        
   );
 }
 `;
 
 export const WritingCodeAnimationComponent = () => {
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const [animationKey, setAnimationKey] = useState(0);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setHasAnimated(true);
+    }, 500); // Small delay before starting animation
+    return () => clearTimeout(timer);
+  }, []);
+
+  const handleHoverStart = () => {
+    setHasAnimated(false);
+    setAnimationKey((prev) => prev + 1);
+    setTimeout(() => {
+      setHasAnimated(true);
+    }, 50);
+  };
+
   return (
-    <div className="flex flex-col items-center">
+    <motion.div className="flex flex-col items-center">
       <div className="h-fit w-[30rem] rounded-tl-xl rounded-tr-xl border border-neutral-400 bg-gray-400 px-2 pb-2">
         <div className="flex w-full justify-center">
           {" "}
@@ -255,24 +276,38 @@ export const WritingCodeAnimationComponent = () => {
                   language={"jsx" as Language}
                 >
                   {({ tokens, getLineProps, getTokenProps }: RenderProps) => (
-                    <pre className="font-mono text-xs leading-relaxed text-white">
+                    <motion.pre
+                      className="font-mono text-xs leading-relaxed text-white"
+                      onHoverStart={handleHoverStart}
+                      whileHover={{ scale: 1.02 }}
+                      transition={{ duration: 0.2 }}
+                    >
                       {tokens.map((line, i) => (
                         <div key={i} {...getLineProps({ line, key: i })}>
-                          {line.map((token, key) => (
-                            <motion.span
-                              key={key}
-                              {...getTokenProps({ token, key })}
-                              initial={{ opacity: 0 }}
-                              animate={{ opacity: 1 }}
-                              transition={{
-                                delay: i * 0.2 + key * 0.05,
-                                duration: 0.1,
-                              }}
-                            />
-                          ))}
+                          {line.map((token, key) => {
+                            // eslint-disable-next-line @typescript-eslint/no-unused-vars
+                            const { key: tokenKey, ...tokenProps } =
+                              getTokenProps({ token, key });
+                            return (
+                              <motion.span
+                                key={`${animationKey}-${i}-${key}`}
+                                {...tokenProps}
+                                initial={{ opacity: 0 }}
+                                animate={{
+                                  opacity: hasAnimated ? 1 : 0,
+                                  transition: {
+                                    delay: hasAnimated
+                                      ? i * 0.1 + key * 0.02
+                                      : 0,
+                                    duration: 0.3,
+                                  },
+                                }}
+                              />
+                            );
+                          })}
                         </div>
                       ))}
-                    </pre>
+                    </motion.pre>
                   )}
                 </Highlight>
               </div>
@@ -289,6 +324,6 @@ export const WritingCodeAnimationComponent = () => {
           <div className="h-1 w-8 rounded-br-lg rounded-bl-lg bg-gray-300"></div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
