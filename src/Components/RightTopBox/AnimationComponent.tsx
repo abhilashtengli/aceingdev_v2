@@ -279,7 +279,7 @@ export const WritingCodeAnimationComponent = () => {
                     <motion.pre
                       className="font-mono text-xs leading-relaxed text-white"
                       onHoverStart={handleHoverStart}
-                      whileHover={{ scale: 1.02 }}
+                      //   whileHover={{ scale: 1.02 }}
                       transition={{ duration: 0.2 }}
                     >
                       {tokens.map((line, i) => (
