@@ -145,7 +145,7 @@ const HeroSection = () => {
       <div className="relative flex items-start justify-center bg-white mask-t-from-60% mask-r-from-70% mask-l-from-89% dark:bg-black">
         <SvgFinalComponent className="mt-12 max-h-full max-w-full" />
         <div className="absolute grid h-full w-full grid-cols-[1.35fr_1.65fr] place-content-center justify-items-center border-red-500">
-          <div className="mt-24 ml-24 grid grid-cols-[1.35fr_1.65fr] gap-x-8 border border-red-600">
+          <div className="mt-24 ml-24 grid grid-cols-[1.35fr_1.65fr] gap-x-8  border-red-600">
             <div className="mt-2 space-y-6 perspective-distant transform-3d">
               <div className="h-[25rem] w-[36rem] rounded-xl border border-neutral-400"></div>
               <div className="relative w-fit rounded-2xl border border-neutral-200 bg-gradient-to-r from-transparent via-neutral-50 to-neutral-100 p-2">
