@@ -10,6 +10,7 @@ import { TopLine } from "./SVG/topLineSvg";
 import { BottomLine } from "./SVG/bottomLineSvg";
 import { SlantLineSvg } from "./SVG/SlantLineSvg";
 import { ConnectingSvg } from "./SVG/connectingWorld/svg";
+import { WritingCodeAnimationComponent } from "./RightTopBox/AnimationComponent";
 
 const HeroSection = () => {
   const delivery = ["Value", "Quality", "Results"];
@@ -142,10 +143,10 @@ const HeroSection = () => {
       </div>
 
       {/* Right box with SVG */}
-      <div className="relative flex items-start justify-center bg-white mask-t-from-60% mask-r-from-70% mask-l-from-89% dark:bg-black">
+      <div className="relative flex items-start justify-center bg-white mask-t-from-60% mask-r-from-93% mask-l-from-89% dark:bg-black">
         <SvgFinalComponent className="mt-12 max-h-full max-w-full" />
         <div className="absolute grid h-full w-full grid-cols-[1.35fr_1.65fr] place-content-center justify-items-center border-red-500">
-          <div className="mt-24 ml-24 grid grid-cols-[1.35fr_1.65fr] gap-x-8  border-red-600">
+          <div className="mt-24 ml-24 grid grid-cols-[1.35fr_1.65fr] gap-x-8 border-red-600">
             <div className="mt-2 space-y-6 perspective-distant transform-3d">
               <div className="h-[25rem] w-[36rem] rounded-xl border border-neutral-400"></div>
               <div className="relative w-fit rounded-2xl border border-neutral-200 bg-gradient-to-r from-transparent via-neutral-50 to-neutral-100 p-2">
@@ -304,7 +305,9 @@ const HeroSection = () => {
             </div>
 
             <div className="mt-32 space-y-6">
-              <div className="h-[35rem] w-[25rem] rounded-xl border border-neutral-400"></div>
+              <div className="flex h-[35rem] w-[32rem] justify-center items-end rounded-xl  border-neutral-400 p-3 pt-6">
+                <WritingCodeAnimationComponent />
+              </div>
               <div className="group/ct rounded-[11px] border border-neutral-500 bg-gradient-to-l from-purple-200 via-neutral-50 to-neutral-100 px-2 py-2">
                 <div
                   style={{
@@ -339,7 +342,7 @@ const HeroSection = () => {
     )
   `,
                   }}
-                  className="relative flex h-[7rem] w-[24rem] items-center justify-center overflow-hidden rounded-[9px] border border-neutral-300 bg-gray-600"
+                  className="relative flex h-[7rem] items-center justify-center overflow-hidden rounded-[9px] border border-neutral-300 bg-gray-600 xl:w-[31rem]"
                 >
                   <ConnectingSvg className="absolute top-0 h-28" />
                   <h1 className="text-md z-10 rounded-full border border-white bg-white px-4 pt-2 pb-1 font-semibold tracking-wider text-gray-700 transition duration-500 ease-in-out group-hover/ct:scale-110">
