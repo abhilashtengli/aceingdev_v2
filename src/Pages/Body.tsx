@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import { ThemeProvider } from "../utils/ThemeProvider";
+import { ThemeProvider } from "../utils/themeProvider";
 // import ThemeToggle from "../utils/themetoggle";
 
 const Body = () => {
