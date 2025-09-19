@@ -316,8 +316,8 @@ export const WritingCodeAnimationComponent = () => {
         </div>
       </div>
       <div>
-        <div className="flex h-4 w-[32rem] items-start justify-center rounded-br-lg rounded-bl-lg bg-gray-400">
-          <div className="h-2 w-24 rounded-br-lg rounded-bl-lg bg-gray-300"></div>
+        <div className="flex h-4 w-[32rem] items-start justify-center rounded-tl-sm rounded-tr-sm rounded-br-3xl rounded-bl-3xl bg-gray-400">
+          <div className="h-2 w-24 rounded-br-lg rounded-bl-lg bg-gray-600"></div>
         </div>
         <div className="flex justify-between px-8">
           <div className="h-1 w-8 rounded-br-lg rounded-bl-lg bg-gray-300"></div>

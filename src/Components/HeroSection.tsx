@@ -11,6 +11,8 @@ import { BottomLine } from "./SVG/bottomLineSvg";
 import { SlantLineSvg } from "./SVG/SlantLineSvg";
 import { ConnectingSvg } from "./SVG/connectingWorld/svg";
 import { WritingCodeAnimationComponent } from "./RightTopBox/AnimationComponent";
+import { Icons } from "./Orbit/OrbitingCirclesDemo";
+import { OrbitingCircles } from "./Orbit/OrbitingCircle";
 
 const HeroSection = () => {
   const delivery = ["Value", "Quality", "Results"];
@@ -143,12 +145,34 @@ const HeroSection = () => {
       </div>
 
       {/* Right box with SVG */}
-      <div className="relative flex items-start justify-center bg-white mask-t-from-60% mask-r-from-93% mask-l-from-89% dark:bg-black">
+      <div className="relative flex items-start justify-center bg-white mask-t-from-60% mask-r-from-93% mask-l-from-95% dark:bg-black">
         <SvgFinalComponent className="mt-12 max-h-full max-w-full" />
         <div className="absolute grid h-full w-full grid-cols-[1.35fr_1.65fr] place-content-center justify-items-center border-red-500">
           <div className="mt-24 ml-24 grid grid-cols-[1.35fr_1.65fr] gap-x-8 border-red-600">
             <div className="mt-2 space-y-6 perspective-distant transform-3d">
-              <div className="h-[30rem] w-[36rem] rounded-xl border border-neutral-400"></div>
+              <div className="via-neutral-40 relative h-[25rem] w-[36rem] overflow-hidden rounded-xl  border-neutral-200">
+               
+                <div className="relative  top-44 flex h-[800px] w-full flex-col items-center justify-center overflow-hidden">
+                  <OrbitingCircles iconSize={30} radius={350} speed={1}>
+                    <Icons.whatsapp />
+                    <Icons.whatsapp />
+                    <Icons.openai />
+                    <Icons.notion />
+                    <Icons.whatsapp />
+                    <Icons.googleDrive />
+                    <Icons.googleDrive />
+                    <Icons.whatsapp />
+                    <Icons.googleDrive />
+                    <Icons.whatsapp />
+                  </OrbitingCircles>
+                  {/* <OrbitingCircles iconSize={30} radius={70} reverse speed={2}>
+                    <Icons.whatsapp />
+                    <Icons.notion />
+                    <Icons.openai />
+                    <Icons.googleDrive />
+                  </OrbitingCircles> */}
+                </div>
+              </div>
               <div className="relative w-fit rounded-2xl border border-neutral-200 bg-gradient-to-r from-transparent via-neutral-50 to-neutral-100 p-2">
                 <div
                   style={{
@@ -354,6 +378,7 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
+      {/* <OrbitingCirclesDemo /> */}
     </section>
   );
 };
