@@ -13,6 +13,7 @@ import { ConnectingSvg } from "./SVG/connectingWorld/svg";
 import { WritingCodeAnimationComponent } from "./RightTopBox/AnimationComponent";
 import { Icons } from "./Orbit/OrbitingCirclesDemo";
 import { OrbitingCircles } from "./Orbit/OrbitingCircle";
+import { RaysSvg } from "./SVG/raysSvg";
 
 const HeroSection = () => {
   const delivery = ["Value", "Quality", "Results"];
@@ -150,8 +151,8 @@ const HeroSection = () => {
         <div className="absolute grid h-full w-full grid-cols-[1.35fr_1.65fr] place-content-center justify-items-center border-red-500">
           <div className="mt-24 ml-24 grid grid-cols-[1.35fr_1.65fr] gap-x-8 border-red-600">
             <div className="mt-2 space-y-6 perspective-distant transform-3d">
-              <div className="via-neutral-40 relative h-[25rem] w-[36rem] overflow-hidden rounded-xl  border-neutral-200">
-               
+              <div className="via-neutral-40 relative h-[25rem] w-[36rem] overflow-hidden rounded-xl border border-neutral-600">
+               <div className="absolute inset-0"><RaysSvg/></div>
                 <div className="relative  top-44 flex h-[800px] w-full flex-col items-center justify-center overflow-hidden">
                   <OrbitingCircles iconSize={30} radius={350} speed={1}>
                     <Icons.whatsapp />
