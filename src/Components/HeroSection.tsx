@@ -91,7 +91,7 @@ const HeroSection = () => {
     return () => clearInterval(interval);
   }, [delivery.length]);
   return (
-    <section className="relative grid h-screen w-full grid-cols-[1.35fr_1.65fr] ">
+    <section className="relative grid h-screen w-full grid-cols-[1.35fr_1.65fr]">
       {/* Left box */}
       <div className="z-20 flex items-center justify-end">
         <div className="max-w-4xl">

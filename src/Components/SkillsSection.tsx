@@ -102,15 +102,15 @@ const SkillsSection = () => {
         </h1>
       </div>
       <div className="flex h-screen w-full items-start justify-center border-red-500 mask-t-from-80% px-80">
-        <div className="relative flex w-full items-start justify-center gap-6 border-blue-400 mask-b-from-60% p-6">
+        <div className="relative flex w-full items-start justify-center gap-6 border-blue-400 mask-b-from-60% mask-l-from-98% p-6">
           <motion.div
-            className="absolute top-42 left-0 z-30 w-[28rem] space-y-3 bg-white"
+            className="absolute top-42 left-1 z-30 space-y-3 rounded-3xl border border-neutral-300 bg-white px-4 py-4"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
             <motion.div
-              className="mb-4 rounded-xl border border-neutral-300 bg-white p-4 shadow-lg backdrop-blur-sm"
+              className="mb-4 w-[28rem] rounded-xl border-t border-r border-b border-neutral-100 bg-white bg-gradient-to-r from-white via-neutral-100 to-yellow-50 p-4 shadow-lg backdrop-blur-sm"
               whileHover={{ scale: 1.02, y: -2 }}
               transition={{ duration: 0.2, ease: "easeOut" }}
             >
@@ -133,10 +133,11 @@ const SkillsSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: 0.1 }}
+                className="w-[28rem]"
               >
                 <AccordionItem
                   value="saas"
-                  className="group rounded-lg border border-neutral-300 bg-white py-2 shadow-sm transition-all duration-300 hover:bg-gray-50 hover:shadow-md"
+                  className="group rounded-lg border-t border-r border-b border-neutral-100 bg-white py-2 shadow-sm transition-all duration-300 hover:bg-gray-50 hover:shadow-md"
                 >
                   <AccordionTrigger className="mt-2 w-full cursor-pointer p-3 text-left">
                     <div className="flex w-full items-center justify-between">
@@ -202,10 +203,11 @@ const SkillsSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: 0.2 }}
+                className="w-[28rem]"
               >
                 <AccordionItem
                   value="ai"
-                  className="group rounded-lg border border-neutral-300 bg-white py-2 shadow-sm transition-all duration-300 hover:bg-gray-50 hover:shadow-md"
+                  className="group rounded-lg border border-neutral-100 bg-white py-2 shadow-sm transition-all duration-300 hover:bg-gray-50 hover:shadow-md"
                 >
                   <AccordionTrigger className="w-full cursor-pointer p-3 text-left">
                     <div className="flex w-full items-center justify-between">
@@ -259,10 +261,11 @@ const SkillsSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: 0.3 }}
+                className="w-[28rem]"
               >
                 <AccordionItem
                   value="analytics"
-                  className="group rounded-lg border border-neutral-300 bg-white py-2 shadow-sm transition-all duration-300 hover:bg-gray-50 hover:shadow-md"
+                  className="group rounded-lg border border-neutral-100 bg-white py-2 shadow-sm transition-all duration-300 hover:bg-gray-50 hover:shadow-md"
                 >
                   <AccordionTrigger className="w-full cursor-pointer p-3 text-left">
                     <div className="flex w-full items-center justify-between">
@@ -316,10 +319,11 @@ const SkillsSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: 0.4 }}
+                className="w-[28rem]"
               >
                 <AccordionItem
                   value="cloud"
-                  className="group rounded-lg border border-neutral-300 bg-white py-2 shadow-sm transition-all duration-300 hover:bg-gray-50 hover:shadow-md"
+                  className="group rounded-lg border border-neutral-100 bg-white py-2 shadow-sm transition-all duration-300 hover:bg-gray-50 hover:shadow-md"
                 >
                   <AccordionTrigger className="w-full p-3 text-left">
                     <div className="flex w-full cursor-pointer items-center justify-between">
@@ -393,10 +397,11 @@ const SkillsSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: 0.5 }}
+                className="w-[28rem]"
               >
                 <AccordionItem
                   value="enterprise"
-                  className="group rounded-lg border border-neutral-300 bg-white py-2 shadow-sm transition-all duration-300 hover:bg-gray-50 hover:shadow-md"
+                  className="group rounded-lg border border-neutral-100 bg-white py-2 shadow-sm transition-all duration-300 hover:bg-gray-50 hover:shadow-md"
                 >
                   <AccordionTrigger className="w-full cursor-pointer p-3 text-left">
                     <div className="flex w-full items-center justify-between">
@@ -447,10 +452,9 @@ const SkillsSection = () => {
               </motion.div>
             </Accordion>
           </motion.div>
-
-          <div className="flex flex-col gap-3">
-            <DevStatusCard className="h-[34rem] border border-neutral-300 shadow-2xl" />
-            <AnimatedHighlightedAreaChart className="z-20 w-[26rem] border border-neutral-300 shadow-2xl" />
+          <div className="flex flex-col gap-3 mask-l-from-0%">
+            <DevStatusCard className="h-[34rem] border-r border-b border-neutral-300 shadow-2xl" />
+            <AnimatedHighlightedAreaChart className="z-20 w-[26rem] border-r border-b border-neutral-300 shadow-2xl" />
           </div>
 
           <div className="flex flex-col gap-3">
