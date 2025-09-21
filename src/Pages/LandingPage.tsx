@@ -1,9 +1,11 @@
-import HeroSection from "../Components/HeroSection";
+import SkillsSection from "@/Components/SkillsSection";
+import HeroSection from "@/Components/HeroSection";
 
 const LandingPage = () => {
   return (
-    <div className="mx-auto flex h-full w-full items-center justify-center">
+    <div className="mx-auto  h-full w-full ">
       <HeroSection />
+      <SkillsSection/>
     </div>
   );
 };
