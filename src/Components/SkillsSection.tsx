@@ -10,8 +10,8 @@ import { FileUploadManager } from "./SkillComponents/UploadFile";
 const SkillsSection = () => {
   return (
     <>
-      <div className="flex h-screen w-full items-start justify-center border border-red-500 mask-t-from-80% px-80">
-        <div className="flex w-full max-w-7xl items-center justify-center gap-6 border-blue-400 p-6">
+      <div className="flex h-screen w-full items-start justify-center border border-red-500 mask-t-from-80% mask-b-from-60% mask-l-from-40% px-80 md:mask-r-from-80%">
+        <div className="flex w-full items-center justify-center gap-6 border border-blue-400 mask-b-from-80% p-6">
           {/* Left column */}
           <div className="flex flex-col gap-3">
             <DevStatusCard className="h-[34rem] border border-neutral-300 shadow-2xl" />
