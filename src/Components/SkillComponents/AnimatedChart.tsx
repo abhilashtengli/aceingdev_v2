@@ -7,15 +7,16 @@ import {
   ChartTooltip,
   ChartTooltipContent,
   type ChartConfig,
-} from "./ui/chart";
+} from "../ui/chart";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "./ui/card";
-import { Badge } from "./ui/badge";
+} from "../ui/card";
+import { Badge } from "../ui/badge";
+import { cn, type ClassNameProp } from "@/lib/utils";
 
 // Change it to your needs
 const animationConfig = {
@@ -48,13 +49,13 @@ const chartConfig = {
   },
 } satisfies ChartConfig;
 
-export function AnimatedHighlightedAreaChart() {
+export function AnimatedHighlightedAreaChart({ className }: ClassNameProp) {
   const [xAxis, setXAxis] = React.useState<number | null>(null);
 
   return (
-    <Card className="bg-black">
+    <Card className={cn("bg-white", className)}>
       <CardHeader>
-        <CardTitle className="text-neutral-300">
+        <CardTitle className="text-neutral-700">
           Highlighted Area Chart
           <Badge
             variant="outline"

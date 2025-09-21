@@ -16,7 +16,7 @@ export const LineSvg = (props: SVGProps<SVGSVGElement>) => (
         x2="0%"
         y1="100%" // start at bottom
         y2="110%" // small offset
-        initial={{ y1: "0%", y2: "10%" }} // bottom
+        initial={{ y1: "-20%", y2: "20%" }} // bottom
         animate={{ y1: "90%", y2: "100%" }} // move upward
         transition={{
           duration: 2,

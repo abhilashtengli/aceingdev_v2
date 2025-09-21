@@ -11,7 +11,6 @@ import { BottomLine } from "./SVG/bottomLineSvg";
 import { SlantLineSvg } from "./SVG/SlantLineSvg";
 import { ConnectingSvg } from "./SVG/connectingWorld/svg";
 import { WritingCodeAnimationComponent } from "./RightTopBox/AnimationComponent";
-import { RaysSvg } from "./SVG/raysSvg";
 
 const HeroSection = () => {
   const delivery = ["Value", "Quality", "Results"];
@@ -295,9 +294,7 @@ const HeroSection = () => {
                   <div className="left- absolute inset-0 top-49.5">
                     <div className="relative z-30 h-2 w-2 rounded-full border-black bg-white text-transparent"></div>
                   </div>
-                  <div className="absolute inset-0">
-                    <RaysSvg />
-                  </div>
+                  <div className="absolute inset-0">{/* <RaysSvg /> */}</div>
 
                   <div className="relative top-44 flex h-[800px] w-full flex-col items-center justify-center overflow-hidden">
                     {/* <OrbitingCircles iconSize={30} radius={350} speed={1}>
