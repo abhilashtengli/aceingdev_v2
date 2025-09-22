@@ -101,27 +101,26 @@ const SkillsSection = () => {
           </span>
         </h1>
       </div>
-      <div className="flex h-screen w-full items-start justify-center border-red-500 mask-t-from-80% px-80">
-        <div className="relative flex w-full items-start justify-center gap-6 border-blue-400 mask-b-from-60% mask-l-from-98% p-6">
+      <div className="flex h-screen w-full items-start justify-center border-red-500 mask-t-from-80% pl-72">
+        <div className="relative flex w-full items-start justify-center gap-6 border-blue-400 p-6">
           <motion.div
-            className="absolute top-42 left-1 z-30 space-y-3 rounded-3xl border border-neutral-300 bg-white px-4 py-4"
+            className="absolute top-42 left-1 z-30 space-y-3 rounded-3xl border border-neutral-200 bg-white px-4 py-4"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
             <motion.div
-              className="mb-4 w-[28rem] rounded-xl border-t border-r border-b border-neutral-100 bg-white bg-gradient-to-r from-white via-neutral-100 to-yellow-50 p-4 shadow-lg backdrop-blur-sm"
+              className="mb-4 w-[25rem] rounded-xl border-t border-r border-b border-neutral-100 bg-white bg-gradient-to-r from-white via-neutral-100 to-yellow-50 p-4 shadow-lg backdrop-blur-sm"
               whileHover={{ scale: 1.02, y: -2 }}
               transition={{ duration: 0.2, ease: "easeOut" }}
             >
               <h2 className="mb-2 text-lg font-bold text-gray-900">
                 What We Build
               </h2>
-              <p className="text-sm leading-relaxed text-gray-700">
-                We specialize in crafting cutting-edge digital solutions that
-                transform ideas into powerful, scalable applications. From
-                AI-powered automation to enterprise-grade platforms, we deliver
-                technology that drives real business growth.
+              <p className="text-md leading-relaxed text-gray-700">
+                We build modern digital solutions that turn ideas into real
+                applications. From AI-powered tools to custom web apps and MVPs,
+                we create technology that helps businesses grow.
               </p>
             </motion.div>
 
@@ -133,7 +132,7 @@ const SkillsSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: 0.1 }}
-                className="w-[28rem]"
+                className="w-[25rem]"
               >
                 <AccordionItem
                   value="saas"
@@ -186,10 +185,10 @@ const SkillsSection = () => {
                       animate={{ opacity: 1 }}
                       transition={{ duration: 0.3 }}
                     >
-                      <p className="text-xs leading-relaxed text-gray-700">
-                        End-to-end development of Software-as-a-Service
+                      <p className="text-md leading-relaxed text-gray-700">
+                        End-to-end development of Software as a Service
                         platforms, custom web applications, and Minimum Viable
-                        Products. We build scalable, user-friendly solutions
+                        Products. We build scalable, user friendly solutions
                         with modern frameworks like React, Next.js, and Node.js,
                         complete with payment integration, user management, and
                         responsive design.
@@ -203,7 +202,7 @@ const SkillsSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: 0.2 }}
-                className="w-[28rem]"
+                className="w-[25rem]"
               >
                 <AccordionItem
                   value="ai"
@@ -244,13 +243,12 @@ const SkillsSection = () => {
                       animate={{ opacity: 1 }}
                       transition={{ duration: 0.3 }}
                     >
-                      <p className="text-xs leading-relaxed text-gray-700">
+                      <p className="text-md leading-relaxed text-gray-700">
                         AI-powered automation solutions including intelligent
                         chatbots, workflow automation, and business process
                         optimization. We integrate cutting-edge AI models like
-                        GPT, Claude, and custom ML solutions to streamline
-                        operations, enhance customer support, and automate
-                        repetitive tasks.
+                        GPT, Claude, custom solutions to streamline operations,
+                        enhance customer support, and automate repetitive tasks.
                       </p>
                     </motion.div>
                   </AccordionContent>
@@ -261,7 +259,7 @@ const SkillsSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: 0.3 }}
-                className="w-[28rem]"
+                className="w-[25rem]"
               >
                 <AccordionItem
                   value="analytics"
@@ -279,7 +277,7 @@ const SkillsSection = () => {
                         </motion.div>
                         <div>
                           <h3 className="text-sm font-semibold text-gray-900 group-hover:text-green-700">
-                            Data Analytics
+                            Data Visualization
                           </h3>
                           <p className="text-xs text-gray-600 opacity-80">
                             Dashboards & insights
@@ -302,13 +300,11 @@ const SkillsSection = () => {
                       animate={{ opacity: 1 }}
                       transition={{ duration: 0.3 }}
                     >
-                      <p className="text-xs leading-relaxed text-gray-700">
-                        Data-driven dashboards and analytics platforms for
-                        actionable business insights. We create real-time
-                        visualization tools, KPI tracking systems, and
-                        comprehensive reporting solutions using technologies
-                        like D3.js, Chart.js, and advanced database optimization
-                        for faster query performance.
+                      <p className="text-md leading-relaxed text-gray-700">
+                        We design interactive dashboards and data visualization
+                        tools that transform complex data into clear, actionable
+                        insights helping businesses track KPIs, monitor
+                        performance, and make smarter decisions in real time.
                       </p>
                     </motion.div>
                   </AccordionContent>
@@ -319,7 +315,7 @@ const SkillsSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: 0.4 }}
-                className="w-[28rem]"
+                className="w-[25rem]"
               >
                 <AccordionItem
                   value="cloud"
@@ -380,13 +376,12 @@ const SkillsSection = () => {
                       animate={{ opacity: 1 }}
                       transition={{ duration: 0.3 }}
                     >
-                      <p className="text-xs leading-relaxed text-gray-700">
+                      <p className="text-md leading-relaxed text-gray-700">
                         Secure, scalable cloud infrastructure with seamless
-                        deployment pipelines. We implement robust authentication
-                        systems, database optimization, CI/CD workflows, and
-                        cloud hosting solutions on platforms like Vercel, AWS,
-                        and Google Cloud for maximum reliability and
-                        performance.
+                        deployment pipelines. We implement robust
+                        authentication, database optimization, and CI/CD
+                        workflows, deploying reliably on AWS and Vercel for
+                        maximum performance and uptime
                       </p>
                     </motion.div>
                   </AccordionContent>
@@ -397,7 +392,7 @@ const SkillsSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: 0.5 }}
-                className="w-[28rem]"
+                className="w-[25rem]"
               >
                 <AccordionItem
                   value="enterprise"
@@ -438,7 +433,7 @@ const SkillsSection = () => {
                       animate={{ opacity: 1 }}
                       transition={{ duration: 0.3 }}
                     >
-                      <p className="text-xs leading-relaxed text-gray-700">
+                      <p className="text-md leading-relaxed text-gray-700">
                         Enterprise-ready admin systems, workflow automation
                         tools, and third-party integrations. We develop
                         comprehensive management dashboards, file handling
@@ -452,23 +447,23 @@ const SkillsSection = () => {
               </motion.div>
             </Accordion>
           </motion.div>
-          <div className="flex flex-col gap-3 mask-l-from-0%">
-            <DevStatusCard className="h-[34rem] border-r border-b border-neutral-300 shadow-2xl" />
-            <AnimatedHighlightedAreaChart className="z-20 w-[26rem] border-r border-b border-neutral-300 shadow-2xl" />
+          <div className="flex flex-col gap-3">
+            <DevStatusCard className="h-[34rem] border-r border-b border-neutral-300 mask-l-from-0% shadow-2xl" />
+            <AnimatedHighlightedAreaChart className="z-20 w-[26rem] border-r border-b border-neutral-300 mask-b-from-40% mask-l-from-50% shadow-2xl" />
           </div>
 
           <div className="flex flex-col gap-3">
             <div className="flex justify-center gap-x-3.5">
-              <CodeMetricsCard className="border border-neutral-300 shadow-2xl" />
-              <DeploymentStatusCard className="border border-neutral-300 shadow-2xl" />
+              <CodeMetricsCard className="border border-neutral-300" />
+              <DeploymentStatusCard className="border border-neutral-300" />
             </div>
             <AdminCrudTable className="h-[34rem] w-[42rem] border border-neutral-300 shadow-2xl" />
-            <FileUploadManager className="shadow-2xl" />
+            <FileUploadManager className="mask-b-from-40% shadow-2xl" />
           </div>
 
           <div className="flex flex-col gap-3">
-            <AiChatWidget className="border shadow-2xl" />
-            <AuthSignupContainer className="w-[24rem] shadow-2xl" />
+            <AiChatWidget className="border mask-r-from-93% shadow-2xl" />
+            <AuthSignupContainer className="w-[24rem] mask-b-from-40% shadow-2xl" />
           </div>
         </div>
       </div>

@@ -24,18 +24,18 @@ const animationConfig = {
 };
 
 const chartData = [
-  { month: "January", desktop: 342, mobile: 245 },
-  { month: "February", desktop: 876, mobile: 654 },
-  { month: "March", desktop: 512, mobile: 387 },
-  { month: "April", desktop: 629, mobile: 521 },
-  { month: "May", desktop: 458, mobile: 412 },
-  { month: "June", desktop: 781, mobile: 598 },
-  { month: "July", desktop: 394, mobile: 312 },
-  { month: "August", desktop: 925, mobile: 743 },
-  { month: "September", desktop: 647, mobile: 489 },
-  { month: "October", desktop: 532, mobile: 476 },
-  { month: "November", desktop: 803, mobile: 687 },
-  { month: "December", desktop: 271, mobile: 198 },
+  { month: "January", desktop: 420, mobile: 310 },
+  { month: "February", desktop: 890, mobile: 520 },
+  { month: "March", desktop: 440, mobile: 420 },
+  { month: "April", desktop: 610, mobile: 480 },
+  { month: "May", desktop: 320, mobile: 590 },
+  { month: "June", desktop: 860, mobile: 670 },
+  { month: "July", desktop: 510, mobile: 390 },
+  { month: "August", desktop: 930, mobile: 720 },
+  { month: "September", desktop: 670, mobile: 510 },
+  { month: "October", desktop: 580, mobile: 460 },
+  { month: "November", desktop: 920, mobile: 690 },
+  { month: "December", desktop: 350, mobile: 260 },
 ];
 
 const chartConfig = {
@@ -59,14 +59,14 @@ export function AnimatedHighlightedAreaChart({ className }: ClassNameProp) {
           Highlighted Area Chart
           <Badge
             variant="outline"
-            className="ml-2 border-none bg-red-500/10 text-green-400"
+            className="ml-2 border-none bg-red-400/10 text-green-400"
           >
             <TrendingUp className="h-4 w-4" />
             <span>9.8%</span>
           </Badge>
         </CardTitle>
         <CardDescription>
-          Showing total visitors for the last 6 months
+          Traffic trends from the last 3 Quarters
         </CardDescription>
       </CardHeader>
       <CardContent>
