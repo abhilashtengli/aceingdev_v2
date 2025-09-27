@@ -89,7 +89,7 @@ const Nrega = () => {
         </div>
       </section>
       <section className="flex flex-col items-center justify-center border-red-500 py-12">
-        <h1 className="flex w-full max-w-[109rem] items-center gap-x-3 text-3xl tracking-wider text-neutral-700 font-semibold">
+        <h1 className="flex w-full max-w-[109rem] items-center gap-x-3 text-3xl font-semibold tracking-wider text-neutral-700">
           <svg
             viewBox="0 0 60 60"
             xmlns="http://www.w3.org/2000/svg"
