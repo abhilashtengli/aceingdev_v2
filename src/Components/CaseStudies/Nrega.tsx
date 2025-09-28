@@ -5,17 +5,89 @@ import adminImge from "../../assets/admin_img.webp";
 import dashboardImg from "../../assets/dashboard_img.webp";
 import materialImg from "../../assets/material2_img.webp";
 import reportImg from "../../assets/reports_img.webp";
+import { motion } from "framer-motion";
+
 const Nrega = () => {
   return (
-    <div className="h-full w-full  border-red-700">
-      <section className="relative flex h-fit w-full justify-center gap-x-32 overflow-hidden  px-12 py-8">
+    <div className="h-full w-full border-red-700">
+      <section className="relative flex h-fit w-full justify-center gap-x-32 overflow-hidden px-12 py-8">
         <div className="mt-3 flex max-w-6xl flex-col justify-center">
           <Badge className="mb-4 border-gray-600 bg-gray-800 px-3 py-1 text-lg tracking-wider text-white">
             SaaS Case Study
           </Badge>
-          <h1 className="mt-4 text-6xl font-bold tracking-wide text-neutral-800">
+          <div className="relative mt-4 w-fit bg-gradient-to-r from-red-100 via-white to-yellow-100 px-3 py-2 text-6xl font-bold tracking-wide text-neutral-800">
+            <svg
+              viewBox="0 0 357 1"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="absolute bottom-0 left-0 w-[120px]"
+            >
+              <defs>
+                <motion.linearGradient
+                  id="x-gradient-red-left-right"
+                  gradientUnits="userSpaceOnUse"
+                  x1="0%"
+                  x2="10%"
+                  y1="0%" // start at bottom
+                  y2="0%" // small offset
+                  initial={{ x1: "120%", x2: "80%" }} // bottom
+                  animate={{ x1: "2%", x2: "-40%" }} // move upward
+                  transition={{
+                    duration: 1,
+                    repeat: Infinity,
+                    ease: "linear",
+                    repeatType: "loop",
+                    repeatDelay: 0.4,
+                  }}
+                >
+                  <stop stopColor="var(--color-neutral-200)" />
+                  <stop offset="0.55" stopColor="red" />
+                  <stop offset="0.66" stopColor="red" />
+                  <stop offset="1" stopColor="var(--color-neutral-200)" />
+                </motion.linearGradient>
+              </defs>
+              <path d="M0 0.5H357" stroke="url(#x-gradient-red-left-right)" />
+            </svg>
+            <svg
+              width="357"
+              height="1"
+              viewBox="0 0 357 1"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="absolute right-0 bottom-0 w-[120px]"
+            >
+              <defs>
+                <motion.linearGradient
+                  id="x-gradient-red-right-left"
+                  gradientUnits="userSpaceOnUse"
+                  x1="0%"
+                  x2="10%"
+                  y1="0%" // start at bottom
+                  y2="0%" // small offset
+                  initial={{ x1: "-20%", x2: "10%" }} // bottom
+                  animate={{ x1: "100%", x2: "140%" }} // move upward
+                  transition={{
+                    duration: 1,
+                    repeat: Infinity,
+                    ease: "linear",
+                    repeatType: "loop",
+                    repeatDelay: 0.4,
+                  }}
+                >
+                  <stop stopColor="var(--color-neutral-200)" />
+                  <stop offset="0.55" stopColor="red" />
+                  <stop offset="0.66" stopColor="red" />
+                  <stop offset="1" stopColor="var(--color-neutral-200)" />
+                </motion.linearGradient>
+              </defs>
+              <path d="M0 0.5H357" stroke="url(#x-gradient-red-right-left)" />
+            </svg>
+            <p className="absolute -top-1 -left-0.5 h-1.5 w-1.5 rounded-full bg-green-300" />
+            <p className="absolute -top-1 -right-0.5 h-1.5 w-1.5 rounded-full bg-yellow-300" />
+            <p className="absolute -bottom-0.5 -left-0.5 h-1.5 w-1.5 rounded-full bg-red-300" />
+            <p className="absolute -right-0.5 -bottom-0.5 h-1.5 w-1.5 rounded-full bg-blue-300" />
             Nrega
-          </h1>
+          </div>
           <p className="mt-5 w-fit rounded-xl border px-2 py-3 pt-4 text-2xl font-bold tracking-wide">
             From 6 Hours of Manual Reporting → to 30 Seconds for Report
             Generation
@@ -257,6 +329,96 @@ const Nrega = () => {
           </div>
         </div>
       </section>
+      <section className="flex w-full flex-col items-center justify-center border-black py-12">
+        <h1 className="flex w-full max-w-[109rem] items-center gap-x-3 text-3xl font-semibold tracking-wider text-neutral-700">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            className="size-14 text-red-400"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M20 6h-13a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h13" />
+            <path d="M13 12a2 2 0 1 1 -4 0a2 2 0 0 1 4 0" />
+            <path d="M13 12h7" />
+          </svg>
+          Project Glimpses
+        </h1>
+        <div className="mt-12 grid w-full max-w-[112rem] grid-cols-2 place-items-center gap-5 gap-y-12 border-red-500 mask-t-from-99% mask-r-from-95% mask-b-from-98% mask-l-from-90%">
+          <div className="flex w-fit flex-col-reverse overflow-hidden rounded-xl border border-neutral-200 p-3 shadow-lg transition duration-300 hover:shadow-2xl">
+            <div className="mt-4 h-[9rem] pl-5">
+              <h1 className="mb-4 text-2xl font-semibold tracking-wider">
+                Admin Dashboard
+              </h1>
+              <ul className="max-w-2xl list-disc pl-5 text-xl leading-8 tracking-wider text-neutral-600">
+                <li>Admin can manage user roles and accessibility.</li>
+                <li>Monitor total users and their activity at a glance.</li>
+                <li>Full control over platform operations from one place.</li>
+              </ul>
+            </div>
+            <img
+              alt=""
+              src={adminImge}
+              className="h-[30rem] w-[50rem] rounded-xl transition duration-500 hover:scale-105"
+            />
+          </div>
+          <div className="flex w-fit flex-col-reverse overflow-hidden rounded-xl border border-neutral-200 p-3 shadow-lg transition duration-300 hover:shadow-2xl">
+            <div className="mt-4 h-[9rem] pl-5">
+              <h1 className="mb-4 text-2xl font-semibold tracking-wider">
+                Work Code Dashboard
+              </h1>
+              <ul className="max-w-2xl list-disc pl-5 text-xl leading-8 tracking-wider text-neutral-600">
+                <li>
+                  Enter Work Code and Financial Year to fetch project details.
+                </li>
+                <li>Automatically scrapes data from external sources.</li>
+                <li>Displays the results in a clean and structured format.</li>
+              </ul>
+            </div>
+            <img
+              alt=""
+              src={dashboardImg}
+              className="h-[30rem] w-[50rem] rounded-xl transition duration-500 hover:scale-105"
+            />
+          </div>
+          <div className="flex w-fit flex-col-reverse overflow-hidden rounded-xl border border-neutral-200 p-3 shadow-lg transition duration-300 hover:shadow-2xl">
+            <div className="mt-4 h-[9rem] pl-5">
+              <h1 className="mb-4 text-2xl font-semibold tracking-wider">
+                Vendor Management
+              </h1>
+              <ul className="max-w-2xl list-disc pl-5 text-xl leading-8 tracking-wider text-neutral-600">
+                <li>Modify scraped vendor and material data.</li>
+              </ul>
+            </div>
+            <img
+              alt=""
+              src={materialImg}
+              className="h-[30rem] w-[50rem] rounded-xl transition duration-500 hover:scale-105"
+            />
+          </div>
+          <div className="flex w-fit flex-col-reverse overflow-hidden rounded-xl border border-neutral-200 p-3 shadow-lg transition duration-300 hover:shadow-2xl">
+            <div className="mt-4 h-[9rem] pl-5">
+              <h1 className="mb-4 text-2xl font-semibold tracking-wider">
+                Reports
+              </h1>
+              <ul className="max-w-2xl list-disc pl-5 text-xl leading-8 tracking-wider text-neutral-600">
+                <li>Access reports quickly without navigating away.</li>
+              </ul>
+            </div>
+            <img
+              alt=""
+              src={reportImg}
+              className="h-[30rem] w-[50rem] rounded-xl transition duration-500 hover:scale-105"
+            />
+          </div>
+        </div>
+      </section>
       <section className="flex flex-col items-center justify-center border-red-500 py-12">
         <h1 className="flex w-full max-w-[109rem] items-center gap-x-3 text-3xl font-semibold tracking-wider text-neutral-700">
           <svg
@@ -271,7 +433,46 @@ const Nrega = () => {
           </svg>
           Challenge vs Solution{" "}
         </h1>
-        <div className="mt-8 flex w-full max-w-[109rem] justify-center">
+        <div className="relative mt-8 flex w-full max-w-[109rem] justify-center overflow-hidden border-red-600">
+          <svg
+            viewBox="0 0 1 272"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="absolute h-[41.5rem] text-red-700"
+          >
+            <defs>
+              <motion.linearGradient
+                id="red-line-top-bottom"
+                gradientUnits="userSpaceOnUse"
+                x1="0%"
+                x2="0%"
+                y1="100%" // start at bottom
+                y2="110%" // small offset
+                initial={{ y1: "210%", y2: "200%" }} // bottom
+                animate={{ y1: "-20%", y2: "0%" }} // move upward
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "linear",
+                  repeatType: "loop",
+                  repeatDelay: 0.4,
+                }}
+              >
+                <stop stopColor="var(--color-neutral-100)" />
+                <stop offset="0.55" stopColor="var(--color-green-500)" />
+                <stop offset="0.66" stopColor="var(--color-green-500)" />
+                <stop offset="1" stopColor="var(--color-neutral-100)" />
+              </motion.linearGradient>
+            </defs>
+            <line
+              x1="0.5"
+              y1="272"
+              x2="0.5"
+              stroke="url(#red-line-top-bottom)"
+              strokeWidth={0.5}
+            />
+          </svg>
+
           <div className="flex w-auto justify-center border-blue-500">
             <div className="overflow-hidden rounded-xl border-gray-800 bg-white shadow-lg">
               <div className="grid w-full grid-cols-2">
@@ -445,99 +646,6 @@ const Nrega = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-      <section className="flex w-full flex-col items-center justify-center  border-black py-12">
-        <h1 className="flex w-full max-w-[109rem] items-center gap-x-3 text-3xl font-semibold tracking-wider text-neutral-700">
-         
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            className="size-14 text-red-400"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path d="M20 6h-13a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h13" />
-            <path d="M13 12a2 2 0 1 1 -4 0a2 2 0 0 1 4 0" />
-            <path d="M13 12h7" />
-          </svg>
-          Glimpes of the project
-        </h1>
-        <div className="mt-12 grid w-full max-w-[112rem] grid-cols-2 place-items-center gap-5 gap-y-12 border-red-500">
-          <div className="flex w-fit flex-col-reverse overflow-hidden rounded-xl border border-neutral-200 p-3 shadow-lg transition duration-300 hover:shadow-2xl">
-            <div className="mt-4">
-              <h1 className="mb-4 text-2xl font-semibold tracking-wider">
-                Admin Dashboard
-              </h1>
-              <p className="max-w-xl text-xl">
-                Limited Control & Accessibility Without role-based systems,
-                there was no secure way for different users to manage their data
-                and access.
-              </p>
-            </div>
-            <img
-              alt=""
-              src={adminImge}
-              className="h-[25rem] w-[50rem] rounded-xl transition duration-500 hover:scale-105"
-            />
-          </div>
-          <div className="flex w-fit flex-col-reverse overflow-hidden rounded-xl border border-neutral-200 p-3 shadow-lg transition duration-300 hover:shadow-2xl">
-            <div className="mt-4">
-              <h1 className="mb-4 text-2xl font-semibold tracking-wider">
-                Work Code Dashboard
-              </h1>
-              <p className="max-w-xl text-xl">
-                Limited Control & Accessibility Without role-based systems,
-                there was no secure way for different users to manage their data
-                and access.
-              </p>
-            </div>
-            <img
-              alt=""
-              src={dashboardImg}
-              className="h-[25rem] w-[50rem] rounded-xl transition duration-500 hover:scale-105"
-            />
-          </div>
-          <div className="flex w-fit flex-col-reverse overflow-hidden rounded-xl border border-neutral-200 p-3 shadow-lg transition duration-300 hover:shadow-2xl">
-            <div className="mt-4">
-              <h1 className="mb-4 text-2xl font-semibold tracking-wider">
-                Vendor Management
-              </h1>
-              <p className="max-w-xl text-xl">
-                Limited Control & Accessibility Without role-based systems,
-                there was no secure way for different users to manage their data
-                and access.
-              </p>
-            </div>
-            <img
-              alt=""
-              src={materialImg}
-              className="h-[25rem] w-[50rem] rounded-xl transition duration-500 hover:scale-105"
-            />
-          </div>
-          <div className="flex w-fit flex-col-reverse overflow-hidden rounded-xl border border-neutral-200 p-3 shadow-lg transition duration-300 hover:shadow-2xl">
-            <div className="mt-4">
-              <h1 className="mb-4 text-2xl font-semibold tracking-wider">
-                Reports
-              </h1>
-              <p className="max-w-xl text-xl">
-                Limited Control & Accessibility Without role-based systems,
-                there was no secure way for different users to manage their data
-                and access.
-              </p>
-            </div>
-            <img
-              alt=""
-              src={reportImg}
-              className="h-[25rem] w-[50rem] rounded-xl transition duration-500 hover:scale-105"
-            />
           </div>
         </div>
       </section>
