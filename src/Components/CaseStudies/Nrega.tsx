@@ -352,13 +352,12 @@ const Nrega = () => {
         </h1>
         <div className="mt-12 grid w-full max-w-[112rem] grid-cols-2 place-items-center gap-5 gap-y-12 border-red-500 mask-t-from-99% mask-r-from-95% mask-b-from-98% mask-l-from-90%">
           <div className="flex w-fit flex-col-reverse overflow-hidden rounded-xl border border-neutral-200 p-3 shadow-lg transition duration-300 hover:shadow-2xl">
-            <div className="mt-4 h-[9rem] pl-5">
+            <div className="mt-4 h-[8rem] pl-5">
               <h1 className="mb-4 text-2xl font-semibold tracking-wider">
                 Admin Dashboard
               </h1>
               <ul className="max-w-2xl list-disc pl-5 text-xl leading-8 tracking-wider text-neutral-600">
                 <li>Admin can manage user roles and accessibility.</li>
-                <li>Monitor total users and their activity at a glance.</li>
                 <li>Full control over platform operations from one place.</li>
               </ul>
             </div>
@@ -369,7 +368,7 @@ const Nrega = () => {
             />
           </div>
           <div className="flex w-fit flex-col-reverse overflow-hidden rounded-xl border border-neutral-200 p-3 shadow-lg transition duration-300 hover:shadow-2xl">
-            <div className="mt-4 h-[9rem] pl-5">
+            <div className="mt-4 h-[8rem] pl-5">
               <h1 className="mb-4 text-2xl font-semibold tracking-wider">
                 Work Code Dashboard
               </h1>
@@ -377,7 +376,6 @@ const Nrega = () => {
                 <li>
                   Enter Work Code and Financial Year to fetch project details.
                 </li>
-                <li>Automatically scrapes data from external sources.</li>
                 <li>Displays the results in a clean and structured format.</li>
               </ul>
             </div>
@@ -388,7 +386,7 @@ const Nrega = () => {
             />
           </div>
           <div className="flex w-fit flex-col-reverse overflow-hidden rounded-xl border border-neutral-200 p-3 shadow-lg transition duration-300 hover:shadow-2xl">
-            <div className="mt-4 h-[9rem] pl-5">
+            <div className="mt-4 h-[8rem] pl-5">
               <h1 className="mb-4 text-2xl font-semibold tracking-wider">
                 Vendor Management
               </h1>
@@ -403,7 +401,7 @@ const Nrega = () => {
             />
           </div>
           <div className="flex w-fit flex-col-reverse overflow-hidden rounded-xl border border-neutral-200 p-3 shadow-lg transition duration-300 hover:shadow-2xl">
-            <div className="mt-4 h-[9rem] pl-5">
+            <div className="mt-4 h-[8rem] pl-5">
               <h1 className="mb-4 text-2xl font-semibold tracking-wider">
                 Reports
               </h1>
