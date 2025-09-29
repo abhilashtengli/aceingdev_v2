@@ -1,22 +1,22 @@
 import { CheckCircle, Lightbulb, Zap } from "lucide-react";
-import nregaImg from "../../assets/nrega-hero.png";
 import { Badge } from "../ui/badge";
-import adminImge from "../../assets/admin_img.webp";
-import dashboardImg from "../../assets/dashboard_img.webp";
-import materialImg from "../../assets/material2_img.webp";
 import reportImg from "../../assets/reports_img.webp";
 import { motion } from "framer-motion";
+import mpmos01 from "@/assets/mpmos_01.webp";
+import mpmosProject from "@/assets/mpmos_project.webp";
+import mpmosReport from "@/assets/mpmos_report.webp";
+import mpmosCms from "@/assets/mpmos_cms.webp";
 
-const Nrega = () => {
+const Mpmos = () => {
   return (
     <div className="flex flex-col items-center justify-center">
       <div className="h-full w-full max-w-7xl border-red-700">
         <section className="relative flex h-fit w-full justify-center gap-x-32 overflow-hidden py-8">
           <div className="mt-3 flex flex-col justify-center">
             <Badge className="mb-4 border-gray-600 bg-gray-800 px-3 py-1 text-sm tracking-wider text-white">
-              SaaS Case Study
+              Project Monitoring System
             </Badge>
-            <div className="relative mt-4 ml-1 w-fit bg-gradient-to-r from-red-100 via-white to-yellow-100 px-3 py-2 text-6xl font-bold tracking-wide text-neutral-800">
+            <div className="relative mt-4 ml-1 w-fit bg-gradient-to-r from-green-100 via-white to-purple-100 px-3 py-2 text-6xl font-bold tracking-wide text-neutral-800">
               <svg
                 viewBox="0 0 357 1"
                 fill="none"
@@ -42,8 +42,8 @@ const Nrega = () => {
                     }}
                   >
                     <stop stopColor="var(--color-neutral-200)" />
-                    <stop offset="0.55" stopColor="red" />
-                    <stop offset="0.66" stopColor="red" />
+                    <stop offset="0.55" stopColor="green" />
+                    <stop offset="0.66" stopColor="green" />
                     <stop offset="1" stopColor="var(--color-neutral-200)" />
                   </motion.linearGradient>
                 </defs>
@@ -76,8 +76,8 @@ const Nrega = () => {
                     }}
                   >
                     <stop stopColor="var(--color-neutral-200)" />
-                    <stop offset="0.55" stopColor="red" />
-                    <stop offset="0.66" stopColor="red" />
+                    <stop offset="0.55" stopColor="green" />
+                    <stop offset="0.66" stopColor="green" />
                     <stop offset="1" stopColor="var(--color-neutral-200)" />
                   </motion.linearGradient>
                 </defs>
@@ -87,17 +87,16 @@ const Nrega = () => {
               <p className="absolute -top-0.5 -right-0.5 h-1.5 w-[5px] rounded-full bg-yellow-300" />
               <p className="absolute -bottom-0.5 -left-0.5 h-1.5 w-1.5 rounded-full bg-red-300" />
               <p className="absolute -right-0.5 -bottom-0.5 h-1.5 w-1.5 rounded-full bg-blue-300" />
-              Nrega
+              Mpmos
             </div>
             <p className="text-md mt-5 w-fit rounded-xl border px-2 py-3 pt-4 font-bold tracking-wide">
-              From 6 Hours of Manual Reporting → to 30 Seconds for Report
-              Generation
+              A Single Platform for Data Collection, Monitoring, and Reports
             </p>
             <p className="text-md mt-14 max-w-4xl leading-6 tracking-wider text-neutral-700">
-              A centralized SaaS platform where contractors and vendors can
-              access structured data sourced from government portals and
-              instantly download 20+ professional reports, all under a
-              subscription-based model.
+              A centralized digital platform where project incharges and
+              administrators can access structured data for field projects and
+              instantly generate professional quarterly and annual reports with
+              automated workflows.
             </p>
             <div className="mt-8 flex">
               <div className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full border border-neutral-300 p-1 md:h-8 md:w-8">
@@ -263,6 +262,27 @@ const Nrega = () => {
                   />
                 </svg>
               </div>
+              {/* cloudflare */}
+              <div className="-ml-3 flex h-4 w-4 shrink-0 items-center justify-center rounded-full border border-neutral-300 bg-white p-2 md:h-8 md:w-8">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 128 128"
+                  className="h-4 w-4 md:h-8 md:w-8"
+                >
+                  <path
+                    fill="#FFF"
+                    d="m115.679 69.288-15.591-8.94-2.689-1.163-63.781.436v32.381h82.061z"
+                  />
+                  <path
+                    fill="#F38020"
+                    d="M87.295 89.022c.763-2.617.472-5.015-.8-6.796-1.163-1.635-3.125-2.58-5.488-2.689l-44.737-.581c-.291 0-.545-.145-.691-.363s-.182-.509-.109-.8c.145-.436.581-.763 1.054-.8l45.137-.581c5.342-.254 11.157-4.579 13.192-9.885l2.58-6.723c.109-.291.145-.581.073-.872-2.906-13.158-14.644-22.97-28.672-22.97-12.938 0-23.913 8.359-27.838 19.952a13.35 13.35 0 0 0-9.267-2.58c-6.215.618-11.193 5.597-11.811 11.811-.145 1.599-.036 3.162.327 4.615C10.104 70.051 2 78.337 2 88.549c0 .909.073 1.817.182 2.726a.895.895 0 0 0 .872.763h82.57c.472 0 .909-.327 1.054-.8l.617-2.216z"
+                  />
+                  <path
+                    fill="#FAAE40"
+                    d="M101.542 60.275c-.4 0-.836 0-1.236.036-.291 0-.545.218-.654.509l-1.744 6.069c-.763 2.617-.472 5.015.8 6.796 1.163 1.635 3.125 2.58 5.488 2.689l9.522.581c.291 0 .545.145.691.363.145.218.182.545.109.8-.145.436-.581.763-1.054.8l-9.924.582c-5.379.254-11.157 4.579-13.192 9.885l-.727 1.853c-.145.363.109.727.509.727h34.089c.4 0 .763-.254.872-.654.581-2.108.909-4.325.909-6.614 0-13.447-10.975-24.422-24.458-24.422"
+                  />
+                </svg>
+              </div>
             </div>
           </div>
           <div>
@@ -274,7 +294,7 @@ const Nrega = () => {
                   <div className="h-3 w-3 rounded-full bg-green-600"></div>
                 </div>
                 <img
-                  src={nregaImg}
+                  src={mpmos01}
                   alt="Nrega Files Dashboard"
                   className="h-full w-[45rem] overflow-hidden rounded-tl-xl rounded-tr-xl rounded-br-xs rounded-bl-xs border"
                 />
@@ -305,26 +325,25 @@ const Nrega = () => {
           </h1>
           <div className="mt-3 flex justify-center">
             <div className="max-w-[45rem] border-r border-dashed border-purple-200 pr-16 pl-1">
-              <p className="text-md leading-6 tracking-wider text-neutral-700">
-                The client required a SaaS-based reporting platform to
-                streamline how officials, contractors, and vendors access and
-                generate government compliance reports.
+              <p className="text-md max-w-7xl leading-6 tracking-wider text-neutral-700">
+                The Central Agricultural University (CAU), Imphal, in
+                collaboration with the Indian Institute of Millets Research
+                (IIMR), Hyderabad, required a centralized digital platform to
+                monitor and evaluate projects across the North-East hilly
+                region.
               </p>
             </div>
             <div className="max-w-5xl pl-16">
               <div className="text-md space-y-5 leading-6 tracking-wider text-neutral-700">
                 <p>
-                  Before this system, users had to spend hours manually
-                  collecting data, piecing together information from multiple
-                  government portals, and formatting reports themselves. This
-                  process was slow, unreliable, and often resulted in incomplete
-                  documentation.
+                  The goal was to simplify data collection, improve
+                  transparency, and replace scattered spreadsheets with a
+                  structured, real-time monitoring system.
                 </p>
                 <p>
-                  The vision was to create a centralized SaaS platform where
-                  contractors and vendors could log in, fetch structured data,
-                  and instantly download 20+ professional reports — all under a
-                  subscription-based model.
+                  Project and activity details were scattered across
+                  spreadsheets, making monitoring complex and error-prone, with
+                  manual reporting taking weeks and being prone to inaccuracies
                 </p>
               </div>
             </div>
@@ -355,16 +374,19 @@ const Nrega = () => {
             <div className="flex w-fit flex-col-reverse overflow-hidden rounded-xl border border-neutral-200 p-3 shadow-lg transition duration-300 hover:shadow-2xl">
               <div className="mt-4 pl-5">
                 <h1 className="mb-4 text-lg font-semibold tracking-wider">
-                  Admin Dashboard
+                  Project Management Dashboard
                 </h1>
                 <ul className="text-md max-w-2xl list-disc pl-5 leading-8 tracking-wider text-neutral-600">
-                  <li>Admin can manage user roles and accessibility.</li>
-                  <li>Full control over platform operations from one place.</li>
+                  <li>
+                    Unified all project details (title, budget, agency) in one
+                    place..
+                  </li>
+                  <li>Real-time tracking of project progress and outcomes.</li>
                 </ul>
               </div>
               <img
                 alt=""
-                src={adminImge}
+                src={mpmosProject}
                 className="h-[25rem] w-[40rem] rounded-xl transition duration-500 hover:scale-105"
               />
             </div>
@@ -384,22 +406,25 @@ const Nrega = () => {
               </div>
               <img
                 alt=""
-                src={dashboardImg}
+                src={mpmosReport}
                 className="h-[25rem] w-[40rem] rounded-xl transition duration-500 hover:scale-105"
               />
             </div>
             <div className="flex w-fit flex-col-reverse overflow-hidden rounded-xl border border-neutral-200 p-3 shadow-lg transition duration-300 hover:shadow-2xl">
               <div className="mt-4 pl-5">
                 <h1 className="mb-4 text-lg font-semibold tracking-wider">
-                  Vendor Management
+                  Content Management Hub
                 </h1>
                 <ul className="text-md max-w-2xl list-disc pl-5 leading-8 tracking-wider text-neutral-600">
-                  <li>Modify scraped vendor and material data.</li>
+                  <li>
+                    Publish events, publications, and galleries for stakeholder
+                    visibility.
+                  </li>
                 </ul>
               </div>
               <img
                 alt=""
-                src={materialImg}
+                src={mpmosCms}
                 className="h-[25rem] w-[40rem] rounded-xl transition duration-500 hover:scale-105"
               />
             </div>
@@ -493,7 +518,7 @@ const Nrega = () => {
               <div className="overflow-hidden rounded-xl border-gray-800 bg-white shadow-lg">
                 <div className="grid w-full grid-cols-2">
                   {/* Header */}
-                  <div className="border-r border-b border-gray-200 bg-gradient-to-b from-red-50 to-transparent p-3 py-5">
+                  <div className="border-r border-b border-gray-200 bg-gradient-to-b from-purple-50 to-transparent p-3 py-5">
                     <div className="flex items-center gap-2">
                       <Zap className="h-5 w-5 text-red-600" />
                       <h3 className="text-xl font-bold tracking-wide text-red-800">
@@ -513,28 +538,29 @@ const Nrega = () => {
                   {/* Row 1 */}
                   <div className="from-red-25 border-r border-b border-gray-200 bg-gradient-to-b to-transparent p-3">
                     <div className="flex items-start gap-2">
-                      <div className="text-lg">⏰</div>
+                      <div className="text-lg">📊</div>
                       <div>
                         <h4 className="mb-1 text-lg font-semibold tracking-wide text-gray-900">
-                          Time-Consuming Reporting
+                          Fragmented Data Management
                         </h4>
                         <p className="text-md tracking-wide text-gray-700">
-                          Contractors and vendors spent hours manually preparing
-                          reports, delaying decision-making.
+                          Project and activity details were scattered across
+                          spreadsheets, making monitoring complex and
+                          error-prone.
                         </p>
                       </div>
                     </div>
                   </div>
                   <div className="from-green-25 border-b border-gray-200 bg-gradient-to-b to-transparent p-3">
                     <div className="flex items-start gap-2">
-                      <div className="text-lg">🤖</div>
+                      <div className="text-lg">🎯</div>
                       <div>
                         <h4 className="mb-1 text-lg font-semibold tracking-wide text-gray-900">
-                          Automated Data Fetching
+                          Centralized Platform
                         </h4>
                         <p className="text-md tracking-wide text-gray-700">
-                          Integrated a robust scraping system that pulled
-                          structured data reliably.
+                          Developed a unified monitoring platform that
+                          streamlined project management and reporting
                         </p>
                       </div>
                     </div>
@@ -543,44 +569,14 @@ const Nrega = () => {
                   {/* Row 2 */}
                   <div className="from-red-25 border-r border-b border-gray-200 bg-gradient-to-b to-transparent p-3">
                     <div className="flex items-start gap-2">
-                      <div className="text-lg">📊</div>
+                      <div className="text-lg">📝</div>
                       <div>
                         <h4 className="mb-1 text-lg font-semibold tracking-wide text-gray-900">
-                          Inconsistent & Scattered Data
+                          Manual Reporting Delays
                         </h4>
                         <p className="text-md tracking-wide text-gray-700">
-                          Data across government portals was fragmented, making
-                          reports error-prone and unreliable.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="from-green-25 border-b border-gray-200 bg-gradient-to-b to-transparent p-3">
-                    <div className="flex items-start gap-2">
-                      <div className="text-lg">📄</div>
-                      <div>
-                        <h4 className="mb-1 text-lg font-semibold tracking-wide text-gray-900">
-                          Dynamic PDF Reports
-                        </h4>
-                        <p className="text-md tracking-wide text-gray-700">
-                          Built a modular engine to generate 20+ professional
-                          reports in seconds.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Row 3 */}
-                  <div className="from-red-25 border-r border-b border-gray-200 bg-gradient-to-b to-transparent p-3">
-                    <div className="flex items-start gap-2">
-                      <div className="text-lg">🔗</div>
-                      <div>
-                        <h4 className="mb-1 text-lg font-semibold tracking-wide text-gray-900">
-                          No Centralized Access
-                        </h4>
-                        <p className="text-md tracking-wide text-gray-700">
-                          Users had to juggle multiple portals and formats
-                          instead of having a single reporting hub.
+                          Preparing quarterly and annual reports took weeks and
+                          was prone to inaccuracies.
                         </p>
                       </div>
                     </div>
@@ -590,72 +586,71 @@ const Nrega = () => {
                       <div className="text-lg">⚡</div>
                       <div>
                         <h4 className="mb-1 text-lg font-semibold tracking-wide text-gray-900">
-                          One-Click Access
+                          Automated Reporting
                         </h4>
                         <p className="text-md tracking-wide text-gray-700">
-                          Users could instantly download individual reports or
-                          generate a combined PDF with all reports merged.
+                          One-click generation of standardized reports in Docx
+                          format, reducing time from weeks to minutes.
                         </p>
                       </div>
                     </div>
                   </div>
 
-                  {/* Row 4 */}
+                  {/* Row 3 */}
                   <div className="from-red-25 border-r border-b border-gray-200 bg-gradient-to-b to-transparent p-3">
                     <div className="flex items-start gap-2">
-                      <div className="text-lg">🔒</div>
+                      <div className="text-lg">🔄</div>
                       <div>
                         <h4 className="mb-1 text-lg font-semibold tracking-wide text-gray-900">
-                          Limited Control & Accessibility
+                          Inconsistent Activity Tracking
                         </h4>
                         <p className="text-md tracking-wide text-gray-700">
-                          Without role-based systems, there was no secure way
-                          for different users to manage their data and access.
+                          Each activity type required different tracking
+                          methods, leading to inconsistency.
                         </p>
                       </div>
                     </div>
                   </div>
                   <div className="from-green-25 border-b border-gray-200 bg-gradient-to-b to-transparent p-3">
                     <div className="flex items-start gap-2">
-                      <div className="text-lg">👥</div>
+                      <div className="text-lg">📋</div>
                       <div>
                         <h4 className="mb-1 text-lg font-semibold tracking-wide text-gray-900">
-                          Role-Based Dashboards
+                          Dedicated Activity Modules
                         </h4>
                         <p className="text-md tracking-wide text-gray-700">
-                          Implemented RBAC (user, admin, super-admin) to ensure
-                          secure, permission-based access.
+                          Created specialized dashboards for training,
+                          awareness, infrastructure, and input distribution.
                         </p>
                       </div>
                     </div>
                   </div>
 
-                  {/* Row 5 */}
-                  <div className="from-red-25 border-r border-gray-200 bg-gradient-to-b to-transparent p-3">
+                  {/* Row 4 */}
+                  <div className="from-red-25 border-r bg-gradient-to-b to-transparent p-3">
                     <div className="flex items-start gap-2">
-                      <div className="text-lg">📈</div>
+                      <div className="text-lg">🔒</div>
                       <div>
                         <h4 className="mb-1 text-lg font-semibold tracking-wide text-gray-900">
-                          Scaling Problems
+                          Access & Security Issues
                         </h4>
                         <p className="text-md tracking-wide text-gray-700">
-                          As reporting demands grew, manual processes could not
-                          keep pace with the workload.
+                          Sensitive project and financial data needed controlled
+                          access between different user roles.
                         </p>
                       </div>
                     </div>
                   </div>
                   <div className="from-green-25 bg-gradient-to-b to-transparent p-3">
                     <div className="flex items-start gap-2">
-                      <div className="text-lg">🚀</div>
+                      <div className="text-lg">👥</div>
                       <div>
                         <h4 className="mb-1 text-lg font-semibold tracking-wide text-gray-900">
-                          Seamless Onboarding & Optimized Performance
+                          Role-Based Access Control
                         </h4>
                         <p className="text-md tracking-wide text-gray-700">
-                          Added subscription-based login, email verification,
-                          OTP reset, and admin approval flows. Enabled fast
-                          batch processing.
+                          Implemented RBAC ensuring admins generated reports
+                          while project incharges managed their respective data.
                         </p>
                       </div>
                     </div>
@@ -699,16 +694,16 @@ const Nrega = () => {
                 <path d="M3 17l6 -6l4 4l8 -8" />
                 <path d="M14 7l7 0l0 7" />
               </svg>
-              Business Impact
+              Impact
             </h1>
             <div className="w-full pl-8">
               <ul className="text-md mt-5 max-w-xl font-medium tracking-wide text-neutral-600">
                 {[
-                  "Reduced report preparation time from hours to minutes.",
-                  "Provided contractors and vendors with one centralized hub for all reporting needs.",
-                  "Enabled subscription-based monetization, creating a new revenue stream for the client.",
-                  "Improved accuracy and consistency of reports with automated data workflows.",
-                  "Delivered an enterprise-ready SaaS product that scales with growing demand.",
+                  "Centralized monitoring replaced scattered spreadsheets.",
+                  "Report preparation time reduced from weeks to minutes.",
+                  "Improved accuracy and transparency in impact reporting.",
+                  "Enabled real-time tracking of project progress and outcomes.",
+                  "Established a scalable foundation for future project expansion.",
                 ].map((text, idx) => (
                   <li key={idx} className="flex items-start gap-2 leading-7">
                     <div className="flex h-5 w-5 items-center justify-center">
@@ -743,15 +738,13 @@ const Nrega = () => {
             </h1>
             <div className="flex items-center justify-center">
               <p className="mt-4 max-w-xl pl-5 leading-7 font-medium tracking-wide text-neutral-600">
-                The Nrega platform transformed government reporting for
-                contractors and govt officials by providing a centralized,
-                automated, and subscription driven solution. Through automated
-                data fetching, dynamic report generation, and secure dashboards,
-                the system eliminated hours of manual effort and reduced errors,
-                while enabling the client to scale and monetize their services.
-                The outcome is a future ready SaaS product that turns reporting
-                into a matter of minutes reliable, efficient, and built for
-                growth.
+                The Project Monitoring System transformed program oversight by
+                introducing a centralized, real-time platform for data
+                management and reporting. With intuitive dashboards, automated
+                workflows, and secure role-based access, it replaced manual
+                processes with speed and accuracy. The result is a future-ready
+                digital solution that empowers institutions to track, evaluate,
+                and scale their initiatives with confidence.
               </p>
             </div>
           </section>
@@ -761,4 +754,4 @@ const Nrega = () => {
   );
 };
 
-export default Nrega;
+export default Mpmos;
