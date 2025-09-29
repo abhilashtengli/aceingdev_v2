@@ -351,7 +351,7 @@ const Nrega = () => {
             </svg>
             Project Glimpses
           </h1>
-          <div className="mt-12 grid w-full grid-cols-2 place-items-center gap-5 gap-y-12 border-red-500 ">
+          <div className="mt-12 grid w-full grid-cols-2 place-items-center gap-5 gap-y-12 border-red-500">
             <div className="flex w-fit flex-col-reverse overflow-hidden rounded-xl border border-neutral-200 p-3 shadow-lg transition duration-300 hover:shadow-2xl">
               <div className="mt-4 pl-5">
                 <h1 className="mb-4 text-lg font-semibold tracking-wider">
@@ -420,7 +420,22 @@ const Nrega = () => {
             </div>
           </div>
         </section>
-        <section className="flex flex-col items-center justify-center border-red-500 py-12">
+        <section className="relative flex flex-col items-center justify-center border-red-500 py-12">
+          <div
+            className="absolute -top-px left-[calc(var(--offset)/2*-1)] z-30 h-[var(--height)] w-[calc(100%+var(--offset))] bg-[linear-gradient(to_right,var(--color),var(--color)_50%,transparent_0,transparent)] [background-size:var(--width)_var(--height)] [mask-composite:exclude] [mask:linear-gradient(to_left,var(--background)_var(--fade-stop),transparent),_linear-gradient(to_right,var(--background)_var(--fade-stop),transparent),_linear-gradient(black,black)] dark:bg-[linear-gradient(to_right,var(--color-dark),var(--color-dark)_50%,transparent_0,transparent)]"
+            style={
+              {
+                "--background": "#ffffff",
+                "--color": "rgba(0, 0, 0, 0.2)",
+                "--height": "1px",
+                "--width": "5px",
+                "--fade-stop": "90%",
+                "--offset": "200px",
+                "--color-dark": "rgba(255, 255, 255, 0.5)",
+                maskComposite: "exclude",
+              } as React.CSSProperties
+            }
+          />
           <h1 className="flex w-full items-center gap-x-3 text-2xl font-semibold tracking-wider text-neutral-700">
             <svg
               viewBox="0 0 60 60"
@@ -650,7 +665,22 @@ const Nrega = () => {
             </div>
           </div>
         </section>
-        <div className="grid grid-cols-2">
+        <div className="relative grid grid-cols-2">
+          <div
+            className="absolute -top-px left-[calc(var(--offset)/2*-1)] z-30 h-[var(--height)] w-[calc(100%+var(--offset))] bg-[linear-gradient(to_right,var(--color),var(--color)_50%,transparent_0,transparent)] [background-size:var(--width)_var(--height)] [mask-composite:exclude] [mask:linear-gradient(to_left,var(--background)_var(--fade-stop),transparent),_linear-gradient(to_right,var(--background)_var(--fade-stop),transparent),_linear-gradient(black,black)] dark:bg-[linear-gradient(to_right,var(--color-dark),var(--color-dark)_50%,transparent_0,transparent)]"
+            style={
+              {
+                "--background": "#ffffff",
+                "--color": "rgba(0, 0, 0, 0.2)",
+                "--height": "1px",
+                "--width": "5px",
+                "--fade-stop": "90%",
+                "--offset": "200px",
+                "--color-dark": "rgba(255, 255, 255, 0.5)",
+                maskComposite: "exclude",
+              } as React.CSSProperties
+            }
+          />
           <section className="border-red-600 py-12">
             <h1 className="flex w-full items-center gap-x-3 text-2xl font-semibold tracking-wider text-neutral-700">
               <svg
@@ -713,7 +743,7 @@ const Nrega = () => {
             </h1>
             <div className="flex items-center justify-center">
               <p className="mt-4 max-w-xl pl-5 leading-7 font-medium tracking-wide text-neutral-600">
-                The Nrega Files SaaS platform transformed government reporting
+                The Nrega platform transformed government reporting
                 for contractors and govt officials by providing a centralized,
                 automated, and subscription driven solution. Through automated
                 data fetching, dynamic report generation, and secure dashboards,
