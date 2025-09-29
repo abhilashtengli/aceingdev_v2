@@ -58,7 +58,7 @@ export function DevStatusCard({ className }: { className?: string }) {
       case "review":
         return (
           <svg
-            className="h-4 w-4"
+            className="h-3 w-3"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -80,7 +80,7 @@ export function DevStatusCard({ className }: { className?: string }) {
       case "merged":
         return (
           <svg
-            className="h-4 w-4"
+            className="h-3 w-3"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -96,7 +96,7 @@ export function DevStatusCard({ className }: { className?: string }) {
       case "building":
         return (
           <svg
-            className="h-4 w-4"
+            className="h-3 w-3"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -123,15 +123,15 @@ export function DevStatusCard({ className }: { className?: string }) {
   return (
     <Card
       className={cn(
-        "bg-background/80 h-fit w-full max-w-md border-0 shadow-lg backdrop-blur-sm",
+        "bg-background/80 h-fit w-full max-w-xs border-0 shadow-lg backdrop-blur-sm",
         className,
       )}
     >
-      <CardHeader className="flex-shrink-0 space-y-2 text-center">
-        <div className="mb-2 flex items-center justify-center">
-          <div className="bg-primary/10 rounded-full p-2">
+      <CardHeader className="flex-shrink-0 space-y-1 text-center">
+        <div className="mb-1 flex items-center justify-center">
+          <div className="bg-primary/10 rounded-full p-1.5">
             <svg
-              className="text-primary h-6 w-6"
+              className="text-primary h-4 w-4"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -145,25 +145,25 @@ export function DevStatusCard({ className }: { className?: string }) {
             </svg>
           </div>
         </div>
-        <CardTitle className="text-2xl font-bold">Code Review</CardTitle>
-        <CardDescription>
+        <CardTitle className="text-base font-bold">Code Review</CardTitle>
+        <CardDescription className="text-xs">
           Track your development progress and code reviews
         </CardDescription>
       </CardHeader>
 
-      <CardContent className="flex-1 space-y-6 overflow-y-auto">
+      <CardContent className="pb- flex-1 space-y-2 overflow-y-auto px-4">
         {/* Repository Selector */}
-        <div className="space-y-2">
-          <label className="text-muted-foreground text-sm font-medium">
+        <div className="space-y-1">
+          <label className="text-muted-foreground text-xs font-medium">
             Repository
           </label>
-          <div className="bg-muted flex rounded-lg p-1">
+          <div className="bg-muted flex rounded-lg p-0.5">
             {repos.map((repo) => (
               <button
                 key={repo.id}
                 type="button"
                 onClick={() => setSelectedRepo(repo.id)}
-                className={`flex-1 rounded-md px-3 py-2 text-sm font-medium transition-all ${
+                className={`flex-1 rounded-md px-2 py-1.5 text-xs font-medium transition-all ${
                   selectedRepo === repo.id
                     ? "bg-background text-foreground shadow-sm"
                     : "text-muted-foreground hover:text-foreground"
@@ -176,11 +176,11 @@ export function DevStatusCard({ className }: { className?: string }) {
         </div>
 
         {/* Current Branch Info */}
-        <div className="space-y-4">
-          <div className="bg-muted/50 flex items-center justify-between rounded-lg p-3">
-            <div className="flex items-center space-x-3">
+        <div className="space-y-3">
+          <div className="bg-muted/50 flex items-center justify-between rounded-lg p-2">
+            <div className="flex items-center space-x-2">
               <svg
-                className="text-muted-foreground h-5 w-5"
+                className="text-muted-foreground h-4 w-4"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -193,14 +193,14 @@ export function DevStatusCard({ className }: { className?: string }) {
                 />
               </svg>
               <div>
-                <p className="text-sm font-medium">{currentRepo.branch}</p>
+                <p className="text-xs font-medium">{currentRepo.branch}</p>
                 <p className="text-muted-foreground text-xs">
                   {currentRepo.commits} commits
                 </p>
               </div>
             </div>
             <div
-              className={`flex items-center space-x-1 rounded-full border px-2 py-1 text-xs font-medium ${getStatusColor(currentRepo.status)}`}
+              className={`flex items-center space-x-1 rounded-full border px-1.5 py-0.5 text-xs font-medium ${getStatusColor(currentRepo.status)}`}
             >
               {getStatusIcon(currentRepo.status)}
               <span className="capitalize">{currentRepo.status}</span>
@@ -208,26 +208,26 @@ export function DevStatusCard({ className }: { className?: string }) {
           </div>
 
           {/* Quick Stats */}
-          <div className="grid grid-cols-3 gap-3">
-            <div className="bg-muted/30 rounded-lg p-3 text-center">
-              <div className="text-lg font-bold text-green-600">+247</div>
-              <div className="text-muted-foreground text-xs">Lines Added</div>
+          <div className="grid grid-cols-3 gap-2">
+            <div className="bg-muted/30 rounded-lg p-2 text-center">
+              <div className="text-xs font-bold text-green-600">+247</div>
+              <div className="text-muted-foreground text-xs">Added</div>
             </div>
-            <div className="bg-muted/30 rounded-lg p-3 text-center">
-              <div className="text-lg font-bold text-red-600">-89</div>
-              <div className="text-muted-foreground text-xs">Lines Removed</div>
+            <div className="bg-muted/30 rounded-lg p-2 text-center">
+              <div className="text-xs font-bold text-red-600">-89</div>
+              <div className="text-muted-foreground text-xs">Removed</div>
             </div>
-            <div className="bg-muted/30 rounded-lg p-3 text-center">
-              <div className="text-lg font-bold text-blue-600">12</div>
-              <div className="text-muted-foreground text-xs">Files Changed</div>
+            <div className="bg-muted/30 rounded-lg p-2 text-center">
+              <div className="text-xs font-bold text-blue-600">12</div>
+              <div className="text-muted-foreground text-xs">Files</div>
             </div>
           </div>
 
           {/* Action Buttons */}
-          <div className="space-y-2">
-            <Button className="w-full">
+          <div className="space-y-1.5">
+            <Button className="w-full py-1.5 text-xs">
               <svg
-                className="mr-2 h-4 w-4"
+                className="mr-1.5 h-3 w-3"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -247,10 +247,14 @@ export function DevStatusCard({ className }: { className?: string }) {
               </svg>
               View Pull Request
             </Button>
-            <div className="grid grid-cols-2 gap-2">
-              <Button variant="outline" size="sm">
+            <div className="mt-3 grid grid-cols-2 gap-1.5">
+              <Button
+                variant="outline"
+                size="sm"
+                className="bg-transparent py-1 text-xs"
+              >
                 <svg
-                  className="mr-1 h-4 w-4"
+                  className="mr-1 h-3 w-3"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -264,9 +268,13 @@ export function DevStatusCard({ className }: { className?: string }) {
                 </svg>
                 Diff
               </Button>
-              <Button variant="outline" size="sm">
+              <Button
+                variant="outline"
+                size="sm"
+                className="bg-transparent py-1 text-xs"
+              >
                 <svg
-                  className="mr-1 h-4 w-4"
+                  className="mr-1 h-3 w-3"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"

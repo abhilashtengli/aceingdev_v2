@@ -1,9 +1,13 @@
+"use client";
+
+import type React from "react";
+
 import { useState } from "react";
 import { Card } from "@/Components/ui/card";
 import { Input } from "@/Components/ui/input";
 import { Bot, Send, User } from "lucide-react";
 import { cn, type ClassNameProp } from "@/lib/utils";
-import { Button } from "../ui/button";
+import { Button } from "@/Components/ui/button";
 
 interface Message {
   id: string;
@@ -73,28 +77,28 @@ export function AiChatWidget({ className }: ClassNameProp) {
   return (
     <Card
       className={cn(
-        "bg-card mx-auto w-full max-w-sm border-0 shadow-lg",
+        "bg-card mx-auto w-full max-w-xs border-0 shadow-lg",
         className,
       )}
     >
       {/* Header */}
-      <div className="border-border flex items-center gap-3 rounded-t-lg border-b bg-gradient-to-r from-blue-50 to-purple-50 p-4 dark:from-blue-950/20 dark:to-purple-950/20">
-        <div className="flex h-8 w-8 items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900/30">
-          <Bot className="h-4 w-4 text-blue-600 dark:text-blue-400" />
+      <div className="border-border flex items-center gap-2 rounded-t-lg border-b bg-gradient-to-r from-blue-50 to-purple-50 p-3 dark:from-blue-950/20 dark:to-purple-950/20">
+        <div className="flex h-6 w-6 items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900/30">
+          <Bot className="h-3 w-3 text-blue-600 dark:text-blue-400" />
         </div>
-        <h3 className="text-foreground font-semibold">AI Assistant</h3>
+        <h3 className="text-foreground text-sm font-semibold">AI Assistant</h3>
         <div className="ml-auto">
-          <div className="h-2 w-2 animate-pulse rounded-full bg-green-500" />
+          <div className="h-1.5 w-1.5 animate-pulse rounded-full bg-green-500" />
         </div>
       </div>
 
       {/* Chat Area */}
-      <div className="bg-muted/20 h-80 space-y-4 overflow-y-auto p-4">
+      <div className="bg-muted/20 h-56 space-y-3 overflow-y-auto p-3">
         {messages.map((message) => (
           <div
             key={message.id}
             className={cn(
-              "flex max-w-[85%] gap-2",
+              "flex max-w-[85%] gap-1.5",
               message.sender === "user"
                 ? "ml-auto flex-row-reverse"
                 : "mr-auto",
@@ -102,21 +106,21 @@ export function AiChatWidget({ className }: ClassNameProp) {
           >
             <div
               className={cn(
-                "mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full",
+                "mt-1 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full",
                 message.sender === "user"
                   ? "bg-blue-600 text-white"
                   : "bg-purple-100 dark:bg-purple-900/30",
               )}
             >
               {message.sender === "user" ? (
-                <User className="h-3 w-3" />
+                <User className="h-2.5 w-2.5" />
               ) : (
-                <Bot className="h-3 w-3 text-purple-600 dark:text-purple-400" />
+                <Bot className="h-2.5 w-2.5 text-purple-600 dark:text-purple-400" />
               )}
             </div>
             <div
               className={cn(
-                "rounded-xl px-3 py-2 text-sm leading-relaxed",
+                "rounded-xl px-2.5 py-1.5 text-xs leading-relaxed",
                 message.sender === "user"
                   ? "rounded-br-sm bg-blue-600 text-white"
                   : "dark:bg-card border-border text-foreground rounded-bl-sm border bg-white",
@@ -129,22 +133,22 @@ export function AiChatWidget({ className }: ClassNameProp) {
       </div>
 
       {/* Input Area */}
-      <div className="border-border bg-background border-t p-4">
-        <div className="flex gap-2">
+      <div className="border-border bg-background border-t p-3">
+        <div className="flex gap-1.5">
           <Input
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
             onKeyPress={handleKeyPress}
             placeholder="Ask me anything..."
-            className="border-border flex-1 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20"
+            className="border-border flex-1 rounded-xl text-xs focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20"
           />
           <Button
             onClick={handleSendMessage}
             size="sm"
-            className="rounded-xl bg-blue-600 px-3 text-white hover:bg-blue-700"
+            className="rounded-xl bg-blue-600 px-2.5 text-white hover:bg-blue-700"
             disabled={!inputValue.trim()}
           >
-            <Send className="h-4 w-4" />
+            <Send className="h-3 w-3" />
           </Button>
         </div>
       </div>

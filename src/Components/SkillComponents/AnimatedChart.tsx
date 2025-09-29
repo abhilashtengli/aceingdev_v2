@@ -53,24 +53,24 @@ export function AnimatedHighlightedAreaChart({ className }: ClassNameProp) {
   const [xAxis, setXAxis] = React.useState<number | null>(null);
 
   return (
-    <Card className={cn("bg-white", className)}>
-      <CardHeader>
-        <CardTitle className="text-neutral-700">
+    <Card className={cn("max-w-xs bg-white", className)}>
+      <CardHeader className="pb-3">
+        <CardTitle className="text-sm text-neutral-700">
           Highlighted Area Chart
           <Badge
             variant="outline"
-            className="ml-2 border-none bg-red-400/10 text-green-400"
+            className="ml-2 border-none bg-red-400/10 text-xs text-green-400"
           >
-            <TrendingUp className="h-4 w-4" />
+            <TrendingUp className="h-3 w-3" />
             <span>9.8%</span>
           </Badge>
         </CardTitle>
-        <CardDescription>
+        <CardDescription className="text-xs">
           Traffic trends from the last 3 Quarters
         </CardDescription>
       </CardHeader>
-      <CardContent>
-        <ChartContainer config={chartConfig}>
+      <CardContent className="pt-0 pb-4">
+        <ChartContainer config={chartConfig} className="h-32">
           <AreaChart
             accessibilityLayer
             data={chartData}

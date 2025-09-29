@@ -1,3 +1,7 @@
+"use client";
+
+import type React from "react";
+
 import { useState } from "react";
 
 import {
@@ -54,15 +58,15 @@ export function AuthSignupContainer({ className }: { className?: string }) {
   return (
     <Card
       className={cn(
-        "bg-background/80 border shadow-lg backdrop-blur-sm",
+        "bg-background/80 max-w-xs border shadow-lg backdrop-blur-sm",
         className,
       )}
     >
-      <CardHeader className="flex-shrink-0 space-y-2 text-center">
-        <div className="mb-2 flex items-center justify-center">
-          <div className="bg-primary/10 rounded-full p-2">
+      <CardHeader className="flex-shrink-0 space-y-0.5 p-2 text-center">
+        <div className="flex items-center justify-center">
+          <div className="bg-primary/10 rounded-full p-1.5">
             <svg
-              className="text-primary h-6 w-6"
+              className="text-primary h-4 w-4"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -77,24 +81,27 @@ export function AuthSignupContainer({ className }: { className?: string }) {
             </svg>
           </div>
         </div>
-        <CardTitle className="text-2xl font-bold">
+        <CardTitle className="text-lg font-bold">
           {isSignUp ? "Sign Up" : "Sign In"}
         </CardTitle>
-        <CardDescription>
+        <CardDescription className="text-xs">
           {isSignUp
             ? "Create your account to get started"
             : "Welcome back! Please sign in to your account"}
         </CardDescription>
       </CardHeader>
-      {/* Social Auth Buttons */}
-      <div className="grid grid-cols-2 gap-3 px-5">
+      <div className="grid grid-cols-2 gap-2 px-2 pb-2">
         <Button
           type="button"
           variant="outline"
           onClick={() => handleSocialAuth("Google")}
-          className="w-full"
+          className="w-full py-1 text-xs"
         >
-          <svg className="mr-2 h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+          <svg
+            className="mr-1.5 h-3 w-3"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
             <path
               d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
               fill="#4285F4"
@@ -118,23 +125,27 @@ export function AuthSignupContainer({ className }: { className?: string }) {
           type="button"
           variant="outline"
           onClick={() => handleSocialAuth("GitHub")}
-          className="w-full"
+          className="w-full py-1 text-xs"
         >
-          <svg className="mr-2 h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+          <svg
+            className="mr-1.5 h-3 w-3"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
             <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
           </svg>
           GitHub
         </Button>
       </div>
 
-      <CardContent className="flex-1 space-y-6 overflow-y-auto">
+      <CardContent className="flex-1 space-y-2 overflow-y-auto p-2">
         {/* Toggle Sign In / Sign Up */}
         <div className="flex items-center justify-center">
-          <div className="bg-muted flex rounded-lg p-1">
+          <div className="bg-muted flex rounded-lg p-0.5">
             <button
               type="button"
               onClick={() => setIsSignUp(false)}
-              className={`rounded-md px-4 py-2 text-sm font-medium transition-all ${
+              className={`rounded-md px-3 py-1.5 text-xs font-medium transition-all ${
                 !isSignUp
                   ? "bg-background text-foreground shadow-sm"
                   : "text-muted-foreground hover:text-foreground"
@@ -145,7 +156,7 @@ export function AuthSignupContainer({ className }: { className?: string }) {
             <button
               type="button"
               onClick={() => setIsSignUp(true)}
-              className={`rounded-md px-4 py-2 text-sm font-medium transition-all ${
+              className={`rounded-md px-3 py-1.5 text-xs font-medium transition-all ${
                 isSignUp
                   ? "bg-background text-foreground shadow-sm"
                   : "text-muted-foreground hover:text-foreground"
@@ -156,13 +167,13 @@ export function AuthSignupContainer({ className }: { className?: string }) {
           </div>
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-2">
           {/* Email Input */}
-          <div className="space-y-2">
+          <div className="space-y-0.5">
             <div className="relative">
-              <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+              <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-2.5">
                 <svg
-                  className="text-muted-foreground h-5 w-5"
+                  className="text-muted-foreground h-4 w-4"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -180,7 +191,7 @@ export function AuthSignupContainer({ className }: { className?: string }) {
                 placeholder="Enter your email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className={`pl-10 transition-all ${
+                className={`pl-8 text-xs transition-all ${
                   errors.email
                     ? "border-destructive focus-visible:ring-destructive"
                     : ""
@@ -188,16 +199,16 @@ export function AuthSignupContainer({ className }: { className?: string }) {
               />
             </div>
             {errors.email && (
-              <p className="text-destructive text-sm">{errors.email}</p>
+              <p className="text-destructive text-xs">{errors.email}</p>
             )}
           </div>
 
           {/* Password Input */}
-          <div className="space-y-2">
+          <div className="space-y-0.5">
             <div className="relative">
-              <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+              <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-2.5">
                 <svg
-                  className="text-muted-foreground h-5 w-5"
+                  className="text-muted-foreground h-4 w-4"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -215,7 +226,7 @@ export function AuthSignupContainer({ className }: { className?: string }) {
                 placeholder="Enter your password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className={`pl-10 transition-all ${
+                className={`pl-8 text-xs transition-all ${
                   errors.password
                     ? "border-destructive focus-visible:ring-destructive"
                     : ""
@@ -223,12 +234,12 @@ export function AuthSignupContainer({ className }: { className?: string }) {
               />
             </div>
             {errors.password && (
-              <p className="text-destructive text-sm">{errors.password}</p>
+              <p className="text-destructive text-xs">{errors.password}</p>
             )}
           </div>
 
           {/* Primary Action Button */}
-          <Button type="submit" className="w-full">
+          <Button type="submit" className="w-full py-1.5 text-xs">
             {isSignUp ? "Create Account" : "Sign In"}
           </Button>
         </form>

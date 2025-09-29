@@ -1,3 +1,7 @@
+"use client";
+
+import type React from "react";
+
 import { useState, useRef, useCallback } from "react";
 import { Button } from "../ui/button";
 import { cn, type ClassNameProp } from "@/lib/utils";
@@ -5,7 +9,7 @@ import { cn, type ClassNameProp } from "@/lib/utils";
 // Tabler Icons as SVG components
 const UploadIcon = () => (
   <svg
-    className="h-5 w-5"
+    className="h-4 w-4"
     fill="none"
     stroke="currentColor"
     viewBox="0 0 24 24"
@@ -21,7 +25,7 @@ const UploadIcon = () => (
 
 const CloudUploadIcon = () => (
   <svg
-    className="text-muted-foreground h-12 w-12"
+    className="text-muted-foreground h-8 w-8"
     fill="none"
     stroke="currentColor"
     viewBox="0 0 24 24"
@@ -37,7 +41,7 @@ const CloudUploadIcon = () => (
 
 const FileIcon = () => (
   <svg
-    className="h-5 w-5 text-blue-500"
+    className="h-4 w-4 text-blue-500"
     fill="none"
     stroke="currentColor"
     viewBox="0 0 24 24"
@@ -53,7 +57,7 @@ const FileIcon = () => (
 
 const XIcon = () => (
   <svg
-    className="h-4 w-4"
+    className="h-3 w-3"
     fill="none"
     stroke="currentColor"
     viewBox="0 0 24 24"
@@ -69,7 +73,7 @@ const XIcon = () => (
 
 const EyeIcon = () => (
   <svg
-    className="h-4 w-4"
+    className="h-3 w-3"
     fill="none"
     stroke="currentColor"
     viewBox="0 0 24 24"
@@ -192,19 +196,19 @@ export function FileUploadManager({ className }: ClassNameProp) {
   return (
     <div
       className={cn(
-        "mx-auto w-full max-w-2xl rounded-xl border border-slate-200 bg-white p-8 shadow-lg dark:border-slate-700 dark:bg-slate-900",
+        "mx-auto w-full max-w-lg rounded-xl border border-slate-200 bg-white p-4 shadow-lg dark:border-slate-700 dark:bg-slate-900",
         className,
       )}
     >
       {/* Header */}
-      <div className="mb-8 flex items-center gap-3">
+      <div className="mb-4 flex items-center gap-2">
         <UploadIcon />
-        <h2 className="text-foreground text-2xl font-bold">Upload Files</h2>
+        <h2 className="text-foreground text-lg font-bold">Upload Files</h2>
       </div>
 
       {/* Upload Area */}
       <div
-        className={`relative cursor-pointer rounded-xl border-2 border-dashed p-12 text-center transition-all duration-200 ${
+        className={`relative cursor-pointer rounded-xl border-2 border-dashed p-6 text-center transition-all duration-200 ${
           isDragOver
             ? "border-blue-500 bg-blue-50 dark:bg-blue-950/20"
             : "border-slate-300 hover:border-blue-400 hover:bg-slate-50 dark:border-slate-600 dark:hover:bg-slate-800/50"
@@ -222,13 +226,13 @@ export function FileUploadManager({ className }: ClassNameProp) {
           onChange={handleFileInput}
         />
 
-        <div className="flex flex-col items-center gap-4">
+        <div className="flex flex-col items-center gap-3">
           <CloudUploadIcon />
           <div>
-            <p className="text-foreground mb-1 text-lg font-medium">
+            <p className="text-foreground mb-1 text-base font-medium">
               Drag & drop files here or click to browse
             </p>
-            <p className="text-muted-foreground text-sm">
+            <p className="text-muted-foreground text-xs">
               Support for multiple file types
             </p>
           </div>
@@ -237,31 +241,31 @@ export function FileUploadManager({ className }: ClassNameProp) {
 
       {/* File List */}
       {files.length > 0 && (
-        <div className="mt-8 space-y-3">
-          <h3 className="text-foreground mb-4 text-lg font-semibold">
+        <div className="mt-4 space-y-2">
+          <h3 className="text-foreground mb-3 text-base font-semibold">
             Uploaded Files
           </h3>
           {files.map((file) => (
             <div
               key={file.id}
-              className="flex items-center gap-4 rounded-lg border border-slate-200 bg-slate-50 p-4 dark:border-slate-700 dark:bg-slate-800"
+              className="flex items-center gap-3 rounded-lg border border-slate-200 bg-slate-50 p-3 dark:border-slate-700 dark:bg-slate-800"
             >
               <FileIcon />
 
               <div className="min-w-0 flex-1">
-                <div className="mb-2 flex items-center justify-between">
-                  <p className="text-foreground truncate text-sm font-medium">
+                <div className="mb-1 flex items-center justify-between">
+                  <p className="text-foreground truncate text-xs font-medium">
                     {file.name}
                   </p>
-                  <span className="text-muted-foreground ml-2 text-xs">
+                  <span className="text-muted-foreground ml-1 text-xs">
                     {formatFileSize(file.size)}
                   </span>
                 </div>
 
                 {file.status === "uploading" && (
-                  <div className="h-2 w-full rounded-full bg-slate-200 dark:bg-slate-700">
+                  <div className="h-1.5 w-full rounded-full bg-slate-200 dark:bg-slate-700">
                     <div
-                      className="h-2 rounded-full bg-blue-500 transition-all duration-300"
+                      className="h-1.5 rounded-full bg-blue-500 transition-all duration-300"
                       style={{ width: `${file.progress}%` }}
                     />
                   </div>
@@ -269,8 +273,8 @@ export function FileUploadManager({ className }: ClassNameProp) {
 
                 {file.status === "completed" && (
                   <div className="flex items-center gap-2">
-                    <div className="h-2 w-full rounded-full bg-green-100 dark:bg-green-900/30">
-                      <div className="h-2 w-full rounded-full bg-green-500" />
+                    <div className="h-1.5 w-full rounded-full bg-green-100 dark:bg-green-900/30">
+                      <div className="h-1.5 w-full rounded-full bg-green-500" />
                     </div>
                     <span className="text-xs font-medium text-green-600 dark:text-green-400">
                       Complete
@@ -279,12 +283,12 @@ export function FileUploadManager({ className }: ClassNameProp) {
                 )}
               </div>
 
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-1">
                 <Button
                   variant="ghost"
                   size="sm"
                   onClick={() => previewFile(file.name)}
-                  className="h-8 w-8 p-0 hover:bg-blue-100 dark:hover:bg-blue-900/30"
+                  className="h-6 w-6 p-0 hover:bg-blue-100 dark:hover:bg-blue-900/30"
                 >
                   <EyeIcon />
                 </Button>
@@ -292,7 +296,7 @@ export function FileUploadManager({ className }: ClassNameProp) {
                   variant="ghost"
                   size="sm"
                   onClick={() => removeFile(file.id)}
-                  className="h-8 w-8 p-0 text-red-600 hover:bg-red-100 hover:text-red-700 dark:hover:bg-red-900/30"
+                  className="h-6 w-6 p-0 text-red-600 hover:bg-red-100 hover:text-red-700 dark:hover:bg-red-900/30"
                 >
                   <XIcon />
                 </Button>

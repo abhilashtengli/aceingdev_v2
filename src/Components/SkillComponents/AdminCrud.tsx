@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, type SetStateAction } from "react";
 import {
   Select,
@@ -78,7 +80,6 @@ const sampleUsers: User[] = [
     role: "User",
     status: "Active",
   },
-  
 ];
 
 export function AdminCrudTable({ className }: ClassNameProp) {
@@ -139,12 +140,12 @@ export function AdminCrudTable({ className }: ClassNameProp) {
   };
 
   return (
-    <Card className={cn("mx-auto w-full max-w-6xl", className)}>
+    <Card className={cn("mx-auto w-full max-w-[31rem]", className)}>
       <CardHeader>
-        <CardTitle className="text-xl font-semibold">User Management</CardTitle>
+        <CardTitle className="text-lg font-semibold">User Management</CardTitle>
 
         {/* Search and Filter Controls */}
-        <div className="mt-4 flex flex-col gap-4 sm:flex-row">
+        <div className="mt-2 flex flex-col gap-2 sm:flex-row">
           <div className="relative flex-1">
             <Search className="text-muted-foreground absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 transform" />
             <Input
@@ -154,7 +155,7 @@ export function AdminCrudTable({ className }: ClassNameProp) {
                 setSearchTerm(e.target.value);
                 setCurrentPage(1); // Reset to first page when searching
               }}
-              className="pl-10"
+              className="h-8 pl-10 text-sm"
             />
           </div>
           <Select
@@ -164,7 +165,7 @@ export function AdminCrudTable({ className }: ClassNameProp) {
               setCurrentPage(1); // Reset to first page when filtering
             }}
           >
-            <SelectTrigger className="w-full sm:w-48">
+            <SelectTrigger className="h-8 w-full text-sm sm:w-32">
               <SelectValue placeholder="Filter by role" />
             </SelectTrigger>
             <SelectContent>
@@ -177,18 +178,18 @@ export function AdminCrudTable({ className }: ClassNameProp) {
         </div>
       </CardHeader>
 
-      <CardContent>
+      <CardContent className="p-3">
         {/* Table */}
         <div className="overflow-x-auto">
           <table className="w-full">
             <thead>
-              <tr className="bg-muted/50 border-b">
-                <th className="p-4 text-left text-sm font-semibold">ID</th>
-                <th className="p-4 text-left text-sm font-semibold">Name</th>
-                <th className="p-4 text-left text-sm font-semibold">Email</th>
-                <th className="p-4 text-left text-sm font-semibold">Role</th>
-                <th className="p-4 text-left text-sm font-semibold">Status</th>
-                <th className="p-4 text-right text-sm font-semibold">
+              <tr className="bg-muted/30 border-b">
+                <th className="p-2 text-left text-xs font-semibold">ID</th>
+                <th className="p-2 text-left text-xs font-semibold">Name</th>
+                <th className="p-2 text-left text-xs font-semibold">Email</th>
+                <th className="p-2 text-left text-xs font-semibold">Role</th>
+                <th className="p-2 text-left text-xs font-semibold">Status</th>
+                <th className="p-2 text-right text-xs font-semibold">
                   Actions
                 </th>
               </tr>
@@ -199,46 +200,46 @@ export function AdminCrudTable({ className }: ClassNameProp) {
                   key={user.id}
                   className="hover:bg-muted/30 border-b transition-colors duration-150"
                 >
-                  <td className="text-muted-foreground p-4 text-sm font-medium">
+                  <td className="text-muted-foreground p-2 text-xs font-medium">
                     #{user.id}
                   </td>
-                  <td className="p-4 text-sm font-medium">{user.name}</td>
-                  <td className="text-muted-foreground p-4 text-sm">
+                  <td className="p-2 text-xs font-medium">{user.name}</td>
+                  <td className="text-muted-foreground p-2 text-xs">
                     {user.email}
                   </td>
-                  <td className="p-4">
+                  <td className="p-2">
                     <Badge
                       variant="secondary"
-                      className={getRoleColor(user.role)}
+                      className={`${getRoleColor(user.role)} px-1 py-0 text-xs`}
                     >
                       {user.role}
                     </Badge>
                   </td>
-                  <td className="p-4">
+                  <td className="p-2">
                     <Badge
                       variant="secondary"
-                      className={getStatusColor(user.status)}
+                      className={`${getStatusColor(user.status)} px-1 py-0 text-xs`}
                     >
                       {user.status}
                     </Badge>
                   </td>
-                  <td className="p-4">
-                    <div className="flex justify-end gap-2">
+                  <td className="p-2">
+                    <div className="flex justify-end gap-1">
                       <Button
                         variant="ghost"
                         size="sm"
                         onClick={() => handleEdit(user)}
-                        className="h-8 w-8 p-0 hover:bg-blue-100 hover:text-blue-600 dark:hover:bg-blue-900 dark:hover:text-blue-300"
+                        className="h-6 w-6 p-0 hover:bg-blue-100 hover:text-blue-600 dark:hover:bg-blue-900 dark:hover:text-blue-300"
                       >
-                        <Edit className="h-4 w-4" />
+                        <Edit className="h-3 w-3" />
                       </Button>
                       <Button
                         variant="ghost"
                         size="sm"
                         onClick={() => handleDelete(user)}
-                        className="h-8 w-8 p-0 hover:bg-red-100 hover:text-red-600 dark:hover:bg-red-900 dark:hover:text-red-300"
+                        className="h-6 w-6 p-0 hover:bg-red-100 hover:text-red-600 dark:hover:bg-red-900 dark:hover:text-red-300"
                       >
-                        <Trash2 className="h-4 w-4" />
+                        <Trash2 className="h-3 w-3" />
                       </Button>
                     </div>
                   </td>
@@ -250,8 +251,8 @@ export function AdminCrudTable({ className }: ClassNameProp) {
 
         {/* Empty State */}
         {paginatedUsers.length === 0 && (
-          <div className="py-12 text-center">
-            <p className="text-muted-foreground">
+          <div className="py-8 text-center">
+            <p className="text-muted-foreground text-sm">
               No users found matching your criteria.
             </p>
           </div>
@@ -259,23 +260,23 @@ export function AdminCrudTable({ className }: ClassNameProp) {
 
         {/* Pagination */}
         {totalPages > 1 && (
-          <div className="mt-6 flex items-center justify-between border-t pt-4">
-            <p className="text-muted-foreground text-sm">
+          <div className="mt-4 flex items-center justify-between border-t pt-3">
+            <p className="text-muted-foreground text-xs">
               Showing {startIndex + 1} to{" "}
               {Math.min(startIndex + itemsPerPage, filteredUsers.length)} of{" "}
               {filteredUsers.length} results
             </p>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-1">
               <Button
                 variant="outline"
                 size="sm"
                 onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
                 disabled={currentPage === 1}
-                className="h-8 w-8 p-0"
+                className="h-6 w-6 p-0"
               >
-                <ChevronLeft className="h-4 w-4" />
+                <ChevronLeft className="h-3 w-3" />
               </Button>
-              <span className="bg-muted rounded px-3 py-1 text-sm font-medium">
+              <span className="bg-muted rounded px-2 py-1 text-xs font-medium">
                 {currentPage} of {totalPages}
               </span>
               <Button
@@ -285,9 +286,9 @@ export function AdminCrudTable({ className }: ClassNameProp) {
                   setCurrentPage((prev) => Math.min(prev + 1, totalPages))
                 }
                 disabled={currentPage === totalPages}
-                className="h-8 w-8 p-0"
+                className="h-6 w-6 p-0"
               >
-                <ChevronRight className="h-4 w-4" />
+                <ChevronRight className="h-3 w-3" />
               </Button>
             </div>
           </div>
