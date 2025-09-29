@@ -11,7 +11,7 @@ import { ServicesSection } from "./SkillComponents/ServiceSection";
 
 const SkillsSection = () => {
   return (
-    <div className="pb-96">
+    <div className="pb-12">
       <div className="border-red-500">
         <h1 className="py-2 text-center text-4xl font-semibold tracking-wider text-neutral-600">
           What we Deliver at{" "}
@@ -106,7 +106,7 @@ const SkillsSection = () => {
               <CodeMetricsCard className="border border-neutral-300" />
               <DeploymentStatusCard className="border border-neutral-300" />
             </div>
-            <AdminCrudTable className="border border-neutral-300 shadow-xl h-[25.5rem]" />
+            <AdminCrudTable className="h-[25.5rem] border border-neutral-300 shadow-xl" />
             <FileUploadManager className="mask-b-from-40% shadow-2xl" />
           </div>
           <div className="flex flex-col gap-3">

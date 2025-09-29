@@ -498,7 +498,7 @@ const HeroSection = () => {
                       className="relative flex h-[7rem] w-[24rem] items-center justify-center overflow-hidden rounded-[9px] border border-neutral-300 bg-gray-600"
                     >
                       <ConnectingSvg className="absolute top-0 h-28" />
-                      <h1 className="z-10 rounded-full pt-1 border border-white bg-white px-4 py-1 text-sm font-semibold tracking-wider text-gray-700 transition duration-500 ease-in-out group-hover/ct:scale-110">
+                      <h1 className="z-10 rounded-full border border-white bg-white px-4 py-1 pt-1 text-sm font-semibold tracking-wider text-gray-700 transition duration-500 ease-in-out group-hover/ct:scale-110">
                         Connecting to the World
                       </h1>
                     </div>

@@ -1,4 +1,4 @@
-import { Lightbulb, Zap } from "lucide-react";
+import { CheckCircle, Lightbulb, Zap } from "lucide-react";
 import nregaImg from "../../assets/nrega-hero.png";
 import { Badge } from "../ui/badge";
 import adminImge from "../../assets/admin_img.webp";
@@ -292,7 +292,7 @@ const Nrega = () => {
               stroke-width="1"
               stroke-linecap="round"
               stroke-linejoin="round"
-              className="size-10 text-green-600"
+              className="size-8 text-green-600"
             >
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
               <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
@@ -342,7 +342,7 @@ const Nrega = () => {
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              className="size-12 text-red-400"
+              className="size-8 text-red-400"
             >
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
               <path d="M20 6h-13a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h13" />
@@ -351,7 +351,7 @@ const Nrega = () => {
             </svg>
             Project Glimpses
           </h1>
-          <div className="mt-12 grid w-full grid-cols-2 place-items-center gap-5 gap-y-12 border-red-500 mask-t-from-99% mask-r-from-95% mask-b-from-98% mask-l-from-98%">
+          <div className="mt-12 grid w-full grid-cols-2 place-items-center gap-5 gap-y-12 border-red-500 ">
             <div className="flex w-fit flex-col-reverse overflow-hidden rounded-xl border border-neutral-200 p-3 shadow-lg transition duration-300 hover:shadow-2xl">
               <div className="mt-4 pl-5">
                 <h1 className="mb-4 text-lg font-semibold tracking-wider">
@@ -428,7 +428,7 @@ const Nrega = () => {
               fill="#000"
               stroke="currentColor"
               stroke-width="1"
-              className="size-12 text-purple-300"
+              className="size-8 text-purple-300"
             >
               <path d="M56.67,49.88,46.89,36a19.31,19.31,0,1,0-33.9.18L3.33,49.88a1.63,1.63,0,0,0,1.34,2.58H55.33a1.63,1.63,0,0,0,1.34-2.58Zm-40-15.57,3.6,5.11-1.6,2.27-1.3-1.3a1,1,0,0,0-.69-.29h0a1,1,0,0,0-.69.29L13.36,43,11.7,41.37Zm18.58-15-.82,1.1a1,1,0,0,0,0,1.17l.82,1.1H30.87V19.3Zm-5.37,9.86,5.69,8.08-1.95,1.95-2.94-2.94a1,1,0,0,0-1.38,0L26.53,39l-2.11-2.11Zm-6.61,9.38,2.56,2.56a1,1,0,0,0,1.38,0L30,38.32l2.94,2.94a1,1,0,0,0,1.38,0l2.4-2.41,8.22,11.66H14.85Zm16.33,1,3.71-5.26,5,7.06L46.64,43,44,40.39a1,1,0,0,0-.69-.29h0a1,1,0,0,0-.69.29L41.2,41.82ZM12.53,26.85a17.36,17.36,0,1,1,33.09,7.34l-1-1.37a1.7,1.7,0,0,0-2.68,0l-3.56,5.05L31.23,27.67a1.45,1.45,0,0,0-.36-.34V24.62h6.34A1,1,0,0,0,38,23.06L36.43,21,38,18.91a1,1,0,0,0-.78-1.56H29.89a1,1,0,0,0-1,1v9a1.33,1.33,0,0,0-.37.34h0l-7.08,10L18,32.82a1.7,1.7,0,0,0-2.68,0l-1.09,1.54A17.37,17.37,0,0,1,12.53,26.85ZM10.57,43l2.1,2.1a1,1,0,0,0,1.38,0l2.64-2.63.85.85-4.63,6.57a1.65,1.65,0,0,0-.26.63H5.26Zm36.56,7.52a1.63,1.63,0,0,0-.25-.63l-4.54-6.44,1-1L46,45.09a1,1,0,0,0,1.38,0l2.1-2.1,5.31,7.52Z" />
             </svg>
@@ -650,27 +650,82 @@ const Nrega = () => {
             </div>
           </div>
         </section>
-        <section className="flex flex-col items-center justify-center py-12">
-          <h1 className="flex w-full items-center gap-x-3 text-3xl font-semibold tracking-wider text-neutral-700">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              className="size-14 text-green-500"
-            >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M3 17l6 -6l4 4l8 -8" />
-              <path d="M14 7l7 0l0 7" />
-            </svg>
-            The Impact
-          </h1>
-        </section>
+        <div className="grid grid-cols-2">
+          <section className="border-red-600 py-12">
+            <h1 className="flex w-full items-center gap-x-3 text-2xl font-semibold tracking-wider text-neutral-700">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                className="size-8 text-yellow-500"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M3 17l6 -6l4 4l8 -8" />
+                <path d="M14 7l7 0l0 7" />
+              </svg>
+              Business Impact
+            </h1>
+            <div className="w-full pl-8">
+              <ul className="text-md mt-5 max-w-xl font-medium tracking-wide text-neutral-600">
+                {[
+                  "Reduced report preparation time from hours to minutes.",
+                  "Provided contractors and vendors with one centralized hub for all reporting needs.",
+                  "Enabled subscription-based monetization, creating a new revenue stream for the client.",
+                  "Improved accuracy and consistency of reports with automated data workflows.",
+                  "Delivered an enterprise-ready SaaS product that scales with growing demand.",
+                ].map((text, idx) => (
+                  <li key={idx} className="flex items-start gap-2 leading-7">
+                    <div className="flex h-5 w-5 items-center justify-center">
+                      <CheckCircle className="mt-2.5 h-4 w-4 text-green-600" />
+                    </div>
+                    <span>{text}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+          <section className="items-center justify-center border-blue-500 py-12">
+            <h1 className="flex w-full items-center gap-x-3 pl-2 text-2xl font-semibold tracking-wider text-neutral-700">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                className="size-8 text-green-700"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M3 12h1m8 -9v1m8 8h1m-15.4 -6.4l.7 .7m12.1 -.7l-.7 .7" />
+                <path d="M9 16a5 5 0 1 1 6 0a3.5 3.5 0 0 0 -1 3a2 2 0 0 1 -4 0a3.5 3.5 0 0 0 -1 -3" />
+                <path d="M9.7 17l4.6 0" />
+              </svg>
+              Conclusion
+            </h1>
+            <div className="flex items-center justify-center">
+              <p className="mt-4 max-w-xl pl-5 leading-7 font-medium tracking-wide text-neutral-600">
+                The Nrega Files SaaS platform transformed government reporting
+                for contractors and govt officials by providing a centralized,
+                automated, and subscription driven solution. Through automated
+                data fetching, dynamic report generation, and secure dashboards,
+                the system eliminated hours of manual effort and reduced errors,
+                while enabling the client to scale and monetize their services.
+                The outcome is a future ready SaaS product that turns reporting
+                into a matter of minutes reliable, efficient, and built for
+                growth.
+              </p>
+            </div>
+          </section>
+        </div>
       </div>
     </div>
   );
