@@ -11,8 +11,15 @@ export const SvgFinalComponent = ({
     viewBox="0 0 1438 911"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    preserveAspectRatio="xMidYMid meet"
     {...props}
-    className={` ${className} h-fit w-fit`}
+    className={`${className} h-full w-full object-contain`}
+    style={{
+      transform: "scale(var(--zoom-scale, 1))",
+      transformOrigin: "center center",
+      minWidth: "100%",
+      minHeight: "100%",
+    }}
   >
     <defs>
       <motion.linearGradient

@@ -16,7 +16,7 @@ const Nrega = () => {
             <Badge className="mb-4 border-gray-600 bg-gray-800 px-3 py-1 text-sm tracking-wider text-white">
               SaaS Case Study
             </Badge>
-            <div className="relative mt-4 w-fit bg-gradient-to-r from-red-100 via-white to-yellow-100 px-3 py-2 text-6xl font-bold tracking-wide text-neutral-800">
+            <div className="relative mt-4 ml-1 w-fit bg-gradient-to-r from-red-100 via-white to-yellow-100 px-3 py-2 text-6xl font-bold tracking-wide text-neutral-800">
               <svg
                 viewBox="0 0 357 1"
                 fill="none"
@@ -83,8 +83,8 @@ const Nrega = () => {
                 </defs>
                 <path d="M0 0.5H357" stroke="url(#x-gradient-red-right-left)" />
               </svg>
-              <p className="absolute -top-1 -left-0.5 h-1.5 w-1.5 rounded-full bg-green-300" />
-              <p className="absolute -top-1 -right-0.5 h-1.5 w-1.5 rounded-full bg-yellow-300" />
+              <p className="absolute -top-0.5 -left-0.5 h-1.5 w-[5px] rounded-full bg-green-300" />
+              <p className="absolute -top-0.5 -right-0.5 h-1.5 w-[5px] rounded-full bg-yellow-300" />
               <p className="absolute -bottom-0.5 -left-0.5 h-1.5 w-1.5 rounded-full bg-red-300" />
               <p className="absolute -right-0.5 -bottom-0.5 h-1.5 w-1.5 rounded-full bg-blue-300" />
               Nrega

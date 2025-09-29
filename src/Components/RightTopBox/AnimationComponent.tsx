@@ -51,7 +51,7 @@ export const WritingCodeAnimationComponent = () => {
 
   return (
     <motion.div className="flex flex-col items-center">
-      <div className="h-fit w-[30rem] rounded-tl-xl rounded-tr-xl border border-neutral-400 bg-gray-400 px-2 pb-2">
+      <div className="h-fit rounded-tl-xl rounded-tr-xl border border-neutral-400 bg-gray-400 px-2 pb-2">
         <div className="flex w-full justify-center">
           {" "}
           <div className="flex h-2 w-10 items-center justify-center rounded-br-sm rounded-bl-sm bg-gray-500">
@@ -275,7 +275,7 @@ export const WritingCodeAnimationComponent = () => {
                 >
                   {({ tokens, getLineProps, getTokenProps }: RenderProps) => (
                     <motion.pre
-                      className="font-mono text-xs leading-relaxed text-white"
+                      className="font-mono text-[10px] leading-relaxed text-white"
                       onHoverStart={handleHoverStart}
                       //   whileHover={{ scale: 1.02 }}
                       transition={{ duration: 0.2 }}
@@ -314,7 +314,7 @@ export const WritingCodeAnimationComponent = () => {
         </div>
       </div>
       <div>
-        <div className="flex h-4 w-[32rem] items-start justify-center rounded-tl-sm rounded-tr-sm rounded-br-3xl rounded-bl-3xl bg-gray-400">
+        <div className="flex h-4 w-[26rem] items-start justify-center rounded-tl-sm rounded-tr-sm rounded-br-3xl rounded-bl-3xl bg-gray-400">
           <div className="h-2 w-24 rounded-br-lg rounded-bl-lg bg-gray-600"></div>
         </div>
         <div className="flex justify-between px-8">
