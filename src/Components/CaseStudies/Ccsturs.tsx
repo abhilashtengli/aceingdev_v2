@@ -1,12 +1,15 @@
 import { CheckCircle, Lightbulb, Zap } from "lucide-react";
 import { Badge } from "../ui/badge";
 import { motion } from "framer-motion";
-import mpmos01 from "@/assets/mpmos_01.webp";
-import mpmosProject from "@/assets/mpmos_project.webp";
-import mpmosReport from "@/assets/mpmos_report.webp";
-import mpmosCms from "@/assets/mpmos_cms.webp";
+// import mpmos01 from "@/assets/mpmos_01.webp";
+// import mpmosProject from "@/assets/mpmos_project.webp";
+// import mpmosReport from "@/assets/mpmos_report.webp";
+// import mpmosCms from "@/assets/mpmos_cms.webp";
+import mainPage from "@/assets/ccs_mainpage.webp";
+import dashboard from "@/assets/ccs_dashboard.webp";
+import program from "@/assets/ccs_program.webp";
 
-const Mpmos = () => {
+const CCS = () => {
   return (
     <div className="flex flex-col items-center justify-center">
       <div className="h-full w-full max-w-7xl border-red-700">
@@ -20,7 +23,7 @@ const Mpmos = () => {
                 viewBox="0 0 357 1"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="absolute bottom-0 left-0 w-[120px]"
+                className="absolute bottom-0 left-0 w-[155px]"
               >
                 <defs>
                   <motion.linearGradient
@@ -54,7 +57,7 @@ const Mpmos = () => {
                 viewBox="0 0 357 1"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="absolute right-0 bottom-0 w-[120px]"
+                className="absolute right-0 bottom-0 w-[155px]"
               >
                 <defs>
                   <motion.linearGradient
@@ -86,16 +89,16 @@ const Mpmos = () => {
               <p className="absolute -top-0.5 -right-0.5 h-1.5 w-[5px] rounded-full bg-yellow-300" />
               <p className="absolute -bottom-0.5 -left-0.5 h-1.5 w-1.5 rounded-full bg-red-300" />
               <p className="absolute -right-0.5 -bottom-0.5 h-1.5 w-1.5 rounded-full bg-blue-300" />
-              MpMos
+              CCS, Tura
             </div>
             <p className="text-md mt-5 w-fit rounded-xl border px-2 py-3 pt-4 font-bold tracking-wide">
               A Single Platform for Data Collection, Monitoring, and Reports
             </p>
             <p className="text-md mt-14 max-w-4xl leading-6 tracking-wider text-neutral-700">
-              A centralized digital platform where project incharges and
-              administrators can access structured data for field projects and
-              instantly generate professional quarterly and annual reports with
-              automated workflows.
+              A dynamic college website with centralized admin dashboard that
+              empowers non-technical staff to manage all digital content
+              independently, featuring modern responsive design and secure cloud
+              storage
             </p>
             <div className="mt-8 flex">
               <div className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full border border-neutral-300 p-1 md:h-8 md:w-8">
@@ -293,7 +296,7 @@ const Mpmos = () => {
                   <div className="h-3 w-3 rounded-full bg-green-600"></div>
                 </div>
                 <img
-                  src={mpmos01}
+                  src={mainPage}
                   alt="Nrega Files Dashboard"
                   className="h-full w-[45rem] overflow-hidden rounded-tl-xl rounded-tr-xl rounded-br-xs rounded-bl-xs border"
                 />
@@ -325,24 +328,23 @@ const Mpmos = () => {
           <div className="mt-3 flex justify-center">
             <div className="max-w-[45rem] border-r border-dashed border-purple-200 pr-16 pl-1">
               <p className="text-md max-w-7xl leading-6 tracking-wider text-neutral-700">
-                The Central Agricultural University (CAU), Imphal, in
-                collaboration with the Indian Institute of Millets Research
-                (IIMR), Hyderabad, required a centralized digital platform to
-                monitor and evaluate projects across the North-East hilly
-                region.
+                A Educational Institution required a modern digital presence
+                that would serve students, faculty, and visitors, while giving
+                administrators full control over content management
               </p>
             </div>
             <div className="max-w-5xl pl-16">
               <div className="text-md space-y-5 leading-6 tracking-wider text-neutral-700">
                 <p>
-                  The goal was to simplify data collection, improve
-                  transparency, and replace scattered spreadsheets with a
-                  structured, real-time monitoring system.
+                  The goal was to create a professional website with an
+                  easy-to-use backend system so updates could be managed
+                  independently without depending on developers.
                 </p>
                 <p>
-                  Project and activity details were scattered across
-                  spreadsheets, making monitoring complex and error-prone, with
-                  manual reporting taking weeks and being prone to inaccuracies
+                  Content updates required developer intervention, leading to
+                  delays, with scattered documents and unstructured gallery
+                  management making it difficult to maintain a modern digital
+                  presence.
                 </p>
               </div>
             </div>
@@ -385,7 +387,7 @@ const Mpmos = () => {
               </div>
               <img
                 alt=""
-                src={mpmosProject}
+                src={dashboard}
                 className="h-[25rem] w-[40rem] rounded-xl transition duration-500 hover:scale-105"
               />
             </div>
@@ -403,11 +405,11 @@ const Mpmos = () => {
               </div>
               <img
                 alt=""
-                src={mpmosReport}
+                src={program}
                 className="h-[25rem] w-[40rem] rounded-xl transition duration-500 hover:scale-105"
               />
             </div>
-            <div className="flex w-fit flex-col-reverse overflow-hidden rounded-xl border border-neutral-200 p-3 shadow-lg transition duration-300 hover:shadow-2xl">
+            {/* <div className="flex w-fit flex-col-reverse overflow-hidden rounded-xl border border-neutral-200 p-3 shadow-lg transition duration-300 hover:shadow-2xl">
               <div className="mt-4 pl-5">
                 <h1 className="mb-4 text-lg font-semibold tracking-wider">
                   Content Management Hub
@@ -424,7 +426,7 @@ const Mpmos = () => {
                 src={mpmosCms}
                 className="h-[25rem] w-[40rem] rounded-xl transition duration-500 hover:scale-105"
               />
-            </div>
+            </div> */}
             {/* <div className="flex w-fit flex-col-reverse overflow-hidden rounded-xl border border-neutral-200 p-3 shadow-lg transition duration-300 hover:shadow-2xl">
               <div className="mt-4 pl-5">
                 <h1 className="mb-4 text-lg font-semibold tracking-wider">
@@ -535,15 +537,14 @@ const Mpmos = () => {
                   {/* Row 1 */}
                   <div className="from-red-25 border-r border-b border-gray-200 bg-gradient-to-b to-transparent p-3">
                     <div className="flex items-start gap-2">
-                      <div className="text-lg">📊</div>
+                      <div className="text-lg">🔧</div>
                       <div>
                         <h4 className="mb-1 text-lg font-semibold tracking-wide text-gray-900">
-                          Fragmented Data Management
+                          Developer Dependency
                         </h4>
                         <p className="text-md tracking-wide text-gray-700">
-                          Project and activity details were scattered across
-                          spreadsheets, making monitoring complex and
-                          error-prone.
+                          Content updates (news, tenders, staff details)
+                          required developer intervention, leading to delays
                         </p>
                       </div>
                     </div>
@@ -553,11 +554,11 @@ const Mpmos = () => {
                       <div className="text-lg">🎯</div>
                       <div>
                         <h4 className="mb-1 text-lg font-semibold tracking-wide text-gray-900">
-                          Centralized Platform
+                          Centralized Admin Dashboard
                         </h4>
                         <p className="text-md tracking-wide text-gray-700">
-                          Developed a unified monitoring platform that
-                          streamlined project management and reporting
+                          Developed an intuitive admin dashboard for full
+                          content control without technical expertise.
                         </p>
                       </div>
                     </div>
@@ -566,88 +567,58 @@ const Mpmos = () => {
                   {/* Row 2 */}
                   <div className="from-red-25 border-r border-b border-gray-200 bg-gradient-to-b to-transparent p-3">
                     <div className="flex items-start gap-2">
-                      <div className="text-lg">📝</div>
+                      <div className="text-lg">📄</div>
                       <div>
                         <h4 className="mb-1 text-lg font-semibold tracking-wide text-gray-900">
-                          Manual Reporting Delays
+                          Scattered Documents
                         </h4>
                         <p className="text-md tracking-wide text-gray-700">
-                          Preparing quarterly and annual reports took weeks and
-                          was prone to inaccuracies.
+                          Official forms, tenders, and documents were scattered
+                          and difficult to update or access.
                         </p>
                       </div>
                     </div>
                   </div>
                   <div className="from-green-25 border-b border-gray-200 bg-gradient-to-b to-transparent p-3">
                     <div className="flex items-start gap-2">
-                      <div className="text-lg">⚡</div>
+                      <div className="text-lg">📁</div>
                       <div>
                         <h4 className="mb-1 text-lg font-semibold tracking-wide text-gray-900">
-                          Automated Reporting
+                          Cloudflare Storage Integration
                         </h4>
                         <p className="text-md tracking-wide text-gray-700">
-                          One-click generation of standardized reports in Docx
-                          format, reducing time from weeks to minutes.
+                          Implemented secure cloud storage for centralized
+                          document management with fast global delivery.
                         </p>
                       </div>
                     </div>
                   </div>
 
                   {/* Row 3 */}
-                  <div className="from-red-25 border-r border-b border-gray-200 bg-gradient-to-b to-transparent p-3">
+                  <div className="from-red-25 border-r border-gray-200 bg-gradient-to-b to-transparent p-3">
                     <div className="flex items-start gap-2">
-                      <div className="text-lg">🔄</div>
+                      <div className="text-lg">🖼️</div>
                       <div>
                         <h4 className="mb-1 text-lg font-semibold tracking-wide text-gray-900">
-                          Inconsistent Activity Tracking
+                          Unstructured Gallery
                         </h4>
                         <p className="text-md tracking-wide text-gray-700">
-                          Each activity type required different tracking
-                          methods, leading to inconsistency.
+                          The gallery lacked structured management for photos
+                          and videos.
                         </p>
                       </div>
                     </div>
                   </div>
-                  <div className="from-green-25 border-b border-gray-200 bg-gradient-to-b to-transparent p-3">
+                  <div className="from-green-25 border-gray-200 bg-gradient-to-b to-transparent p-3">
                     <div className="flex items-start gap-2">
-                      <div className="text-lg">📋</div>
+                      <div className="text-lg">🎨</div>
                       <div>
                         <h4 className="mb-1 text-lg font-semibold tracking-wide text-gray-900">
-                          Dedicated Activity Modules
+                          Gallery Management System
                         </h4>
                         <p className="text-md tracking-wide text-gray-700">
-                          Created specialized dashboards for training,
-                          awareness, infrastructure, and input distribution.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Row 4 */}
-                  <div className="from-red-25 border-r bg-gradient-to-b to-transparent p-3">
-                    <div className="flex items-start gap-2">
-                      <div className="text-lg">🔒</div>
-                      <div>
-                        <h4 className="mb-1 text-lg font-semibold tracking-wide text-gray-900">
-                          Access & Security Issues
-                        </h4>
-                        <p className="text-md tracking-wide text-gray-700">
-                          Sensitive project and financial data needed controlled
-                          access between different user roles.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="from-green-25 bg-gradient-to-b to-transparent p-3">
-                    <div className="flex items-start gap-2">
-                      <div className="text-lg">👥</div>
-                      <div>
-                        <h4 className="mb-1 text-lg font-semibold tracking-wide text-gray-900">
-                          Role-Based Access Control
-                        </h4>
-                        <p className="text-md tracking-wide text-gray-700">
-                          Implemented RBAC ensuring admins generated reports
-                          while project incharges managed their respective data.
+                          Created structured photo and video organization with
+                          easy upload and categorization.
                         </p>
                       </div>
                     </div>
@@ -696,11 +667,11 @@ const Mpmos = () => {
             <div className="w-full pl-8">
               <ul className="text-md mt-5 max-w-xl font-medium tracking-wide text-neutral-600">
                 {[
-                  "Centralized monitoring replaced scattered spreadsheets.",
-                  "Report preparation time reduced from weeks to minutes.",
-                  "Improved accuracy and transparency in impact reporting.",
+                  "Administrators gained independence, updating website content instantly without technical help.",
+                  "Staff directories, tenders, and news updates were organized and accessible in real-time.",
+                  "Academic programs were showcased with clear filters, improving course discovery.",
                   "Enabled real-time tracking of project progress and outcomes.",
-                  "Established a scalable foundation for future project expansion.",
+                  "Cloudflare-backed storage ensured secure, reliable, and scalable hosting for media and documents.",
                 ].map((text, idx) => (
                   <li key={idx} className="flex items-start gap-2 leading-7">
                     <div className="flex h-5 w-5 items-center justify-center">
@@ -735,13 +706,12 @@ const Mpmos = () => {
             </h1>
             <div className="flex items-center justify-center">
               <p className="mt-4 max-w-xl pl-5 leading-7 font-medium tracking-wide text-neutral-600">
-                The Project Monitoring System transformed program oversight by
-                introducing a centralized, real-time platform for data
-                management and reporting. With intuitive dashboards, automated
-                workflows, and secure role-based access, it replaced manual
-                processes with speed and accuracy. The result is a future-ready
-                digital solution that empowers institutions to track, evaluate,
-                and scale their initiatives with confidence.
+                The new College Website and Admin Dashboard modernized the
+                institution's online presence. Administrators can now manage
+                content easily without technical help, while students and
+                faculty enjoy a fast, responsive experience. With secure
+                storage, clear dashboards, and better communication tools, the
+                platform has made operations smoother and more transparent.
               </p>
             </div>
           </section>
@@ -751,4 +721,4 @@ const Mpmos = () => {
   );
 };
 
-export default Mpmos;
+export default CCS;
