@@ -1,6 +1,5 @@
 import { CheckCircle, Lightbulb, Zap } from "lucide-react";
 import { Badge } from "../ui/badge";
-import reportImg from "../../assets/reports_img.webp";
 import { motion } from "framer-motion";
 import mpmos01 from "@/assets/mpmos_01.webp";
 import mpmosProject from "@/assets/mpmos_project.webp";
@@ -393,14 +392,12 @@ const Mpmos = () => {
             <div className="flex w-fit flex-col-reverse overflow-hidden rounded-xl border border-neutral-200 p-3 shadow-lg transition duration-300 hover:shadow-2xl">
               <div className="mt-4 pl-5">
                 <h1 className="mb-4 text-lg font-semibold tracking-wider">
-                  Work Code Dashboard
+                  Automated Reporting System
                 </h1>
                 <ul className="text-md max-w-2xl list-disc pl-5 leading-8 tracking-wider text-neutral-600">
+                  <li>Quick Access to Quarterly & Consolidated Reports</li>
                   <li>
-                    Enter Work Code and Financial Year to fetch project details.
-                  </li>
-                  <li>
-                    Displays the results in a clean and structured format.
+                    Securely stored in Cloudflare for quick audit or sharing
                   </li>
                 </ul>
               </div>
@@ -428,7 +425,7 @@ const Mpmos = () => {
                 className="h-[25rem] w-[40rem] rounded-xl transition duration-500 hover:scale-105"
               />
             </div>
-            <div className="flex w-fit flex-col-reverse overflow-hidden rounded-xl border border-neutral-200 p-3 shadow-lg transition duration-300 hover:shadow-2xl">
+            {/* <div className="flex w-fit flex-col-reverse overflow-hidden rounded-xl border border-neutral-200 p-3 shadow-lg transition duration-300 hover:shadow-2xl">
               <div className="mt-4 pl-5">
                 <h1 className="mb-4 text-lg font-semibold tracking-wider">
                   Reports
@@ -442,7 +439,7 @@ const Mpmos = () => {
                 src={reportImg}
                 className="h-[25rem] w-[40rem] rounded-xl transition duration-500 hover:scale-105"
               />
-            </div>
+            </div> */}
           </div>
         </section>
         <section className="relative flex flex-col items-center justify-center border-red-500 py-12">
