@@ -16,14 +16,14 @@ const MilletInformationSystem = () => {
         <section className="relative flex h-fit w-full justify-center gap-x-32 overflow-hidden py-8">
           <div className="mt-3 flex flex-col justify-center">
             <Badge className="mb-4 border-gray-600 bg-gray-800 px-3 py-1 text-sm tracking-wider text-white">
-              Project Monitoring System
+              Gov-SaaS Case Study
             </Badge>
             <div className="relative mt-4 ml-1 w-fit bg-gradient-to-r from-[#f8e6dd] via-white to-[#e8f5fa] px-3 py-2 text-6xl font-bold tracking-wide text-neutral-800">
               <svg
                 viewBox="0 0 357 1"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="absolute bottom-0 left-0 w-[120px]"
+                className="absolute bottom-0 left-0 w-[69px]"
               >
                 <defs>
                   <motion.linearGradient
@@ -36,7 +36,7 @@ const MilletInformationSystem = () => {
                     initial={{ x1: "120%", x2: "80%" }} // bottom
                     animate={{ x1: "2%", x2: "-40%" }} // move upward
                     transition={{
-                      duration: 1,
+                      duration: 0.6,
                       repeat: Infinity,
                       ease: "linear",
                       repeatType: "loop",
@@ -57,7 +57,7 @@ const MilletInformationSystem = () => {
                 viewBox="0 0 357 1"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="absolute right-0 bottom-0 w-[120px]"
+                className="top-0. absolute right-0 bottom-0 w-[69px]"
               >
                 <defs>
                   <motion.linearGradient
@@ -70,7 +70,7 @@ const MilletInformationSystem = () => {
                     initial={{ x1: "-20%", x2: "10%" }} // bottom
                     animate={{ x1: "100%", x2: "140%" }} // move upward
                     transition={{
-                      duration: 1,
+                      duration: 0.6,
                       repeat: Infinity,
                       ease: "linear",
                       repeatType: "loop",
@@ -92,7 +92,7 @@ const MilletInformationSystem = () => {
               MIS
             </div>
             <p className="text-md mt-5 w-fit rounded-xl border px-2 py-3 pt-4 font-bold tracking-wide">
-              A Single Platform for Data Collection, Monitoring, and Reports
+              A Platform Connecting Buyers, Sellers, Experts and Govt Resources.
             </p>
             <p className="text-md mt-14 max-w-4xl leading-6 tracking-wider text-neutral-700">
               A platform where Sellers, buyers, policymakers, and researchers
@@ -373,17 +373,20 @@ const MilletInformationSystem = () => {
             Project Glimpses
           </h1>
           <div className="mt-12 grid w-full grid-cols-2 place-items-center gap-5 gap-y-12 border-red-500">
-            <div className="flex w-fit flex-col-reverse overflow-hidden rounded-xl border border-neutral-200 p-3 shadow-lg transition duration-300 hover:shadow-2xl">
+            <div className="flex h-[37rem] w-fit flex-col-reverse overflow-hidden rounded-xl border border-neutral-200 p-3 shadow-lg transition duration-300 hover:shadow-2xl">
               <div className="mt-4 pl-5">
                 <h1 className="mb-4 text-lg font-semibold tracking-wider">
-                  Project Management Dashboard
+                  Millet Mart
                 </h1>
                 <ul className="text-md max-w-2xl list-disc pl-5 leading-8 tracking-wider text-neutral-600">
                   <li>
-                    Unified all project details (title, budget, agency) in one
-                    place..
+                    Digital marketplace where farmers can sign up and list
+                    products.
                   </li>
-                  <li>Real-time tracking of project progress and outcomes.</li>
+                  <li>
+                    Direct connection between farmers and buyers for better
+                    profitability.
+                  </li>
                 </ul>
               </div>
               <img
@@ -392,15 +395,18 @@ const MilletInformationSystem = () => {
                 className="h-[25rem] w-[40rem] rounded-xl transition duration-500 hover:scale-105"
               />
             </div>
-            <div className="flex w-fit flex-col-reverse overflow-hidden rounded-xl border border-neutral-200 p-3 shadow-lg transition duration-300 hover:shadow-2xl">
+            <div className="h-[37rem] flex w-fit flex-col-reverse overflow-hidden rounded-xl border border-neutral-200 p-3 shadow-lg transition duration-300 hover:shadow-2xl">
               <div className="mt-4 pl-5">
                 <h1 className="mb-4 text-lg font-semibold tracking-wider">
-                  Automated Reporting System
+                  Consultation Booking
                 </h1>
                 <ul className="text-md max-w-2xl list-disc pl-5 leading-8 tracking-wider text-neutral-600">
-                  <li>Quick Access to Quarterly & Consolidated Reports</li>
                   <li>
-                    Securely stored in Cloudflare for quick audit or sharing
+                    Farmers can schedule calls with mentors for expert guidance.
+                  </li>
+                  <li>
+                    Direct access to agricultural experts for knowledge
+                    transfer.
                   </li>
                 </ul>
               </div>
@@ -413,12 +419,11 @@ const MilletInformationSystem = () => {
             <div className="flex w-fit flex-col-reverse overflow-hidden rounded-xl border border-neutral-200 p-3 shadow-lg transition duration-300 hover:shadow-2xl">
               <div className="mt-4 pl-5">
                 <h1 className="mb-4 text-lg font-semibold tracking-wider">
-                  Content Management Hub
+                  Community Forum
                 </h1>
                 <ul className="text-md max-w-2xl list-disc pl-5 leading-8 tracking-wider text-neutral-600">
                   <li>
-                    Publish events, publications, and galleries for stakeholder
-                    visibility.
+                    Space for farmers to ask questions and share experiences.
                   </li>
                 </ul>
               </div>
