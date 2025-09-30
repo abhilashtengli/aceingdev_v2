@@ -3,6 +3,7 @@ import Body from "./Pages/Body";
 import LandingPage from "./Pages/LandingPage";
 import Nrega from "./Components/CaseStudies/Nrega";
 import Mpmos from "./Components/CaseStudies/Mpmos";
+import MilletInformationSystem from "./Components/CaseStudies/Mis";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
             <Route path="/" element={<LandingPage />} />
             <Route path="/nrega" element={<Nrega />} />
             <Route path="/mpmos" element={<Mpmos />} />
+            <Route path="/mis" element={<MilletInformationSystem />} />
           </Route>
         </Routes>
       </BrowserRouter>
