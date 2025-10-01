@@ -375,14 +375,13 @@ const CCS = () => {
             <div className="flex w-fit flex-col-reverse overflow-hidden rounded-xl border border-neutral-200 p-3 shadow-lg transition duration-300 hover:shadow-2xl">
               <div className="mt-4 pl-5">
                 <h1 className="mb-4 text-lg font-semibold tracking-wider">
-                  Project Management Dashboard
+                  Admin Dashboard
                 </h1>
                 <ul className="text-md max-w-2xl list-disc pl-5 leading-8 tracking-wider text-neutral-600">
                   <li>
-                    Unified all project details (title, budget, agency) in one
-                    place..
+                    Full control over all website content News, Ads, Tenders & more.
                   </li>
-                  <li>Real-time tracking of project progress and outcomes.</li>
+                  <li>Intuitive interface for non-technical administrators</li>
                 </ul>
               </div>
               <img
@@ -394,13 +393,11 @@ const CCS = () => {
             <div className="flex w-fit flex-col-reverse overflow-hidden rounded-xl border border-neutral-200 p-3 shadow-lg transition duration-300 hover:shadow-2xl">
               <div className="mt-4 pl-5">
                 <h1 className="mb-4 text-lg font-semibold tracking-wider">
-                  Automated Reporting System
+                  Visual Showcase of the Solution
                 </h1>
                 <ul className="text-md max-w-2xl list-disc pl-5 leading-8 tracking-wider text-neutral-600">
-                  <li>Quick Access to Quarterly & Consolidated Reports</li>
-                  <li>
-                    Securely stored in Cloudflare for quick audit or sharing
-                  </li>
+                  <li>User friendly interface with filtering options</li>
+                  <li>Easy exploration by department, degree, and duration</li>
                 </ul>
               </div>
               <img
