@@ -23,7 +23,7 @@ const CCS = () => {
             <Badge className="mb-4 border-gray-600 bg-gray-800 px-3 py-1 text-sm tracking-wider text-white">
               Education
             </Badge>
-            <div className="relative mt-4 ml-1 w-fit bg-gradient-to-r from-green-100 via-white to-purple-100 px-3 py-2 text-6xl font-bold tracking-wide text-neutral-800">
+            <div className="relative mt-4 ml-1 w-fit bg-gradient-to-r from-[#c6e7ec] via-white to-[#eec8d9] px-3 py-2 text-6xl font-bold tracking-wide text-neutral-800">
               <svg
                 viewBox="0 0 357 1"
                 fill="none"
@@ -49,8 +49,8 @@ const CCS = () => {
                     }}
                   >
                     <stop stopColor="var(--color-neutral-200)" />
-                    <stop offset="0.55" stopColor="green" />
-                    <stop offset="0.66" stopColor="green" />
+                    <stop offset="0.55" stopColor="#f72585" />
+                    <stop offset="0.66" stopColor="#f72585" />
                     <stop offset="1" stopColor="var(--color-neutral-200)" />
                   </motion.linearGradient>
                 </defs>
@@ -83,8 +83,8 @@ const CCS = () => {
                     }}
                   >
                     <stop stopColor="var(--color-neutral-200)" />
-                    <stop offset="0.55" stopColor="green" />
-                    <stop offset="0.66" stopColor="green" />
+                    <stop offset="0.55" stopColor="#f72585" />
+                    <stop offset="0.66" stopColor="#f72585" />
                     <stop offset="1" stopColor="var(--color-neutral-200)" />
                   </motion.linearGradient>
                 </defs>
