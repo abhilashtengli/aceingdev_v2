@@ -95,7 +95,7 @@ const HeroSection = () => {
         <div className="z-20 flex items-center justify-end border-red-400">
           <div className="max-w-4xl">
             <h1 className="relative mb-4 text-5xl leading-[1.2] font-bold tracking-widest text-neutral-700">
-              <div className="absolute -top-96 -left-1.5 z-0 h-fit w-[48rem]">
+              <div className="absolute -top-64 -left-1.5 z-0 h-fit w-[32rem]">
                 <LineSvg />
               </div>
 
