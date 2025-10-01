@@ -1,10 +1,6 @@
 import { CheckCircle, Lightbulb, Zap } from "lucide-react";
 import { Badge } from "../ui/badge";
 import { motion, AnimatePresence } from "motion/react";
-// import mpmos01 from "@/assets/mpmos_01.webp";
-// import mpmosProject from "@/assets/mpmos_project.webp";
-// import mpmosReport from "@/assets/mpmos_report.webp";
-// import mpmosCms from "@/assets/mpmos_cms.webp";
 import mainPage from "@/assets/ccs_mainpage.webp";
 import dashboard from "@/assets/ccs_dashboard.webp";
 import program from "@/assets/ccs_program.webp";
@@ -20,19 +16,19 @@ const CCS = () => {
   const [reactHovered, setReactHovered] = useState(false);
   const [tailwindHovered, setTailwindHovered] = useState(false);
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex flex-col items-center border-red-400">
       <div className="h-full w-full max-w-7xl border-red-700">
         <section className="relative flex h-fit w-full justify-center gap-x-32 overflow-hidden py-8">
           <div className="mt-3 flex flex-col justify-center">
             <Badge className="mb-4 border-gray-600 bg-gray-800 px-3 py-1 text-sm tracking-wider text-white">
-              Project Monitoring System
+              Education
             </Badge>
             <div className="relative mt-4 ml-1 w-fit bg-gradient-to-r from-green-100 via-white to-purple-100 px-3 py-2 text-6xl font-bold tracking-wide text-neutral-800">
               <svg
                 viewBox="0 0 357 1"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="absolute bottom-0 left-0 w-[155px]"
+                className="absolute bottom-0 left-0 w-[79px]"
               >
                 <defs>
                   <motion.linearGradient
@@ -66,7 +62,7 @@ const CCS = () => {
                 viewBox="0 0 357 1"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="absolute right-0 bottom-0 w-[155px]"
+                className="absolute right-0 bottom-0 w-[79px]"
               >
                 <defs>
                   <motion.linearGradient
@@ -94,14 +90,14 @@ const CCS = () => {
                 </defs>
                 <path d="M0 0.5H357" stroke="url(#x-gradient-red-right-left)" />
               </svg>
-              <p className="absolute -top-0.5 -left-0.5 h-1.5 w-[5px] rounded-full bg-green-300" />
-              <p className="absolute -top-0.5 -right-0.5 h-1.5 w-[5px] rounded-full bg-yellow-300" />
-              <p className="absolute -bottom-0.5 -left-0.5 h-1.5 w-1.5 rounded-full bg-red-300" />
-              <p className="absolute -right-0.5 -bottom-0.5 h-1.5 w-1.5 rounded-full bg-blue-300" />
-              CCS, Tura
+              <p className="absolute -top-0.5 -left-0.5 h-1.5 w-[6px] rounded-full bg-green-300" />
+              <p className="absolute -top-0.5 -right-0.5 h-1.5 w-[7px] rounded-full bg-yellow-300" />
+              <p className="absolute -bottom-0.5 -left-0.5 h-[7px] w-[6px] rounded-full bg-red-300" />
+              <p className="absolute -right-0.5 -bottom-0.5 h-[7px] w-[7px] rounded-full bg-blue-300" />
+              CCS{" "}
             </div>
             <p className="text-md mt-5 w-fit rounded-xl border px-2 py-3 pt-4 font-bold tracking-wide">
-              A Single Platform for Data Collection, Monitoring, and Reports
+              A Self-Managed College Website and Admin Portal
             </p>
             <p className="text-md mt-14 max-w-4xl leading-6 tracking-wider text-neutral-700">
               A dynamic college website with centralized admin dashboard that
