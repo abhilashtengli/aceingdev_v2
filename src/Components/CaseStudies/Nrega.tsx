@@ -6,7 +6,7 @@ import dashboardImg from "../../assets/dashboard_img.webp";
 import materialImg from "../../assets/material2_img.webp";
 import reportImg from "../../assets/reports_img.webp";
 import { motion, AnimatePresence } from "motion/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Nrega = () => {
   const [postgreSqlHovered, setPostgreSqlHovered] = useState(false);
@@ -16,6 +16,9 @@ const Nrega = () => {
   const [expressHovered, setExpressHovered] = useState(false);
   const [reactHovered, setReactHovered] = useState(false);
   const [tailwindHovered, setTailwindHovered] = useState(false);
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   return (
     <div className="flex flex-col items-center justify-center">
       <div className="h-full w-full max-w-7xl border-red-700">

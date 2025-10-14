@@ -4,7 +4,7 @@ import { ThemeProvider } from "../utils/themeProvider";
 
 const Body = () => {
   return (
-    <ThemeProvider defaultTheme="system" storageKey="app-theme">
+    <ThemeProvider  storageKey="app-theme">
       <div>
         {/* <ThemeToggle /> */}
         <Outlet />

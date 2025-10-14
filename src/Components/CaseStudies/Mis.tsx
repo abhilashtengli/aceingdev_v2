@@ -8,7 +8,7 @@ import misImg from "@/assets/mis_mainpage.webp";
 import misMart from "@/assets/mis_mart.webp";
 import misConsultation from "@/assets/mis_consultation.webp";
 import misDiscussion from "@/assets/mis_discussion.webp";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const MilletInformationSystem = () => {
    const [cloudflareHovered, setCloudflareHovered] = useState(false);
@@ -18,7 +18,10 @@ const MilletInformationSystem = () => {
    const [awsHovered, setAwsHovered] = useState(false);
    const [expressHovered, setExpressHovered] = useState(false);
    const [reactHovered, setReactHovered] = useState(false);
-   const [tailwindHovered, setTailwindHovered] = useState(false);
+  const [tailwindHovered, setTailwindHovered] = useState(false);
+    useEffect(() => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }, []);
   return (
     <div className="flex flex-col items-center justify-center">
       <div className="h-full w-full max-w-7xl border-red-700">

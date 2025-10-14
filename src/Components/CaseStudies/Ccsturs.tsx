@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "motion/react";
 import mainPage from "@/assets/ccs_mainpage.webp";
 import dashboard from "@/assets/ccs_dashboard.webp";
 import program from "@/assets/ccs_program.webp";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const CCS = () => {
   const [cloudflareHovered, setCloudflareHovered] = useState(false);
@@ -15,6 +15,9 @@ const CCS = () => {
   const [expressHovered, setExpressHovered] = useState(false);
   const [reactHovered, setReactHovered] = useState(false);
   const [tailwindHovered, setTailwindHovered] = useState(false);
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   return (
     <div className="flex flex-col items-center border-red-400">
       <div className="h-full w-full max-w-7xl border-red-700">
@@ -100,7 +103,7 @@ const CCS = () => {
               A Self-Managed College Website and Admin Portal
             </p>
             <p className="text-md mt-14 max-w-4xl leading-6 tracking-wider text-neutral-700">
-              A dynamic college website with centralized admin dashboard that
+              A dynamic educational institution website with centralized admin dashboard that
               empowers non-technical staff to manage all digital content
               independently, featuring modern responsive design and secure cloud
               storage

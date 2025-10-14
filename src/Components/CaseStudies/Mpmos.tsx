@@ -5,17 +5,20 @@ import mpmos01 from "@/assets/mpmos_01.webp";
 import mpmosProject from "@/assets/mpmos_project.webp";
 import mpmosReport from "@/assets/mpmos_report.webp";
 import mpmosCms from "@/assets/mpmos_cms.webp";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Mpmos = () => {
-   const [cloudflareHovered, setCloudflareHovered] = useState(false);
-    const [postgreSqlHovered, setPostgreSqlHovered] = useState(false);
-    const [typescriptHovered, setTsHovered] = useState(false);
-    const [motionHovered, setMotionHovered] = useState(false);
-    const [awsHovered, setAwsHovered] = useState(false);
-    const [expressHovered, setExpressHovered] = useState(false);
-    const [reactHovered, setReactHovered] = useState(false);
-    const [tailwindHovered, setTailwindHovered] = useState(false);
+  const [cloudflareHovered, setCloudflareHovered] = useState(false);
+  const [postgreSqlHovered, setPostgreSqlHovered] = useState(false);
+  const [typescriptHovered, setTsHovered] = useState(false);
+  const [motionHovered, setMotionHovered] = useState(false);
+  const [awsHovered, setAwsHovered] = useState(false);
+  const [expressHovered, setExpressHovered] = useState(false);
+  const [reactHovered, setReactHovered] = useState(false);
+  const [tailwindHovered, setTailwindHovered] = useState(false);
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   return (
     <div className="flex flex-col items-center justify-center">
       <div className="h-full w-full max-w-7xl border-red-700">
