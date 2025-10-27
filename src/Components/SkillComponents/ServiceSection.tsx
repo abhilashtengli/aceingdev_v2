@@ -74,10 +74,10 @@ export function ServicesSection({ className }: { className?: string }) {
                   </motion.div>
                   <div>
                     <h3 className="text-xs font-semibold text-gray-900 group-hover:text-blue-700">
-                      SaaS & Web Apps
+                      SaaS, Web & Mobile Applications
                     </h3>
                     <p className="text-xs text-gray-600 opacity-80">
-                      Custom platforms & MVPs
+                      Custom Platforms, MVPs & More..
                     </p>
                   </div>
                 </div>
@@ -261,7 +261,7 @@ export function ServicesSection({ className }: { className?: string }) {
                   </motion.div>
                   <div>
                     <h3 className="text-xs font-semibold text-gray-900 group-hover:text-orange-700">
-                      Cloud Deploy
+                      Deployment
                     </h3>
                     <p className="text-xs text-gray-600 opacity-80">
                       Secure & scalable
@@ -285,10 +285,9 @@ export function ServicesSection({ className }: { className?: string }) {
                 transition={{ duration: 0.3 }}
               >
                 <p className="text-xs leading-relaxed text-gray-700">
-                  Secure, scalable cloud infrastructure with seamless deployment
-                  pipelines. We implement robust authentication, database
-                  optimization, and CI/CD workflows, deploying reliably on AWS
-                  and Vercel for maximum performance and uptime
+                  Deploying and configuring web and mobile applications with
+                  secure authentication, optimized databases, and reliable
+                  uptime on AWS, Vercel, and app stores
                 </p>
               </motion.div>
             </AccordionContent>

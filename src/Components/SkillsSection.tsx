@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { AdminCrudTable } from "./SkillComponents/AdminCrud";
 import { AiChatWidget } from "./SkillComponents/AiChat";
 import { AnimatedHighlightedAreaChart } from "./SkillComponents/AnimatedChart";
@@ -91,7 +91,7 @@ const SkillsSection = () => {
         </h1>
       </div>
       <div className="flex h-[50rem] w-full items-start justify-center overflow-hidden border-blue-500 mask-t-from-90%">
-        <div className="relative flex w-full items-start justify-center gap-6 border border-green-400 p-6">
+        <div className="relative flex w-full items-start justify-center gap-6 p-6">
           <div className="flex flex-col gap-3">
             <DevStatusCard className="border-r border-b border-neutral-300 mask-l-from-30% shadow-2xl" />
             <AiChatWidget className="border mask-l-from-60% shadow-2xl" />

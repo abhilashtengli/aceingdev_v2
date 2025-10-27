@@ -115,13 +115,12 @@ const HeroSection = () => {
               </span>
             </h1>
             <p className="mt-6 mb-6 max-w-2xl text-xl leading-6 font-medium tracking-wide text-neutral-600">
-              From websites to SaaS, we turn your Ideas into Products that are
-              simple, impactful, and useful delivering Results that drive
-              Growth.
+              From web and mobile apps to SaaS platforms, we transform ideas
+              into products that are refined, impactful, and results driven.
             </p>
             <div className="flex items-center text-2xl font-semibold tracking-wider text-neutral-700">
               We Deliver{" "}
-              <span className="relative ml-2 inline-block h-10 w-32 overflow-hidden">
+              <span className="relative mt-1 ml-2 inline-block h-10 w-32 overflow-hidden">
                 <AnimatePresence mode="wait">
                   <motion.span
                     key={index}
