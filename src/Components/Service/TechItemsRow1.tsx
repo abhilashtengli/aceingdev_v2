@@ -1,4 +1,4 @@
-const TechItems = () => (
+const TechItemsRow1 = () => (
   <>
     {/* React */}
     <div className="flex items-center gap-x-1">
@@ -100,4 +100,4 @@ const TechItems = () => (
   </>
 );
 
-export default TechItems;
+export default TechItemsRow1;

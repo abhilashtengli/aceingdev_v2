@@ -168,7 +168,7 @@ body {
 
   @keyframes marquee-reverse {
     0% {
-      transform: translateX(-100%);
+      transform: translateX(-50%);
     }
     100% {
       transform: translateX(0);
@@ -180,7 +180,7 @@ body {
   }
 
   .animate-marquee-reverse {
-    animation: marquee-reverse 10s linear infinite;
+    animation: marquee-reverse 20s linear infinite;
   }
   .bg-gradient {
     background-image: linear-gradient(
