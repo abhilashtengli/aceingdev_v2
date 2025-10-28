@@ -4,10 +4,11 @@ import {
   IconBuildings,
   IconBuildingSkyscraper,
   IconCode,
+  IconCodeCircle2,
   IconFlag3,
   IconHeartRateMonitor,
- 
   IconRocket,
+  IconSettingsCode,
 } from "@tabler/icons-react";
 import { motion, AnimatePresence } from "motion/react";
 import { useEffect, useState } from "react";
@@ -323,7 +324,10 @@ const CustomSoftwareService = () => {
               <li>Patient Registration & Billing</li>
               <li>Medical Records</li>
               <li>Telemedicine + e-Prescription Solutions</li>
-              <li>ABHA & Ayushman Bharat Integrated Systems and <span className="font-semibold">more..</span></li>
+              <li>
+                ABHA & Ayushman Bharat Integrated Systems and{" "}
+                <span className="font-semibold">more..</span>
+              </li>
             </ul>
           </div>
           <div className="group relative rounded-lg border border-neutral-300 from-yellow-50 via-white to-red-50 p-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition duration-300 hover:bg-gradient-to-r">
@@ -354,7 +358,10 @@ const CustomSoftwareService = () => {
               <li>FTO, NMR & Fund Management Dashboards</li>
               <li>Citizen Service Platforms</li>
               <li>Project management Platforms</li>
-              <li>Report generation using available dat aand <span className="font-semibold">more..</span></li>
+              <li>
+                Report generation using available dat aand{" "}
+                <span className="font-semibold">more..</span>
+              </li>
             </ul>
           </div>
           <div className="group relative rounded-lg border border-neutral-300 from-yellow-50 via-white to-red-50 p-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition duration-300 hover:bg-gradient-to-r">
@@ -385,7 +392,10 @@ const CustomSoftwareService = () => {
               <li>Property Listing & CRM Systems</li>
               <li>Booking & Payment Automation</li>
               <li>Owner/Tenant Mobile Apps</li>
-              <li>Maintenance & Service Requests System and <span className="font-semibold">more..</span></li>
+              <li>
+                Maintenance & Service Requests System and{" "}
+                <span className="font-semibold">more..</span>
+              </li>
             </ul>
           </div>
           <div className="group relative rounded-lg border border-neutral-300 from-yellow-50 via-white to-red-50 p-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition duration-300 hover:bg-gradient-to-r">
@@ -414,7 +424,10 @@ const CustomSoftwareService = () => {
             <ul className="relative z-10 mt-2 list-disc pl-6 tracking-wide text-neutral-600">
               <li>ERP / CRM / HRMS Development</li>
               <li>Custom Dashboards & Analytics</li>
-              <li>API Integration & System Migration and <span className="font-semibold">more..</span></li>
+              <li>
+                API Integration & System Migration and{" "}
+                <span className="font-semibold">more..</span>
+              </li>
             </ul>
           </div>
         </div>
@@ -423,14 +436,14 @@ const CustomSoftwareService = () => {
 
       <div className="relative flex flex-col items-center justify-center border-neutral-300 py-12">
         <h1 className="text-2xl font-semibold tracking-wider text-neutral-700">
-         Custom Software Development Process
+          Custom Software Development Process
         </h1>
         <p className="mt-2 rounded-sm border border-neutral-300 px-3 pt-0.5 text-xs tracking-wider text-neutral-800 shadow-sm">
           Completed in 12–20 weeks (depending on project scope)
         </p>
 
-        <div className="relative z-10 mt-8 grid grid-cols-3 gap-x-12 gap-y-12 border-red-600">
-          <div className="group relative rounded-lg border border-neutral-300 bg-white from-yellow-50 via-white to-red-50 p-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition duration-300 hover:bg-gradient-to-r">
+        <div className="relative z-10 mt-8 grid grid-cols-2 gap-x-12 gap-y-12 border-red-600">
+          <div className="group h-44 relative rounded-lg border border-neutral-300 bg-white from-yellow-50 via-white to-red-50 p-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition duration-300 hover:bg-gradient-to-r">
             {/* -------------- */}
 
             <div
@@ -458,7 +471,7 @@ const CustomSoftwareService = () => {
               <li>Define success metrics and development roadmap</li>
             </ul>
           </div>
-          <div className="group relative rounded-lg border border-neutral-300 bg-white from-yellow-50 via-white to-red-50 p-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition duration-300 hover:bg-gradient-to-r">
+          <div className="group h-44 relative rounded-lg border border-neutral-300 bg-white from-yellow-50 via-white to-red-50 p-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition duration-300 hover:bg-gradient-to-r">
             {/* -------------- */}
 
             <div
@@ -487,7 +500,7 @@ const CustomSoftwareService = () => {
               <li>Establish data models and integration points</li>
             </ul>
           </div>
-          <div className="group relative rounded-lg border border-neutral-300 bg-white from-yellow-50 via-white to-red-50 p-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition duration-300 hover:bg-gradient-to-r">
+          <div className="group h-44 relative rounded-lg border border-neutral-300 bg-white from-yellow-50 via-white to-red-50 p-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition duration-300 hover:bg-gradient-to-r">
             {/* -------------- */}
 
             <div
@@ -516,7 +529,7 @@ const CustomSoftwareService = () => {
               <li>Integrate APIs, databases, and essential functionality</li>
             </ul>
           </div>
-          <div className="group relative rounded-lg border border-neutral-300 bg-white from-yellow-50 via-white to-red-50 p-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition duration-300 hover:bg-gradient-to-r">
+          <div className="group h-44 relative rounded-lg border border-neutral-300 bg-white from-yellow-50 via-white to-red-50 p-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition duration-300 hover:bg-gradient-to-r">
             {/* -------------- */}
 
             <div
@@ -536,7 +549,7 @@ const CustomSoftwareService = () => {
             {/* Your Content/Components */}
             {/* -------------- */}
             <h1 className="relative z-10 flex gap-x-2 text-lg font-semibold tracking-wider text-neutral-700">
-              <IconRocket className="mt-0.5 text-[#457b9d] transition duration-300 group-hover:-rotate-45" />{" "}
+              <IconSettingsCode className="mt-0.5 text-[#457b9d] transition duration-300 group-hover:rotate-130" />{" "}
               Testing & Quality Assurance
             </h1>
             <ul className="relative z-10 mt-2 list-disc pl-6 tracking-wide text-neutral-600">
@@ -544,7 +557,7 @@ const CustomSoftwareService = () => {
               <li>Ensure compatibility across devices and platforms</li>
             </ul>
           </div>
-          <div className="group relative rounded-lg border border-neutral-300 bg-white from-yellow-50 via-white to-red-50 p-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition duration-300 hover:bg-gradient-to-r">
+          <div className="group h-44 relative rounded-lg border border-neutral-300 bg-white from-yellow-50 via-white to-red-50 p-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition duration-300 hover:bg-gradient-to-r">
             {/* -------------- */}
 
             <div
@@ -564,7 +577,7 @@ const CustomSoftwareService = () => {
             {/* Your Content/Components */}
             {/* -------------- */}
             <h1 className="relative z-10 flex gap-x-2 text-lg font-semibold tracking-wider text-neutral-700">
-              <IconRocket className="mt-0.5 text-[#457b9d] transition duration-300 group-hover:-rotate-45" />{" "}
+              <IconRocket className="mt-0.5 text-[#e36414] transition duration-300 group-hover:-rotate-45" />{" "}
               Deployment & Launch
             </h1>
             <ul className="relative z-10 mt-2 list-disc pl-6 tracking-wide text-neutral-600">
@@ -572,7 +585,7 @@ const CustomSoftwareService = () => {
               <li>Ensure smooth transition into live production</li>
             </ul>
           </div>
-          <div className="group relative rounded-lg border border-neutral-300 bg-white from-yellow-50 via-white to-red-50 p-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition duration-300 hover:bg-gradient-to-r">
+          <div className="group h-44 relative rounded-lg border border-neutral-300 bg-white from-yellow-50 via-white to-red-50 p-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition duration-300 hover:bg-gradient-to-r">
             {/* -------------- */}
 
             <div
@@ -592,8 +605,8 @@ const CustomSoftwareService = () => {
             {/* Your Content/Components */}
             {/* -------------- */}
             <h1 className="relative z-10 flex gap-x-2 text-lg font-semibold tracking-wider text-neutral-700">
-              <IconRocket className="mt-0.5 text-[#457b9d] transition duration-300 group-hover:-rotate-45" />{" "}
-              Support 
+              <IconCodeCircle2 className="mt-0.5 text-[#3a0ca3] transition duration-300 group-hover:-rotate-90" />{" "}
+              Support
             </h1>
             <ul className="relative z-10 mt-2 list-disc pl-6 tracking-wide text-neutral-600">
               <li>Monitor performance and user feedback</li>
