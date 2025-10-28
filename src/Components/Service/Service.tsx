@@ -201,7 +201,7 @@ const Service = () => {
                   className="group flex w-fit items-center gap-x-2 rounded-sm border border-neutral-300 px-2 py-1 font-semibold tracking-wide text-blue-700 shadow-lg transition duration-300 active:scale-85"
                   to="/mvp"
                 >
-                  Learn more
+                  Read more
                   <IconCircleArrowRightFilled className="h-5 w-5 text-blue-700 transition-transform duration-300 group-hover:-rotate-45" />
                 </Link>
               </div>
@@ -325,7 +325,7 @@ const Service = () => {
                   className="group flex w-fit items-center gap-x-2 rounded-sm border border-neutral-300 px-2 py-1 font-semibold tracking-wide text-blue-700 shadow-lg transition duration-300 active:scale-90"
                   to="/customsoftware"
                 >
-                  Learn more
+                  Read more
                   <IconCircleArrowRightFilled className="h-5 w-5 text-blue-700 transition-transform duration-300 group-hover:-rotate-45" />
                 </Link>
               </div>

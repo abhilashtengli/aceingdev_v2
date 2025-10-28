@@ -1,5 +1,6 @@
 import HeroSection from "@/Components/HeroSection";
 import ProjectSection from "@/Components/ProjectSection";
+import CTA from "@/Components/Service/CTA";
 import Service from "@/Components/Service/Service";
 import SkillsSection from "@/Components/SkillsSection";
 
@@ -10,6 +11,7 @@ const LandingPage = () => {
       <SkillsSection />
       <ProjectSection />
       <Service />
+      <CTA />
     </div>
   );
 };
