@@ -423,7 +423,7 @@ const MvpService = () => {
         </p>
 
         <div className="relative z-10 mt-8 grid grid-cols-2 gap-x-12 gap-y-12 border-red-600">
-          <div className="group relative rounded-lg border border-neutral-300 bg-white from-yellow-50 via-white to-red-50 p-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition duration-300 hover:bg-gradient-to-r">
+          <div className="group relative h-44 rounded-lg border border-neutral-300 bg-white from-yellow-50 via-white to-red-50 p-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition duration-300 hover:bg-gradient-to-r">
             {/* -------------- */}
 
             <div
@@ -451,7 +451,7 @@ const MvpService = () => {
               <li>Create a go-to-market validation plan</li>
             </ul>
           </div>
-          <div className="group relative rounded-lg border border-neutral-300 bg-white from-yellow-50 via-white to-red-50 p-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition duration-300 hover:bg-gradient-to-r">
+          <div className="group relative h-44 rounded-lg border border-neutral-300 bg-white from-yellow-50 via-white to-red-50 p-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition duration-300 hover:bg-gradient-to-r">
             {/* -------------- */}
 
             <div
@@ -479,7 +479,7 @@ const MvpService = () => {
               <li>User flow designed for maximum retention and conversion</li>
             </ul>
           </div>
-          <div className="group relative rounded-lg border border-neutral-300 bg-white from-yellow-50 via-white to-red-50 p-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition duration-300 hover:bg-gradient-to-r">
+          <div className="group relative h-44 rounded-lg border border-neutral-300 bg-white from-yellow-50 via-white to-red-50 p-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition duration-300 hover:bg-gradient-to-r">
             {/* -------------- */}
 
             <div
@@ -500,15 +500,16 @@ const MvpService = () => {
             {/* -------------- */}
             <h1 className="relative z-10 flex gap-x-2 text-lg font-semibold tracking-wider text-neutral-700">
               <IconCode className="mt-0.5 text-[#f0386b] transition duration-300 group-hover:rotate-92" />{" "}
-              Development
+              Development & Testing
             </h1>
             <ul className="relative z-10 mt-2 list-disc pl-6 tracking-wide text-neutral-600">
               <li>Rapid development in weekly sprints</li>
               <li>You see progress in real-time (transparency-first)</li>
               <li>Scalable backend using industry best practices</li>
+              <li>Rigorous testing at each stage to ensure reliability</li>
             </ul>
           </div>
-          <div className="group relative rounded-lg border border-neutral-300 bg-white from-yellow-50 via-white to-red-50 p-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition duration-300 hover:bg-gradient-to-r">
+          <div className="group relative h-44 rounded-lg border border-neutral-300 bg-white from-yellow-50 via-white to-red-50 p-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition duration-300 hover:bg-gradient-to-r">
             {/* -------------- */}
 
             <div

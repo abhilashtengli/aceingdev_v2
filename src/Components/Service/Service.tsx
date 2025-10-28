@@ -5,7 +5,7 @@ import InfinteSliderCode from "./TechstackCarousel";
 const Service = () => {
   return (
     <>
-      <div className="w-full items-center justify-center border-red-600 px-32 py-4">
+      <div className="w-full items-center justify-center border-red-600 mask-b-from-90% px-32 py-4">
         <h1 className="py-2 text-center text-4xl font-semibold tracking-wider text-neutral-600">
           <span className="relative border border-neutral-100 bg-gradient-to-r from-red-100 via-white to-yellow-100 px-3">
             <svg
@@ -198,11 +198,11 @@ const Service = () => {
               </div>
               <div className="mt-6 flex justify-end">
                 <Link
-                  className="group flex w-fit items-center gap-x-2 rounded-sm border border-neutral-300 px-2 py-1 font-semibold tracking-wide text-blue-700 shadow-lg transition duration-300 active:scale-85"
+                  className="group flex w-fit items-center gap-x-2 rounded-full border border-neutral-300 px-3 py-1 font-semibold tracking-wide text-white bg-neutral-900 shadow-lg transition duration-300 active:scale-85"
                   to="/mvp"
                 >
                   Read more
-                  <IconCircleArrowRightFilled className="h-5 w-5 text-blue-700 transition-transform duration-300 group-hover:-rotate-45" />
+                  <IconCircleArrowRightFilled className="h-5 w-5 text-white transition-transform duration-300 group-hover:-rotate-45" />
                 </Link>
               </div>
             </div>
@@ -322,11 +322,11 @@ const Service = () => {
               </div>
               <div className="mt-6 flex justify-end">
                 <Link
-                  className="group flex w-fit items-center gap-x-2 rounded-sm border border-neutral-300 px-2 py-1 font-semibold tracking-wide text-blue-700 shadow-lg transition duration-300 active:scale-90"
+                  className="group flex w-fit items-center gap-x-2 rounded-full border border-neutral-300 px-3 py-1 font-semibold tracking-wide bg-neutral-900 text-white shadow-lg transition duration-300 active:scale-90"
                   to="/customsoftware"
                 >
                   Read more
-                  <IconCircleArrowRightFilled className="h-5 w-5 text-blue-700 transition-transform duration-300 group-hover:-rotate-45" />
+                  <IconCircleArrowRightFilled className="h-5 w-5 text-white transition-transform duration-300 group-hover:-rotate-45" />
                 </Link>
               </div>
             </div>
