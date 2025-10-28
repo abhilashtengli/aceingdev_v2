@@ -322,7 +322,7 @@ const Service = () => {
               </div>
               <div className="mt-6 flex justify-end">
                 <Link
-                  className="group flex w-fit items-center gap-x-2 rounded-sm border border-neutral-300 px-2 py-1 font-semibold tracking-wide text-blue-700 shadow-lg transition duration-300 active:scale-85"
+                  className="group flex w-fit items-center gap-x-2 rounded-sm border border-neutral-300 px-2 py-1 font-semibold tracking-wide text-blue-700 shadow-lg transition duration-300 active:scale-90"
                   to="/customsoftware"
                 >
                   Learn more
