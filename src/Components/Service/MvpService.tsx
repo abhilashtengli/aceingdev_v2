@@ -1,3 +1,9 @@
+import {
+  IconBrandCoreos,
+  IconCloudCode,
+  IconNavigationCode,
+  IconPencilBolt,
+} from "@tabler/icons-react";
 import { motion, AnimatePresence } from "motion/react";
 import { useEffect, useState } from "react";
 
@@ -64,8 +70,136 @@ const MvpService = () => {
           From Idea to Functional Product - Fast, Efficient, Market Ready
         </p>
       </div>
-      <div className="border border-blue-600">
-        <h1>What You Receive in Our MVP Program </h1>
+      <div className="flex flex-col items-center justify-center border-blue-600 py-12">
+        <h1 className="text-2xl font-semibold tracking-wider text-neutral-700">
+          What You Receive in Our MVP Program{" "}
+        </h1>
+        <div className="mt-8 grid grid-cols-2 gap-x-12 gap-y-12 border-red-600">
+          <div className="group relative rounded-lg border border-neutral-300 from-yellow-50 via-white to-red-50 p-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition duration-300 hover:bg-gradient-to-r">
+            {/* -------------- */}
+
+            <div
+              className="absolute inset-0"
+              style={{
+                backgroundImage: `
+        linear-gradient(45deg, transparent 49%, #e5e7eb 49%, #e5e7eb 51%, transparent 51%),
+        linear-gradient(-45deg, transparent 49%, #e5e7eb 49%, #e5e7eb 51%, transparent 51%)
+      `,
+                backgroundSize: "40px 40px",
+                WebkitMaskImage:
+                  "radial-gradient(ellipse 80% 80% at 100% 0%, #000 50%, transparent 90%)",
+                maskImage:
+                  "radial-gradient(ellipse 80% 80% at 100% 0%, #000 50%, transparent 90%)",
+              }}
+            />
+
+            <h1 className="relative z-10 flex gap-x-2 text-lg font-semibold tracking-wider text-neutral-700">
+              <IconPencilBolt className="mt-0.5 text-green-600 transition duration-300 group-hover:-rotate-135" />{" "}
+              Strategy & Architecture
+            </h1>
+            <ul className="relative z-10 mt-2 list-disc pl-6 tracking-wide text-neutral-600">
+              <li>Market & user flow analysis</li>
+              <li>MVP feature prioritization (80/20 focus)</li>
+              <li>Scalable architecture planning</li>
+            </ul>
+          </div>
+          <div className="group relative rounded-lg border border-neutral-300 from-yellow-50 via-white to-red-50 p-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition duration-300 hover:bg-gradient-to-r">
+            {/* -------------- */}
+
+            <div
+              className="absolute inset-0"
+              style={{
+                backgroundImage: `
+        linear-gradient(45deg, transparent 49%, #e5e7eb 49%, #e5e7eb 51%, transparent 51%),
+        linear-gradient(-45deg, transparent 49%, #e5e7eb 49%, #e5e7eb 51%, transparent 51%)
+      `,
+                backgroundSize: "40px 40px",
+                WebkitMaskImage:
+                  "radial-gradient(ellipse 80% 80% at 100% 0%, #000 50%, transparent 90%)",
+                maskImage:
+                  "radial-gradient(ellipse 80% 80% at 100% 0%, #000 50%, transparent 90%)",
+              }}
+            />
+            {/* Your Content/Components */}
+            {/* -------------- */}
+            <h1 className="relative z-10 flex gap-x-2 text-lg font-semibold tracking-wider text-neutral-700">
+              <IconBrandCoreos className="mt-0.5 text-[#e07a5f] transition duration-300 group-hover:-rotate-135" />{" "}
+              UI/UX Prototype
+            </h1>
+            <ul className="relative z-10 mt-2 list-disc pl-6 tracking-wide text-neutral-600">
+              <li>Conversion-focused UI</li>
+              <li>Mobile-first responsive layouts</li>
+              <li>Clickable prototypes for validation</li>
+            </ul>
+          </div>
+          <div className="group relative rounded-lg border border-neutral-300 from-yellow-50 via-white to-red-50 p-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition duration-300 hover:bg-gradient-to-r">
+            {/* -------------- */}
+
+            <div
+              className="absolute inset-0"
+              style={{
+                backgroundImage: `
+        linear-gradient(45deg, transparent 49%, #e5e7eb 49%, #e5e7eb 51%, transparent 51%),
+        linear-gradient(-45deg, transparent 49%, #e5e7eb 49%, #e5e7eb 51%, transparent 51%)
+      `,
+                backgroundSize: "40px 40px",
+                WebkitMaskImage:
+                  "radial-gradient(ellipse 80% 80% at 100% 0%, #000 50%, transparent 90%)",
+                maskImage:
+                  "radial-gradient(ellipse 80% 80% at 100% 0%, #000 50%, transparent 90%)",
+              }}
+            />
+            {/* Your Content/Components */}
+            {/* -------------- */}
+            <h1 className="relative z-10 flex gap-x-2 text-lg font-semibold tracking-wider text-neutral-700">
+              <IconNavigationCode className="mt-0.5 text-[#f0386b] transition duration-300 group-hover:rotate-110" />{" "}
+              Core Product Development
+            </h1>
+            <ul className="relative z-10 mt-2 list-disc pl-6 tracking-wide text-neutral-600">
+              <li>Web or Mobile build (React, Node,etc.)</li>
+              <li>Authentication, payments, dashboards</li>
+              <li>SaaS-ready structure (if needed)</li>
+            </ul>
+          </div>
+          <div className="group relative rounded-lg border border-neutral-300 from-yellow-50 via-white to-red-50 p-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition duration-300 hover:bg-gradient-to-r">
+            {/* -------------- */}
+
+            <div
+              className="absolute inset-0"
+              style={{
+                backgroundImage: `
+        linear-gradient(45deg, transparent 49%, #e5e7eb 49%, #e5e7eb 51%, transparent 51%),
+        linear-gradient(-45deg, transparent 49%, #e5e7eb 49%, #e5e7eb 51%, transparent 51%)
+      `,
+                backgroundSize: "40px 40px",
+                WebkitMaskImage:
+                  "radial-gradient(ellipse 80% 80% at 100% 0%, #000 50%, transparent 90%)",
+                maskImage:
+                  "radial-gradient(ellipse 80% 80% at 100% 0%, #000 50%, transparent 90%)",
+              }}
+            />
+            {/* Your Content/Components */}
+            {/* -------------- */}
+            <h1 className="relative z-10 flex gap-x-2 text-lg font-semibold tracking-wider text-neutral-700">
+              <IconCloudCode className="mt-0.5 text-[#0ea5e9] transition duration-300 group-hover:rotate-90" />{" "}
+              Deployment & Launch
+            </h1>
+            <ul className="relative z-10 mt-2 list-disc pl-6 tracking-wide text-neutral-600">
+              <li>Cloud hosting & domain setup</li>
+              <li>Live deployment with staging</li>
+              <li>Analytics & user feedback tracking</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div className="flex flex-col items-center justify-center border-blue-600 py-12">
+        <h1 className="text-2xl font-semibold tracking-wider text-neutral-700">
+          Our Development Process{" "}
+        </h1>
+        <p className="mt-2 rounded-sm border border-neutral-300 px-3 pt-0.5 text-xs tracking-wider text-neutral-800 shadow-sm">
+          Complete MVP in 4 - 6 weeks
+        </p>
       </div>
     </div>
   );
