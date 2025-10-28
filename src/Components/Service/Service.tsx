@@ -121,8 +121,8 @@ const Service = () => {
                   }}
                 >
                   <stop stopColor="var(--color-neutral-300)" />
-                  <stop offset="0.55" stopColor="var(--color-blue-300)" />
-                  <stop offset="0.66" stopColor="var(--color-blue-300)" />
+                  <stop offset="0.55" stopColor="var(--color-blue-400)" />
+                  <stop offset="0.66" stopColor="var(--color-blue-400)" />
                   <stop offset="1" stopColor="var(--color-neutral-300)" />
                 </motion.linearGradient>
               </defs>
@@ -199,7 +199,7 @@ const Service = () => {
               <div className="mt-6 flex justify-end">
                 <Link
                   className="group flex w-fit items-center gap-x-2 rounded-sm border border-neutral-300 px-2 py-1 font-semibold tracking-wide text-blue-700 shadow-lg transition duration-300 active:scale-85"
-                  to="/"
+                  to="/mvp"
                 >
                   Learn more
                   <IconCircleArrowRightFilled className="h-5 w-5 text-blue-700 transition-transform duration-300 group-hover:-rotate-45" />
@@ -218,7 +218,7 @@ const Service = () => {
             >
               <defs>
                 <motion.linearGradient
-                  id="x-gradient-card-right-left"
+                  id="x-gradient-card-custom-right-left"
                   gradientUnits="userSpaceOnUse"
                   x1="0%"
                   x2="10%"
@@ -235,12 +235,15 @@ const Service = () => {
                   }}
                 >
                   <stop stopColor="var(--color-neutral-300)" />
-                  <stop offset="0.55" stopColor="var(--color-blue-300)" />
-                  <stop offset="0.66" stopColor="var(--color-blue-300)" />
+                  <stop offset="0.55" stopColor="var(--color-red-400)" />
+                  <stop offset="0.66" stopColor="var(--color-red-400)" />
                   <stop offset="1" stopColor="var(--color-neutral-300)" />
                 </motion.linearGradient>
               </defs>
-              <path d="M0 0.5H357" stroke="url(#x-gradient-card-right-left)" />
+              <path
+                d="M0 0.5H357"
+                stroke="url(#x-gradient-card-custom-right-left)"
+              />
             </svg>
             {/* Diagonal Fade Grid Background - Top Left */}
             <div
@@ -283,10 +286,10 @@ const Service = () => {
                     Enterprises
                   </li>
                   <li className="rounded-xs px-2 tracking-wide shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] transition duration-200 hover:scale-105">
-                    Government institutions
+                    Organizations
                   </li>
                   <li className="rounded-xs px-2 tracking-wide shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] transition duration-200 hover:scale-105">
-                    Organizations
+                    Government institutions
                   </li>
                   <li className="rounded-xs px-2 tracking-wide shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] transition duration-200 hover:scale-105">
                     Teams
@@ -320,7 +323,7 @@ const Service = () => {
               <div className="mt-6 flex justify-end">
                 <Link
                   className="group flex w-fit items-center gap-x-2 rounded-sm border border-neutral-300 px-2 py-1 font-semibold tracking-wide text-blue-700 shadow-lg transition duration-300 active:scale-85"
-                  to="/"
+                  to="/customsoftware"
                 >
                   Learn more
                   <IconCircleArrowRightFilled className="h-5 w-5 text-blue-700 transition-transform duration-300 group-hover:-rotate-45" />

@@ -5,6 +5,8 @@ import Nrega from "./Components/CaseStudies/Nrega";
 import Mpmos from "./Components/CaseStudies/Mpmos";
 import MilletInformationSystem from "./Components/CaseStudies/Mis";
 import CCS from "./Components/CaseStudies/Ccsturs";
+import CustomSoftwareService from "./Components/Service/CustomSoftwareService";
+import MvpService from "./Components/Service/MvpService";
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
             <Route path="/mpmos" element={<Mpmos />} />
             <Route path="/mis" element={<MilletInformationSystem />} />
             <Route path="/ccs" element={<CCS />} />
+            <Route path="/customsoftware" element={<CustomSoftwareService />} />
+            <Route path="/mvp" element={<MvpService />} />
           </Route>
         </Routes>
       </BrowserRouter>

@@ -12,7 +12,7 @@ const TechItemsRow1 = () => (
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
-        className="h-4 w-4 shrink-0 stroke-1 text-blue-600 md:h-6 md:w-6"
+        className="h-4 w-4 shrink-0 stroke-1 text-blue-500 md:h-6 md:w-6"
       >
         <path d="M6.306 8.711c-2.602 .723 -4.306 1.926 -4.306 3.289c0 2.21 4.477 4 10 4c.773 0 1.526 -.035 2.248 -.102"></path>
         <path d="M17.692 15.289c2.603 -.722 4.308 -1.926 4.308 -3.289c0 -2.21 -4.477 -4 -10 -4c-.773 0 -1.526 .035 -2.25 .102"></path>
@@ -22,7 +22,7 @@ const TechItemsRow1 = () => (
         <path d="M12 18.574c1.926 1.893 3.821 2.768 5 2.086c1.913 -1.104 1.226 -5.877 -1.536 -10.66c-.375 -.65 -.78 -1.283 -1.212 -1.897"></path>
         <path d="M11.5 12.866a1 1 0 1 0 1 -1.732a1 1 0 0 0 -1 1.732z"></path>
       </svg>
-      <p className="text-sm font-semibold tracking-wide text-blue-600">React</p>
+      <p className="text-sm font-semibold tracking-wide text-blue-500">React</p>
     </div>
 
     {/* Next.js */}

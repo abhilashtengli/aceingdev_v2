@@ -1,6 +1,6 @@
 const TechItemsRow2 = () => (
   <>
-    {/* React */}
+    {/* tailwind */}
     <div className="flex items-center gap-x-2">
       <svg
         stroke="currentColor"
