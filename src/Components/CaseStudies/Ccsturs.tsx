@@ -23,7 +23,7 @@ const CCS = () => {
   return (
     <>
       <CommonNavbar />
-      <div className="flex flex-col items-center border-red-400">
+      <div className="flex flex-col items-center border-red-400 mt-24">
         <div className="h-full w-full max-w-7xl border-red-700">
           <section className="relative flex h-fit w-full justify-center gap-x-32 overflow-hidden py-8">
             <div className="mt-3 flex flex-col justify-center">

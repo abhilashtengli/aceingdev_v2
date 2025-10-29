@@ -34,7 +34,7 @@ const MvpService = () => {
   return (
     <div className="">
       <CommonNavbar/>
-      <div className="relative flex w-full flex-col items-center justify-center border-red-700 px-24 py-12 pt-32 text-center">
+      <div className="relative flex w-full flex-col items-center justify-center border-red-700 px-24 py-12 pt-32 text-center mt-6">
         {/* ------------------- */}
         <div
           className="absolute inset-0 z-0"
