@@ -198,7 +198,7 @@ const Service = () => {
               </div>
               <div className="mt-6 flex justify-end">
                 <Link
-                  className="group flex w-fit items-center gap-x-2 rounded-full border border-neutral-300 px-3 py-1 font-semibold tracking-wide text-white bg-neutral-900 shadow-lg transition duration-300 active:scale-85"
+                  className="group flex w-fit items-center gap-x-2 rounded-full border border-neutral-300 bg-neutral-900 px-3 py-1 font-semibold tracking-wide text-white shadow-lg transition duration-300 active:scale-85"
                   to="/mvp"
                 >
                   Read more
@@ -322,7 +322,7 @@ const Service = () => {
               </div>
               <div className="mt-6 flex justify-end">
                 <Link
-                  className="group flex w-fit items-center gap-x-2 rounded-full border border-neutral-300 px-3 py-1 font-semibold tracking-wide bg-neutral-900 text-white shadow-lg transition duration-300 active:scale-90"
+                  className="group flex w-fit items-center gap-x-2 rounded-full border border-neutral-300 bg-black px-3 py-1 font-semibold tracking-wide text-white shadow-lg transition duration-300 active:scale-90"
                   to="/customsoftware"
                 >
                   Read more

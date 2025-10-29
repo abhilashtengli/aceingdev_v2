@@ -10,7 +10,8 @@ import {
 } from "@tabler/icons-react";
 import { motion, AnimatePresence } from "motion/react";
 import { useEffect, useState } from "react";
-import CTA from "./CTA";
+import CTA from "../CTA";
+import CommonNavbar from "../Navbar";
 
 const MvpService = () => {
   const delivery = [
@@ -32,6 +33,7 @@ const MvpService = () => {
   }, []);
   return (
     <div className="">
+      <CommonNavbar/>
       <div className="relative flex w-full flex-col items-center justify-center border-red-700 px-24 py-12 pt-32 text-center">
         {/* ------------------- */}
         <div

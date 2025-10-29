@@ -5,6 +5,7 @@ import mpmos from "@/assets/mpmos_thumbnail.webp";
 import ccsp from "@/assets/ccs_program.webp";
 import nrgeaa from "@/assets/nrega-hero.png";
 import { motion } from "motion/react";
+import Aceingdevlogo from "./AceingdevSvg";
 const CTA = () => {
   return (
     <>
@@ -59,6 +60,15 @@ const CTA = () => {
                 "radial-gradient(ellipse 80% 80% at 100% 0%, #000 50%, transparent 90%)",
             }}
           />
+          <div className="absolute top-7 left-5 ml-5 flex w-fit items-center justify-center gap-x-5">
+            <Aceingdevlogo className="rounde-xl h-10 w-11 rounded-xl border-neutral-500 bg-neutral-800 p-1 px-1 pl-2 text-white" />
+            <h1 className="text-2xl font-bold tracking-wider text-neutral-800">
+              Aceing
+              <span className="bg-gradient-to-r from-purple-700 to-red-400 bg-clip-text text-transparent">
+                Dev
+              </span>
+            </h1>
+          </div>
           {/* Your Content/Components */}
           <div className="relative z-10 flex flex-col items-start justify-center border-red-500">
             <h1 className="max-w-[28rem] pt-3 pl-6 text-3xl font-bold tracking-wider text-neutral-700">
