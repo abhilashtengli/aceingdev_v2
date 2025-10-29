@@ -9,6 +9,7 @@ import { PlanSvg } from "./SVG/PlanToProduct/PlanSvg";
 
 import { ConnectingSvg } from "./SVG/connectingWorld/svg";
 import { WritingCodeAnimationComponent } from "./RightTopBox/AnimationComponent";
+import { IconCircleArrowRightFilled } from "@tabler/icons-react";
 
 const HeroSection = () => {
   const delivery = ["Value", "Quality", "Results"];
@@ -89,10 +90,40 @@ const HeroSection = () => {
     return () => clearInterval(interval);
   }, [delivery.length]);
   return (
-    <div className="flex w-full flex-col items-center justify-center">
-      <section className="relative grid h-screen w-full grid-cols-[1.35fr_1.65fr] px-24">
+    <div className="relative mb-12 flex w-full flex-col items-center justify-center bg-gradient-to-t from-neutral-50 via-white to-white">
+      <section className="relative grid h-screen w-full grid-cols-[1.35fr_1.65fr] mask-r-from-95% mask-l-from-90% px-24">
+        <div
+          className="absolute inset-0 z-0"
+          style={{
+            backgroundImage: `
+        linear-gradient(to right, #f3f4f6 1px, transparent 1px),
+        linear-gradient(to bottom, #f3f4f6 1px, transparent 1px)
+      `,
+            backgroundSize: "52px 52px",
+            WebkitMaskImage:
+              "radial-gradient(ellipse 40% 50% at 0% 0%, #000 50%, transparent 90%)",
+            maskImage:
+              "radial-gradient(ellipse 40% 50% at 0% 0%, #000 50%, transparent 90%)",
+          }}
+        />
+
+        <div
+          className="absolute inset-0 z-0"
+          style={{
+            backgroundImage: `
+        linear-gradient(to right, #f3f4f6 1px, transparent 1px),
+        linear-gradient(to bottom, #f3f4f6 1px, transparent 1px)
+      `,
+            backgroundSize: "52px 52px",
+            WebkitMaskImage:
+              "radial-gradient(ellipse 40% 50% at 0% 100%, #000 50%, transparent 90%)",
+            maskImage:
+              "radial-gradient(ellipse 40% 50% at 0% 100%, #000 50%, transparent 90%)",
+          }}
+        />
+
         {/* Left box */}
-        <div className="z-20 flex items-center justify-end border-red-400">
+        <div className="relative z-20 flex items-center justify-end border-red-400">
           <div className="max-w-4xl">
             <h1 className="relative mb-4 text-5xl leading-[1.2] font-bold tracking-widest text-neutral-700">
               <div className="absolute -top-64 -left-1.5 z-0 h-fit w-[32rem]">
@@ -135,10 +166,11 @@ const HeroSection = () => {
                 </AnimatePresence>
               </span>
             </div>
-            <button className="mt-12 cursor-pointer rounded-xl bg-black px-6 py-2 text-lg tracking-wider text-white transition duration-150 hover:bg-neutral-900 active:scale-95">
+            <button className="group mt-12 flex cursor-pointer items-center gap-x-3 rounded-full bg-black px-6 py-3 text-lg tracking-wider text-white transition duration-150 hover:bg-neutral-900 active:scale-95">
               Start the Conversation
+              <IconCircleArrowRightFilled className="mt-0.5 h-6 w-6 text-white transition-transform duration-300 group-hover:-rotate-45" />
             </button>
-            <div className="mt-12 flex items-center gap-x-5">
+            <div className="mt-8 flex max-w-2xl flex-wrap items-center gap-x-9 gap-y-4">
               <div className="flex items-center gap-x-1">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -235,6 +267,32 @@ const HeroSection = () => {
                   Express.js
                 </p>
               </div>
+
+              <div className="flex items-center gap-x-1">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  className="h-4 w-4 shrink-0 stroke-1 text-neutral-600 md:h-6 md:w-6"
+                >
+                  <path d="M6.306 8.711c-2.602 .723 -4.306 1.926 -4.306 3.289c0 2.21 4.477 4 10 4c.773 0 1.526 -.035 2.248 -.102"></path>
+                  <path d="M17.692 15.289c2.603 -.722 4.308 -1.926 4.308 -3.289c0 -2.21 -4.477 -4 -10 -4c-.773 0 -1.526 .035 -2.25 .102"></path>
+                  <path d="M6.305 15.287c-.676 2.615 -.485 4.693 .695 5.373c1.913 1.105 5.703 -1.877 8.464 -6.66c.387 -.67 .733 -1.339 1.036 -2"></path>
+                  <path d="M17.694 8.716c.677 -2.616 .487 -4.696 -.694 -5.376c-1.913 -1.105 -5.703 1.877 -8.464 6.66c-.387 .67 -.733 1.34 -1.037 2"></path>
+                  <path d="M12 5.424c-1.925 -1.892 -3.82 -2.766 -5 -2.084c-1.913 1.104 -1.226 5.877 1.536 10.66c.386 .67 .793 1.304 1.212 1.896"></path>
+                  <path d="M12 18.574c1.926 1.893 3.821 2.768 5 2.086c1.913 -1.104 1.226 -5.877 -1.536 -10.66c-.375 -.65 -.78 -1.283 -1.212 -1.897"></path>
+                  <path d="M11.5 12.866a1 1 0 1 0 1 -1.732a1 1 0 0 0 -1 1.732z"></path>
+                </svg>
+                <p className="text-sm font-semibold tracking-wide text-neutral-600">
+                  React Native
+                </p>
+              </div>
               <div className="flex items-center gap-x-2">
                 <svg
                   stroke="currentColor"
@@ -250,6 +308,31 @@ const HeroSection = () => {
                 </svg>
                 <p className="text-sm font-semibold tracking-wide text-neutral-600">
                   TailwindCSS
+                </p>
+              </div>
+              <div className="flex items-center gap-x-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  className="h-4 w-4 shrink-0 stroke-[1px] text-neutral-600 md:h-6 md:w-6"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M17 18.5a15.198 15.198 0 0 1 -7.37 1.44a14.62 14.62 0 0 1 -6.63 -2.94" />
+                  <path d="M19.5 21c.907 -1.411 1.451 -3.323 1.5 -5c-1.197 -.773 -2.577 -.935 -4 -1" />
+                  <path d="M3 11v-4.5a1.5 1.5 0 0 1 3 0v4.5" />
+                  <path d="M3 9h3" />
+                  <path d="M9 5l1.2 6l1.8 -4l1.8 4l1.2 -6" />
+                  <path d="M18 10.25c0 .414 .336 .75 .75 .75h1.25a1 1 0 0 0 1 -1v-1a1 1 0 0 0 -1 -1h-1a1 1 0 0 1 -1 -1v-1a1 1 0 0 1 1 -1h1.25a.75 .75 0 0 1 .75 .75" />
+                </svg>
+                <p className="text-sm font-semibold tracking-wide text-neutral-600">
+                  AWS
                 </p>
               </div>
               <div className="flex items-center gap-x-2">
@@ -278,12 +361,35 @@ const HeroSection = () => {
                   Motion/React
                 </p>
               </div>
+              <div className="flex items-center gap-x-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width=""
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  className="h-4 w-4 shrink-0 stroke-1 text-neutral-600 md:h-6 md:w-6"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M13.031 7.007c2.469 -.007 3.295 1.293 3.969 2.993c4 0 4.994 3.825 5 6h-20c-.001 -1.64 1.36 -2.954 3 -3c0 -1.5 1 -3 3 -3c.66 -1.942 2.562 -2.986 5.031 -2.993z" />
+                  <path d="M12 13h6" />
+                  <path d="M17 10l-2.5 6" />
+                </svg>
+
+                <p className="text-sm font-semibold tracking-wide text-neutral-600">
+                  Cloudflare
+                </p>
+              </div>
             </div>
           </div>
         </div>
 
         {/* Right box with SVG */}
-        <div className="relative flex items-start justify-center border-blue-500 bg-white dark:bg-black">
+        <div className="relative flex items-start justify-center border-blue-500 bg-gradient-to-t from-neutral-50 via-white to-white dark:bg-black">
           <div className="h-full w-full overflow-hidden">
             <div className="absolute inset-0 -top-35 scale-100 mask-r-from-70% mask-l-from-70%">
               <SvgFinalComponent className="h-full w-full border-blue-700" />
@@ -508,6 +614,7 @@ const HeroSection = () => {
           </div>
         </div>
       </section>
+      <div className="absolute bottom-0 w-full border mask-r-from-0% mask-l-from-0%" />
     </div>
   );
 };

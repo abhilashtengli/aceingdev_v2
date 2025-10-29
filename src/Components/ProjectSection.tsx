@@ -45,7 +45,7 @@ const ProjectSection = () => {
 
   return (
     <>
-      <div className="w-full border-black pb-24">
+      <div className="relative w-full border-black pb-24 bg-gradient-to-t from-neutral-50 via-white to-white mb-12">
         <div className="w-full pt-12 text-center text-3xl font-bold text-neutral-600">
           <span className="relative mr-2 border border-neutral-100 bg-gradient-to-r from-red-100 via-white to-yellow-100 px-3">
             <svg
@@ -1551,6 +1551,7 @@ const ProjectSection = () => {
             </h3>
           </Link>
         </div>
+        <div className="absolute bottom-0 w-full border mask-r-from-30% mask-l-from-30%" />
       </div>
     </>
   );

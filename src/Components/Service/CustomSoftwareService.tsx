@@ -29,6 +29,10 @@ const CustomSoftwareService = () => {
     }, 2000); // change word every 2s
     return () => clearInterval(interval);
   }, [delivery.length]);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   return (
     <div className="">
       <div className="relative flex w-full flex-col items-center justify-center border-red-700 px-24 py-12 pt-32 text-center">
@@ -443,7 +447,7 @@ const CustomSoftwareService = () => {
         </p>
 
         <div className="relative z-10 mt-8 grid grid-cols-2 gap-x-12 gap-y-12 border-red-600">
-          <div className="group h-44 relative rounded-lg border border-neutral-300 bg-white from-yellow-50 via-white to-red-50 p-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition duration-300 hover:bg-gradient-to-r">
+          <div className="group relative h-44 rounded-lg border border-neutral-300 bg-white from-yellow-50 via-white to-red-50 p-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition duration-300 hover:bg-gradient-to-r">
             {/* -------------- */}
 
             <div
@@ -471,7 +475,7 @@ const CustomSoftwareService = () => {
               <li>Define success metrics and development roadmap</li>
             </ul>
           </div>
-          <div className="group h-44 relative rounded-lg border border-neutral-300 bg-white from-yellow-50 via-white to-red-50 p-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition duration-300 hover:bg-gradient-to-r">
+          <div className="group relative h-44 rounded-lg border border-neutral-300 bg-white from-yellow-50 via-white to-red-50 p-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition duration-300 hover:bg-gradient-to-r">
             {/* -------------- */}
 
             <div
@@ -500,7 +504,7 @@ const CustomSoftwareService = () => {
               <li>Establish data models and integration points</li>
             </ul>
           </div>
-          <div className="group h-44 relative rounded-lg border border-neutral-300 bg-white from-yellow-50 via-white to-red-50 p-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition duration-300 hover:bg-gradient-to-r">
+          <div className="group relative h-44 rounded-lg border border-neutral-300 bg-white from-yellow-50 via-white to-red-50 p-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition duration-300 hover:bg-gradient-to-r">
             {/* -------------- */}
 
             <div
@@ -529,7 +533,7 @@ const CustomSoftwareService = () => {
               <li>Integrate APIs, databases, and essential functionality</li>
             </ul>
           </div>
-          <div className="group h-44 relative rounded-lg border border-neutral-300 bg-white from-yellow-50 via-white to-red-50 p-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition duration-300 hover:bg-gradient-to-r">
+          <div className="group relative h-44 rounded-lg border border-neutral-300 bg-white from-yellow-50 via-white to-red-50 p-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition duration-300 hover:bg-gradient-to-r">
             {/* -------------- */}
 
             <div
@@ -557,7 +561,7 @@ const CustomSoftwareService = () => {
               <li>Ensure compatibility across devices and platforms</li>
             </ul>
           </div>
-          <div className="group h-44 relative rounded-lg border border-neutral-300 bg-white from-yellow-50 via-white to-red-50 p-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition duration-300 hover:bg-gradient-to-r">
+          <div className="group relative h-44 rounded-lg border border-neutral-300 bg-white from-yellow-50 via-white to-red-50 p-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition duration-300 hover:bg-gradient-to-r">
             {/* -------------- */}
 
             <div
@@ -585,7 +589,7 @@ const CustomSoftwareService = () => {
               <li>Ensure smooth transition into live production</li>
             </ul>
           </div>
-          <div className="group h-44 relative rounded-lg border border-neutral-300 bg-white from-yellow-50 via-white to-red-50 p-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition duration-300 hover:bg-gradient-to-r">
+          <div className="group relative h-44 rounded-lg border border-neutral-300 bg-white from-yellow-50 via-white to-red-50 p-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition duration-300 hover:bg-gradient-to-r">
             {/* -------------- */}
 
             <div

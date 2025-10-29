@@ -11,7 +11,7 @@ import { ServicesSection } from "./SkillComponents/ServiceSection";
 
 const SkillsSection = () => {
   return (
-    <div className="pb-12">
+    <div className="relative mb-6 bg-gradient-to-t from-neutral-50 via-white to-white pb-16">
       <div className="border-red-500">
         <h1 className="py-2 text-center text-4xl font-semibold tracking-wider text-neutral-600">
           What we Deliver at{" "}
@@ -115,6 +115,7 @@ const SkillsSection = () => {
           </div>
         </div>
       </div>
+      <div className="absolute bottom-0 w-full border mask-r-from-20% mask-l-from-20%" />
     </div>
   );
 };

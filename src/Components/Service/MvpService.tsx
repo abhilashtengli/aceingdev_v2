@@ -27,6 +27,9 @@ const MvpService = () => {
     }, 2000); // change word every 2s
     return () => clearInterval(interval);
   }, [delivery.length]);
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   return (
     <div className="">
       <div className="relative flex w-full flex-col items-center justify-center border-red-700 px-24 py-12 pt-32 text-center">
