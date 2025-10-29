@@ -1,4 +1,9 @@
-import { IconCircleArrowRightFilled } from "@tabler/icons-react";
+import {
+  IconBrandLinkedin,
+  IconBrandWhatsapp,
+  IconBrandX,
+  IconCircleArrowRightFilled,
+} from "@tabler/icons-react";
 import { Link } from "react-router-dom";
 import adhome from "@/assets/aceingdev_home.png";
 import mpmos from "@/assets/mpmos_thumbnail.webp";
@@ -7,6 +12,9 @@ import nrgeaa from "@/assets/nrega-hero.png";
 import { motion } from "motion/react";
 import Aceingdevlogo from "./AceingdevSvg";
 const CTA = () => {
+  const whatsappUrl =
+    "https://wa.me/6362566003?text=Hello%20I%20am%20interested%20in%20your%20services";
+
   return (
     <>
       <div className="flex flex-col items-center justify-center border-blue-600 py-12">
@@ -88,6 +96,20 @@ const CTA = () => {
                 Let’s Build Together
                 <IconCircleArrowRightFilled className="mt-0.5 h-6 w-6 text-white transition-transform duration-300 group-hover:-rotate-45" />
               </Link>
+            </div>
+            <div className="absolute bottom-5 flex gap-x-7 pl-6">
+              <a href="https://x.com/abhilashtengli" target="_blank">
+                <IconBrandX className="h-7 w-7 text-neutral-700 transition-colors duration-200 hover:text-black" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/abhitengli30/"
+                target="_blank"
+              >
+                <IconBrandLinkedin className="h-7 w-7 text-neutral-700 transition-colors duration-200 hover:text-blue-500" />
+              </a>
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                <IconBrandWhatsapp className="h-7 w-7 cursor-pointer text-neutral-700 transition-colors duration-200 hover:text-green-500" />
+              </a>
             </div>
           </div>
           <div className="relative z-10 grid grid-cols-2 overflow-hidden border-red-500">

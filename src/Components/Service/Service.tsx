@@ -74,10 +74,10 @@ const Service = () => {
               </defs>
               <path d="M0 0.5H357" stroke="url(#x-gradient-red-right-left)" />
             </svg>
-            <p className="absolute -top-1 -left-0.5 h-1.5 w-[5px] rounded-full bg-neutral-300" />
-            <p className="absolute -top-1 -right-0.5 h-1.5 w-1.5 rounded-full bg-neutral-300" />
-            <p className="absolute -bottom-0.5 -left-0.5 h-1.5 w-[5px] rounded-full bg-neutral-300" />
-            <p className="absolute -right-0.5 -bottom-0.5 h-1.5 w-1.5 rounded-full bg-neutral-300" />
+            <p className="absolute -top-1 -left-0.5 h-1.5 w-[7px] rounded-full bg-neutral-300" />
+            <p className="absolute -top-1 -right-1 h-1.5 w-[7px] rounded-full bg-neutral-300" />
+            <p className="absolute -bottom-0.5 -left-0.5 h-1.5 w-[7px] rounded-full bg-neutral-300" />
+            <p className="absolute -right-1 -bottom-0.5 h-1.5 w-[7px] rounded-full bg-neutral-300" />
             Services
           </span>{" "}
           We Provide !

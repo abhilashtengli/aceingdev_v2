@@ -1,7 +1,6 @@
 import { useEffect, useState, type RefObject } from "react";
 import Aceingdevlogo from "./AceingdevSvg";
-import { IconCircleArrowRightFilled } from "@tabler/icons-react";
-
+import { IconBrandLinkedin, IconBrandX, IconCircleArrowRightFilled } from "@tabler/icons-react";
 
 interface LandingNavbarProps {
   scrollToSection: (ref: RefObject<HTMLDivElement | null>) => void;
@@ -9,7 +8,11 @@ interface LandingNavbarProps {
   workRef: RefObject<HTMLDivElement | null>;
 }
 
-const LandingNavbar = ({ scrollToSection, servicesRef, workRef } : LandingNavbarProps) => {
+const LandingNavbar = ({
+  scrollToSection,
+  servicesRef,
+  workRef,
+}: LandingNavbarProps) => {
   const [scrolled, setScrolled] = useState(false);
 
   const handleNavClick = (section: string) => {
@@ -43,7 +46,7 @@ const LandingNavbar = ({ scrollToSection, servicesRef, workRef } : LandingNavbar
         <div className="flex items-center gap-x-32">
           {/* Logo - scroll to top */}
           <div
-            className="flex w-fit items-center justify-center gap-x-5 px-12 cursor-pointer"
+            className="flex w-fit cursor-pointer items-center justify-center gap-x-5 px-12"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
             <Aceingdevlogo className="rounde-xl h-12 w-13 rounded-xl border-neutral-500 bg-neutral-800 p-1 px-1 pl-2 text-white" />
@@ -57,20 +60,36 @@ const LandingNavbar = ({ scrollToSection, servicesRef, workRef } : LandingNavbar
 
           {/* Navigation Links */}
           <ul className="flex gap-x-12 font-semibold tracking-wide text-neutral-500">
-            <li className="cursor-pointer" onClick={() => handleNavClick("services")}>
+            <li
+              className="cursor-pointer"
+              onClick={() => handleNavClick("services")}
+            >
               Services
             </li>
-            <li className="cursor-pointer" onClick={() => handleNavClick("work")}>
+            <li
+              className="cursor-pointer"
+              onClick={() => handleNavClick("work")}
+            >
               Work
             </li>
           </ul>
         </div>
 
-        {/* CTA Button */}
-        <button className="group flex cursor-pointer items-center gap-x-3 rounded-full bg-black px-5 py-1.5 tracking-wider text-white transition duration-150 hover:bg-neutral-900 active:scale-95">
-          Book Free Call
-          <IconCircleArrowRightFilled className="mt-0.5 h-6 w-6 text-white transition-transform duration-300 group-hover:-rotate-45" />
-        </button>
+        <div className="flex items-center gap-x-5">
+          <a href="https://x.com/abhilashtengli" target="_blank">
+            <IconBrandX className="h-4 w-4 text-neutral-500 transition-colors duration-200 hover:text-black" />
+          </a>
+           <a
+                href="https://www.linkedin.com/in/abhitengli30/"
+                target="_blank"
+              >
+                <IconBrandLinkedin className="h-4.5 w-4.5 text-neutral-500 transition-colors duration-200 hover:text-blue-500" />
+              </a>
+          <button className="group flex cursor-pointer items-center gap-x-3 rounded-full bg-black px-5 py-1.5 tracking-wider text-white transition duration-150 hover:bg-neutral-900 active:scale-95">
+            Book Free Call
+            <IconCircleArrowRightFilled className="mt-0.5 h-6 w-6 text-white transition-transform duration-300 group-hover:-rotate-45" />
+          </button>
+        </div>
       </div>
     </div>
   );

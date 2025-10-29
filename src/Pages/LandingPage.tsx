@@ -6,6 +6,7 @@ import SkillsSection from "@/Components/SkillsSection";
 import { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import LandingNavbar from "@/Components/NavbarLandingPage";
+import FounderMessage from "@/Components/FounderMessage";
 
 const LandingPage = () => {
   const location = useLocation();
@@ -57,6 +58,7 @@ const LandingPage = () => {
         <Service />
       </div>
       <CTA />
+      <FounderMessage/>
     </div>
   );
 };
