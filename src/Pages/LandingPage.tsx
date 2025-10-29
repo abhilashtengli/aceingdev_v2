@@ -34,13 +34,17 @@ const LandingPage = () => {
         if (location.state.scrollTo === "work") {
           scrollToSection(workRef);
         }
+        window.history.replaceState({}, document.title);
       }, 100); // Small delay ensures DOM is ready
     }
   }, [location]);
 
-  useEffect(() => {
+ useEffect(() => {
+  // Only scroll to top if no scrollTo state exists
+  if (!location.state?.scrollTo) {
     window.scrollTo({ top: 0, behavior: "smooth" });
-  }, []);
+  }
+}, [location]);
   return (
     <div className="mx-auto h-full w-full">
       <LandingNavbar
