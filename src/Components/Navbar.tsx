@@ -1,17 +1,22 @@
 import { useEffect, useState } from "react";
 import Aceingdevlogo from "./AceingdevSvg";
 import { IconCircleArrowRightFilled } from "@tabler/icons-react";
-import { Link, useLocation, useNavigate, useOutletContext } from "react-router-dom";
+import {
+  Link,
+  useLocation,
+  useNavigate,
+  useOutletContext,
+} from "react-router-dom";
 
 const CommonNavbar = () => {
   const [scrolled, setScrolled] = useState(false);
-   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-   const context = useOutletContext() as any; // will be undefined on non-home pages
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const context = useOutletContext() as any; // will be undefined on non-home pages
   const scrollToSection = context?.scrollToSection;
   const location = useLocation();
   const navigate = useNavigate();
 
-   const handleNavClick = (section: string) => {
+  const handleNavClick = (section: string) => {
     if (location.pathname === "/") {
       // Already on homepage
       scrollToSection?.(section);
@@ -39,7 +44,7 @@ const CommonNavbar = () => {
   }, []);
   return (
     <div
-      className={`fixed top-0 left-0 z-50 w-full bg-white py-3 transition-all duration-300 md:px-12 ${
+      className={`fixed top-0 left-0 z-50 w-full bg-white/[0.9] py-3 transition-all duration-300 md:px-12 ${
         scrolled ? "border-b border-gray-200 shadow-sm" : "border-b-0"
       }`}
     >

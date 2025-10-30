@@ -1,4 +1,5 @@
 import {
+  IconBrandGithub,
   IconBrandLinkedin,
   IconBrandWhatsapp,
   IconBrandX,
@@ -106,6 +107,9 @@ const CTA = () => {
                 target="_blank"
               >
                 <IconBrandLinkedin className="h-7 w-7 text-neutral-700 transition-colors duration-200 hover:text-blue-500" />
+              </a>
+              <a href="https://github.com/abhilashtengli" target="_blank">
+                <IconBrandGithub className="h-7 w-7 text-neutral-700 transition-colors duration-200 hover:text-black" />
               </a>
               <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
                 <IconBrandWhatsapp className="h-7 w-7 cursor-pointer text-neutral-700 transition-colors duration-200 hover:text-green-500" />

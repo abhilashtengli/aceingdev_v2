@@ -1,6 +1,10 @@
 import { useEffect, useState, type RefObject } from "react";
 import Aceingdevlogo from "./AceingdevSvg";
-import { IconBrandLinkedin, IconBrandX, IconCircleArrowRightFilled } from "@tabler/icons-react";
+import {
+  IconBrandLinkedin,
+  IconBrandX,
+  IconCircleArrowRightFilled,
+} from "@tabler/icons-react";
 
 interface LandingNavbarProps {
   scrollToSection: (ref: RefObject<HTMLDivElement | null>) => void;
@@ -37,7 +41,7 @@ const LandingNavbar = ({
 
   return (
     <div
-      className={`fixed top-0 left-0 z-50 w-full bg-white py-3 transition-all duration-300 md:px-12 ${
+      className={`fixed top-0 left-0 z-50 w-full bg-white/[0.9] py-3 transition-all duration-300 md:px-12 ${
         scrolled ? "border-b border-gray-200 shadow-sm" : "border-b-0"
       }`}
     >
@@ -74,17 +78,13 @@ const LandingNavbar = ({
             </li>
           </ul>
         </div>
-
         <div className="flex items-center gap-x-5">
           <a href="https://x.com/abhilashtengli" target="_blank">
             <IconBrandX className="h-4 w-4 text-neutral-500 transition-colors duration-200 hover:text-black" />
           </a>
-           <a
-                href="https://www.linkedin.com/in/abhitengli30/"
-                target="_blank"
-              >
-                <IconBrandLinkedin className="h-4.5 w-4.5 text-neutral-500 transition-colors duration-200 hover:text-blue-500" />
-              </a>
+          <a href="https://www.linkedin.com/in/abhitengli30/" target="_blank">
+            <IconBrandLinkedin className="h-4.5 w-4.5 text-neutral-500 transition-colors duration-200 hover:text-blue-500" />
+          </a>
           <button className="group flex cursor-pointer items-center gap-x-3 rounded-full bg-black px-5 py-1.5 tracking-wider text-white transition duration-150 hover:bg-neutral-900 active:scale-95">
             Book Free Call
             <IconCircleArrowRightFilled className="mt-0.5 h-6 w-6 text-white transition-transform duration-300 group-hover:-rotate-45" />
