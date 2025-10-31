@@ -113,7 +113,7 @@ const CommonFooter = () => {
         <div className="absolute top-0 left-0 w-full border border-neutral-200 mask-r-from-50% mask-l-from-50%" />
       </div>
       <p className="bg-gradient-to-t from-red-50 via-white to-white py-6 text-center tracking-wider text-neutral-700">
-        © 2025 Aceingdev. All rights reserved.
+        © 2025 Aceingdev - Registered in India. All rights reserved.
       </p>
     </>
   );

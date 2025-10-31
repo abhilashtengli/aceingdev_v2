@@ -166,10 +166,10 @@ const HeroSection = () => {
                 </AnimatePresence>
               </span>
             </div>
-            <button className="group mt-12 flex cursor-pointer items-center gap-x-3 rounded-full bg-black px-6 py-3 text-lg tracking-wider text-white transition duration-150 hover:bg-neutral-900 active:scale-95">
+            <a href="https://cal.com/aceingdev" target="_blank" className="group mt-12 w-fit flex cursor-pointer items-center gap-x-3 rounded-full bg-black px-6 py-3 text-lg tracking-wider text-white transition duration-150 hover:bg-neutral-900 active:scale-95">
               Start the Conversation
               <IconCircleArrowRightFilled className="mt-0.5 h-6 w-6 text-white transition-transform duration-300 group-hover:-rotate-45" />
-            </button>
+            </a>
             <div className="mt-8 flex max-w-2xl flex-wrap items-center gap-x-9 gap-y-4">
               <div className="flex items-center gap-x-1">
                 <svg

@@ -50,7 +50,7 @@ const LandingNavbar = ({
         <div className="flex items-center gap-x-32">
           {/* Logo - scroll to top */}
           <div
-            className="flex w-fit cursor-pointer items-center justify-center gap-x-5 "
+            className="flex w-fit cursor-pointer items-center justify-center gap-x-5"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
             <Aceingdevlogo className="rounde-xl h-12 w-13 rounded-xl border-neutral-500 bg-neutral-800 p-1 px-1 pl-2 text-white" />
@@ -85,10 +85,14 @@ const LandingNavbar = ({
           <a href="https://www.linkedin.com/in/abhitengli30/" target="_blank">
             <IconBrandLinkedin className="h-4.5 w-4.5 text-neutral-500 transition-colors duration-200 hover:text-blue-500" />
           </a>
-          <button className="group flex cursor-pointer items-center gap-x-3 rounded-full bg-black px-5 py-1.5 tracking-wider text-white transition duration-150 hover:bg-neutral-900 active:scale-95">
+          <a
+            href="https://cal.com/aceingdev"
+            target="_blank"
+            className="group flex cursor-pointer items-center gap-x-3 rounded-full bg-black px-5 py-1.5 tracking-wider text-white transition duration-150 hover:bg-neutral-900 active:scale-95"
+          >
             Book Free Call
             <IconCircleArrowRightFilled className="mt-0.5 h-6 w-6 text-white transition-transform duration-300 group-hover:-rotate-45" />
-          </button>
+          </a>
         </div>
       </div>
     </div>

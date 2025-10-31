@@ -5,8 +5,11 @@ import {
   IconBrandLinkedin,
   IconBrandWhatsapp,
   IconBrandX,
+  IconMapPin,
 } from "@tabler/icons-react";
 import type { RefObject } from "react";
+
+import india from "@/assets/india.png";
 
 interface LandingNavbarProps {
   scrollToSection: (ref: RefObject<HTMLDivElement | null>) => void;
@@ -31,7 +34,7 @@ const Footer = ({
   return (
     <>
       <div className="relative flex w-full justify-between bg-white px-12 pt-24 pb-12">
-        <div className="w-fit space-y-5 border-black">
+        <div className="w-fit space-y-3 border-black">
           <Link to="/">
             <div className="flex w-fit items-center justify-center gap-x-5 px-12">
               <Aceingdevlogo className="rounde-xl h-12 w-13 rounded-xl border-neutral-500 bg-neutral-800 p-1 px-1 pl-2 text-white" />
@@ -47,10 +50,17 @@ const Footer = ({
             AceingDev helps founders and businesses build meaningful web and
             mobile applications that create real value
           </p>
-          <div className="mt-2 flex flex-col items-start border-red-500 px-12 text-neutral-500">
+          <div className=" flex items-center gap-x-2 border-red-500 px-12 text-neutral-500">
+            <IconMapPin className="h-5 w-5 text-neutral-700" />
+            <p>
+              India 
+            </p>
+            <img src={india} className="h-5" />
+          </div>
+          <div className=" flex flex-col items-start border-red-500 px-12 text-neutral-500">
             <p>contact@aceingdev.com</p>
           </div>
-          <div className="bottom-5 flex gap-x-7 px-12">
+          <div className="bottom-5 flex gap-x-7 px-12 pt-2">
             <a href="https://x.com/abhilashtengli" target="_blank">
               <IconBrandX className="h-5 w-5 text-neutral-700 transition-colors duration-200 hover:text-black" />
             </a>
@@ -111,7 +121,7 @@ const Footer = ({
         <div className="absolute top-0 left-0 w-full border border-neutral-200 mask-r-from-50% mask-l-from-50%" />
       </div>
       <p className="bg-gradient-to-t from-red-50 via-white to-white py-6 text-center tracking-wider text-neutral-700">
-        © 2025 Aceingdev. All rights reserved.
+        © 2025 Aceingdev - Registered in India. All rights reserved.
       </p>
     </>
   );

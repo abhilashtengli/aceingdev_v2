@@ -5,7 +5,6 @@ import {
   IconBrandX,
   IconCircleArrowRightFilled,
 } from "@tabler/icons-react";
-import { Link } from "react-router-dom";
 import adhome from "@/assets/aceingdev_home.png";
 import mpmos from "@/assets/mpmos_thumbnail.webp";
 import ccsp from "@/assets/ccs_program.webp";
@@ -90,13 +89,14 @@ const CTA = () => {
               a Free Strategy Call!
             </h1>
             <div className="mt-5 pl-6">
-              <Link
-                to="/"
+              <a
+                href="https://cal.com/aceingdev"
+                target="_blank"
                 className="group flex items-center justify-center gap-x-2 rounded-full border-neutral-400 bg-black px-5 py-2 text-lg font-semibold tracking-wider text-white transition duration-300 active:scale-90"
               >
                 Let’s Build Together
                 <IconCircleArrowRightFilled className="mt-0.5 h-6 w-6 text-white transition-transform duration-300 group-hover:-rotate-45" />
-              </Link>
+              </a>
             </div>
             <div className="absolute bottom-5 flex gap-x-7 pl-6">
               <a href="https://x.com/abhilashtengli" target="_blank">

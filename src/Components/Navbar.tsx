@@ -77,10 +77,10 @@ const CommonNavbar = () => {
             </li>
           </ul>
         </div>
-        <button className="group flex cursor-pointer items-center gap-x-3 rounded-full bg-black px-5 py-1.5 tracking-wider text-white transition duration-150 hover:bg-neutral-900 active:scale-95">
+        <a href="https://cal.com/aceingdev" target="_blank" className="group flex cursor-pointer items-center gap-x-3 rounded-full bg-black px-5 py-1.5 tracking-wider text-white transition duration-150 hover:bg-neutral-900 active:scale-95">
           Book Free Call
           <IconCircleArrowRightFilled className="mt-0.5 h-6 w-6 text-white transition-transform duration-300 group-hover:-rotate-45" />
-        </button>
+        </a>
       </div>
     </div>
   );
