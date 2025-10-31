@@ -7,7 +7,7 @@ import { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import LandingNavbar from "@/Components/NavbarLandingPage";
 import FounderMessage from "@/Components/FounderMessage";
-import Footer from "@/Components/Footer";
+import Footer from "@/Components/FooterLandingPage";
 
 const LandingPage = () => {
   const location = useLocation();
@@ -25,6 +25,9 @@ const LandingPage = () => {
       });
     }
   };
+  useEffect(() => {
+    document.title = "AceingDev - Web & Mobile App Development";
+  }, []);
 
   useEffect(() => {
     if (location.state?.scrollTo) {
@@ -64,9 +67,11 @@ const LandingPage = () => {
       </div>
       <CTA />
       <FounderMessage />
-      <Footer scrollToSection={scrollToSection}
+      <Footer
+        scrollToSection={scrollToSection}
         servicesRef={servicesRef}
-        workRef={workRef}/>
+        workRef={workRef}
+      />
     </div>
   );
 };

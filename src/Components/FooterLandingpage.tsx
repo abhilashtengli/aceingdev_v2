@@ -30,7 +30,7 @@ const Footer = ({
     "https://wa.me/6362566003?text=Hello%20I%20am%20interested%20in%20your%20services";
   return (
     <>
-      <div className="relative flex w-full justify-between bg-white px-12 pt-24 pb-12 ">
+      <div className="relative flex w-full justify-between bg-white px-12 pt-24 pb-12">
         <div className="w-fit space-y-5 border-black">
           <Link to="/">
             <div className="flex w-fit items-center justify-center gap-x-5 px-12">
@@ -98,15 +98,19 @@ const Footer = ({
           <h1 className="text-xl tracking-wider text-neutral-800">Legal</h1>
 
           <ul className="mt-3 text-neutral-700">
-            <li className="tracking-wider">Privacy Policy</li>
-            <li className="tracking-wider">Terms & Consition</li>
+            <Link to="/privacypolicy">
+              <li className="tracking-wider">Privacy Policy</li>
+            </Link>
+            <Link to="/termsandcondition">
+              <li className="tracking-wider">Terms & Condition</li>
+            </Link>
             <li></li>
           </ul>
         </div>
 
-        <div className="absolute top-0 left-0 w-full border border-neutral-200 mask-l-from-50% mask-r-from-50%" />
+        <div className="absolute top-0 left-0 w-full border border-neutral-200 mask-r-from-50% mask-l-from-50%" />
       </div>
-      <p className="py-6 text-center tracking-wider  text-neutral-700 bg-gradient-to-t from-red-50 via-white to-white">
+      <p className="bg-gradient-to-t from-red-50 via-white to-white py-6 text-center tracking-wider text-neutral-700">
         © 2025 Aceingdev. All rights reserved.
       </p>
     </>

@@ -14,6 +14,7 @@ import { motion, AnimatePresence } from "motion/react";
 import { useEffect, useState } from "react";
 import CTA from "../CTA";
 import CommonNavbar from "../Navbar";
+import CommonFooter from "../FooterCommon";
 
 const CustomSoftwareService = () => {
   const delivery = [
@@ -24,6 +25,9 @@ const CustomSoftwareService = () => {
     "Organizations",
   ];
   const [index, setIndex] = useState(0);
+  useEffect(() => {
+    document.title = "Custom Software Development - AceingDev";
+  }, []);
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % delivery.length);
@@ -640,6 +644,7 @@ const CustomSoftwareService = () => {
       </div>
 
       <CTA />
+      <CommonFooter />
     </div>
   );
 };

@@ -41,7 +41,7 @@ const LandingNavbar = ({
 
   return (
     <div
-      className={`fixed top-0 left-0 z-50 w-full bg-white/[0.9] py-3 transition-all duration-300 md:px-12 ${
+      className={`fixed top-0 left-0 z-50 w-full bg-white/[0.9] py-3 transition-all duration-300 md:px-24 ${
         scrolled ? "border-b border-gray-200 shadow-sm" : "border-b-0"
       }`}
     >
@@ -50,7 +50,7 @@ const LandingNavbar = ({
         <div className="flex items-center gap-x-32">
           {/* Logo - scroll to top */}
           <div
-            className="flex w-fit cursor-pointer items-center justify-center gap-x-5 px-12"
+            className="flex w-fit cursor-pointer items-center justify-center gap-x-5 "
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
             <Aceingdevlogo className="rounde-xl h-12 w-13 rounded-xl border-neutral-500 bg-neutral-800 p-1 px-1 pl-2 text-white" />

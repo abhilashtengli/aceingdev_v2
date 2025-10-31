@@ -7,6 +7,8 @@ import MilletInformationSystem from "./Components/CaseStudies/Mis";
 import CCS from "./Components/CaseStudies/Ccsturs";
 import CustomSoftwareService from "./Components/Service/CustomSoftwareService";
 import MvpService from "./Components/Service/MvpService";
+import PrivacyPolicy from "./Components/Legal/PrivacyPolicy";
+import TermsAndCondition from "./Components/Legal/TermsAndCondition";
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
             <Route path="/ccs" element={<CCS />} />
             <Route path="/customsoftware" element={<CustomSoftwareService />} />
             <Route path="/mvp" element={<MvpService />} />
+            <Route path="/privacypolicy" element={<PrivacyPolicy />} />
+            <Route path="/termsandcondition" element={<TermsAndCondition />} />
           </Route>
         </Routes>
       </BrowserRouter>

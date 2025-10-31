@@ -12,6 +12,7 @@ import { motion, AnimatePresence } from "motion/react";
 import { useEffect, useState } from "react";
 import CTA from "../CTA";
 import CommonNavbar from "../Navbar";
+import CommonFooter from "../FooterCommon";
 
 const MvpService = () => {
   const delivery = [
@@ -22,6 +23,9 @@ const MvpService = () => {
     "Builders",
   ];
   const [index, setIndex] = useState(0);
+  useEffect(() => {
+    document.title = "MVP Development - AceingDev";
+  }, []);
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % delivery.length);
@@ -562,6 +566,7 @@ const MvpService = () => {
       </div>
 
       <CTA />
+      <CommonFooter />
     </div>
   );
 };

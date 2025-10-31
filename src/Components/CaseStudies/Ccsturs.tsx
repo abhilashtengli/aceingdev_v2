@@ -7,6 +7,7 @@ import program from "@/assets/ccs_program.webp";
 import { useEffect, useState } from "react";
 import CommonNavbar from "../Navbar";
 import CTA from "../CTA";
+import CommonFooter from "../FooterCommon";
 
 const CCS = () => {
   const [cloudflareHovered, setCloudflareHovered] = useState(false);
@@ -18,12 +19,15 @@ const CCS = () => {
   const [reactHovered, setReactHovered] = useState(false);
   const [tailwindHovered, setTailwindHovered] = useState(false);
   useEffect(() => {
+    document.title = "CCS Case study - AceingDev";
+  }, []);
+  useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
   return (
     <>
       <CommonNavbar />
-      <div className="flex flex-col items-center border-red-400 mt-24">
+      <div className="mt-24 flex flex-col items-center border-red-400">
         <div className="h-full w-full max-w-7xl border-red-700">
           <section className="relative flex h-fit w-full justify-center gap-x-32 overflow-hidden py-8">
             <div className="mt-3 flex flex-col justify-center">
@@ -898,7 +902,8 @@ const CCS = () => {
           </div>
         </div>
       </div>
-      <CTA/>
+      <CTA />
+      <CommonFooter />
     </>
   );
 };
