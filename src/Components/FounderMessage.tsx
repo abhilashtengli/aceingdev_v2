@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 const FounderMessage = () => {
   return (
     <>
-      <div className="relative flex h-screen flex-col items-center justify-center mask-t-from-80% mask-r-from-80% mask-l-from-90%">
+      <div className="relative flex h-screen flex-col items-center justify-center mask-r-from-80% mask-l-from-90% md:mask-t-from-80%">
         <div
           className="absolute inset-0 z-0"
           style={{
@@ -66,11 +66,11 @@ const FounderMessage = () => {
           />
 
           {/* Your Content/Components */}
-          <div className="flex w-full justify-between border-red-600">
-            <div className="z-10 flex w-full flex-col gap-y-6 border-red-500 pr-6">
-              <p className="pt-3 pl-6 text-lg tracking-wider text-neutral-700">
+          <div className="flex w-full flex-col justify-between border-red-600 md:flex-row">
+            <div className="z-10 flex w-full flex-col gap-y-6 items-center md:items-start border-red-500 pr-6">
+              <p className="pt-3 text-sm leading-6 tracking-wider text-neutral-700 pl-3 md:pl-6 md:text-lg">
                 Hi, I’m{" "}
-                <span className="bg-gradient-to-r from-violet-600 via-neutral-700 to-red-400 bg-clip-text font-semibold text-transparent">
+                <span className="bg-gradient-to-r from-violet-600 via-neutral-700 to-red-400 bg-clip-text text-sm font-semibold text-transparent md:text-lg">
                   Abhilash
                 </span>
                 , I’ve always loved finding solutions engineering shaped how I
@@ -81,25 +81,25 @@ const FounderMessage = () => {
               </p>
 
               <div>
-                <h2 className="pt-3 pl-6 text-lg font-semibold tracking-wider text-neutral-700">
+                <h2 className="pt-3 text-sm font-semibold tracking-wider text-neutral-700 pl-3 md:pl-6 md:text-lg">
                   {" "}
-                  AceingDev was born from a simple belief :
+                  AceingDev was born from a simple belief:
                 </h2>
-                <p className="pt-1 pl-6 text-sm tracking-wider text-neutral-700">
+                <p className="pt-1 text-xs tracking-wider text-neutral-700 pl-3 md:pl-6 md:text-sm">
                   You don’t need complexity to build powerful solutions just the
                   right intent and execution.
                 </p>
               </div>
             </div>
-            <div className="z-10 flex w-fit flex-col items-end justify-center overflow-hidden border-red-500 pr-5">
+            <div className="z-10 mt-6 flex w-full flex-col items-center justify-center overflow-hidden border-red-500 md:mt-0 md:w-fit md:items-end md:pr-5">
               <img
                 src={abhiimg}
-                className="h-72 w-96 rounded-4xl border border-neutral-400"
+                className="h-72 rounded-4xl border border-neutral-400 md:w-96"
               />
               <p className="mt-3 w-[17rem] text-xs tracking-wider text-neutral-700">
                 I am human, here to connect and build.
               </p>
-              <h1 className="mt-2 pr-5 text-sm font-semibold tracking-wider text-neutral-500">
+              <h1 className="mt-2 md:pr-5 text-sm font-semibold tracking-wider text-neutral-500">
                 - Abhilash Tengli
               </h1>
             </div>

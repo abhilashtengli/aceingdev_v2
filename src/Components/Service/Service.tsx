@@ -6,13 +6,13 @@ const Service = () => {
   return (
     <>
       <div className="w-full items-center justify-center border-red-600 py-4 md:mask-b-from-90% md:px-32">
-        <div className="border-red-600 py-2 text-center text-4xl font-semibold tracking-wider text-neutral-600">
+        <div className="border-red-600 py-2 text-center text-xl md:text-4xl font-semibold tracking-wider text-neutral-600">
           <span className="relative border border-neutral-100 bg-gradient-to-r from-red-100 via-white to-yellow-100 px-3">
             <svg
               viewBox="0 0 357 1"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className="absolute bottom-0 left-0 w-[91px]"
+              className="absolute bottom-0 left-0 w-[57.5px] md:w-[91px]"
             >
               <defs>
                 <motion.linearGradient
@@ -46,7 +46,7 @@ const Service = () => {
               viewBox="0 0 357 1"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className="absolute right-0 -bottom-[1px] w-[91px]"
+              className="absolute right-0 -bottom-[1px] w-[57.5px] md:w-[91px]"
             >
               <defs>
                 <motion.linearGradient
@@ -74,10 +74,10 @@ const Service = () => {
               </defs>
               <path d="M0 0.5H357" stroke="url(#x-gradient-red-right-left)" />
             </svg>
-            <p className="absolute -top-1 -left-0.5 h-1.5 w-[7px] rounded-full bg-neutral-300" />
-            <p className="absolute -top-1 -right-1 h-1.5 w-[7px] rounded-full bg-neutral-300" />
-            <p className="absolute -bottom-0.5 -left-0.5 h-1.5 w-[7px] rounded-full bg-neutral-300" />
-            <p className="absolute -right-1 -bottom-0.5 h-1.5 w-[7px] rounded-full bg-neutral-300" />
+            <p className="absolute -top-0.5 md:-top-1  -left-0.5  md:h-1.5 h-[3px] md:w-[7px] w-[3px] rounded-full bg-neutral-300" />
+            <p className="absolute -top-0.5 md:-top-1 -right-0.5 md:-right-1 md:h-1.5 h-[3px] md:w-[7px] w-[3px] rounded-full bg-neutral-300" />
+            <p className="absolute -bottom-0.5 -left-0.5 md:h-1.5 h-[3px] md:w-[7px] w-[3px] rounded-full bg-neutral-300" />
+            <p className="absolute -right-0.5 md:-right-1 -bottom-0.5 md:h-1.5 h-[3px] md:w-[7px] w-[3px] rounded-full bg-neutral-300" />
             Services
           </span>{" "}
           We Provide !

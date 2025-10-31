@@ -50,7 +50,7 @@ const LandingPage = () => {
     }
   }, [location]);
   return (
-    <div className="mx-auto overflow-x-hidden w-full">
+    <div className="mx-auto w-full overflow-x-hidden">
       <LandingNavbar
         scrollToSection={scrollToSection}
         servicesRef={servicesRef}
@@ -59,19 +59,19 @@ const LandingPage = () => {
 
       <HeroSection />
       <SkillsSection />
-       <div ref={workRef}>
+      <div ref={workRef}>
         <ProjectSection />
       </div>
       <div ref={servicesRef}>
         <Service />
       </div>
       <CTA />
-    {/*  <FounderMessage />
-      <Footer
+      <FounderMessage />
+       <Footer
         scrollToSection={scrollToSection}
         servicesRef={servicesRef}
         workRef={workRef}
-      /> */}
+      />
     </div>
   );
 };

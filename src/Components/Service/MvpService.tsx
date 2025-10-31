@@ -11,7 +11,7 @@ import {
 import { motion, AnimatePresence } from "motion/react";
 import { useEffect, useState } from "react";
 import CTA from "../CTA";
-import CommonNavbar from "../Navbar";
+// import CommonNavbar from "../Navbar";
 import CommonFooter from "../FooterCommon";
 
 const MvpService = () => {
@@ -37,11 +37,11 @@ const MvpService = () => {
   }, []);
   return (
     <div className="">
-      <CommonNavbar />
-      <div className="relative mt-6 flex w-full flex-col items-center justify-center border-red-700 px-24 py-12 pt-32 text-center">
+      {/* <CommonNavbar /> */}
+      <div className="relative mt-5 flex w-full flex-col items-center justify-center border-red-700 pt-12 text-center md:mt-6 md:px-24 md:py-12 md:pt-32">
         {/* ------------------- */}
         <div
-          className="absolute inset-0 z-0"
+          className="absolute inset-0 z-0 hidden md:block"
           style={{
             backgroundImage: `
         linear-gradient(to right, #f3f4f6 1px, transparent 1px),
@@ -54,12 +54,26 @@ const MvpService = () => {
               "radial-gradient(ellipse 70% 60% at 50% 0%, #000 60%, transparent 100%)",
           }}
         />
+        <div
+          className="absolute inset-0 z-0 md:hidden"
+          style={{
+            backgroundImage: `
+        linear-gradient(to right, #f3f4f6 1px, transparent 1px),
+        linear-gradient(to bottom, #f3f4f6 1px, transparent 1px)
+      `,
+            backgroundSize: "30px 30px",
+            WebkitMaskImage:
+              "radial-gradient(ellipse 70% 60% at 50% 0%, #000 60%, transparent 100%)",
+            maskImage:
+              "radial-gradient(ellipse 70% 60% at 50% 0%, #000 60%, transparent 100%)",
+          }}
+        />
         {/* Your Content/Components */}
         {/* ------------------- */}
-        <div className="relative z-10 ml-12 flex flex-col items-center border-red-400 text-5xl font-bold tracking-wider text-neutral-700">
+        <div className="relative z-10 flex flex-col items-center border-red-400 text-xl font-bold tracking-wider text-neutral-700 md:ml-12 md:text-5xl">
           <div className="flex items-end justify-center">
             <span>MVP Development for</span>
-            <span className="relative ml-3 inline-block h-13 w-72 overflow-hidden rounded-sm border border-neutral-100 bg-gradient-to-r from-yellow-100 via-white to-red-100">
+            <span className="relative ml-1 inline-block h-7.5 w-[8rem] overflow-hidden rounded-sm border border-neutral-100 bg-gradient-to-r from-yellow-100 via-white to-red-100 md:ml-3 md:h-13 md:w-72">
               <AnimatePresence mode="wait">
                 <motion.span
                   key={index}
@@ -67,7 +81,7 @@ const MvpService = () => {
                   animate={{ y: 0, opacity: 1 }}
                   exit={{ y: -20, opacity: 0 }}
                   transition={{ duration: 0.3, ease: "easeInOut" }}
-                  className="absolute top-0 left-0 bg-gradient-to-r from-blue-600 via-cyan-500 to-green-400 mask-t-from-70% bg-clip-text py-1 pl-3 text-start text-transparent"
+                  className="absolute top-0 left-0 bg-gradient-to-r from-blue-600 via-cyan-500 to-green-400 mask-t-from-70% bg-clip-text py-0.5 pl-1 text-start text-transparent md:py-1 md:pl-3"
                 >
                   {delivery[index]}
                 </motion.span>
@@ -75,15 +89,15 @@ const MvpService = () => {
             </span>
           </div>
         </div>
-        <p className="mt-3 max-w-3xl text-xl tracking-wide text-neutral-700">
+        <p className="relative z-10 mt-3 max-w-3xl px-3 text-lg tracking-wide text-neutral-700 md:px-0 md:text-xl">
           We don’t just build MVPs we build market ready products designed to
           validate real demand, attract users, and scale without rebuilding from
           scratch.
         </p>
-        <p className="mt-3 rounded-sm border px-2 py-1 pt-1.5 text-xs tracking-wider text-neutral-800 shadow-sm">
+        <p className="mt-3 rounded-sm border px-2 py-1 pt-1.5 text-[10px] tracking-wider text-neutral-800 shadow-sm md:text-xs">
           From Idea to Functional Product - Fast, Efficient, Market Ready
         </p>
-        <div className="mt-8 flex max-w-2xl flex-wrap items-center justify-center gap-x-9 gap-y-4">
+        <div className="mt-8 flex max-w-2xl flex-wrap items-center justify-center gap-x-3 gap-y-4 md:gap-x-9">
           <div className="flex items-center gap-x-1">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -105,7 +119,7 @@ const MvpService = () => {
               <path d="M12 18.574c1.926 1.893 3.821 2.768 5 2.086c1.913 -1.104 1.226 -5.877 -1.536 -10.66c-.375 -.65 -.78 -1.283 -1.212 -1.897"></path>
               <path d="M11.5 12.866a1 1 0 1 0 1 -1.732a1 1 0 0 0 -1 1.732z"></path>
             </svg>
-            <p className="text-sm font-semibold tracking-wide text-neutral-600">
+            <p className="text-xs font-semibold tracking-wide text-neutral-600 md:text-sm">
               React
             </p>
           </div>
@@ -300,10 +314,10 @@ const MvpService = () => {
         </div>
       </div>
       <div className="relative flex flex-col items-center justify-center border-blue-600 py-1 pb-12">
-        <h1 className="text-2xl font-semibold tracking-wider text-neutral-700">
+        <h1 className="text-md mt-5 font-semibold tracking-wider text-neutral-700 md:mt-0 md:text-2xl">
           What You Receive in Our MVP Program{" "}
         </h1>
-        <div className="mt-8 grid grid-cols-2 gap-x-12 gap-y-12 border-red-600">
+        <div className="mt-8 grid grid-cols-1 gap-x-12 gap-y-6 border-red-600 md:grid-cols-2 md:gap-y-12">
           <div className="group relative rounded-lg border border-neutral-300 from-yellow-50 via-white to-red-50 p-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition duration-300 hover:bg-gradient-to-r">
             {/* -------------- */}
 
@@ -326,7 +340,7 @@ const MvpService = () => {
               <IconPencilBolt className="mt-0.5 text-green-600 transition duration-300 group-hover:-rotate-135" />{" "}
               Strategy & Architecture
             </h1>
-            <ul className="relative z-10 mt-2 list-disc pl-6 tracking-wide text-neutral-600">
+            <ul className="relative z-10 mt-2 list-disc pl-6 text-sm tracking-wide text-neutral-600 md:text-[16px]">
               <li>Market & user flow analysis</li>
               <li>MVP feature prioritization (80/20 focus)</li>
               <li>Scalable architecture planning</li>
@@ -355,7 +369,7 @@ const MvpService = () => {
               <IconBrandCoreos className="mt-0.5 text-[#e07a5f] transition duration-300 group-hover:-rotate-135" />{" "}
               UI/UX Prototype
             </h1>
-            <ul className="relative z-10 mt-2 list-disc pl-6 tracking-wide text-neutral-600">
+            <ul className="relative z-10 mt-2 list-disc pl-6 text-sm tracking-wide text-neutral-600 md:text-[16px]">
               <li>Conversion-focused UI</li>
               <li>Mobile-first responsive layouts</li>
               <li>Clickable prototypes for validation</li>
@@ -384,7 +398,7 @@ const MvpService = () => {
               <IconNavigationCode className="mt-0.5 text-[#f0386b] transition duration-300 group-hover:rotate-110" />{" "}
               Core Product Development
             </h1>
-            <ul className="relative z-10 mt-2 list-disc pl-6 tracking-wide text-neutral-600">
+            <ul className="relative z-10 mt-2 list-disc pl-6 text-sm tracking-wide text-neutral-600 md:text-[16px]">
               <li>Web or Mobile build (React, Node,etc.)</li>
               <li>Authentication, payments, dashboards</li>
               <li>SaaS-ready structure (if needed)</li>
@@ -413,7 +427,7 @@ const MvpService = () => {
               <IconCloudCode className="mt-0.5 text-[#0ea5e9] transition duration-300 group-hover:rotate-90" />{" "}
               Deployment & Launch
             </h1>
-            <ul className="relative z-10 mt-2 list-disc pl-6 tracking-wide text-neutral-600">
+            <ul className="relative z-10 mt-2 list-disc pl-6 text-sm tracking-wide text-neutral-600 md:text-[16px]">
               <li>Cloud hosting & domain setup</li>
               <li>Live deployment with staging</li>
               <li>Analytics & user feedback tracking</li>
@@ -422,17 +436,16 @@ const MvpService = () => {
         </div>
         <div className="absolute bottom-0 w-full border border-b border-neutral-100 mask-r-from-70% mask-l-from-70%" />
       </div>
-
       <div className="relative flex flex-col items-center justify-center border-neutral-300 py-12">
-        <h1 className="text-2xl font-semibold tracking-wider text-neutral-700">
+        <h1 className="text-md font-semibold tracking-wider text-neutral-700 md:text-2xl">
           Our Development Process{" "}
         </h1>
-        <p className="mt-2 rounded-sm border border-neutral-300 px-3 pt-0.5 text-xs tracking-wider text-neutral-800 shadow-sm">
+        <p className="mt-2 rounded-sm border border-neutral-300 px-3 pt-0.5 text-[10px] tracking-wider text-neutral-800 shadow-sm md:text-xs">
           Complete MVP in 4 - 6 weeks
         </p>
 
-        <div className="relative z-10 mt-8 grid grid-cols-2 gap-x-12 gap-y-12 border-red-600">
-          <div className="group relative h-44 rounded-lg border border-neutral-300 bg-white from-yellow-50 via-white to-red-50 p-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition duration-300 hover:bg-gradient-to-r">
+        <div className="relative z-10 mt-8 grid grid-cols-1 gap-x-12 gap-y-6 border-red-600 md:grid-cols-2 md:gap-y-12">
+          <div className="group relative rounded-lg border border-neutral-300 bg-white from-yellow-50 via-white to-red-50 p-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition duration-300 hover:bg-gradient-to-r md:h-44">
             {/* -------------- */}
 
             <div
@@ -454,13 +467,13 @@ const MvpService = () => {
               <IconFlag3 className="mt-0.5 text-green-600 transition duration-300 group-hover:rotate-90" />{" "}
               Discovery & Strategy
             </h1>
-            <ul className="relative z-10 mt-2 list-disc pl-6 tracking-wide text-neutral-600">
+            <ul className="relative z-10 mt-2 list-disc pl-6 md:text-[16px] text-sm tracking-wide text-neutral-600 ">
               <li>Understand your vision, users, and goals</li>
               <li>Define must-have features vs nice-to-have</li>
               <li>Create a go-to-market validation plan</li>
             </ul>
           </div>
-          <div className="group relative h-44 rounded-lg border border-neutral-300 bg-white from-yellow-50 via-white to-red-50 p-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition duration-300 hover:bg-gradient-to-r">
+          <div className="group relative rounded-lg border border-neutral-300 bg-white from-yellow-50 via-white to-red-50 p-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition duration-300 hover:bg-gradient-to-r md:h-44">
             {/* -------------- */}
 
             <div
@@ -488,7 +501,7 @@ const MvpService = () => {
               <li>User flow designed for maximum retention and conversion</li>
             </ul>
           </div>
-          <div className="group relative h-44 rounded-lg border border-neutral-300 bg-white from-yellow-50 via-white to-red-50 p-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition duration-300 hover:bg-gradient-to-r">
+          <div className="group relative rounded-lg border border-neutral-300 bg-white from-yellow-50 via-white to-red-50 p-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition duration-300 hover:bg-gradient-to-r md:h-44">
             {/* -------------- */}
 
             <div
@@ -518,7 +531,7 @@ const MvpService = () => {
               <li>Rigorous testing at each stage to ensure reliability</li>
             </ul>
           </div>
-          <div className="group relative h-44 rounded-lg border border-neutral-300 bg-white from-yellow-50 via-white to-red-50 p-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition duration-300 hover:bg-gradient-to-r">
+          <div className="group relative rounded-lg border border-neutral-300 bg-white from-yellow-50 via-white to-red-50 p-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition duration-300 hover:bg-gradient-to-r md:h-44">
             {/* -------------- */}
 
             <div

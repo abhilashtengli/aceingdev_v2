@@ -13,7 +13,7 @@ import {
 import { motion, AnimatePresence } from "motion/react";
 import { useEffect, useState } from "react";
 import CTA from "../CTA";
-import CommonNavbar from "../Navbar";
+// import CommonNavbar from "../Navbar";
 import CommonFooter from "../FooterCommon";
 
 const CustomSoftwareService = () => {
@@ -40,9 +40,9 @@ const CustomSoftwareService = () => {
   }, []);
   return (
     <div className="">
-      <CommonNavbar />
+      {/* <CommonNavbar /> */}
 
-      <div className="relative flex w-full flex-col items-center justify-center border-red-700 px-24 py-12 pt-32 text-center">
+      <div className="relative mt-5 flex w-full flex-col items-center justify-center border-red-700 text-center md:px-24 md:py-12 md:pt-32">
         {/* ------------------- */}
         <div
           className="absolute inset-0 z-0"
@@ -60,10 +60,13 @@ const CustomSoftwareService = () => {
         />
         {/* Your Content/Components */}
         {/* ------------------- */}
-        <div className="relative z-10 ml-12 flex flex-col items-center border-red-400 text-5xl font-bold tracking-wider text-neutral-700">
+        <div className="relative z-10 flex flex-col items-center border-red-400 text-xl font-bold tracking-wider text-neutral-700 md:ml-12 md:text-5xl">
           <div className="flex items-end justify-center">
-            <span>Custom Software solutions for </span>
-            <span className="relative ml-3 inline-block h-14 w-[22rem] overflow-hidden rounded-sm border border-neutral-100 bg-gradient-to-r from-yellow-100 via-white to-red-100">
+            <span className="hidden md:block">
+              Custom Software solutions for{" "}
+            </span>
+            <span className="md:hidden">Software for </span>
+            <span className="relative ml-1 inline-block h-7.5 w-[10rem] overflow-hidden rounded-sm border border-neutral-100 bg-gradient-to-r from-yellow-100 via-white to-red-100 md:ml-3 md:h-14 md:w-[22rem]">
               <AnimatePresence mode="wait">
                 <motion.span
                   key={index}
@@ -79,15 +82,15 @@ const CustomSoftwareService = () => {
             </span>
           </div>
         </div>
-        <p className="mt-3 max-w-3xl text-xl tracking-wide text-neutral-700">
+        <p className="relative z-10 mt-3 max-w-3xl px-3 text-lg tracking-wide text-neutral-700 md:px-0 md:text-xl">
           We build custom software platforms crafted to your unique needs
           designed to streamline operations, drive growth, and scale
           effortlessly.
         </p>
-        <p className="mt-3 rounded-sm border px-2 py-1 pt-1.5 text-xs tracking-wider text-neutral-800 shadow-sm">
+        <p className="mt-3 rounded-sm border px-2 py-1 pt-1.5 text-[10px] tracking-wider text-neutral-800 shadow-sm md:text-xs">
           We build growth engines tailored to your industry
         </p>
-        <div className="mt-8 flex max-w-2xl flex-wrap items-center justify-center gap-x-9 gap-y-4">
+        <div className="mt-8 flex max-w-2xl flex-wrap items-center justify-center gap-x-3 gap-y-4 md:gap-x-9">
           <div className="flex items-center gap-x-1">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -304,10 +307,10 @@ const CustomSoftwareService = () => {
         </div>
       </div>
       <div className="relative flex flex-col items-center justify-center border-blue-600 py-1 pb-12">
-        <h1 className="text-2xl font-semibold tracking-wider text-neutral-700">
+        <h1 className="text-md mt-5 font-semibold tracking-wider text-neutral-700 md:mt-0 md:text-2xl">
           🌍 Industries We Serve
         </h1>
-        <div className="mt-8 grid grid-cols-2 gap-x-12 gap-y-12 border-red-600">
+        <div className="mt-8 grid grid-cols-1 gap-x-12 gap-y-12 border-red-600 md:grid-cols-2">
           <div className="group relative rounded-lg border border-neutral-300 from-yellow-50 via-white to-red-50 p-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition duration-300 hover:bg-gradient-to-r">
             {/* -------------- */}
 
@@ -330,7 +333,7 @@ const CustomSoftwareService = () => {
               <IconHeartRateMonitor className="mt-0.5 text-green-600 transition duration-300 group-hover:rotate-90" />{" "}
               Healthcare & Hospitals
             </h1>
-            <ul className="relative z-10 mt-2 list-disc pl-6 tracking-wide text-neutral-600">
+            <ul className="relative z-10 mt-2 list-disc pl-6 text-sm tracking-wide text-neutral-600 md:text-[16px]">
               <li>OPD/IPD Management Systems</li>
               <li>Patient Registration & Billing</li>
               <li>Medical Records</li>
@@ -364,7 +367,7 @@ const CustomSoftwareService = () => {
               <IconBuildingBank className="mt-0.5 text-[#e07a5f] transition duration-300 group-hover:rotate-90" />{" "}
               Government & Public Sector
             </h1>
-            <ul className="relative z-10 mt-2 list-disc pl-6 tracking-wide text-neutral-600">
+            <ul className="relative z-10 mt-2 list-disc pl-6 text-sm tracking-wide text-neutral-600 md:text-[16px]">
               <li>Beneficiary & Scheme Management Systems</li>
               <li>FTO, NMR & Fund Management Dashboards</li>
               <li>Citizen Service Platforms</li>
@@ -398,7 +401,7 @@ const CustomSoftwareService = () => {
               <IconBuildings className="mt-0.5 text-[#f0386b] transition duration-300 group-hover:rotate-90" />{" "}
               Real Estate & Property Management
             </h1>
-            <ul className="relative z-10 mt-2 list-disc pl-6 tracking-wide text-neutral-600">
+            <ul className="relative z-10 mt-2 list-disc pl-6 text-sm tracking-wide text-neutral-600 md:text-[16px]">
               <li>Rental Management Portals</li>
               <li>Property Listing & CRM Systems</li>
               <li>Booking & Payment Automation</li>
@@ -432,7 +435,7 @@ const CustomSoftwareService = () => {
               <IconBuildingSkyscraper className="mt-0.5 text-[#0ea5e9] transition duration-300 group-hover:rotate-90" />{" "}
               Enterprise Solutions
             </h1>
-            <ul className="relative z-10 mt-2 list-disc pl-6 tracking-wide text-neutral-600">
+            <ul className="relative z-10 mt-2 list-disc pl-6 text-sm tracking-wide text-neutral-600 md:text-[16px]">
               <li>ERP / CRM / HRMS Development</li>
               <li>Custom Dashboards & Analytics</li>
               <li>
@@ -446,15 +449,15 @@ const CustomSoftwareService = () => {
       </div>
 
       <div className="relative flex flex-col items-center justify-center border-neutral-300 py-12">
-        <h1 className="text-2xl font-semibold tracking-wider text-neutral-700">
+        <h1 className="text-md font-semibold tracking-wider text-neutral-700 md:text-2xl">
           Custom Software Development Process
         </h1>
-        <p className="mt-2 rounded-sm border border-neutral-300 px-3 pt-0.5 text-xs tracking-wider text-neutral-800 shadow-sm">
+        <p className="mt-2 rounded-sm border border-neutral-300 px-3 pt-0.5 text-[10px] tracking-wider text-neutral-800 shadow-sm md:text-xs">
           Completed in 12–20 weeks (depending on project scope)
         </p>
 
-        <div className="relative z-10 mt-8 grid grid-cols-2 gap-x-12 gap-y-12 border-red-600">
-          <div className="group relative h-44 rounded-lg border border-neutral-300 bg-white from-yellow-50 via-white to-red-50 p-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition duration-300 hover:bg-gradient-to-r">
+        <div className="relative z-10 mt-8 grid grid-cols-1 gap-x-12 gap-y-6 border-red-600 md:grid-cols-2 md:gap-y-12">
+          <div className="group relative rounded-lg border border-neutral-300 bg-white from-yellow-50 via-white to-red-50 p-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition duration-300 hover:bg-gradient-to-r md:h-44">
             {/* -------------- */}
 
             <div
@@ -482,7 +485,7 @@ const CustomSoftwareService = () => {
               <li>Define success metrics and development roadmap</li>
             </ul>
           </div>
-          <div className="group relative h-44 rounded-lg border border-neutral-300 bg-white from-yellow-50 via-white to-red-50 p-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition duration-300 hover:bg-gradient-to-r">
+          <div className="group relative rounded-lg border border-neutral-300 bg-white from-yellow-50 via-white to-red-50 p-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition duration-300 hover:bg-gradient-to-r md:h-44">
             {/* -------------- */}
 
             <div
@@ -511,7 +514,7 @@ const CustomSoftwareService = () => {
               <li>Establish data models and integration points</li>
             </ul>
           </div>
-          <div className="group relative h-44 rounded-lg border border-neutral-300 bg-white from-yellow-50 via-white to-red-50 p-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition duration-300 hover:bg-gradient-to-r">
+          <div className="group relative rounded-lg border border-neutral-300 bg-white from-yellow-50 via-white to-red-50 p-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition duration-300 hover:bg-gradient-to-r md:h-44">
             {/* -------------- */}
 
             <div
@@ -540,7 +543,7 @@ const CustomSoftwareService = () => {
               <li>Integrate APIs, databases, and essential functionality</li>
             </ul>
           </div>
-          <div className="group relative h-44 rounded-lg border border-neutral-300 bg-white from-yellow-50 via-white to-red-50 p-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition duration-300 hover:bg-gradient-to-r">
+          <div className="group relative rounded-lg border border-neutral-300 bg-white from-yellow-50 via-white to-red-50 p-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition duration-300 hover:bg-gradient-to-r md:h-44">
             {/* -------------- */}
 
             <div

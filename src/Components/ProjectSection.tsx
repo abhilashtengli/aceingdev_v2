@@ -46,13 +46,13 @@ const ProjectSection = () => {
   return (
     <>
       <div className="relative mb-12 w-full border-black bg-gradient-to-t from-neutral-50 via-white to-white pb-24">
-        <div className="w-full md:pt-12 text-center text-xl md:text-3xl font-bold text-neutral-600">
+        <div className="w-full md:pt-12 text-center text-xl md:text-4xl font-bold text-neutral-600">
           <span className="relative mr-2 border border-neutral-100 bg-gradient-to-r from-red-100 via-white to-yellow-100 px-3">
             <svg
               viewBox="0 0 357 1"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className="absolute bottom-0 left-0 w-[70px]"
+              className="absolute bottom-0 left-0 w-[54px] md:w-[81px]"
             >
               <defs>
                 <motion.linearGradient
@@ -86,7 +86,7 @@ const ProjectSection = () => {
               viewBox="0 0 357 1"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className="absolute right-0 bottom-0 w-[70px]"
+              className="absolute right-0 bottom-0 w-[54px] md:w-[81px]"
             >
               <defs>
                 <motion.linearGradient

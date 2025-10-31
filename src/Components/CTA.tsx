@@ -17,15 +17,15 @@ const CTA = () => {
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center border border-blue-600 py-12">
-        <div className="relative grid w-full grid-cols-1 overflow-hidden rounded-xl border border-red-500 bg-gradient-to-r from-violet-100 via-white to-green-50 p-5 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)] md:max-w-[69rem] md:grid-cols-2">
+      <div className="flex flex-col items-center justify-center border-blue-600 py-12">
+        <div className="relative grid w-full grid-cols-1 overflow-hidden border-red-500 bg-gradient-to-r from-violet-100 via-white to-green-50 p-5 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)] md:max-w-[69rem] md:grid-cols-2 md:rounded-xl">
           <svg
             width="357"
             height="1"
             viewBox="0 0 357 1"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="top-0 left-0 w-[24rem] md:absolute"
+            className="absolute top-0 left-0 w-[17rem] md:w-[24rem]"
           >
             <defs>
               <motion.linearGradient
@@ -68,9 +68,9 @@ const CTA = () => {
                 "radial-gradient(ellipse 80% 80% at 100% 0%, #000 50%, transparent 90%)",
             }}
           />
-          <div className="top-7 left-5 ml-5 flex w-fit items-center justify-center gap-x-5 md:absolute">
+          <div className="top-7 left-5 flex w-fit items-center justify-center gap-x-5 md:absolute md:ml-5">
             <Aceingdevlogo className="rounde-xl h-10 w-11 rounded-xl border-neutral-500 bg-neutral-800 p-1 px-1 pl-2 text-white" />
-            <h1 className="text-2xl font-bold tracking-wider text-neutral-800">
+            <h1 className="relative z-10 text-2xl font-bold tracking-wider text-neutral-800">
               Aceing
               <span className="bg-gradient-to-r from-purple-700 to-red-400 bg-clip-text text-transparent">
                 Dev
@@ -79,16 +79,16 @@ const CTA = () => {
           </div>
           {/* Your Content/Components */}
           <div className="relative z-10 flex flex-col items-start justify-center border-red-500">
-            <h1 className="max-w-[28rem] pt-3 pl-6 font-bold tracking-wider text-neutral-700 md:text-3xl">
+            <h1 className="max-w-[28rem] pt-3 font-bold tracking-wider text-neutral-700 md:pl-6 md:text-3xl">
               Have a Vision? Let's Turn It Into Impact.
             </h1>
-            <h1 className="mt-3 max-w-[22rem] pl-6 font-semibold tracking-wider text-neutral-700 md:text-2xl">
+            <h1 className="mt-3 max-w-[22rem] font-semibold tracking-wider text-neutral-700 md:pl-6 md:text-2xl">
               <span className="bg-gradient-to-r from-purple-700 to-red-400 bg-clip-text text-transparent text-shadow-black">
                 Book
               </span>{" "}
               a Free Strategy Call!
             </h1>
-            <div className="mt-2 pl-6 md:mt-5">
+            <div className="mt-2 md:mt-5 md:pl-6">
               <a
                 href="https://cal.com/aceingdev"
                 target="_blank"
@@ -98,7 +98,7 @@ const CTA = () => {
                 <IconCircleArrowRightFilled className="mt-0.5 h-4 w-4 text-white transition-transform duration-300 group-hover:-rotate-45 md:h-6 md:w-6" />
               </a>
             </div>
-            <div className="bottom-5 mt-4 flex gap-x-7 pl-6 md:absolute md:mt-0">
+            <div className="bottom-5 mt-4 flex gap-x-7 md:absolute md:mt-0 md:pl-6">
               <a href="https://x.com/abhilashtengli" target="_blank">
                 <IconBrandX className="h-4 w-4 text-neutral-700 transition-colors duration-200 hover:text-black md:h-7 md:w-7" />
               </a>
@@ -116,10 +116,10 @@ const CTA = () => {
               </a>
             </div>
           </div>
-          <div className="relative z-10 grid grid-cols-2 overflow-hidden border-red-500">
-            <img src={adhome} className="mt-5 h-full w-full" />
+          <div className="relative z-10 mt-4 grid grid-cols-2 overflow-hidden border-red-500 mask-b-from-99% md:mt-0">
+            <img src={adhome} className="h-full w-full md:mt-5" />
             <img src={nrgeaa} className="h-full w-full" />
-            <img src={mpmos} className="mt-9 h-fit w-full" />
+            <img src={mpmos} className="mt-5 h-fit w-full md:mt-9" />
             <img src={ccsp} className="h-full w-full mask-b-from-90%" />
           </div>
         </div>

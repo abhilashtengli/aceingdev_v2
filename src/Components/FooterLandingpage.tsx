@@ -8,7 +8,6 @@ import {
   IconMapPin,
 } from "@tabler/icons-react";
 import type { RefObject } from "react";
-
 import india from "@/assets/india.png";
 
 interface LandingNavbarProps {
@@ -33,8 +32,8 @@ const Footer = ({
     "https://wa.me/6362566003?text=Hello%20I%20am%20interested%20in%20your%20services";
   return (
     <>
-      <div className="relative flex w-full justify-between bg-white px-12 pt-24 pb-12">
-        <div className="w-fit space-y-3 border-black">
+      <div className="relative w-full justify-between bg-white md:pb-12 md:flex md:px-12 md:pt-24">
+        <div className="w-fit space-y-3 border-black md:pt-0 pt-5">
           <Link to="/">
             <div className="flex w-fit items-center justify-center gap-x-5 px-12">
               <Aceingdevlogo className="rounde-xl h-12 w-13 rounded-xl border-neutral-500 bg-neutral-800 p-1 px-1 pl-2 text-white" />
@@ -46,18 +45,16 @@ const Footer = ({
               </h1>
             </div>
           </Link>
-          <p className="mt-2 max-w-lg px-12 tracking-wide text-neutral-600">
+          <p className="mt-2 max-w-lg text-sm md:text-[17px] px-12 tracking-wide text-neutral-600">
             AceingDev helps founders and businesses build meaningful web and
             mobile applications that create real value
           </p>
-          <div className=" flex items-center gap-x-2 border-red-500 px-12 text-neutral-500">
+          <div className="flex items-center gap-x-2 border-red-500 px-12 text-neutral-500">
             <IconMapPin className="h-5 w-5 text-neutral-700" />
-            <p>
-              India 
-            </p>
+            <p>India</p>
             <img src={india} className="h-5" />
           </div>
-          <div className=" flex flex-col items-start border-red-500 px-12 text-neutral-500">
+          <div className="flex flex-col items-start border-red-500 px-12 text-neutral-500">
             <p>contact@aceingdev.com</p>
           </div>
           <div className="bottom-5 flex gap-x-7 px-12 pt-2">
@@ -75,7 +72,7 @@ const Footer = ({
             </a>
           </div>
         </div>
-        <div>
+        <div className="hidden md:block">
           <h1 className="text-xl tracking-wider text-neutral-800">
             Quick Links
           </h1>
@@ -97,14 +94,14 @@ const Footer = ({
             </li>
           </ul>
         </div>
-        <div>
+        <div className="hidden md:block">
           <h1 className="text-xl tracking-wider text-neutral-800">Services</h1>
           <ul className="mt-3 text-neutral-700">
             <li className="tracking-wider">Web Development</li>
             <li className="tracking-wider">App Development</li>
           </ul>
         </div>
-        <div>
+        <div className="hidden md:block">
           <h1 className="text-xl tracking-wider text-neutral-800">Legal</h1>
 
           <ul className="mt-3 text-neutral-700">
@@ -118,9 +115,9 @@ const Footer = ({
           </ul>
         </div>
 
-        <div className="absolute top-0 left-0 w-full border border-neutral-200 mask-r-from-50% mask-l-from-50%" />
+        <div className="absolute top-0 left-0 w-full border border-neutral-200 mask-r-from-50% mask-l-from-50% md:block hidden" />
       </div>
-      <p className="bg-gradient-to-t from-red-50 via-white to-white py-6 text-center tracking-wider text-neutral-700">
+      <p className="bg-gradient-to-t text-[9px] md:text-[17px] from-red-50 via-white to-white py-6 text-center tracking-wider text-neutral-700">
         © 2025 Aceingdev - Registered in India. All rights reserved.
       </p>
     </>

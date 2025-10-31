@@ -17,7 +17,7 @@ import {
 export function ServicesSection({ className }: { className?: string }) {
   return (
     <motion.div
-      className={`${className} top-42 md:left-1 z-30 max-w-xs space-y-2 rounded-2xl border border-neutral-200 bg-white px-3 py-3`}
+      className={`${className} top-42 z-30 max-w-xs space-y-2 rounded-2xl border border-neutral-200 bg-white px-3 py-3 md:left-1`}
       initial={{ opacity: 0, x: -50 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
@@ -32,8 +32,8 @@ export function ServicesSection({ className }: { className?: string }) {
         </h2>
         <p className="text-sm leading-relaxed text-gray-700">
           We build modern digital solutions that turn ideas into real
-          applications. From AI-powered tools to custom web apps and MVPs, we
-          create technology that helps businesses grow.
+          applications. From custom web and mobile apps to MVPs, we create
+          technology that helps businesses grow.
         </p>
       </motion.div>
 
@@ -98,11 +98,10 @@ export function ServicesSection({ className }: { className?: string }) {
                 transition={{ duration: 0.3 }}
               >
                 <p className="text-xs leading-relaxed text-gray-700">
-                  End-to-end development of Software as a Service platforms,
-                  custom web applications, and Minimum Viable Products. We build
-                  scalable, user friendly solutions with modern frameworks like
-                  React, Next.js, and Node.js, complete with payment
-                  integration, user management, and responsive design.
+                  We build SaaS platforms, custom web & mobile apps, and MVPs
+                  end to end. Scalable, fast, and user friendly products powered
+                  by React, Next.js, and Node.js, with payment systems, user
+                  management, and responsive design built-in.
                 </p>
               </motion.div>
             </AccordionContent>
