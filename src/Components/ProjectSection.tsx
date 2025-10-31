@@ -45,8 +45,8 @@ const ProjectSection = () => {
 
   return (
     <>
-      <div className="relative w-full border-black pb-24 bg-gradient-to-t from-neutral-50 via-white to-white mb-12">
-        <div className="w-full pt-12 text-center text-3xl font-bold text-neutral-600">
+      <div className="relative mb-12 w-full border-black bg-gradient-to-t from-neutral-50 via-white to-white pb-24">
+        <div className="w-full md:pt-12 text-center text-xl md:text-3xl font-bold text-neutral-600">
           <span className="relative mr-2 border border-neutral-100 bg-gradient-to-r from-red-100 via-white to-yellow-100 px-3">
             <svg
               viewBox="0 0 357 1"
@@ -114,36 +114,38 @@ const ProjectSection = () => {
               </defs>
               <path d="M0 0.5H357" stroke="url(#x-gradient-red-right-left)" />
             </svg>
-            <p className="absolute -top-1 block aspect-square w-[4px] rounded-full bg-neutral-300 md:-left-1 md:w-[5px] lg:w-[5px]" />
-            <p className="absolute -top-1 -right-1 block aspect-square w-[4px] rounded-full bg-neutral-300 md:w-[5px] lg:w-[5px]" />
-            <p className="absolute -bottom-1 -left-1 block aspect-square w-[4px] rounded-full bg-neutral-300 md:w-[5px] lg:w-[5px]" />
-            <p className="absolute -right-1 -bottom-1 block aspect-square w-[4px] rounded-full bg-neutral-300 md:w-[5px] lg:w-[5px]" />
+            <p className="absolute -top-0.5 md:-top-1 -left-0.5 block aspect-square w-[4px] rounded-full bg-neutral-300 md:-left-1 md:w-[5px] lg:w-[5px]" />
+            <p className="absolute -top-0.5 md:-top-1 md:-right-1 -right-0.5  block aspect-square w-[4px] rounded-full bg-neutral-300 md:w-[5px] lg:w-[5px]" />
+            <p className="absolute -bottom-0.5 md:-bottom-1 md:-left-1 -left-0.5 block aspect-square w-[4px] rounded-full bg-neutral-300 md:w-[5px] lg:w-[5px]" />
+            <p className="absolute -right-0.5 md-right-1 -bottom-0.5 md:-bottom-1 block aspect-square w-[4px] rounded-full bg-neutral-300 md:w-[5px] lg:w-[5px]" />
             Projects
           </span>
           {""} We’ve Built !
         </div>
-        <div className="flex w-full justify-center p-12 pt-3 text-center">
-          <p className="max-w-3xl text-xl tracking-wide text-neutral-500">
+        <div className="flex w-full justify-center md:p-12 md:px-0 px-4 py-3 pt-3 pb-12 text-center  border-red-500">
+          <p className="max-w-3xl text-sm md:text-xl tracking-wide text-neutral-500">
             Showcasing our projects across industries, highlighting innovative
             solutions. From concept to deployment, see how we bring ideas to
             life.
           </p>
         </div>
-        <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-12 mask-r-from-80% mask-l-from-80% px-32">
+        <div className="flex flex-col items-center justify-center gap-y-12 px-32 md:flex-row md:flex-wrap md:gap-x-12 md:mask-r-from-80% md:mask-l-from-80%">
           <Link
             to="/nrega"
-            className="group w-fit rounded-xl border border-neutral-300 bg-neutral-50 p-2 px-6 py-3 pt-6 shadow-lg shadow-red-100 hover:border-red-200"
+            className="group w-[21rem] rounded-xl border border-neutral-300 bg-neutral-50 p-2 px-2 shadow-lg shadow-red-100 hover:border-red-200 md:w-fit md:px-6 md:py-3 md:pt-6"
           >
             <img
               alt=""
               src={nrega}
-              className="w-[40rem] rounded-lg border border-neutral-100 transition duration-300 hover:scale-105"
+              className="w-96 rounded-lg border border-neutral-100 transition duration-300 hover:scale-105 md:w-[40rem]"
             />
-            <div className="mt-3 flex items-center justify-start gap-x-4">
-              <Badge className="rounded-full bg-zinc-700 px-5 text-sm tracking-widest">
-                Saas portal for Report generation
-              </Badge>
-              <div className="flex">
+            <div className="mt-3 flex flex-col items-center justify-start gap-x-4 md:flex-row">
+              <div className="w-full md:w-fit">
+                <Badge className="rounded-full bg-zinc-700 px-5 text-xs tracking-widest md:text-sm">
+                  Saas portal for Report generation
+                </Badge>
+              </div>
+              <div className="mt-3 flex w-full md:mt-0 md:w-fit">
                 <motion.div
                   className={`${nregareactHovered ? "z-10" : ""} flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white px-1`}
                   onMouseEnter={() => nregaSetReactHovered(true)}
@@ -161,7 +163,7 @@ const ProjectSection = () => {
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      className="h-4 w-4 stroke-1 text-sky-600 md:h-5 md:w-5"
+                      className="h-5 w-5 stroke-1 text-sky-600"
                     >
                       <path d="M6.306 8.711c-2.602 .723 -4.306 1.926 -4.306 3.289c0 2.21 4.477 4 10 4c.773 0 1.526 -.035 2.248 -.102"></path>
                       <path d="M17.692 15.289c2.603 -.722 4.308 -1.926 4.308 -3.289c0 -2.21 -4.477 -4 -10 -4c-.773 0 -1.526 .035 -2.25 .102"></path>
@@ -187,7 +189,7 @@ const ProjectSection = () => {
                   </AnimatePresence>
                 </motion.div>
                 <motion.div
-                  className={`${nregaexpressHovered ? "z-10" : ""} -ml-3 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white px-1`}
+                  className={`${nregaexpressHovered ? "z-10" : ""} -ml-2 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white px-1 md:-ml-3`}
                   onMouseEnter={() => nregaSetExpressHovered(true)}
                   onMouseLeave={() => nregaSetExpressHovered(false)}
                   layout
@@ -195,7 +197,7 @@ const ProjectSection = () => {
                   <div className="flex min-w-[16px] flex-none items-center justify-center md:min-w-[20px]">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-4 w-4 text-green-600 md:h-5 md:w-5"
+                      className="h-5 w-5 text-green-600"
                       viewBox="0 0 128 128"
                     >
                       <path
@@ -220,7 +222,7 @@ const ProjectSection = () => {
                   </AnimatePresence>
                 </motion.div>
                 <motion.div
-                  className={`${nregatailwindHovered ? "z-10" : ""} -ml-3 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white px-1`}
+                  className={`${nregatailwindHovered ? "z-10" : ""} -ml-2 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white px-1 md:-ml-3`}
                   onMouseEnter={() => nregaSetTailwindHovered(true)}
                   onMouseLeave={() => nregaSetTailwindHovered(false)}
                   layout
@@ -231,7 +233,7 @@ const ProjectSection = () => {
                       fill="currentColor"
                       stroke-width="0"
                       viewBox="0 0 24 24"
-                      className="h-4 w-4 text-sky-600 md:h-5 md:w-5"
+                      className="h-5 w-5 text-sky-600"
                       height="1em"
                       width="1em"
                       xmlns="http://www.w3.org/2000/svg"
@@ -254,7 +256,7 @@ const ProjectSection = () => {
                   </AnimatePresence>
                 </motion.div>
                 <motion.div
-                  className={`${nregaawsHovered ? "z-10" : ""} -ml-3 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white px-1`}
+                  className={`${nregaawsHovered ? "z-10" : ""} -ml-2 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white px-1 md:-ml-3`}
                   onMouseEnter={() => nregaSetAwsHovered(true)}
                   onMouseLeave={() => nregaSetAwsHovered(false)}
                   layout
@@ -264,7 +266,7 @@ const ProjectSection = () => {
                       viewBox="0 -30 150 150"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-4 w-4 pt-1 md:h-5 md:w-5"
+                      className="h-5 w-5 pt-1"
                     >
                       <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                       <g
@@ -304,7 +306,7 @@ const ProjectSection = () => {
                   </AnimatePresence>
                 </motion.div>
                 <motion.div
-                  className={`${nregamotionHovered ? "z-20" : ""} -ml-3 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white p-1.5`}
+                  className={`${nregamotionHovered ? "z-20" : ""} -ml-2 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white p-1.5 md:-ml-3`}
                   onMouseEnter={() => nregaSetMotionHovered(true)}
                   onMouseLeave={() => nregaSetMotionHovered(false)}
                   layout
@@ -316,7 +318,7 @@ const ProjectSection = () => {
                       viewBox="0 0 34 12"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-4 w-4 text-yellow-400"
+                      className="h-5 w-4 text-yellow-400"
                     >
                       <g clip-path="url(#clip0_715_30)">
                         <path
@@ -346,7 +348,7 @@ const ProjectSection = () => {
                   </AnimatePresence>
                 </motion.div>
                 <motion.div
-                  className={`${nregatypescriptHovered ? "z-20" : ""} -ml-3 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white p-2`}
+                  className={`${nregatypescriptHovered ? "z-20" : ""} -ml-2 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white p-2 md:-ml-3`}
                   onMouseEnter={() => nregaSetTsHovered(true)}
                   onMouseLeave={() => nregaSetTsHovered(false)}
                   layout
@@ -358,7 +360,7 @@ const ProjectSection = () => {
                       xmlns="http://www.w3.org/2000/svg"
                       preserveAspectRatio="xMidYMid"
                       fill="#000000"
-                      className="h-4 w-4"
+                      className="h-5 w-4"
                     >
                       <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                       <g
@@ -410,7 +412,7 @@ const ProjectSection = () => {
                   </AnimatePresence>
                 </motion.div>
                 <motion.div
-                  className={`${nregapostgreSqlHovered ? "z-10" : ""} -ml-3 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white p-2`}
+                  className={`${nregapostgreSqlHovered ? "z-10" : ""} -ml-2 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white p-2 md:-ml-3`}
                   onMouseEnter={() => nregaSetPostgreSqlHovered(true)}
                   onMouseLeave={() => nregaSetPostgreSqlHovered(false)}
                   layout
@@ -419,7 +421,7 @@ const ProjectSection = () => {
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 128 128"
-                      className="h-4 w-4"
+                      className="h-5 w-4"
                     >
                       <path d="M93.809 92.112c.785-6.533.55-7.492 5.416-6.433l1.235.108c3.742.17 8.637-.602 11.513-1.938 6.191-2.873 9.861-7.668 3.758-6.409-13.924 2.873-14.881-1.842-14.881-1.842 14.703-21.815 20.849-49.508 15.543-56.287-14.47-18.489-39.517-9.746-39.936-9.52l-.134.025c-2.751-.571-5.83-.912-9.289-.968-6.301-.104-11.082 1.652-14.709 4.402 0 0-44.683-18.409-42.604 23.151.442 8.841 12.672 66.898 27.26 49.362 5.332-6.412 10.484-11.834 10.484-11.834 2.558 1.699 5.622 2.567 8.834 2.255l.249-.212c-.078.796-.044 1.575.099 2.497-3.757 4.199-2.653 4.936-10.166 6.482-7.602 1.566-3.136 4.355-.221 5.084 3.535.884 11.712 2.136 17.238-5.598l-.22.882c1.474 1.18 1.375 8.477 1.583 13.69.209 5.214.558 10.079 1.621 12.948 1.063 2.868 2.317 10.256 12.191 8.14 8.252-1.764 14.561-4.309 15.136-27.985" />
                       <path d="M75.458 125.256c-4.367 0-7.211-1.689-8.938-3.32-2.607-2.46-3.641-5.629-4.259-7.522l-.267-.79c-1.244-3.358-1.666-8.193-1.916-14.419-.038-.935-.064-1.898-.093-2.919-.021-.747-.047-1.684-.085-2.664a18.8 18.8 0 01-4.962 1.568c-3.079.526-6.389.356-9.84-.507-2.435-.609-4.965-1.871-6.407-3.82-4.203 3.681-8.212 3.182-10.396 2.453-3.853-1.285-7.301-4.896-10.542-11.037-2.309-4.375-4.542-10.075-6.638-16.943-3.65-11.96-5.969-24.557-6.175-28.693C4.292 23.698 7.777 14.44 15.296 9.129 27.157.751 45.128 5.678 51.68 7.915c4.402-2.653 9.581-3.944 15.433-3.851 3.143.051 6.136.327 8.916.823 2.9-.912 8.628-2.221 15.185-2.139 12.081.144 22.092 4.852 28.949 13.615 4.894 6.252 2.474 19.381.597 26.651-2.642 10.226-7.271 21.102-12.957 30.57 1.544.011 3.781-.174 6.961-.831 6.274-1.295 8.109 2.069 8.607 3.575 1.995 6.042-6.677 10.608-9.382 11.864-3.466 1.609-9.117 2.589-13.745 2.377l-.202-.013-1.216-.107-.12 1.014-.116.991c-.311 11.999-2.025 19.598-5.552 24.619-3.697 5.264-8.835 6.739-13.361 7.709-1.544.33-2.947.474-4.219.474zm-9.19-43.671c2.819 2.256 3.066 6.501 3.287 14.434.028.99.054 1.927.089 2.802.106 2.65.355 8.855 1.327 11.477.137.371.26.747.39 1.146 1.083 3.316 1.626 4.979 6.309 3.978 3.931-.843 5.952-1.599 7.534-3.851 2.299-3.274 3.585-9.86 3.821-19.575l4.783.116-4.75-.57.14-1.186c.455-3.91.783-6.734 3.396-8.602 2.097-1.498 4.486-1.353 6.389-1.01-2.091-1.58-2.669-3.433-2.823-4.193l-.399-1.965 1.121-1.663c6.457-9.58 11.781-21.354 14.609-32.304 2.906-11.251 2.02-17.226 1.134-18.356-11.729-14.987-32.068-8.799-34.192-8.097l-.359.194-1.8.335-.922-.191c-2.542-.528-5.366-.82-8.393-.869-4.756-.08-8.593 1.044-11.739 3.431l-2.183 1.655-2.533-1.043c-5.412-2.213-21.308-6.662-29.696-.721-4.656 3.298-6.777 9.76-6.305 19.207.156 3.119 2.275 14.926 5.771 26.377 4.831 15.825 9.221 21.082 11.054 21.693.32.108 1.15-.537 1.976-1.529a270.708 270.708 0 0110.694-12.07l2.77-2.915 3.349 2.225c1.35.897 2.839 1.406 4.368 1.502l7.987-6.812-1.157 11.808c-.026.265-.039.626.065 1.296l.348 2.238-1.51 1.688-.174.196 4.388 2.025 1.836-2.301z" />
@@ -450,26 +452,28 @@ const ProjectSection = () => {
               </div>
             </div>
 
-            <h3 className="mt-2 max-w-xl text-lg tracking-wide text-neutral-800 transition duration-300 group-hover:text-green-600">
+            <h3 className="mt-2 max-w-xl text-sm tracking-wide text-neutral-800 transition duration-300 group-hover:text-green-600 md:text-lg">
               SaaS platform that sources publicly available government data and
               instantly generates 20+ reports
             </h3>
           </Link>
           <Link
             to="/mpmos"
-            className="group w-fit rounded-xl border border-neutral-300 bg-neutral-50 p-2 px-6 py-3 pt-6 shadow-lg shadow-green-100 hover:border-green-200"
+            className="group w-[21rem] rounded-xl border border-neutral-300 bg-neutral-50 p-2 shadow-lg shadow-green-100 hover:border-green-200 md:w-fit md:px-6 md:py-3 md:pt-6"
           >
             <img
               alt=""
               src={mpmos}
-              className="w-[40rem] rounded-lg border border-neutral-100 transition duration-300 hover:scale-105"
+              className="w-96 rounded-lg border border-neutral-100 transition duration-300 hover:scale-105 md:w-[40rem]"
             />
 
-            <div className="mt-3 flex items-center justify-start gap-x-4">
-              <Badge className="rounded-full bg-zinc-700 px-5 text-sm tracking-widest">
-                Project Management & Monitoring
-              </Badge>
-              <div className="flex">
+            <div className="mt-3 flex flex-col items-center justify-start gap-x-4 md:flex-row">
+              <div className="w-full md:w-fit">
+                <Badge className="rounded-full bg-zinc-700 px-5 text-xs tracking-widest md:text-sm">
+                  Project Management & Monitoring
+                </Badge>
+              </div>
+              <div className="mt-3 flex w-full md:mt-0 md:w-fit">
                 <motion.div
                   className={`${mpmosreactHovered ? "z-10" : ""} flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white px-1`}
                   onMouseEnter={() => mpmosSetReactHovered(true)}
@@ -487,7 +491,7 @@ const ProjectSection = () => {
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      className="h-4 w-4 stroke-1 text-sky-600 md:h-5 md:w-5"
+                      className="h-5 w-5 stroke-1 text-sky-600"
                     >
                       <path d="M6.306 8.711c-2.602 .723 -4.306 1.926 -4.306 3.289c0 2.21 4.477 4 10 4c.773 0 1.526 -.035 2.248 -.102"></path>
                       <path d="M17.692 15.289c2.603 -.722 4.308 -1.926 4.308 -3.289c0 -2.21 -4.477 -4 -10 -4c-.773 0 -1.526 .035 -2.25 .102"></path>
@@ -513,7 +517,7 @@ const ProjectSection = () => {
                   </AnimatePresence>
                 </motion.div>
                 <motion.div
-                  className={`${mpmosexpressHovered ? "z-10" : ""} -ml-3 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white px-1`}
+                  className={`${mpmosexpressHovered ? "z-10" : ""} -ml-2 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white px-1 md:-ml-3`}
                   onMouseEnter={() => mpmosSetExpressHovered(true)}
                   onMouseLeave={() => mpmosSetExpressHovered(false)}
                   layout
@@ -521,7 +525,7 @@ const ProjectSection = () => {
                   <div className="flex min-w-[16px] flex-none items-center justify-center md:min-w-[20px]">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-4 w-4 text-green-600 md:h-5 md:w-5"
+                      className="h-5 w-5 text-green-600"
                       viewBox="0 0 128 128"
                     >
                       <path
@@ -546,7 +550,7 @@ const ProjectSection = () => {
                   </AnimatePresence>
                 </motion.div>
                 <motion.div
-                  className={`${mpmostailwindHovered ? "z-10" : ""} -ml-3 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white px-1`}
+                  className={`${mpmostailwindHovered ? "z-10" : ""} -ml-2 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white px-1 md:-ml-3`}
                   onMouseEnter={() => mpmosSetTailwindHovered(true)}
                   onMouseLeave={() => mpmosSetTailwindHovered(false)}
                   layout
@@ -557,7 +561,7 @@ const ProjectSection = () => {
                       fill="currentColor"
                       stroke-width="0"
                       viewBox="0 0 24 24"
-                      className="h-4 w-4 text-sky-600 md:h-5 md:w-5"
+                      className="h-5 w-5 text-sky-600"
                       height="1em"
                       width="1em"
                       xmlns="http://www.w3.org/2000/svg"
@@ -580,7 +584,7 @@ const ProjectSection = () => {
                   </AnimatePresence>
                 </motion.div>
                 <motion.div
-                  className={`${mpmosawsHovered ? "z-10" : ""} -ml-3 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white px-1`}
+                  className={`${mpmosawsHovered ? "z-10" : ""} -ml-2 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white px-1 md:-ml-3`}
                   onMouseEnter={() => mpmosSetAwsHovered(true)}
                   onMouseLeave={() => mpmosSetAwsHovered(false)}
                   layout
@@ -590,7 +594,7 @@ const ProjectSection = () => {
                       viewBox="0 -30 150 150"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-4 w-4 pt-1 md:h-5 md:w-5"
+                      className="h-5 w-5 pt-1"
                     >
                       <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                       <g
@@ -630,7 +634,7 @@ const ProjectSection = () => {
                   </AnimatePresence>
                 </motion.div>
                 <motion.div
-                  className={`${mpmosmotionHovered ? "z-20" : ""} -ml-3 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white p-1.5`}
+                  className={`${mpmosmotionHovered ? "z-20" : ""} -ml-2 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white p-1.5 md:-ml-3`}
                   onMouseEnter={() => mpmosSetMotionHovered(true)}
                   onMouseLeave={() => mpmosSetMotionHovered(false)}
                   layout
@@ -642,7 +646,7 @@ const ProjectSection = () => {
                       viewBox="0 0 34 12"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-4 w-4 text-yellow-400"
+                      className="h-5 w-4 text-yellow-400"
                     >
                       <g clip-path="url(#clip0_715_30)">
                         <path
@@ -672,7 +676,7 @@ const ProjectSection = () => {
                   </AnimatePresence>
                 </motion.div>
                 <motion.div
-                  className={`${mpmostypescriptHovered ? "z-20" : ""} -ml-3 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white p-2`}
+                  className={`${mpmostypescriptHovered ? "z-20" : ""} -ml-2 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white p-2 md:-ml-3`}
                   onMouseEnter={() => mpmosSetTsHovered(true)}
                   onMouseLeave={() => mpmosSetTsHovered(false)}
                   layout
@@ -684,7 +688,7 @@ const ProjectSection = () => {
                       xmlns="http://www.w3.org/2000/svg"
                       preserveAspectRatio="xMidYMid"
                       fill="#000000"
-                      className="h-4 w-4"
+                      className="h-5 w-4"
                     >
                       <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                       <g
@@ -736,7 +740,7 @@ const ProjectSection = () => {
                   </AnimatePresence>
                 </motion.div>
                 <motion.div
-                  className={`${mpmospostgreSqlHovered ? "z-10" : ""} -ml-3 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white p-2`}
+                  className={`${mpmospostgreSqlHovered ? "z-10" : ""} -ml-2 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white p-2 md:-ml-3`}
                   onMouseEnter={() => mpmosSetPostgreSqlHovered(true)}
                   onMouseLeave={() => mpmosSetPostgreSqlHovered(false)}
                   layout
@@ -745,7 +749,7 @@ const ProjectSection = () => {
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 128 128"
-                      className="h-4 w-4"
+                      className="h-5 w-4"
                     >
                       <path d="M93.809 92.112c.785-6.533.55-7.492 5.416-6.433l1.235.108c3.742.17 8.637-.602 11.513-1.938 6.191-2.873 9.861-7.668 3.758-6.409-13.924 2.873-14.881-1.842-14.881-1.842 14.703-21.815 20.849-49.508 15.543-56.287-14.47-18.489-39.517-9.746-39.936-9.52l-.134.025c-2.751-.571-5.83-.912-9.289-.968-6.301-.104-11.082 1.652-14.709 4.402 0 0-44.683-18.409-42.604 23.151.442 8.841 12.672 66.898 27.26 49.362 5.332-6.412 10.484-11.834 10.484-11.834 2.558 1.699 5.622 2.567 8.834 2.255l.249-.212c-.078.796-.044 1.575.099 2.497-3.757 4.199-2.653 4.936-10.166 6.482-7.602 1.566-3.136 4.355-.221 5.084 3.535.884 11.712 2.136 17.238-5.598l-.22.882c1.474 1.18 1.375 8.477 1.583 13.69.209 5.214.558 10.079 1.621 12.948 1.063 2.868 2.317 10.256 12.191 8.14 8.252-1.764 14.561-4.309 15.136-27.985" />
                       <path d="M75.458 125.256c-4.367 0-7.211-1.689-8.938-3.32-2.607-2.46-3.641-5.629-4.259-7.522l-.267-.79c-1.244-3.358-1.666-8.193-1.916-14.419-.038-.935-.064-1.898-.093-2.919-.021-.747-.047-1.684-.085-2.664a18.8 18.8 0 01-4.962 1.568c-3.079.526-6.389.356-9.84-.507-2.435-.609-4.965-1.871-6.407-3.82-4.203 3.681-8.212 3.182-10.396 2.453-3.853-1.285-7.301-4.896-10.542-11.037-2.309-4.375-4.542-10.075-6.638-16.943-3.65-11.96-5.969-24.557-6.175-28.693C4.292 23.698 7.777 14.44 15.296 9.129 27.157.751 45.128 5.678 51.68 7.915c4.402-2.653 9.581-3.944 15.433-3.851 3.143.051 6.136.327 8.916.823 2.9-.912 8.628-2.221 15.185-2.139 12.081.144 22.092 4.852 28.949 13.615 4.894 6.252 2.474 19.381.597 26.651-2.642 10.226-7.271 21.102-12.957 30.57 1.544.011 3.781-.174 6.961-.831 6.274-1.295 8.109 2.069 8.607 3.575 1.995 6.042-6.677 10.608-9.382 11.864-3.466 1.609-9.117 2.589-13.745 2.377l-.202-.013-1.216-.107-.12 1.014-.116.991c-.311 11.999-2.025 19.598-5.552 24.619-3.697 5.264-8.835 6.739-13.361 7.709-1.544.33-2.947.474-4.219.474zm-9.19-43.671c2.819 2.256 3.066 6.501 3.287 14.434.028.99.054 1.927.089 2.802.106 2.65.355 8.855 1.327 11.477.137.371.26.747.39 1.146 1.083 3.316 1.626 4.979 6.309 3.978 3.931-.843 5.952-1.599 7.534-3.851 2.299-3.274 3.585-9.86 3.821-19.575l4.783.116-4.75-.57.14-1.186c.455-3.91.783-6.734 3.396-8.602 2.097-1.498 4.486-1.353 6.389-1.01-2.091-1.58-2.669-3.433-2.823-4.193l-.399-1.965 1.121-1.663c6.457-9.58 11.781-21.354 14.609-32.304 2.906-11.251 2.02-17.226 1.134-18.356-11.729-14.987-32.068-8.799-34.192-8.097l-.359.194-1.8.335-.922-.191c-2.542-.528-5.366-.82-8.393-.869-4.756-.08-8.593 1.044-11.739 3.431l-2.183 1.655-2.533-1.043c-5.412-2.213-21.308-6.662-29.696-.721-4.656 3.298-6.777 9.76-6.305 19.207.156 3.119 2.275 14.926 5.771 26.377 4.831 15.825 9.221 21.082 11.054 21.693.32.108 1.15-.537 1.976-1.529a270.708 270.708 0 0110.694-12.07l2.77-2.915 3.349 2.225c1.35.897 2.839 1.406 4.368 1.502l7.987-6.812-1.157 11.808c-.026.265-.039.626.065 1.296l.348 2.238-1.51 1.688-.174.196 4.388 2.025 1.836-2.301z" />
@@ -774,7 +778,7 @@ const ProjectSection = () => {
                   </AnimatePresence>
                 </motion.div>
                 <motion.div
-                  className="-ml-3 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white p-2"
+                  className="-ml-2 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white p-2 md:-ml-3"
                   onMouseEnter={() => mpmosSetCloudflareHovered(true)}
                   onMouseLeave={() => mpmosSetCloudflareHovered(false)}
                   layout
@@ -783,7 +787,7 @@ const ProjectSection = () => {
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 128 128"
-                      className="h-4 w-4"
+                      className="h-5 w-4"
                     >
                       <path
                         fill="#FFF"
@@ -815,26 +819,28 @@ const ProjectSection = () => {
                 </motion.div>
               </div>
             </div>
-            <h3 className="mt-2 max-w-xl text-lg tracking-wide text-neutral-800 transition duration-300 group-hover:text-green-600">
+            <h3 className="mt-2 max-w-xl text-sm tracking-wide text-neutral-800 transition duration-300 group-hover:text-green-600 md:text-lg">
               Digital platform for quick insights and automated project
               reporting.
             </h3>
           </Link>
           <Link
             to="/mis"
-            className="group w-fit rounded-xl border border-neutral-300 bg-neutral-50 p-2 px-6 py-3 pt-6 shadow-lg shadow-blue-100 hover:border-blue-200"
+            className="group w-[21rem] rounded-xl border border-neutral-300 bg-neutral-50 p-2 shadow-lg shadow-blue-100 hover:border-blue-200 md:w-fit md:px-6 md:py-3 md:pt-6"
           >
             <img
               alt=""
               src={mis}
-              className="w-[40rem] rounded-lg border border-neutral-100 transition duration-300 hover:scale-105"
+              className="w-96 rounded-lg border border-neutral-100 transition duration-300 hover:scale-105 md:w-[40rem]"
             />
 
-            <div className="mt-3 flex items-center justify-start gap-x-4">
-              <Badge className="rounded-full bg-zinc-700 px-5 text-sm tracking-widest">
-                Info system & Products listing
-              </Badge>
-              <div className="flex">
+            <div className="mt-3 flex flex-col items-center justify-start gap-x-4 md:flex-row">
+              <div className="w-full md:w-fit">
+                <Badge className="rounded-full bg-zinc-700 px-5 text-xs tracking-widest md:text-sm">
+                  Info system & Products listing
+                </Badge>
+              </div>
+              <div className="mt-3 flex w-full md:mt-0 md:w-fit">
                 <motion.div
                   className={`${misreactHovered ? "z-10" : ""} flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white px-1`}
                   onMouseEnter={() => misSetReactHovered(true)}
@@ -852,7 +858,7 @@ const ProjectSection = () => {
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      className="h-4 w-4 stroke-1 text-sky-600 md:h-5 md:w-5"
+                      className="h-5 w-5 stroke-1 text-sky-600"
                     >
                       <path d="M6.306 8.711c-2.602 .723 -4.306 1.926 -4.306 3.289c0 2.21 4.477 4 10 4c.773 0 1.526 -.035 2.248 -.102"></path>
                       <path d="M17.692 15.289c2.603 -.722 4.308 -1.926 4.308 -3.289c0 -2.21 -4.477 -4 -10 -4c-.773 0 -1.526 .035 -2.25 .102"></path>
@@ -878,7 +884,7 @@ const ProjectSection = () => {
                   </AnimatePresence>
                 </motion.div>
                 <motion.div
-                  className={`${misexpressHovered ? "z-10" : ""} -ml-3 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white px-1`}
+                  className={`${misexpressHovered ? "z-10" : ""} -ml-2 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white px-1 md:-ml-3`}
                   onMouseEnter={() => misSetExpressHovered(true)}
                   onMouseLeave={() => misSetExpressHovered(false)}
                   layout
@@ -886,7 +892,7 @@ const ProjectSection = () => {
                   <div className="flex min-w-[16px] flex-none items-center justify-center md:min-w-[20px]">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-4 w-4 text-green-600 md:h-5 md:w-5"
+                      className="h-5 w-5 text-green-600"
                       viewBox="0 0 128 128"
                     >
                       <path
@@ -911,7 +917,7 @@ const ProjectSection = () => {
                   </AnimatePresence>
                 </motion.div>
                 <motion.div
-                  className={`${mistailwindHovered ? "z-10" : ""} -ml-3 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white px-1`}
+                  className={`${mistailwindHovered ? "z-10" : ""} -ml-2 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white px-1 md:-ml-3`}
                   onMouseEnter={() => misSetTailwindHovered(true)}
                   onMouseLeave={() => misSetTailwindHovered(false)}
                   layout
@@ -922,7 +928,7 @@ const ProjectSection = () => {
                       fill="currentColor"
                       stroke-width="0"
                       viewBox="0 0 24 24"
-                      className="h-4 w-4 text-sky-600 md:h-5 md:w-5"
+                      className="h-5 w-5 text-sky-600"
                       height="1em"
                       width="1em"
                       xmlns="http://www.w3.org/2000/svg"
@@ -945,7 +951,7 @@ const ProjectSection = () => {
                   </AnimatePresence>
                 </motion.div>
                 <motion.div
-                  className={`${misawsHovered ? "z-10" : ""} -ml-3 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white px-1`}
+                  className={`${misawsHovered ? "z-10" : ""} -ml-2 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white px-1 md:-ml-3`}
                   onMouseEnter={() => misSetAwsHovered(true)}
                   onMouseLeave={() => misSetAwsHovered(false)}
                   layout
@@ -955,7 +961,7 @@ const ProjectSection = () => {
                       viewBox="0 -30 150 150"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-4 w-4 pt-1 md:h-5 md:w-5"
+                      className="h-5 w-5 pt-1"
                     >
                       <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                       <g
@@ -995,7 +1001,7 @@ const ProjectSection = () => {
                   </AnimatePresence>
                 </motion.div>
                 <motion.div
-                  className={`${mismotionHovered ? "z-20" : ""} -ml-3 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white p-1.5`}
+                  className={`${mismotionHovered ? "z-20" : ""} -ml-2 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white p-1.5 md:-ml-3`}
                   onMouseEnter={() => misSetMotionHovered(true)}
                   onMouseLeave={() => misSetMotionHovered(false)}
                   layout
@@ -1007,7 +1013,7 @@ const ProjectSection = () => {
                       viewBox="0 0 34 12"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-4 w-4 text-yellow-400"
+                      className="h-5 w-4 text-yellow-400"
                     >
                       <g clip-path="url(#clip0_715_30)">
                         <path
@@ -1037,7 +1043,7 @@ const ProjectSection = () => {
                   </AnimatePresence>
                 </motion.div>
                 <motion.div
-                  className={`${mistypescriptHovered ? "z-20" : ""} -ml-3 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white p-2`}
+                  className={`${mistypescriptHovered ? "z-20" : ""} -ml-2 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white p-2 md:-ml-3`}
                   onMouseEnter={() => misSetTsHovered(true)}
                   onMouseLeave={() => misSetTsHovered(false)}
                   layout
@@ -1049,7 +1055,7 @@ const ProjectSection = () => {
                       xmlns="http://www.w3.org/2000/svg"
                       preserveAspectRatio="xMidYMid"
                       fill="#000000"
-                      className="h-4 w-4"
+                      className="h-5 w-4"
                     >
                       <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                       <g
@@ -1101,7 +1107,7 @@ const ProjectSection = () => {
                   </AnimatePresence>
                 </motion.div>
                 <motion.div
-                  className={`${mispostgreSqlHovered ? "z-10" : ""} -ml-3 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white p-2`}
+                  className={`${mispostgreSqlHovered ? "z-10" : ""} -ml-2 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white p-2 md:-ml-3`}
                   onMouseEnter={() => misSetPostgreSqlHovered(true)}
                   onMouseLeave={() => misSetPostgreSqlHovered(false)}
                   layout
@@ -1110,7 +1116,7 @@ const ProjectSection = () => {
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 128 128"
-                      className="h-4 w-4"
+                      className="h-5 w-4"
                     >
                       <path d="M93.809 92.112c.785-6.533.55-7.492 5.416-6.433l1.235.108c3.742.17 8.637-.602 11.513-1.938 6.191-2.873 9.861-7.668 3.758-6.409-13.924 2.873-14.881-1.842-14.881-1.842 14.703-21.815 20.849-49.508 15.543-56.287-14.47-18.489-39.517-9.746-39.936-9.52l-.134.025c-2.751-.571-5.83-.912-9.289-.968-6.301-.104-11.082 1.652-14.709 4.402 0 0-44.683-18.409-42.604 23.151.442 8.841 12.672 66.898 27.26 49.362 5.332-6.412 10.484-11.834 10.484-11.834 2.558 1.699 5.622 2.567 8.834 2.255l.249-.212c-.078.796-.044 1.575.099 2.497-3.757 4.199-2.653 4.936-10.166 6.482-7.602 1.566-3.136 4.355-.221 5.084 3.535.884 11.712 2.136 17.238-5.598l-.22.882c1.474 1.18 1.375 8.477 1.583 13.69.209 5.214.558 10.079 1.621 12.948 1.063 2.868 2.317 10.256 12.191 8.14 8.252-1.764 14.561-4.309 15.136-27.985" />
                       <path d="M75.458 125.256c-4.367 0-7.211-1.689-8.938-3.32-2.607-2.46-3.641-5.629-4.259-7.522l-.267-.79c-1.244-3.358-1.666-8.193-1.916-14.419-.038-.935-.064-1.898-.093-2.919-.021-.747-.047-1.684-.085-2.664a18.8 18.8 0 01-4.962 1.568c-3.079.526-6.389.356-9.84-.507-2.435-.609-4.965-1.871-6.407-3.82-4.203 3.681-8.212 3.182-10.396 2.453-3.853-1.285-7.301-4.896-10.542-11.037-2.309-4.375-4.542-10.075-6.638-16.943-3.65-11.96-5.969-24.557-6.175-28.693C4.292 23.698 7.777 14.44 15.296 9.129 27.157.751 45.128 5.678 51.68 7.915c4.402-2.653 9.581-3.944 15.433-3.851 3.143.051 6.136.327 8.916.823 2.9-.912 8.628-2.221 15.185-2.139 12.081.144 22.092 4.852 28.949 13.615 4.894 6.252 2.474 19.381.597 26.651-2.642 10.226-7.271 21.102-12.957 30.57 1.544.011 3.781-.174 6.961-.831 6.274-1.295 8.109 2.069 8.607 3.575 1.995 6.042-6.677 10.608-9.382 11.864-3.466 1.609-9.117 2.589-13.745 2.377l-.202-.013-1.216-.107-.12 1.014-.116.991c-.311 11.999-2.025 19.598-5.552 24.619-3.697 5.264-8.835 6.739-13.361 7.709-1.544.33-2.947.474-4.219.474zm-9.19-43.671c2.819 2.256 3.066 6.501 3.287 14.434.028.99.054 1.927.089 2.802.106 2.65.355 8.855 1.327 11.477.137.371.26.747.39 1.146 1.083 3.316 1.626 4.979 6.309 3.978 3.931-.843 5.952-1.599 7.534-3.851 2.299-3.274 3.585-9.86 3.821-19.575l4.783.116-4.75-.57.14-1.186c.455-3.91.783-6.734 3.396-8.602 2.097-1.498 4.486-1.353 6.389-1.01-2.091-1.58-2.669-3.433-2.823-4.193l-.399-1.965 1.121-1.663c6.457-9.58 11.781-21.354 14.609-32.304 2.906-11.251 2.02-17.226 1.134-18.356-11.729-14.987-32.068-8.799-34.192-8.097l-.359.194-1.8.335-.922-.191c-2.542-.528-5.366-.82-8.393-.869-4.756-.08-8.593 1.044-11.739 3.431l-2.183 1.655-2.533-1.043c-5.412-2.213-21.308-6.662-29.696-.721-4.656 3.298-6.777 9.76-6.305 19.207.156 3.119 2.275 14.926 5.771 26.377 4.831 15.825 9.221 21.082 11.054 21.693.32.108 1.15-.537 1.976-1.529a270.708 270.708 0 0110.694-12.07l2.77-2.915 3.349 2.225c1.35.897 2.839 1.406 4.368 1.502l7.987-6.812-1.157 11.808c-.026.265-.039.626.065 1.296l.348 2.238-1.51 1.688-.174.196 4.388 2.025 1.836-2.301z" />
@@ -1139,7 +1145,7 @@ const ProjectSection = () => {
                   </AnimatePresence>
                 </motion.div>
                 <motion.div
-                  className="-ml-3 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white p-2"
+                  className="-ml-2 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white p-2 md:-ml-3"
                   onMouseEnter={() => misSetCloudflareHovered(true)}
                   onMouseLeave={() => misSetCloudflareHovered(false)}
                   layout
@@ -1148,7 +1154,7 @@ const ProjectSection = () => {
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 128 128"
-                      className="h-4 w-4"
+                      className="h-5 w-4"
                     >
                       <path
                         fill="#FFF"
@@ -1180,26 +1186,28 @@ const ProjectSection = () => {
                 </motion.div>
               </div>
             </div>
-            <h3 className="mt-2 max-w-xl text-lg tracking-wide text-neutral-800 transition duration-300 group-hover:text-green-600">
+            <h3 className="mt-2 max-w-xl text-sm tracking-wide text-neutral-800 transition duration-300 group-hover:text-green-600 md:text-lg">
               A platform for trading products, accessing resources, and
               collaborating on sustainable adoption
             </h3>
           </Link>
           <Link
             to="/ccs"
-            className="group w-fit rounded-xl border border-neutral-300 bg-neutral-50 p-2 px-6 py-3 pt-6 shadow-lg shadow-pink-100 hover:border-pink-200"
+            className="group w-[21rem] rounded-xl border border-neutral-300 bg-neutral-50 p-2 shadow-lg shadow-pink-100 hover:border-pink-200 md:w-fit md:px-6 md:py-3 md:pt-6"
           >
             <img
               alt=""
               src={ccs}
-              className="w-[40rem] rounded-lg border border-neutral-100 transition duration-300 hover:scale-105"
+              className="w-96 rounded-lg border border-neutral-100 transition duration-300 hover:scale-105 md:w-[40rem]"
             />
 
-            <div className="mt-3 flex items-center justify-start gap-x-4">
-              <Badge className="rounded-full bg-zinc-700 px-5 text-sm tracking-widest">
-                Educational Portal with CMS
-              </Badge>
-              <div className="flex">
+            <div className="mt-3 flex flex-col items-center justify-start gap-x-4 md:flex-row">
+              <div className="w-full md:w-fit">
+                <Badge className="rounded-full bg-zinc-700 px-5 text-xs md:text-sm tracking-widest">
+                  Educational Portal with CMS
+                </Badge>
+              </div>
+              <div className="mt-3 flex w-full md:mt-0 md:w-fit">
                 <motion.div
                   className={`${ccsreactHovered ? "z-10" : ""} flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white px-1`}
                   onMouseEnter={() => ccsSetReactHovered(true)}
@@ -1217,7 +1225,7 @@ const ProjectSection = () => {
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      className="h-4 w-4 stroke-1 text-sky-600 md:h-5 md:w-5"
+                      className="h-5 w-5 stroke-1 text-sky-600"
                     >
                       <path d="M6.306 8.711c-2.602 .723 -4.306 1.926 -4.306 3.289c0 2.21 4.477 4 10 4c.773 0 1.526 -.035 2.248 -.102"></path>
                       <path d="M17.692 15.289c2.603 -.722 4.308 -1.926 4.308 -3.289c0 -2.21 -4.477 -4 -10 -4c-.773 0 -1.526 .035 -2.25 .102"></path>
@@ -1243,7 +1251,7 @@ const ProjectSection = () => {
                   </AnimatePresence>
                 </motion.div>
                 <motion.div
-                  className={`${ccsexpressHovered ? "z-10" : ""} -ml-3 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white px-1`}
+                  className={`${ccsexpressHovered ? "z-10" : ""} -ml-2 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white px-1 md:-ml-3`}
                   onMouseEnter={() => ccsSetExpressHovered(true)}
                   onMouseLeave={() => ccsSetExpressHovered(false)}
                   layout
@@ -1251,7 +1259,7 @@ const ProjectSection = () => {
                   <div className="flex min-w-[16px] flex-none items-center justify-center md:min-w-[20px]">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-4 w-4 text-green-600 md:h-5 md:w-5"
+                      className="h-5 w-5 text-green-600"
                       viewBox="0 0 128 128"
                     >
                       <path
@@ -1276,7 +1284,7 @@ const ProjectSection = () => {
                   </AnimatePresence>
                 </motion.div>
                 <motion.div
-                  className={`${ccstailwindHovered ? "z-10" : ""} -ml-3 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white px-1`}
+                  className={`${ccstailwindHovered ? "z-10" : ""} -ml-2 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white px-1 md:-ml-3`}
                   onMouseEnter={() => ccsSetTailwindHovered(true)}
                   onMouseLeave={() => ccsSetTailwindHovered(false)}
                   layout
@@ -1287,7 +1295,7 @@ const ProjectSection = () => {
                       fill="currentColor"
                       stroke-width="0"
                       viewBox="0 0 24 24"
-                      className="h-4 w-4 text-sky-600 md:h-5 md:w-5"
+                      className="h-5 w-5 text-sky-600"
                       height="1em"
                       width="1em"
                       xmlns="http://www.w3.org/2000/svg"
@@ -1310,7 +1318,7 @@ const ProjectSection = () => {
                   </AnimatePresence>
                 </motion.div>
                 <motion.div
-                  className={`${ccsawsHovered ? "z-10" : ""} -ml-3 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white px-1`}
+                  className={`${ccsawsHovered ? "z-10" : ""} -ml-2 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white px-1 md:-ml-3`}
                   onMouseEnter={() => ccsSetAwsHovered(true)}
                   onMouseLeave={() => ccsSetAwsHovered(false)}
                   layout
@@ -1320,7 +1328,7 @@ const ProjectSection = () => {
                       viewBox="0 -30 150 150"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-4 w-4 pt-1 md:h-5 md:w-5"
+                      className="h-5 w-5 pt-1"
                     >
                       <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                       <g
@@ -1360,7 +1368,7 @@ const ProjectSection = () => {
                   </AnimatePresence>
                 </motion.div>
                 <motion.div
-                  className={`${ccsmotionHovered ? "z-20" : ""} -ml-3 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white p-1.5`}
+                  className={`${ccsmotionHovered ? "z-20" : ""} -ml-2 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white p-1.5 md:-ml-3`}
                   onMouseEnter={() => ccsSetMotionHovered(true)}
                   onMouseLeave={() => ccsSetMotionHovered(false)}
                   layout
@@ -1372,7 +1380,7 @@ const ProjectSection = () => {
                       viewBox="0 0 34 12"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-4 w-4 text-yellow-400"
+                      className="h-5 w-4 text-yellow-400"
                     >
                       <g clip-path="url(#clip0_715_30)">
                         <path
@@ -1402,7 +1410,7 @@ const ProjectSection = () => {
                   </AnimatePresence>
                 </motion.div>
                 <motion.div
-                  className={`${ccstypescriptHovered ? "z-20" : ""} -ml-3 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white p-2`}
+                  className={`${ccstypescriptHovered ? "z-20" : ""} -ml-2 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white p-2 md:-ml-3`}
                   onMouseEnter={() => ccsSetTsHovered(true)}
                   onMouseLeave={() => ccsSetTsHovered(false)}
                   layout
@@ -1414,7 +1422,7 @@ const ProjectSection = () => {
                       xmlns="http://www.w3.org/2000/svg"
                       preserveAspectRatio="xMidYMid"
                       fill="#000000"
-                      className="h-4 w-4"
+                      className="h-5 w-4"
                     >
                       <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                       <g
@@ -1466,7 +1474,7 @@ const ProjectSection = () => {
                   </AnimatePresence>
                 </motion.div>
                 <motion.div
-                  className={`${ccspostgreSqlHovered ? "z-10" : ""} -ml-3 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white p-2`}
+                  className={`${ccspostgreSqlHovered ? "z-10" : ""} -ml-2 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white p-2 md:-ml-3`}
                   onMouseEnter={() => ccsSetPostgreSqlHovered(true)}
                   onMouseLeave={() => ccsSetPostgreSqlHovered(false)}
                   layout
@@ -1475,7 +1483,7 @@ const ProjectSection = () => {
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 128 128"
-                      className="h-4 w-4"
+                      className="h-5 w-4"
                     >
                       <path d="M93.809 92.112c.785-6.533.55-7.492 5.416-6.433l1.235.108c3.742.17 8.637-.602 11.513-1.938 6.191-2.873 9.861-7.668 3.758-6.409-13.924 2.873-14.881-1.842-14.881-1.842 14.703-21.815 20.849-49.508 15.543-56.287-14.47-18.489-39.517-9.746-39.936-9.52l-.134.025c-2.751-.571-5.83-.912-9.289-.968-6.301-.104-11.082 1.652-14.709 4.402 0 0-44.683-18.409-42.604 23.151.442 8.841 12.672 66.898 27.26 49.362 5.332-6.412 10.484-11.834 10.484-11.834 2.558 1.699 5.622 2.567 8.834 2.255l.249-.212c-.078.796-.044 1.575.099 2.497-3.757 4.199-2.653 4.936-10.166 6.482-7.602 1.566-3.136 4.355-.221 5.084 3.535.884 11.712 2.136 17.238-5.598l-.22.882c1.474 1.18 1.375 8.477 1.583 13.69.209 5.214.558 10.079 1.621 12.948 1.063 2.868 2.317 10.256 12.191 8.14 8.252-1.764 14.561-4.309 15.136-27.985" />
                       <path d="M75.458 125.256c-4.367 0-7.211-1.689-8.938-3.32-2.607-2.46-3.641-5.629-4.259-7.522l-.267-.79c-1.244-3.358-1.666-8.193-1.916-14.419-.038-.935-.064-1.898-.093-2.919-.021-.747-.047-1.684-.085-2.664a18.8 18.8 0 01-4.962 1.568c-3.079.526-6.389.356-9.84-.507-2.435-.609-4.965-1.871-6.407-3.82-4.203 3.681-8.212 3.182-10.396 2.453-3.853-1.285-7.301-4.896-10.542-11.037-2.309-4.375-4.542-10.075-6.638-16.943-3.65-11.96-5.969-24.557-6.175-28.693C4.292 23.698 7.777 14.44 15.296 9.129 27.157.751 45.128 5.678 51.68 7.915c4.402-2.653 9.581-3.944 15.433-3.851 3.143.051 6.136.327 8.916.823 2.9-.912 8.628-2.221 15.185-2.139 12.081.144 22.092 4.852 28.949 13.615 4.894 6.252 2.474 19.381.597 26.651-2.642 10.226-7.271 21.102-12.957 30.57 1.544.011 3.781-.174 6.961-.831 6.274-1.295 8.109 2.069 8.607 3.575 1.995 6.042-6.677 10.608-9.382 11.864-3.466 1.609-9.117 2.589-13.745 2.377l-.202-.013-1.216-.107-.12 1.014-.116.991c-.311 11.999-2.025 19.598-5.552 24.619-3.697 5.264-8.835 6.739-13.361 7.709-1.544.33-2.947.474-4.219.474zm-9.19-43.671c2.819 2.256 3.066 6.501 3.287 14.434.028.99.054 1.927.089 2.802.106 2.65.355 8.855 1.327 11.477.137.371.26.747.39 1.146 1.083 3.316 1.626 4.979 6.309 3.978 3.931-.843 5.952-1.599 7.534-3.851 2.299-3.274 3.585-9.86 3.821-19.575l4.783.116-4.75-.57.14-1.186c.455-3.91.783-6.734 3.396-8.602 2.097-1.498 4.486-1.353 6.389-1.01-2.091-1.58-2.669-3.433-2.823-4.193l-.399-1.965 1.121-1.663c6.457-9.58 11.781-21.354 14.609-32.304 2.906-11.251 2.02-17.226 1.134-18.356-11.729-14.987-32.068-8.799-34.192-8.097l-.359.194-1.8.335-.922-.191c-2.542-.528-5.366-.82-8.393-.869-4.756-.08-8.593 1.044-11.739 3.431l-2.183 1.655-2.533-1.043c-5.412-2.213-21.308-6.662-29.696-.721-4.656 3.298-6.777 9.76-6.305 19.207.156 3.119 2.275 14.926 5.771 26.377 4.831 15.825 9.221 21.082 11.054 21.693.32.108 1.15-.537 1.976-1.529a270.708 270.708 0 0110.694-12.07l2.77-2.915 3.349 2.225c1.35.897 2.839 1.406 4.368 1.502l7.987-6.812-1.157 11.808c-.026.265-.039.626.065 1.296l.348 2.238-1.51 1.688-.174.196 4.388 2.025 1.836-2.301z" />
@@ -1504,7 +1512,7 @@ const ProjectSection = () => {
                   </AnimatePresence>
                 </motion.div>
                 <motion.div
-                  className="-ml-3 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white p-2"
+                  className="-ml-2 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white p-2 md:-ml-3"
                   onMouseEnter={() => ccsSetCloudflareHovered(true)}
                   onMouseLeave={() => ccsSetCloudflareHovered(false)}
                   layout
@@ -1513,7 +1521,7 @@ const ProjectSection = () => {
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 128 128"
-                      className="h-4 w-4"
+                      className="h-5 w-4"
                     >
                       <path
                         fill="#FFF"
@@ -1545,7 +1553,7 @@ const ProjectSection = () => {
                 </motion.div>
               </div>
             </div>
-            <h3 className="mt-2 max-w-xl text-lg tracking-wide text-neutral-800 transition duration-300 group-hover:text-green-600">
+            <h3 className="mt-2 max-w-xl text-sm md:text-lg tracking-wide text-neutral-800 transition duration-300 group-hover:text-green-600">
               An educational website with a centralized dashboard to manage
               content securely
             </h3>

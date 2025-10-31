@@ -90,10 +90,10 @@ const HeroSection = () => {
     return () => clearInterval(interval);
   }, [delivery.length]);
   return (
-    <div className="relative mb-12 flex w-full flex-col items-center justify-center bg-gradient-to-t from-neutral-50 via-white to-white">
-      <section className="relative grid h-screen w-full grid-cols-[1.35fr_1.65fr] mask-r-from-95% mask-l-from-90% px-24">
+    <div className="relative mb-12 flex w-full flex-col items-center justify-center from-neutral-50 via-white to-white md:bg-gradient-to-t">
+      <section className="mb:pb-0 relative grid h-full w-full px-5 pb-14 md:h-screen md:grid-cols-[1.35fr_1.65fr] md:mask-r-from-95% md:mask-l-from-90% md:px-24">
         <div
-          className="absolute inset-0 z-0"
+          className="absolute inset-0 z-0 hidden md:block"
           style={{
             backgroundImage: `
         linear-gradient(to right, #f3f4f6 1px, transparent 1px),
@@ -108,7 +108,7 @@ const HeroSection = () => {
         />
 
         <div
-          className="absolute inset-0 z-0"
+          className="absolute inset-0 z-0 hidden md:block"
           style={{
             backgroundImage: `
         linear-gradient(to right, #f3f4f6 1px, transparent 1px),
@@ -119,14 +119,43 @@ const HeroSection = () => {
               "radial-gradient(ellipse 40% 50% at 0% 100%, #000 50%, transparent 90%)",
             maskImage:
               "radial-gradient(ellipse 40% 50% at 0% 100%, #000 50%, transparent 90%)",
+          }}
+        />
+        <div
+          className="absolute inset-0 z-0 md:hidden"
+          style={{
+            backgroundImage: `
+        linear-gradient(to right, #f3f4f6 1px, transparent 1px),
+        linear-gradient(to bottom, #f3f4f6 1px, transparent 1px)
+      `,
+            backgroundSize: "32px 32px",
+            WebkitMaskImage:
+              "radial-gradient(ellipse 50% 50% at 0% 0%, #000 50%, transparent 90%)",
+            maskImage:
+              "radial-gradient(ellipse 40% 50% at 0% 0%, #000 50%, transparent 90%)",
+          }}
+        />
+
+        <div
+          className="absolute inset-0 z-0 md:hidden"
+          style={{
+            backgroundImage: `
+        linear-gradient(to right, #f3f4f6 1px, transparent 1px),
+        linear-gradient(to bottom, #f3f4f6 1px, transparent 1px)
+      `,
+            backgroundSize: "32px 32px",
+            WebkitMaskImage:
+              "radial-gradient(ellipse 60% 50% at 0% 100%, #000 50%, transparent 90%)",
+            maskImage:
+              "radial-gradient(ellipse 60% 50% at 0% 100%, #000 50%, transparent 90%)",
           }}
         />
 
         {/* Left box */}
-        <div className="relative z-20 flex items-center justify-end border-red-400">
+        <div className="relative z-20 flex justify-end border-red-400 pt-24 md:items-center md:pt-0">
           <div className="max-w-4xl">
-            <h1 className="relative mb-4 text-5xl leading-[1.2] font-bold tracking-widest text-neutral-700">
-              <div className="absolute -top-64 -left-1.5 z-0 h-fit w-[32rem]">
+            <div className="relative mb-4 text-3xl leading-[1.2] font-bold tracking-widest text-neutral-700 md:text-5xl">
+              <div className="absolute -top-64 -left-1.5 z-0 hidden h-fit w-[32rem] md:block">
                 <LineSvg />
               </div>
 
@@ -144,8 +173,8 @@ const HeroSection = () => {
                   <span className="absolute inset-0 h-full w-full scale-[4] animate-spin [background-image:conic-gradient(at_center,transparent,var(--color-red-300)_20%,transparent_30%)] [animation-delay:1.5s] [animation-duration:3.5s]"></span>
                 </span>
               </span>
-            </h1>
-            <p className="mt-6 mb-6 max-w-2xl text-xl leading-6 font-medium tracking-wide text-neutral-600">
+            </div>
+            <p className="mt-6 mb-3 max-w-2xl leading-6 font-medium tracking-wide text-neutral-600 md:mb-6 md:text-xl">
               From web and mobile apps to SaaS platforms, we transform ideas
               into products that are refined, impactful, and results driven.
             </p>
@@ -166,11 +195,15 @@ const HeroSection = () => {
                 </AnimatePresence>
               </span>
             </div>
-            <a href="https://cal.com/aceingdev" target="_blank" className="group mt-12 w-fit flex cursor-pointer items-center gap-x-3 rounded-full bg-black px-6 py-3 text-lg tracking-wider text-white transition duration-150 hover:bg-neutral-900 active:scale-95">
+            <a
+              href="https://cal.com/aceingdev"
+              target="_blank"
+              className="group mt-5 flex w-fit cursor-pointer items-center gap-x-3 rounded-full bg-black px-3 py-1 text-sm tracking-wider text-white transition duration-150 hover:bg-neutral-900 active:scale-95 md:mt-12 md:text-lg"
+            >
               Start the Conversation
               <IconCircleArrowRightFilled className="mt-0.5 h-6 w-6 text-white transition-transform duration-300 group-hover:-rotate-45" />
             </a>
-            <div className="mt-8 flex max-w-2xl flex-wrap items-center gap-x-9 gap-y-4">
+            <div className="mt-8 flex max-w-2xl flex-wrap items-center gap-x-5 gap-y-4 md:gap-x-9">
               <div className="flex items-center gap-x-1">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -192,7 +225,7 @@ const HeroSection = () => {
                   <path d="M12 18.574c1.926 1.893 3.821 2.768 5 2.086c1.913 -1.104 1.226 -5.877 -1.536 -10.66c-.375 -.65 -.78 -1.283 -1.212 -1.897"></path>
                   <path d="M11.5 12.866a1 1 0 1 0 1 -1.732a1 1 0 0 0 -1 1.732z"></path>
                 </svg>
-                <p className="text-sm font-semibold tracking-wide text-neutral-600">
+                <p className="text-xs font-semibold tracking-wide text-neutral-600 md:text-sm">
                   React
                 </p>
               </div>
@@ -212,7 +245,7 @@ const HeroSection = () => {
                   <path d="M9 15v-6l7.745 10.65a9 9 0 1 1 2.255 -1.993"></path>
                   <path d="M15 12v-3"></path>
                 </svg>
-                <p className="text-sm font-semibold tracking-wide text-neutral-600">
+                <p className="text-xs font-semibold tracking-wide text-neutral-600 md:text-sm">
                   Next.js
                 </p>
               </div>
@@ -246,7 +279,7 @@ const HeroSection = () => {
                   </defs>
                 </svg>
 
-                <p className="text-sm font-semibold tracking-wide text-neutral-600">
+                <p className="text-xs font-semibold tracking-wide text-neutral-600 md:text-sm">
                   Node.js
                 </p>
               </div>
@@ -263,7 +296,7 @@ const HeroSection = () => {
                   />
                 </svg>
 
-                <p className="text-sm font-semibold tracking-wide text-neutral-600">
+                <p className="text-xs font-semibold tracking-wide text-neutral-600 md:text-sm">
                   Express.js
                 </p>
               </div>
@@ -289,7 +322,7 @@ const HeroSection = () => {
                   <path d="M12 18.574c1.926 1.893 3.821 2.768 5 2.086c1.913 -1.104 1.226 -5.877 -1.536 -10.66c-.375 -.65 -.78 -1.283 -1.212 -1.897"></path>
                   <path d="M11.5 12.866a1 1 0 1 0 1 -1.732a1 1 0 0 0 -1 1.732z"></path>
                 </svg>
-                <p className="text-sm font-semibold tracking-wide text-neutral-600">
+                <p className="text-xs font-semibold tracking-wide text-neutral-600 md:text-sm">
                   React Native
                 </p>
               </div>
@@ -306,7 +339,7 @@ const HeroSection = () => {
                 >
                   <path d="M18.5 9.51a4.22 4.22 0 0 1-1.91-1.34A5.77 5.77 0 0 0 12 6a4.72 4.72 0 0 0-5 4 3.23 3.23 0 0 1 3.5-1.49 4.32 4.32 0 0 1 1.91 1.35A5.77 5.77 0 0 0 17 12a4.72 4.72 0 0 0 5-4 3.2 3.2 0 0 1-3.5 1.51zm-13 4.98a4.22 4.22 0 0 1 1.91 1.34A5.77 5.77 0 0 0 12 18a4.72 4.72 0 0 0 5-4 3.23 3.23 0 0 1-3.5 1.49 4.32 4.32 0 0 1-1.91-1.35A5.8 5.8 0 0 0 7 12a4.72 4.72 0 0 0-5 4 3.2 3.2 0 0 1 3.5-1.51z"></path>
                 </svg>
-                <p className="text-sm font-semibold tracking-wide text-neutral-600">
+                <p className="text-xs font-semibold tracking-wide text-neutral-600 md:text-sm">
                   TailwindCSS
                 </p>
               </div>
@@ -331,7 +364,7 @@ const HeroSection = () => {
                   <path d="M9 5l1.2 6l1.8 -4l1.8 4l1.2 -6" />
                   <path d="M18 10.25c0 .414 .336 .75 .75 .75h1.25a1 1 0 0 0 1 -1v-1a1 1 0 0 0 -1 -1h-1a1 1 0 0 1 -1 -1v-1a1 1 0 0 1 1 -1h1.25a.75 .75 0 0 1 .75 .75" />
                 </svg>
-                <p className="text-sm font-semibold tracking-wide text-neutral-600">
+                <p className="text-xs font-semibold tracking-wide text-neutral-600 md:text-sm">
                   AWS
                 </p>
               </div>
@@ -357,7 +390,7 @@ const HeroSection = () => {
                   </defs>
                 </svg>
 
-                <p className="text-sm font-semibold tracking-wide text-neutral-600">
+                <p className="text-xs font-semibold tracking-wide text-neutral-600 md:text-sm">
                   Motion/React
                 </p>
               </div>
@@ -380,7 +413,7 @@ const HeroSection = () => {
                   <path d="M17 10l-2.5 6" />
                 </svg>
 
-                <p className="text-sm font-semibold tracking-wide text-neutral-600">
+                <p className="text-xs font-semibold tracking-wide text-neutral-600 md:text-sm">
                   Cloudflare
                 </p>
               </div>
@@ -389,7 +422,7 @@ const HeroSection = () => {
         </div>
 
         {/* Right box with SVG */}
-        <div className="relative flex items-start justify-center border-blue-500 bg-gradient-to-t from-neutral-50 via-white to-white dark:bg-black">
+        <div className="relative hidden items-start justify-center border-blue-500 bg-gradient-to-t from-neutral-50 via-white to-white md:flex dark:bg-black">
           <div className="h-full w-full overflow-hidden">
             <div className="absolute inset-0 -top-35 scale-100 mask-r-from-70% mask-l-from-70%">
               <SvgFinalComponent className="h-full w-full border-blue-700" />

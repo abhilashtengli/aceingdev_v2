@@ -20,7 +20,7 @@ const TechItemsRow3 = () => (
         />
       </svg>
 
-      <p className="text-sm font-semibold tracking-wide text-orange-500">
+      <p className="md:text-sm text-xs font-semibold tracking-wide text-orange-500">
         Cloudflare
       </p>
     </div>
@@ -42,7 +42,7 @@ const TechItemsRow3 = () => (
         />
       </svg>
 
-      <p className="text-sm font-semibold tracking-wide text-cyan-800">
+      <p className="md:text-sm text-xs font-semibold tracking-wide text-cyan-800">
         PostgreSQL
       </p>
     </div>
@@ -62,7 +62,7 @@ const TechItemsRow3 = () => (
         <path d="M9 15v-6l7.745 10.65a9 9 0 1 1 2.255 -1.993"></path>
         <path d="M15 12v-3"></path>
       </svg>
-      <p className="text-sm font-semibold tracking-wide text-black">Next.js</p>
+      <p className="md:text-sm text-xs font-semibold tracking-wide text-black">Next.js</p>
     </div>
     <div className="flex items-center gap-x-2">
       <svg
@@ -86,7 +86,7 @@ const TechItemsRow3 = () => (
         </defs>
       </svg>
 
-      <p className="bg-gradient-to-r from-black from-40% to-yellow-400 to-50% bg-clip-text text-sm font-semibold tracking-wide text-transparent">
+      <p className="bg-gradient-to-r from-black from-40% to-yellow-400 to-50% bg-clip-text md:text-sm text-xs font-semibold tracking-wide text-transparent">
         Motion/React
       </p>
     </div>

@@ -3,7 +3,7 @@ import TechItemsRow2 from "./TechItemsRow2";
 import TechItemsRow3 from "./TechItemsRow3";
 const InfinteSliderCode = () => {
   return (
-    <div className="mt-2">
+    <div className="mt-2 border-red-600 w-full">
       <div className="flex w-full items-center overflow-hidden mask-r-from-80% mask-l-from-80% py-1">
         <div className="animate-marquee flex min-w-max gap-x-5">
           <TechItemsRow1 />

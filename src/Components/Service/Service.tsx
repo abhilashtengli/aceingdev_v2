@@ -5,8 +5,8 @@ import InfinteSliderCode from "./TechstackCarousel";
 const Service = () => {
   return (
     <>
-      <div className="w-full items-center justify-center border-red-600 mask-b-from-90% px-32 py-4">
-        <h1 className="py-2 text-center text-4xl font-semibold tracking-wider text-neutral-600">
+      <div className="w-full items-center justify-center border-red-600 py-4 md:mask-b-from-90% md:px-32">
+        <div className="border-red-600 py-2 text-center text-4xl font-semibold tracking-wider text-neutral-600">
           <span className="relative border border-neutral-100 bg-gradient-to-r from-red-100 via-white to-yellow-100 px-3">
             <svg
               viewBox="0 0 357 1"
@@ -81,9 +81,9 @@ const Service = () => {
             Services
           </span>{" "}
           We Provide !
-        </h1>
+        </div>
 
-        <div className="relative flex w-full items-center justify-center gap-x-32 mask-t-from-90% mask-r-from-90% mask-l-from-90% py-12">
+        <div className="relative flex w-full flex-col items-center justify-center border-red-600 py-12 md:flex-row md:gap-x-32 md:mask-t-from-90% md:mask-r-from-90% md:mask-l-from-90%">
           <div
             className="absolute inset-0 z-0"
             style={{
@@ -93,14 +93,14 @@ const Service = () => {
               backgroundSize: "20px 20px",
             }}
           />
-          <div className="relative h-fit w-[30rem] rounded-lg border border-neutral-300 bg-white px-5 py-4 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
+          <div className="relative h-fit w-[21rem] rounded-lg border border-neutral-300 bg-white px-5 py-4 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)] md:w-[30rem]">
             <svg
               width="357"
               height="1"
               viewBox="0 0 357 1"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className="absolute -top-[1px] -left-6 w-[420px]"
+              className="absolute -top-[1px] left-2 w-[220px] md:-left-6 md:w-[420px]"
             >
               <defs>
                 <motion.linearGradient
@@ -145,23 +145,23 @@ const Service = () => {
             />
             {/* Your Content/Components */}
             <div className="relative z-20">
-              <h1 className="text-2xl font-bold tracking-wide text-neutral-700">
+              <h1 className="text-xl font-bold tracking-wide text-neutral-700 md:text-2xl">
                 MVP Development
               </h1>
-              <p className="w-fit rounded-sm border-neutral-300 px-1 pt-0.5 text-xs tracking-wide text-neutral-500">
+              <p className="w-fit rounded-sm border-neutral-300 px-1 pt-0.5 text-[10px] tracking-wide text-neutral-500 md:text-xs">
                 Launch Your Product Idea into a Market Ready Reality
               </p>
-              <p className="mt-5 text-neutral-600">
+              <p className="mt-5 text-sm text-neutral-600 md:text-[17px]">
                 We help founders, startups, and visionaries turn raw ideas into
                 functional web or mobile products built to validate, scale, and
                 win.
               </p>
               <div className="">
-                <h1 className="mt-3 font-semibold tracking-wide text-neutral-700">
+                <h1 className="mt-3 text-sm font-semibold tracking-wide text-neutral-700 md:text-[17px]">
                   ✨ Perfect for :{" "}
                 </h1>
 
-                <ul className="mt-3 flex flex-wrap gap-x-5 gap-y-3 text-sm text-neutral-600">
+                <ul className="mt-3 flex flex-wrap gap-x-5 gap-y-3 text-[9px] text-neutral-600 md:text-sm">
                   <li className="rounded-xs px-2 tracking-wide shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] transition duration-200 hover:scale-105">
                     Entrepreneurs
                   </li>
@@ -176,21 +176,23 @@ const Service = () => {
                   </li>
                 </ul>
               </div>
-              <div className="py-4 font-semibold tracking-wide text-neutral-700">
+              <div className="py-4 text-sm font-semibold tracking-wide text-neutral-700 md:text-[17px]">
                 <h1>⚡ Highlights : </h1>
                 <ul className="mt-3 flex list-disc flex-wrap gap-x-5 gap-y-1 pl-6 tracking-wide text-neutral-600">
-                  <li className="text-sm">Rapid MVP Development (4–8 weeks)</li>
-                  <li className="text-sm">Web & Mobile App </li>
-                  <li className="text-sm">
+                  <li className="text-xs md:text-sm">
+                    Rapid MVP Development (4–8 weeks)
+                  </li>
+                  <li className="text-xs md:text-sm">Web & Mobile App </li>
+                  <li className="text-xs md:text-sm">
                     SaaS MVPs with real user functionality
                   </li>
-                  <li className="text-sm">
+                  <li className="text-xs md:text-sm">
                     Scalable architecture to turn MVP into a full product{" "}
                   </li>
                 </ul>
               </div>
               <div className="overflow-hidden">
-                <h1 className="font-semibold tracking-wide text-neutral-700">
+                <h1 className="text-sm font-semibold tracking-wide text-neutral-700 md:text-[17px]">
                   ⚡Tech stack :{" "}
                 </h1>
 
@@ -198,23 +200,23 @@ const Service = () => {
               </div>
               <div className="mt-6 flex justify-end">
                 <Link
-                  className="group flex w-fit items-center gap-x-2 rounded-full border border-neutral-300 bg-neutral-900 px-3 py-1 font-semibold tracking-wide text-white shadow-lg transition duration-300 active:scale-85"
+                  className="group flex w-fit items-center gap-x-2 rounded-full border border-neutral-300 bg-neutral-900 px-3 py-1 text-xs font-semibold tracking-wide text-white shadow-lg transition duration-300 active:scale-85 md:text-[16px]"
                   to="/mvp"
                 >
                   Read more
-                  <IconCircleArrowRightFilled className="h-5 w-5 text-white transition-transform duration-300 group-hover:-rotate-45" />
+                  <IconCircleArrowRightFilled className="h-3 w-3 text-white transition-transform duration-300 group-hover:-rotate-45 md:h-5 md:w-5" />
                 </Link>
               </div>
             </div>
           </div>
-          <div className="relative h-fit w-[30rem] rounded-lg border border-neutral-300 bg-white px-5 py-4 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
+          <div className="relative mt-12 h-fit w-[21rem] rounded-lg border border-neutral-300 bg-white px-5 py-4 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)] md:mt-0 md:w-[30rem]">
             <svg
               width="357"
               height="1"
               viewBox="0 0 357 1"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className="absolute -top-[1px] -left-6 w-[420px]"
+              className="absolute -top-[1px] left-2 w-[220px] md:-left-6 md:w-[420px]"
             >
               <defs>
                 <motion.linearGradient
@@ -262,23 +264,23 @@ const Service = () => {
             />
             {/* Your Content/Components */}
             <div className="relative z-20">
-              <h1 className="text-2xl font-bold tracking-wide text-neutral-700">
+              <h1 className="text-xl font-bold tracking-wide text-neutral-700 md:text-2xl">
                 Custom Software Solutions
               </h1>
-              <p className="w-fit rounded-sm border-neutral-300 px-1 pt-0.5 text-xs tracking-wide text-neutral-500">
+              <p className="w-fit rounded-sm border-neutral-300 px-1 pt-0.5 text-[10px] tracking-wide text-neutral-500 md:text-xs">
                 Industry-Grade Web & Mobile Applications Built for Growth
               </p>
-              <p className="mt-5 text-neutral-600">
+              <p className="mt-5 text-sm text-neutral-600 md:text-[17px]">
                 We build fully customized software solutions from simple
                 applications to complex platforms designed around your
                 processes, objectives, and long term vision
               </p>
               <div className="">
-                <h1 className="mt-3 font-semibold tracking-wide text-neutral-700">
+                <h1 className="mt-3 text-sm font-semibold tracking-wide text-neutral-700 md:text-[17px]">
                   ✨ Perfect for :{" "}
                 </h1>
 
-                <ul className="mt-3 flex flex-wrap gap-x-5 gap-y-3 text-sm text-neutral-600">
+                <ul className="mt-3 flex flex-wrap gap-x-5 gap-y-3 text-[9px] text-neutral-600 md:text-sm">
                   <li className="rounded-xs px-2 tracking-wide shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] transition duration-200 hover:scale-105">
                     Businesses
                   </li>
@@ -296,25 +298,25 @@ const Service = () => {
                   </li>
                 </ul>
               </div>
-              <div className="py-4 font-semibold tracking-wide text-neutral-700">
+              <div className="py-4 text-sm font-semibold tracking-wide text-neutral-700 md:text-[17px]">
                 <h1>⚡ Highlights : </h1>
                 <ul className="mt-3 flex list-disc flex-wrap gap-x-5 gap-y-1 pl-6 tracking-wide text-neutral-600">
-                  <li className="text-sm">
+                  <li className="text-xs md:text-sm">
                     End-to-end Custom Web & Mobile Development
                   </li>
-                  <li className="text-sm">
+                  <li className="text-xs md:text-sm">
                     Government Project Management Systems{" "}
                   </li>
-                  <li className="text-sm">
+                  <li className="text-xs md:text-sm">
                     Enterprise API & System Integrations
                   </li>
-                  <li className="text-sm">
+                  <li className="text-xs md:text-sm">
                     Saas Application with AI-Enhanced Features
                   </li>
                 </ul>
               </div>
               <div className="overflow-hidden">
-                <h1 className="font-semibold tracking-wide text-neutral-700">
+                <h1 className="text-sm font-semibold tracking-wide text-neutral-700 md:text-[17px]">
                   ⚡Tech stack :{" "}
                 </h1>
 
@@ -322,11 +324,11 @@ const Service = () => {
               </div>
               <div className="mt-6 flex justify-end">
                 <Link
-                  className="group flex w-fit items-center gap-x-2 rounded-full border border-neutral-300 bg-black px-3 py-1 font-semibold tracking-wide text-white shadow-lg transition duration-300 active:scale-90"
+                  className="group flex w-fit items-center gap-x-2 rounded-full border border-neutral-300 bg-neutral-900 px-3 py-1 text-xs font-semibold tracking-wide text-white shadow-lg transition duration-300 active:scale-85 md:text-[16px]"
                   to="/customsoftware"
                 >
                   Read more
-                  <IconCircleArrowRightFilled className="h-5 w-5 text-white transition-transform duration-300 group-hover:-rotate-45" />
+                  <IconCircleArrowRightFilled className="h-3 w-3 text-white transition-transform duration-300 group-hover:-rotate-45 md:h-5 md:w-5" />
                 </Link>
               </div>
             </div>

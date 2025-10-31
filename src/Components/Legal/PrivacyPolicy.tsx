@@ -1,18 +1,16 @@
 import { useEffect } from "react";
 import CommonNavbar from "../Navbar";
+import CommonFooter from "../FooterCommon";
 
 const PrivacyPolicy = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   });
   return (
-    <>
+    <div className="relative h-screen">
       <CommonNavbar />
-      <div
-        className="absolute z-10 rotate-45 overflow-hidden blur-2xl lg:block lg:px-36"
-        aria-hidden="true"
-      ></div>
-      <div className="mb-16 border-black px-5 py-2 text-zinc-800 lg:mt-20 lg:px-72">
+
+      <div className="mb-1 border-black px-5 py-2 text-zinc-800 lg:px-72 lg:pt-20">
         <h1 className="text-4xl font-bold tracking-wider text-zinc-800">
           Privacy Policy
         </h1>
@@ -36,10 +34,7 @@ const PrivacyPolicy = () => {
         <p className="mt-3 text-justify text-lg">
           By using this website, you agree to this privacy policy. If you have
           questions, you can contact us at:
-          <a
-            className="ml-1 text-blue-600"
-            href="mailto:contact@aceingdev.com"
-          >
+          <a className="ml-1 text-blue-600" href="mailto:contact@aceingdev.com">
             contact@aceingdev.com
           </a>
         </p>
@@ -67,7 +62,10 @@ const PrivacyPolicy = () => {
           </li>
         </ul>
       </div>
-    </>
+      <div className="absolute bottom-0 left-0 w-full">
+        <CommonFooter />
+      </div>
+    </div>
   );
 };
 

@@ -14,7 +14,7 @@ const TechItemsRow2 = () => (
       >
         <path d="M18.5 9.51a4.22 4.22 0 0 1-1.91-1.34A5.77 5.77 0 0 0 12 6a4.72 4.72 0 0 0-5 4 3.23 3.23 0 0 1 3.5-1.49 4.32 4.32 0 0 1 1.91 1.35A5.77 5.77 0 0 0 17 12a4.72 4.72 0 0 0 5-4 3.2 3.2 0 0 1-3.5 1.51zm-13 4.98a4.22 4.22 0 0 1 1.91 1.34A5.77 5.77 0 0 0 12 18a4.72 4.72 0 0 0 5-4 3.23 3.23 0 0 1-3.5 1.49 4.32 4.32 0 0 1-1.91-1.35A5.8 5.8 0 0 0 7 12a4.72 4.72 0 0 0-5 4 3.2 3.2 0 0 1 3.5-1.51z"></path>
       </svg>
-      <p className="text-sm font-semibold tracking-wide text-cyan-600">
+      <p className="md:text-sm text-xs font-semibold tracking-wide text-cyan-600">
         TailwindCSS
       </p>
     </div>
@@ -40,7 +40,7 @@ const TechItemsRow2 = () => (
         </defs>
       </svg>
 
-      <p className="bg-gradient-to-r from-black from-40% to-yellow-400 to-50% bg-clip-text text-sm font-semibold tracking-wide text-transparent">
+      <p className="bg-gradient-to-r from-black from-40% to-yellow-400 to-50% bg-clip-text md:text-sm text-xs font-semibold tracking-wide text-transparent">
         Motion/React
       </p>
     </div>
@@ -65,7 +65,7 @@ const TechItemsRow2 = () => (
         <path d="M12 18.574c1.926 1.893 3.821 2.768 5 2.086c1.913 -1.104 1.226 -5.877 -1.536 -10.66c-.375 -.65 -.78 -1.283 -1.212 -1.897"></path>
         <path d="M11.5 12.866a1 1 0 1 0 1 -1.732a1 1 0 0 0 -1 1.732z"></path>
       </svg>
-      <p className="text-sm font-semibold tracking-wide text-blue-500">
+      <p className="md:text-sm text-xs font-semibold tracking-wide text-blue-500">
         React Native
       </p>
     </div>
@@ -99,7 +99,7 @@ const TechItemsRow2 = () => (
         </g>
       </svg>
 
-      <p className="text-sm font-semibold tracking-wide text-neutral-800">
+      <p className="md:text-sm text-xs font-semibold tracking-wide text-neutral-800">
         AWS
       </p>
     </div>

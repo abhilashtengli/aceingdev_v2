@@ -1,14 +1,15 @@
 import { useEffect } from "react";
 import CommonNavbar from "../Navbar";
+import CommonFooter from "../FooterCommon";
 
 const TermsAndCondition = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   });
   return (
-    <div>
+    <>
       <CommonNavbar />
-      <div className="mb-16 border-black px-5 py-2 text-zinc-800 lg:mt-20 lg:px-72">
+      <div className="mb-16 border-black px-5 py-2 text-zinc-800 lg:pt-20 lg:px-72">
         <h1 className="text-4xl font-bold tracking-wider text-zinc-800">
           Terms and Conditions
         </h1>
@@ -61,7 +62,8 @@ const TermsAndCondition = () => {
           </p>
         </div>
       </div>
-    </div>
+      <CommonFooter />
+    </>
   );
 };
 

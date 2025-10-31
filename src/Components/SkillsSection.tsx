@@ -8,19 +8,19 @@ import { DeploymentStatusCard } from "./SkillComponents/DeploymentStatus";
 import { DevStatusCard } from "./SkillComponents/DevSkillCard";
 import { FileUploadManager } from "./SkillComponents/UploadFile";
 import { ServicesSection } from "./SkillComponents/ServiceSection";
-
+import wedeliverimg from "@/assets/wedeliver.png";
 const SkillsSection = () => {
   return (
-    <div className="relative mb-6 bg-gradient-to-t from-neutral-50 via-white to-white pb-24">
+    <div className="relative mb-6 bg-gradient-to-t from-neutral-50 via-white to-white md:pb-24 pb-12">
       <div className="border-red-500">
-        <h1 className="py-2 text-center text-4xl font-semibold tracking-wider text-neutral-600">
+        <h1 className="py-2 text-center text-xl font-semibold tracking-wider text-neutral-600 md:text-4xl">
           What we Deliver at{" "}
           <span className="relative border border-neutral-100 bg-gradient-to-r from-red-100 via-white to-yellow-100 px-3">
             <svg
               viewBox="0 0 357 1"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className="absolute bottom-0 left-0 w-[120px]"
+              className="absolute bottom-0 left-0 w-[75px] md:w-[120px]"
             >
               <defs>
                 <motion.linearGradient
@@ -54,7 +54,7 @@ const SkillsSection = () => {
               viewBox="0 0 357 1"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className="absolute right-0 bottom-0 w-[120px]"
+              className="absolute right-0 bottom-0 w-[75px] md:w-[120px]"
             >
               <defs>
                 <motion.linearGradient
@@ -82,15 +82,15 @@ const SkillsSection = () => {
               </defs>
               <path d="M0 0.5H357" stroke="url(#x-gradient-red-right-left)" />
             </svg>
-            <p className="absolute -top-1 -left-0.5 h-1.5 w-[5px] rounded-full bg-neutral-300" />
-            <p className="absolute -top-1 -right-0.5 h-1.5 w-1.5 rounded-full bg-neutral-300" />
-            <p className="absolute -bottom-0.5 -left-0.5 h-1.5 w-[5px] rounded-full bg-neutral-300" />
-            <p className="absolute -right-0.5 -bottom-0.5 h-1.5 w-1.5 rounded-full bg-neutral-300" />
+            <p className="absolute -top-1 -left-0.5 h-1 w-1 rounded-full bg-neutral-300 md:h-1.5 md:w-[5px]" />
+            <p className="absolute -top-1 -right-0.5 h-1 w-1 rounded-full bg-neutral-300 md:h-1.5 md:w-1.5" />
+            <p className="absolute -bottom-0.5 -left-0.5 h-1 w-1 rounded-full bg-neutral-300 md:h-1.5 md:w-[5px]" />
+            <p className="absolute -right-0.5 -bottom-0.5 h-1 w-1 rounded-full bg-neutral-300 md:h-1.5 md:w-1.5" />
             AceingDev?
           </span>
         </h1>
       </div>
-      <div className="flex h-[50rem] w-full items-start justify-center overflow-hidden border-blue-500 mask-t-from-90%">
+      <div className="hidden h-[50rem] w-full items-start justify-center overflow-hidden border-blue-500 mask-t-from-90% md:flex">
         <div className="relative flex w-full items-start justify-center gap-6 p-6">
           <div className="flex flex-col gap-3">
             <DevStatusCard className="border-r border-b border-neutral-300 mask-l-from-30% shadow-2xl" />
@@ -114,6 +114,12 @@ const SkillsSection = () => {
             <AuthSignupContainer className="w-[24rem] mask-r-from-98% mask-b-from-20% shadow-2xl" />
           </div>
         </div>
+      </div>
+      <div className="w-full md:hidden">
+        <div className="flex w-full justify-center border-red-500 py-4">
+          <ServicesSection className="border border-neutral-300 shadow-[-10px_-10px_30px_4px_rgba(0,0,0,0.1),_10px_10px_30px_4px_rgba(45,78,255,0.15)]" />
+        </div>
+        <img src={wedeliverimg} alt="wedeliverimage" className="mx-auto" />
       </div>
       <div className="absolute bottom-0 w-full border mask-r-from-20% mask-l-from-20%" />
     </div>

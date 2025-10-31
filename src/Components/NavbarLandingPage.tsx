@@ -41,7 +41,7 @@ const LandingNavbar = ({
 
   return (
     <div
-      className={`fixed top-0 left-0 z-50 w-full bg-white/[0.9] py-3 transition-all duration-300 md:px-24 ${
+      className={`fixed top-0 left-0 z-50 w-full bg-white/[0.9] md:block hidden py-3 transition-all duration-300 md:px-24 ${
         scrolled ? "border-b border-gray-200 shadow-sm" : "border-b-0"
       }`}
     >

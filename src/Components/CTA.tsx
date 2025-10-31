@@ -17,15 +17,15 @@ const CTA = () => {
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center border-blue-600 py-12">
-        <div className="relative grid w-full max-w-[69rem] grid-cols-2 overflow-hidden rounded-xl border border-neutral-200 bg-gradient-to-r from-violet-100 via-white to-green-50 p-5 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
+      <div className="flex flex-col items-center justify-center border border-blue-600 py-12">
+        <div className="relative grid w-full grid-cols-1 overflow-hidden rounded-xl border border-red-500 bg-gradient-to-r from-violet-100 via-white to-green-50 p-5 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)] md:max-w-[69rem] md:grid-cols-2">
           <svg
             width="357"
             height="1"
             viewBox="0 0 357 1"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="absolute top-0 left-0 w-[24rem]"
+            className="top-0 left-0 w-[24rem] md:absolute"
           >
             <defs>
               <motion.linearGradient
@@ -68,7 +68,7 @@ const CTA = () => {
                 "radial-gradient(ellipse 80% 80% at 100% 0%, #000 50%, transparent 90%)",
             }}
           />
-          <div className="absolute top-7 left-5 ml-5 flex w-fit items-center justify-center gap-x-5">
+          <div className="top-7 left-5 ml-5 flex w-fit items-center justify-center gap-x-5 md:absolute">
             <Aceingdevlogo className="rounde-xl h-10 w-11 rounded-xl border-neutral-500 bg-neutral-800 p-1 px-1 pl-2 text-white" />
             <h1 className="text-2xl font-bold tracking-wider text-neutral-800">
               Aceing
@@ -79,40 +79,40 @@ const CTA = () => {
           </div>
           {/* Your Content/Components */}
           <div className="relative z-10 flex flex-col items-start justify-center border-red-500">
-            <h1 className="max-w-[28rem] pt-3 pl-6 text-3xl font-bold tracking-wider text-neutral-700">
+            <h1 className="max-w-[28rem] pt-3 pl-6 font-bold tracking-wider text-neutral-700 md:text-3xl">
               Have a Vision? Let's Turn It Into Impact.
             </h1>
-            <h1 className="mt-3 max-w-[22rem] pl-6 text-2xl font-semibold tracking-wider text-neutral-700">
+            <h1 className="mt-3 max-w-[22rem] pl-6 font-semibold tracking-wider text-neutral-700 md:text-2xl">
               <span className="bg-gradient-to-r from-purple-700 to-red-400 bg-clip-text text-transparent text-shadow-black">
                 Book
               </span>{" "}
               a Free Strategy Call!
             </h1>
-            <div className="mt-5 pl-6">
+            <div className="mt-2 pl-6 md:mt-5">
               <a
                 href="https://cal.com/aceingdev"
                 target="_blank"
-                className="group flex items-center justify-center gap-x-2 rounded-full border-neutral-400 bg-black px-5 py-2 text-lg font-semibold tracking-wider text-white transition duration-300 active:scale-90"
+                className="group flex items-center justify-center gap-x-2 rounded-full border-neutral-400 bg-black px-3 py-1 text-xs font-semibold tracking-wider text-white transition duration-300 active:scale-90 md:px-5 md:py-2 md:text-lg"
               >
                 Let’s Build Together
-                <IconCircleArrowRightFilled className="mt-0.5 h-6 w-6 text-white transition-transform duration-300 group-hover:-rotate-45" />
+                <IconCircleArrowRightFilled className="mt-0.5 h-4 w-4 text-white transition-transform duration-300 group-hover:-rotate-45 md:h-6 md:w-6" />
               </a>
             </div>
-            <div className="absolute bottom-5 flex gap-x-7 pl-6">
+            <div className="bottom-5 mt-4 flex gap-x-7 pl-6 md:absolute md:mt-0">
               <a href="https://x.com/abhilashtengli" target="_blank">
-                <IconBrandX className="h-7 w-7 text-neutral-700 transition-colors duration-200 hover:text-black" />
+                <IconBrandX className="h-4 w-4 text-neutral-700 transition-colors duration-200 hover:text-black md:h-7 md:w-7" />
               </a>
               <a
                 href="https://www.linkedin.com/in/abhitengli30/"
                 target="_blank"
               >
-                <IconBrandLinkedin className="h-7 w-7 text-neutral-700 transition-colors duration-200 hover:text-blue-500" />
+                <IconBrandLinkedin className="h-4 w-4 text-neutral-700 transition-colors duration-200 hover:text-blue-500 md:h-7 md:w-7" />
               </a>
               <a href="https://github.com/abhilashtengli" target="_blank">
-                <IconBrandGithub className="h-7 w-7 text-neutral-700 transition-colors duration-200 hover:text-black" />
+                <IconBrandGithub className="h-4 w-4 text-neutral-700 transition-colors duration-200 hover:text-black md:h-7 md:w-7" />
               </a>
               <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                <IconBrandWhatsapp className="h-7 w-7 cursor-pointer text-neutral-700 transition-colors duration-200 hover:text-green-500" />
+                <IconBrandWhatsapp className="h-4 w-4 cursor-pointer text-neutral-700 transition-colors duration-200 hover:text-green-500 md:h-7 md:w-7" />
               </a>
             </div>
           </div>

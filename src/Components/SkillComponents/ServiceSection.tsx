@@ -17,7 +17,7 @@ import {
 export function ServicesSection({ className }: { className?: string }) {
   return (
     <motion.div
-      className={`${className} top-42 left-1 z-30 max-w-xs space-y-2 rounded-2xl border border-neutral-200 bg-white px-3 py-3`}
+      className={`${className} top-42 md:left-1 z-30 max-w-xs space-y-2 rounded-2xl border border-neutral-200 bg-white px-3 py-3`}
       initial={{ opacity: 0, x: -50 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
