@@ -9,7 +9,7 @@ import misMart from "@/assets/mis_mart.webp";
 import misConsultation from "@/assets/mis_consultation.webp";
 import misDiscussion from "@/assets/mis_discussion.webp";
 import { useEffect, useState } from "react";
-import CommonNavbar from "../Navbar";
+// import CommonNavbar from "../Navbar";
 import CTA from "../CTA";
 import CommonFooter from "../FooterCommon";
 
@@ -30,20 +30,20 @@ const MilletInformationSystem = () => {
   }, []);
   return (
     <>
-      <CommonNavbar />
-      <div className="mt-24 flex flex-col items-center justify-center">
-        <div className="h-full w-full max-w-7xl border-red-700">
-          <section className="relative flex h-fit w-full justify-center gap-x-32 overflow-hidden py-8">
+      {/* <CommonNavbar /> */}
+      <div className="flex w-full flex-col items-center justify-center border-blue-600 md:mt-24">
+        <div className="w-full md:max-w-7xl">
+          <section className="relative h-fit w-full justify-center overflow-hidden border-black px-5 py-8 md:flex md:gap-x-32 md:px-0">
             <div className="mt-3 flex flex-col justify-center">
-              <Badge className="mb-4 border-gray-600 bg-gray-800 px-3 py-1 text-sm tracking-wider text-white">
+              <Badge className="mb-4 border-gray-600 bg-gray-800 px-1.5 py-0.5 text-xs tracking-wider text-white md:px-3 md:py-1 md:text-sm">
                 Gov-SaaS
               </Badge>
-              <div className="relative mt-4 ml-1 w-fit bg-gradient-to-r from-[#f8e6dd] via-white to-[#e8f5fa] px-3 py-2 text-6xl font-bold tracking-wide text-neutral-800">
+              <div className="relative mt-4 ml-1 w-fit bg-gradient-to-r from-red-100 via-white to-yellow-100 px-1.5 py-1 text-3xl font-bold tracking-wide text-neutral-800 md:px-3 md:py-2 md:text-6xl">
                 <svg
                   viewBox="0 0 357 1"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="absolute bottom-0 left-0 w-[69px]"
+                  className="absolute bottom-0 left-0 w-[35px] md:w-[69px]"
                 >
                   <defs>
                     <motion.linearGradient
@@ -80,7 +80,7 @@ const MilletInformationSystem = () => {
                   viewBox="0 0 357 1"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="top-0. absolute right-0 bottom-0 w-[69px]"
+                  className="top-0. absolute right-0 bottom-0 w-[35px] md:w-[69px]"
                 >
                   <defs>
                     <motion.linearGradient
@@ -117,16 +117,16 @@ const MilletInformationSystem = () => {
                 <p className="absolute -right-0.5 -bottom-0.5 h-1.5 w-1.5 rounded-full bg-blue-300" />
                 MIS
               </div>
-              <p className="text-md mt-5 w-fit rounded-xl border px-2 py-3 pt-4 font-bold tracking-wide">
+              <p className="mt-3 w-fit rounded-xl border px-2 py-1 text-[8px] font-bold tracking-wide md:mt-5 md:py-3 md:pt-4 md:text-sm">
                 A Platform Connecting Buyers, Sellers, Experts and Govt
                 Resources.
               </p>
-              <p className="text-md mt-14 max-w-4xl leading-6 tracking-wider text-neutral-700">
+              <p className="mt-5 max-w-4xl text-sm leading-6 tracking-wider text-neutral-700 md:mt-14 md:text-lg">
                 A platform where Sellers, buyers, policymakers, and researchers
                 can access resources, trade millet products, explore government
                 schemes, and collaborate for sustainable millet adoption.
               </p>
-              <div className="mt-8 flex">
+              <div className="mt-4 flex md:mt-8">
                 <motion.div
                   className={`${reactHovered ? "z-10" : ""} flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white px-1`}
                   onMouseEnter={() => setReactHovered(true)}
@@ -144,7 +144,7 @@ const MilletInformationSystem = () => {
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      className="h-4 w-4 stroke-1 text-sky-600 md:h-6 md:w-6"
+                      className="h-4 w-5 stroke-1 text-sky-600 md:h-6 md:w-6"
                     >
                       <path d="M6.306 8.711c-2.602 .723 -4.306 1.926 -4.306 3.289c0 2.21 4.477 4 10 4c.773 0 1.526 -.035 2.248 -.102"></path>
                       <path d="M17.692 15.289c2.603 -.722 4.308 -1.926 4.308 -3.289c0 -2.21 -4.477 -4 -10 -4c-.773 0 -1.526 .035 -2.25 .102"></path>
@@ -170,7 +170,7 @@ const MilletInformationSystem = () => {
                   </AnimatePresence>
                 </motion.div>
                 <motion.div
-                  className={`${expressHovered ? "z-10" : ""} -ml-3 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white px-1`}
+                  className={`${expressHovered ? "z-10" : ""} -ml-2 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white px-1 md:-ml-3`}
                   onMouseEnter={() => setExpressHovered(true)}
                   onMouseLeave={() => setExpressHovered(false)}
                   layout
@@ -178,7 +178,7 @@ const MilletInformationSystem = () => {
                   <div className="flex min-w-[16px] flex-none items-center justify-center md:min-w-[20px]">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-4 w-4 text-green-600 md:h-6 md:w-6"
+                      className="h-4 w-5 text-green-600 md:h-6 md:w-6"
                       viewBox="0 0 128 128"
                     >
                       <path
@@ -203,7 +203,7 @@ const MilletInformationSystem = () => {
                   </AnimatePresence>
                 </motion.div>
                 <motion.div
-                  className={`${tailwindHovered ? "z-10" : ""} -ml-3 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white px-1`}
+                  className={`${tailwindHovered ? "z-10" : ""} -ml-2 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white px-1 md:-ml-3`}
                   onMouseEnter={() => setTailwindHovered(true)}
                   onMouseLeave={() => setTailwindHovered(false)}
                   layout
@@ -214,7 +214,7 @@ const MilletInformationSystem = () => {
                       fill="currentColor"
                       stroke-width="0"
                       viewBox="0 0 24 24"
-                      className="h-4 w-4 text-sky-600 md:h-6 md:w-6"
+                      className="h-4 w-5 text-sky-600 md:h-6 md:w-6"
                       height="1em"
                       width="1em"
                       xmlns="http://www.w3.org/2000/svg"
@@ -237,7 +237,7 @@ const MilletInformationSystem = () => {
                   </AnimatePresence>
                 </motion.div>
                 <motion.div
-                  className={`${awsHovered ? "z-10" : ""} -ml-3 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white px-1`}
+                  className={`${awsHovered ? "z-10" : ""} -ml-2 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white px-1 md:-ml-3`}
                   onMouseEnter={() => setAwsHovered(true)}
                   onMouseLeave={() => setAwsHovered(false)}
                   layout
@@ -247,7 +247,7 @@ const MilletInformationSystem = () => {
                       viewBox="0 -30 150 150"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-4 w-4 pt-1 md:h-6 md:w-6"
+                      className="h-4 w-5 pt-1 md:h-6 md:w-6"
                     >
                       <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                       <g
@@ -287,7 +287,7 @@ const MilletInformationSystem = () => {
                   </AnimatePresence>
                 </motion.div>
                 <motion.div
-                  className={`${motionHovered ? "z-20" : ""} -ml-3 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white p-1.5`}
+                  className={`${motionHovered ? "z-20" : ""} -ml-2 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white p-1.5 md:-ml-3`}
                   onMouseEnter={() => setMotionHovered(true)}
                   onMouseLeave={() => setMotionHovered(false)}
                   layout
@@ -329,7 +329,7 @@ const MilletInformationSystem = () => {
                   </AnimatePresence>
                 </motion.div>
                 <motion.div
-                  className={`${typescriptHovered ? "z-20" : ""} -ml-3 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white p-2`}
+                  className={`${typescriptHovered ? "z-20" : ""} -ml-2 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white p-2 md:-ml-3`}
                   onMouseEnter={() => setTsHovered(true)}
                   onMouseLeave={() => setTsHovered(false)}
                   layout
@@ -393,7 +393,7 @@ const MilletInformationSystem = () => {
                   </AnimatePresence>
                 </motion.div>
                 <motion.div
-                  className={`${postgreSqlHovered ? "z-10" : ""} -ml-3 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white p-2`}
+                  className={`${postgreSqlHovered ? "z-10" : ""} -ml-2 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white p-2 md:-ml-3`}
                   onMouseEnter={() => setPostgreSqlHovered(true)}
                   onMouseLeave={() => setPostgreSqlHovered(false)}
                   layout
@@ -432,7 +432,7 @@ const MilletInformationSystem = () => {
                 </motion.div>
                 {/* cloudflare */}
                 <motion.div
-                  className="-ml-3 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white p-2"
+                  className="-ml-2 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white p-2 md:-ml-3"
                   onMouseEnter={() => setCloudflareHovered(true)}
                   onMouseLeave={() => setCloudflareHovered(false)}
                   layout
@@ -473,25 +473,25 @@ const MilletInformationSystem = () => {
                 </motion.div>
               </div>
             </div>
-            <div>
+            <div className="mt-5 md:mt-0">
               <div className="relative">
-                <div className="relative rounded-tl-xl rounded-tr-xl rounded-br-xs rounded-bl-xs border border-neutral-200 bg-gray-200 p-2 px-3 pb-3 shadow-xl">
-                  <div className="mb-3 flex gap-2 pt-2 pl-4">
-                    <div className="h-3 w-3 rounded-full bg-red-600"></div>
-                    <div className="h-3 w-3 rounded-full bg-yellow-500"></div>
-                    <div className="h-3 w-3 rounded-full bg-green-600"></div>
+                <div className="relative rounded-tl-xl rounded-tr-xl rounded-br-xs rounded-bl-xs border border-neutral-200 bg-gray-200 p-1.5 px-1.5 shadow-xl md:p-2 md:px-3 md:pb-3">
+                  <div className="mb-1 flex gap-2 pl-4 md:mb-3 md:pt-2">
+                    <div className="size-2 rounded-full bg-red-600 md:size-3" />
+                    <div className="size-2 rounded-full bg-yellow-500 md:size-3" />
+                    <div className="size-2 rounded-full bg-green-600 md:size-3" />
                   </div>
                   <img
                     src={misImg}
-                    alt="Nrega Files Dashboard"
-                    className="h-full w-[45rem] overflow-hidden rounded-tl-xl rounded-tr-xl rounded-br-xs rounded-bl-xs border"
+                    alt="Mis Img"
+                    className="h-full overflow-hidden rounded-tl-xl rounded-tr-xl rounded-br-xs rounded-bl-xs border md:w-[45rem]"
                   />
                 </div>
               </div>
             </div>
           </section>
-          <section className="flex flex-col items-center justify-center border-red-500 py-12">
-            <h1 className="flex w-full items-center gap-x-3 text-2xl font-semibold tracking-wider text-neutral-700">
+          <section className="flex flex-col items-center justify-center border-red-500 px-5 py-12 md:px-0">
+            <h1 className="flex w-full items-center gap-x-3 text-lg font-semibold tracking-wider text-neutral-700 md:text-2xl">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -500,7 +500,7 @@ const MilletInformationSystem = () => {
                 stroke-width="1"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                className="size-8 text-green-600"
+                className="size-5 text-green-600 md:size-8"
               >
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
@@ -511,9 +511,9 @@ const MilletInformationSystem = () => {
               </svg>
               Client Goal
             </h1>
-            <div className="mt-3 flex justify-center">
-              <div className="max-w-[45rem] border-r border-dashed border-purple-200 pr-16 pl-1">
-                <p className="text-md max-w-7xl leading-6 tracking-wider text-neutral-700">
+            <div className="mt-3 flex flex-col justify-center md:flex-row">
+              <div className="border-r border-dashed border-purple-200 pl-1 md:max-w-[45rem] md:pr-16">
+                <p className="text-md text-sm leading-6 tracking-wider text-neutral-700 md:text-lg">
                   A Central Government Institution required a digital platform
                   to strengthen the millet ecosystem. The vision was to provide
                   a one stop hub where Sellers, buyers, policymakers, and
@@ -522,8 +522,8 @@ const MilletInformationSystem = () => {
                   millet adoption.
                 </p>
               </div>
-              <div className="max-w-5xl pl-16">
-                <div className="text-md space-y-5 leading-6 tracking-wider text-neutral-700">
+              <div className="mt-4 max-w-5xl md:mt-0 md:pl-16">
+                <div className="text-md space-y-5 text-sm leading-6 tracking-wider text-neutral-700 md:text-lg">
                   <p>
                     The institution identified key challenges faced by the
                     millet ecosystem including lack of structured marketplace,
@@ -540,8 +540,8 @@ const MilletInformationSystem = () => {
               </div>
             </div>
           </section>
-          <section className="flex w-full flex-col items-center justify-center border-black py-12">
-            <h1 className="flex w-full items-center gap-x-3 text-2xl font-semibold tracking-wider text-neutral-700">
+          <section className="flex w-full flex-col items-center justify-center border-black px-5 md:px-0 md:py-12">
+            <h1 className="mb-2 flex w-full items-center gap-x-3 text-lg font-semibold tracking-wider text-neutral-700 md:mb-0 md:text-2xl">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -552,7 +552,7 @@ const MilletInformationSystem = () => {
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                className="size-8 text-red-400"
+                className="size-5 text-red-400 md:size-8"
               >
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <path d="M20 6h-13a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h13" />
@@ -561,13 +561,13 @@ const MilletInformationSystem = () => {
               </svg>
               Project Glimpses
             </h1>
-            <div className="mt-12 grid w-full grid-cols-2 place-items-center gap-5 gap-y-12 border-red-500">
-              <div className="flex h-[37rem] w-fit flex-col-reverse overflow-hidden rounded-xl border border-neutral-200 p-3 shadow-lg transition duration-300 hover:shadow-2xl">
+            <div className="grid w-full grid-cols-1 place-items-center gap-5 gap-y-12 border-red-500 md:mt-12 md:grid-cols-2">
+              <div className="flex w-fit flex-col-reverse overflow-hidden rounded-xl border border-neutral-200 p-3 shadow-lg transition duration-300 hover:shadow-2xl md:h-[37rem]">
                 <div className="mt-4 pl-5">
-                  <h1 className="mb-4 text-lg font-semibold tracking-wider">
+                  <h1 className="mb-4 text-sm font-semibold tracking-wider md:text-lg">
                     Millet Mart
                   </h1>
-                  <ul className="text-md max-w-2xl list-disc pl-5 leading-8 tracking-wider text-neutral-600">
+                  <ul className="max-w-2xl list-disc pl-5 text-xs tracking-wider text-neutral-600 md:text-sm md:leading-8">
                     <li>
                       Digital marketplace where farmers can sign up and list
                       products.
@@ -581,15 +581,15 @@ const MilletInformationSystem = () => {
                 <img
                   alt=""
                   src={misMart}
-                  className="h-[25rem] w-[40rem] rounded-xl transition duration-500 hover:scale-105"
+                  className="rounded-xl transition duration-500 hover:scale-105 md:h-[25rem] md:w-[40rem]"
                 />
               </div>
-              <div className="flex h-[37rem] w-fit flex-col-reverse overflow-hidden rounded-xl border border-neutral-200 p-3 shadow-lg transition duration-300 hover:shadow-2xl">
+              <div className="flex w-fit flex-col-reverse overflow-hidden rounded-xl border border-neutral-200 p-3 shadow-lg transition duration-300 hover:shadow-2xl md:h-[37rem]">
                 <div className="mt-4 pl-5">
-                  <h1 className="mb-4 text-lg font-semibold tracking-wider">
+                  <h1 className="mb-4 text-sm font-semibold tracking-wider md:text-lg">
                     Consultation Booking
                   </h1>
-                  <ul className="text-md max-w-2xl list-disc pl-5 leading-8 tracking-wider text-neutral-600">
+                  <ul className="max-w-2xl list-disc pl-5 text-xs tracking-wider text-neutral-600 md:text-sm md:leading-8">
                     <li>
                       Farmers can schedule calls with mentors for expert
                       guidance.
@@ -603,15 +603,15 @@ const MilletInformationSystem = () => {
                 <img
                   alt=""
                   src={misConsultation}
-                  className="h-[25rem] w-[40rem] rounded-xl transition duration-500 hover:scale-105"
+                  className="rounded-xl transition duration-500 hover:scale-105 md:h-[25rem] md:w-[40rem]"
                 />
               </div>
               <div className="flex w-fit flex-col-reverse overflow-hidden rounded-xl border border-neutral-200 p-3 shadow-lg transition duration-300 hover:shadow-2xl">
                 <div className="mt-4 pl-5">
-                  <h1 className="mb-4 text-lg font-semibold tracking-wider">
+                  <h1 className="mb-4 text-sm font-semibold tracking-wider md:text-lg">
                     Community Forum
                   </h1>
-                  <ul className="text-md max-w-2xl list-disc pl-5 leading-8 tracking-wider text-neutral-600">
+                  <ul className="max-w-2xl list-disc pl-5 text-xs tracking-wider text-neutral-600 md:text-sm md:leading-8">
                     <li>
                       Space for farmers to ask questions and share experiences.
                     </li>
@@ -620,7 +620,7 @@ const MilletInformationSystem = () => {
                 <img
                   alt=""
                   src={misDiscussion}
-                  className="h-[25rem] w-[40rem] rounded-xl transition duration-500 hover:scale-105"
+                  className="rounded-xl transition duration-500 hover:scale-105 md:h-[25rem] md:w-[40rem]"
                 />
               </div>
               {/* <div className="flex w-fit flex-col-reverse overflow-hidden rounded-xl border border-neutral-200 p-3 shadow-lg transition duration-300 hover:shadow-2xl">
@@ -640,9 +640,9 @@ const MilletInformationSystem = () => {
                 </div> */}
             </div>
           </section>
-          <section className="relative flex flex-col items-center justify-center border-red-500 py-12">
+          <section className="relative flex flex-col items-center justify-center border-red-500 px-5 py-12 md:px-0">
             <div
-              className="absolute -top-px left-[calc(var(--offset)/2*-1)] z-30 h-[var(--height)] w-[calc(100%+var(--offset))] bg-[linear-gradient(to_right,var(--color),var(--color)_50%,transparent_0,transparent)] [background-size:var(--width)_var(--height)] [mask-composite:exclude] [mask:linear-gradient(to_left,var(--background)_var(--fade-stop),transparent),_linear-gradient(to_right,var(--background)_var(--fade-stop),transparent),_linear-gradient(black,black)] dark:bg-[linear-gradient(to_right,var(--color-dark),var(--color-dark)_50%,transparent_0,transparent)]"
+              className="absolute -top-px left-[calc(var(--offset)/2*-1)] z-30 hidden h-[var(--height)] w-[calc(100%+var(--offset))] bg-[linear-gradient(to_right,var(--color),var(--color)_50%,transparent_0,transparent)] [background-size:var(--width)_var(--height)] [mask-composite:exclude] [mask:linear-gradient(to_left,var(--background)_var(--fade-stop),transparent),_linear-gradient(to_right,var(--background)_var(--fade-stop),transparent),_linear-gradient(black,black)] md:block dark:bg-[linear-gradient(to_right,var(--color-dark),var(--color-dark)_50%,transparent_0,transparent)]"
               style={
                 {
                   "--background": "#ffffff",
@@ -656,14 +656,14 @@ const MilletInformationSystem = () => {
                 } as React.CSSProperties
               }
             />
-            <h1 className="flex w-full items-center gap-x-3 text-2xl font-semibold tracking-wider text-neutral-700">
+            <h1 className="flex w-full items-center gap-x-3 text-lg font-semibold tracking-wider text-neutral-700 md:text-2xl">
               <svg
                 viewBox="0 0 60 60"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="#000"
                 stroke="currentColor"
                 stroke-width="1"
-                className="size-8 text-purple-300"
+                className="size-5 text-purple-300 md:size-8"
               >
                 <path d="M56.67,49.88,46.89,36a19.31,19.31,0,1,0-33.9.18L3.33,49.88a1.63,1.63,0,0,0,1.34,2.58H55.33a1.63,1.63,0,0,0,1.34-2.58Zm-40-15.57,3.6,5.11-1.6,2.27-1.3-1.3a1,1,0,0,0-.69-.29h0a1,1,0,0,0-.69.29L13.36,43,11.7,41.37Zm18.58-15-.82,1.1a1,1,0,0,0,0,1.17l.82,1.1H30.87V19.3Zm-5.37,9.86,5.69,8.08-1.95,1.95-2.94-2.94a1,1,0,0,0-1.38,0L26.53,39l-2.11-2.11Zm-6.61,9.38,2.56,2.56a1,1,0,0,0,1.38,0L30,38.32l2.94,2.94a1,1,0,0,0,1.38,0l2.4-2.41,8.22,11.66H14.85Zm16.33,1,3.71-5.26,5,7.06L46.64,43,44,40.39a1,1,0,0,0-.69-.29h0a1,1,0,0,0-.69.29L41.2,41.82ZM12.53,26.85a17.36,17.36,0,1,1,33.09,7.34l-1-1.37a1.7,1.7,0,0,0-2.68,0l-3.56,5.05L31.23,27.67a1.45,1.45,0,0,0-.36-.34V24.62h6.34A1,1,0,0,0,38,23.06L36.43,21,38,18.91a1,1,0,0,0-.78-1.56H29.89a1,1,0,0,0-1,1v9a1.33,1.33,0,0,0-.37.34h0l-7.08,10L18,32.82a1.7,1.7,0,0,0-2.68,0l-1.09,1.54A17.37,17.37,0,0,1,12.53,26.85ZM10.57,43l2.1,2.1a1,1,0,0,0,1.38,0l2.64-2.63.85.85-4.63,6.57a1.65,1.65,0,0,0-.26.63H5.26Zm36.56,7.52a1.63,1.63,0,0,0-.25-.63l-4.54-6.44,1-1L46,45.09a1,1,0,0,0,1.38,0l2.1-2.1,5.31,7.52Z" />
               </svg>
@@ -674,7 +674,7 @@ const MilletInformationSystem = () => {
                 viewBox="0 0 1 272"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="absolute h-[41.5rem] text-red-700"
+                className="absolute h-[55rem] text-red-700 md:h-[41.5rem]"
               >
                 <defs>
                   <motion.linearGradient
@@ -713,18 +713,18 @@ const MilletInformationSystem = () => {
                 <div className="overflow-hidden rounded-xl border-gray-800 bg-white shadow-lg">
                   <div className="grid w-full grid-cols-2">
                     {/* Header */}
-                    <div className="border-r border-b border-gray-200 bg-gradient-to-b from-purple-50 to-transparent p-3 py-5">
+                    <div className="border-r border-b border-gray-200 bg-gradient-to-b from-red-50 to-transparent p-3 py-5">
                       <div className="flex items-center gap-2">
-                        <Zap className="h-5 w-5 text-red-600" />
-                        <h3 className="text-xl font-bold tracking-wide text-red-800">
+                        <Zap className="h-4 w-4 text-red-600 md:h-5 md:w-5" />
+                        <h3 className="text-sm font-bold tracking-wide text-red-800 md:text-xl">
                           Challenges
                         </h3>
                       </div>
                     </div>
                     <div className="border-b border-gray-200 bg-gradient-to-b from-green-50 to-transparent p-3 py-5">
                       <div className="flex items-center gap-2">
-                        <Lightbulb className="h-5 w-5 text-green-600" />
-                        <h3 className="text-xl font-bold tracking-wide text-green-800">
+                        <Lightbulb className="h-4 w-4 text-green-600 md:h-5 md:w-5" />
+                        <h3 className="text-sm font-bold tracking-wide text-green-800 md:text-xl">
                           Solutions
                         </h3>
                       </div>
@@ -733,12 +733,12 @@ const MilletInformationSystem = () => {
                     {/* Row 1 */}
                     <div className="from-red-25 border-r border-b border-gray-200 bg-gradient-to-b to-transparent p-3">
                       <div className="flex items-start gap-2">
-                        <div className="text-lg">🛒</div>
+                        <div className="text-xs md:text-lg">🛒</div>
                         <div>
-                          <h4 className="mb-1 text-lg font-semibold tracking-wide text-gray-900">
+                          <h4 className="mb-1 text-sm font-semibold tracking-wide text-gray-900 md:text-lg">
                             No Structured Marketplace
                           </h4>
-                          <p className="text-md tracking-wide text-gray-700">
+                          <p className="text-xs tracking-wide text-gray-700 md:text-[16px]">
                             Farmers had no structured online marketplace to sell
                             or buy millet products.
                           </p>
@@ -747,12 +747,12 @@ const MilletInformationSystem = () => {
                     </div>
                     <div className="from-green-25 border-b border-gray-200 bg-gradient-to-b to-transparent p-3">
                       <div className="flex items-start gap-2">
-                        <div className="text-lg">🏪</div>
+                        <div className="text-xs md:text-lg">🏪</div>
                         <div>
-                          <h4 className="mb-1 text-lg font-semibold tracking-wide text-gray-900">
+                          <h4 className="mb-1 text-sm font-semibold tracking-wide text-gray-900 md:text-lg">
                             Millet Mart Platform
                           </h4>
-                          <p className="text-md tracking-wide text-gray-700">
+                          <p className="text-xs tracking-wide text-gray-700 md:text-[16px]">
                             Created a digital marketplace enabling direct
                             farmer-to-buyer connections for better
                             profitability.
@@ -764,12 +764,12 @@ const MilletInformationSystem = () => {
                     {/* Row 2 */}
                     <div className="from-red-25 border-r border-b border-gray-200 bg-gradient-to-b to-transparent p-3">
                       <div className="flex items-start gap-2">
-                        <div className="text-lg">👨‍🏫</div>
+                        <div className="text-xs md:text-lg">👨‍🏫</div>
                         <div>
-                          <h4 className="mb-1 text-lg font-semibold tracking-wide text-gray-900">
+                          <h4 className="mb-1 text-sm font-semibold tracking-wide text-gray-900 md:text-lg">
                             Limited Expert Access
                           </h4>
-                          <p className="text-md tracking-wide text-gray-700">
+                          <p className="text-xs tracking-wide text-gray-700 md:text-[16px]">
                             Lack of direct access to experts limited knowledge
                             transfer and guidance.
                           </p>
@@ -778,12 +778,12 @@ const MilletInformationSystem = () => {
                     </div>
                     <div className="from-green-25 border-b border-gray-200 bg-gradient-to-b to-transparent p-3">
                       <div className="flex items-start gap-2">
-                        <div className="text-lg">📞</div>
+                        <div className="text-xs md:text-lg">📞</div>
                         <div>
-                          <h4 className="mb-1 text-lg font-semibold tracking-wide text-gray-900">
+                          <h4 className="mb-1 text-sm font-semibold tracking-wide text-gray-900 md:text-lg">
                             Consultation Booking System
                           </h4>
-                          <p className="text-md tracking-wide text-gray-700">
+                          <p className="text-xs tracking-wide text-gray-700 md:text-[16px]">
                             Enabled farmers to schedule calls with mentors for
                             expert guidance and knowledge transfer.
                           </p>
@@ -794,12 +794,12 @@ const MilletInformationSystem = () => {
                     {/* Row 3 */}
                     <div className="from-red-25 border-r border-b border-gray-200 bg-gradient-to-b to-transparent p-3">
                       <div className="flex items-start gap-2">
-                        <div className="text-lg">💬</div>
+                        <div className="text-xs md:text-lg">💬</div>
                         <div>
-                          <h4 className="mb-1 text-lg font-semibold tracking-wide text-gray-900">
+                          <h4 className="mb-1 text-sm font-semibold tracking-wide text-gray-900 md:text-lg">
                             Minimal Community Interaction
                           </h4>
-                          <p className="text-md tracking-wide text-gray-700">
+                          <p className="text-xs tracking-wide text-gray-700 md:text-[16px]">
                             Scattered knowledge-sharing led to isolated farmers
                             with limited peer support.
                           </p>
@@ -808,12 +808,12 @@ const MilletInformationSystem = () => {
                     </div>
                     <div className="from-green-25 border-b border-gray-200 bg-gradient-to-b to-transparent p-3">
                       <div className="flex items-start gap-2">
-                        <div className="text-lg">🤝</div>
+                        <div className="text-xs md:text-lg">🤝</div>
                         <div>
-                          <h4 className="mb-1 text-lg font-semibold tracking-wide text-gray-900">
+                          <h4 className="mb-1 text-sm font-semibold tracking-wide text-gray-900 md:text-lg">
                             Community Forum
                           </h4>
-                          <p className="text-md tracking-wide text-gray-700">
+                          <p className="text-xs tracking-wide text-gray-700 md:text-[16px]">
                             Built a collaborative space for farmers to ask
                             questions, share experiences, and learn from each
                             other.
@@ -825,12 +825,12 @@ const MilletInformationSystem = () => {
                     {/* Row 4 */}
                     <div className="from-red-25 border-r bg-gradient-to-b to-transparent p-3">
                       <div className="flex items-start gap-2">
-                        <div className="text-lg">📋</div>
+                        <div className="text-xs md:text-lg">📋</div>
                         <div>
-                          <h4 className="mb-1 text-lg font-semibold tracking-wide text-gray-900">
+                          <h4 className="mb-1 text-sm font-semibold tracking-wide text-gray-900 md:text-lg">
                             Poor Scheme Accessibility
                           </h4>
-                          <p className="text-md tracking-wide text-gray-700">
+                          <p className="text-xs tracking-wide text-gray-700 md:text-[16px]">
                             Government schemes and policies were poorly
                             accessible to farmers.
                           </p>
@@ -838,13 +838,13 @@ const MilletInformationSystem = () => {
                       </div>
                     </div>
                     <div className="from-green-25 bg-gradient-to-b to-transparent p-3">
-                      <div className="flex items-start gap-2">
-                        <div className="text-lg">🎯</div>
+                      <div className="flex items-start gap-x-1 md:gap-2">
+                        <div className="text-xs md:text-lg">🎯</div>
                         <div>
-                          <h4 className="mb-1 text-lg font-semibold tracking-wide text-gray-900">
+                          <h4 className="mb-1 text-sm font-semibold tracking-wide text-gray-900 md:text-lg">
                             Schemes Dashboard
                           </h4>
-                          <p className="text-md tracking-wide text-gray-700">
+                          <p className="text-xs tracking-wide text-gray-700 md:text-[16px]">
                             Centralized latest central and state schemes with
                             direct links for easy access and adoption.
                           </p>
@@ -856,9 +856,9 @@ const MilletInformationSystem = () => {
               </div>
             </div>
           </section>
-          <div className="relative grid grid-cols-2">
+          <div className="relative grid grid-cols-1 md:grid-cols-2">
             <div
-              className="absolute -top-px left-[calc(var(--offset)/2*-1)] z-30 h-[var(--height)] w-[calc(100%+var(--offset))] bg-[linear-gradient(to_right,var(--color),var(--color)_50%,transparent_0,transparent)] [background-size:var(--width)_var(--height)] [mask-composite:exclude] [mask:linear-gradient(to_left,var(--background)_var(--fade-stop),transparent),_linear-gradient(to_right,var(--background)_var(--fade-stop),transparent),_linear-gradient(black,black)] dark:bg-[linear-gradient(to_right,var(--color-dark),var(--color-dark)_50%,transparent_0,transparent)]"
+              className="absolute -top-px left-[calc(var(--offset)/2*-1)] z-30 hidden h-[var(--height)] w-[calc(100%+var(--offset))] bg-[linear-gradient(to_right,var(--color),var(--color)_50%,transparent_0,transparent)] [background-size:var(--width)_var(--height)] [mask-composite:exclude] [mask:linear-gradient(to_left,var(--background)_var(--fade-stop),transparent),_linear-gradient(to_right,var(--background)_var(--fade-stop),transparent),_linear-gradient(black,black)] md:block dark:bg-[linear-gradient(to_right,var(--color-dark),var(--color-dark)_50%,transparent_0,transparent)]"
               style={
                 {
                   "--background": "#ffffff",
@@ -872,7 +872,7 @@ const MilletInformationSystem = () => {
                 } as React.CSSProperties
               }
             />
-            <section className="border-red-600 py-12">
+            <section className="border-black px-3 md:px-0 md:py-12">
               <h1 className="flex w-full items-center gap-x-3 text-2xl font-semibold tracking-wider text-neutral-700">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -884,7 +884,7 @@ const MilletInformationSystem = () => {
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  className="size-8 text-yellow-500"
+                  className="size-5 text-yellow-500 md:size-8"
                 >
                   <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                   <path d="M3 17l6 -6l4 4l8 -8" />
@@ -892,8 +892,8 @@ const MilletInformationSystem = () => {
                 </svg>
                 Impact
               </h1>
-              <div className="w-full pl-8">
-                <ul className="text-md mt-5 max-w-xl font-medium tracking-wide text-neutral-600">
+              <div className="w-full md:pl-8">
+                <ul className="mt-5 max-w-xl text-sm font-medium tracking-wide text-neutral-600 md:text-[16px]">
                   {[
                     "Enabled direct farmer-to-market linkages, boosting profitability.",
                     "Simplified government scheme access, increasing resource adoption.",
@@ -912,8 +912,8 @@ const MilletInformationSystem = () => {
                 </ul>
               </div>
             </section>
-            <section className="items-center justify-center border-blue-500 py-12">
-              <h1 className="flex w-full items-center gap-x-3 pl-2 text-2xl font-semibold tracking-wider text-neutral-700">
+            <section className="items-center justify-center px-3 pt-6 md:px-0 md:py-12">
+              <h1 className="flex w-full items-center gap-x-3 pl-2 text-lg font-semibold tracking-wider text-neutral-700 md:text-2xl">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -924,7 +924,7 @@ const MilletInformationSystem = () => {
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  className="size-8 text-green-700"
+                  className="size-5 text-green-700 md:size-8"
                 >
                   <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                   <path d="M3 12h1m8 -9v1m8 8h1m-15.4 -6.4l.7 .7m12.1 -.7l-.7 .7" />
@@ -934,7 +934,7 @@ const MilletInformationSystem = () => {
                 Conclusion
               </h1>
               <div className="flex items-center justify-center">
-                <p className="mt-4 max-w-xl pl-5 leading-7 font-medium tracking-wide text-neutral-600">
+                <p className="mt-4 max-w-xl text-sm leading-6 font-medium tracking-wide text-neutral-600 md:pl-5 md:text-[16px] md:leading-7">
                   The Millet Information System successfully bridged the gap
                   between farmers, policymakers, and researchers by providing a
                   centralized digital hub. By combining marketplace features,

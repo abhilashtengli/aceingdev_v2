@@ -26,13 +26,13 @@ const Nrega = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
   return (
-    <div className="w-full">
+    <>
       {/* <CommonNavbar /> */}
       <div className="flex w-full flex-col items-center justify-center border-blue-600 md:mt-24">
         <div className="w-full md:max-w-7xl">
           <section className="relative h-fit w-full justify-center overflow-hidden border-black px-5 py-8 md:flex md:gap-x-32 md:px-0">
             <div className="mt-3 flex flex-col justify-center">
-              <Badge className="mb-2 border-gray-600 bg-gray-800 px-3 py-1 text-xs tracking-wider text-white md:mb-4 md:text-sm">
+              <Badge className="mb-4 border-gray-600 bg-gray-800 px-1.5 py-0.5 text-xs tracking-wider text-white md:px-3 md:py-1 md:text-sm">
                 SaaS
               </Badge>
               <div className="relative mt-4 ml-1 w-fit bg-gradient-to-r from-red-100 via-white to-yellow-100 px-1.5 py-1 text-3xl font-bold tracking-wide text-neutral-800 md:px-3 md:py-2 md:text-6xl">
@@ -590,7 +590,7 @@ const Nrega = () => {
           </section>
           <section className="relative flex flex-col items-center justify-center border-red-500 px-5 py-12 md:px-0">
             <div
-              className="absolute -top-px left-[calc(var(--offset)/2*-1)] z-30 hidden h-[var(--height)] w-[calc(100%+var(--offset))] border border-violet-500 bg-[linear-gradient(to_right,var(--color),var(--color)_50%,transparent_0,transparent)] [background-size:var(--width)_var(--height)] [mask-composite:exclude] [mask:linear-gradient(to_left,var(--background)_var(--fade-stop),transparent),_linear-gradient(to_right,var(--background)_var(--fade-stop),transparent),_linear-gradient(black,black)] md:block dark:bg-[linear-gradient(to_right,var(--color-dark),var(--color-dark)_50%,transparent_0,transparent)]"
+              className="absolute -top-px left-[calc(var(--offset)/2*-1)] z-30 hidden h-[var(--height)] w-[calc(100%+var(--offset))] bg-[linear-gradient(to_right,var(--color),var(--color)_50%,transparent_0,transparent)] [background-size:var(--width)_var(--height)] [mask-composite:exclude] [mask:linear-gradient(to_left,var(--background)_var(--fade-stop),transparent),_linear-gradient(to_right,var(--background)_var(--fade-stop),transparent),_linear-gradient(black,black)] md:block dark:bg-[linear-gradient(to_right,var(--color-dark),var(--color-dark)_50%,transparent_0,transparent)]"
               style={
                 {
                   "--background": "#ffffff",
@@ -861,7 +861,7 @@ const Nrega = () => {
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  className="size-6 text-yellow-500 md:size-8"
+                  className="size-5 text-yellow-500 md:size-8"
                 >
                   <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                   <path d="M3 17l6 -6l4 4l8 -8" />
@@ -903,7 +903,7 @@ const Nrega = () => {
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  className="size-8 text-green-700"
+                  className="size-5 text-green-700 md:size-8"
                 >
                   <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                   <path d="M3 12h1m8 -9v1m8 8h1m-15.4 -6.4l.7 .7m12.1 -.7l-.7 .7" />
@@ -931,7 +931,7 @@ const Nrega = () => {
       </div>
       <CTA />
       <CommonFooter />
-    </div>
+    </>
   );
 };
 

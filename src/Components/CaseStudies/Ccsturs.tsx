@@ -5,7 +5,7 @@ import mainPage from "@/assets/ccs_mainpage.webp";
 import dashboard from "@/assets/ccs_dashboard.webp";
 import program from "@/assets/ccs_program.webp";
 import { useEffect, useState } from "react";
-import CommonNavbar from "../Navbar";
+// import CommonNavbar from "../Navbar";
 import CTA from "../CTA";
 import CommonFooter from "../FooterCommon";
 
@@ -26,20 +26,20 @@ const CCS = () => {
   }, []);
   return (
     <>
-      <CommonNavbar />
-      <div className="mt-24 flex flex-col items-center border-red-400">
-        <div className="h-full w-full max-w-7xl border-red-700">
-          <section className="relative flex h-fit w-full justify-center gap-x-32 overflow-hidden py-8">
+      {/* <CommonNavbar /> */}
+      <div className="flex w-full flex-col items-center justify-center border-blue-600 md:mt-24">
+        <div className="w-full md:max-w-7xl">
+          <section className="relative h-fit w-full justify-center overflow-hidden border-black px-5 py-8 md:flex md:gap-x-32 md:px-0">
             <div className="mt-3 flex flex-col justify-center">
-              <Badge className="mb-4 border-gray-600 bg-gray-800 px-3 py-1 text-sm tracking-wider text-white">
+              <Badge className="mb-4 border-gray-600 bg-gray-800 px-1.5 py-0.5 text-xs tracking-wider text-white md:px-3 md:py-1 md:text-sm">
                 Education
               </Badge>
-              <div className="relative mt-4 ml-1 w-fit bg-gradient-to-r from-[#c6e7ec] via-white to-[#eec8d9] px-3 py-2 text-6xl font-bold tracking-wide text-neutral-800">
+              <div className="relative mt-4 ml-1 w-fit bg-gradient-to-r from-[#c6e7ec] via-white to-[#eec8d9] px-1.5 py-1 text-3xl font-bold tracking-wide text-neutral-800 md:px-3 md:py-2 md:text-6xl">
                 <svg
                   viewBox="0 0 357 1"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="absolute bottom-0 left-0 w-[79px]"
+                  className="absolute bottom-0 left-0 w-[40px] md:w-[79px]"
                 >
                   <defs>
                     <motion.linearGradient
@@ -76,7 +76,7 @@ const CCS = () => {
                   viewBox="0 0 357 1"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="absolute right-0 bottom-0 w-[79px]"
+                  className="absolute right-0 bottom-0 w-[40px] md:w-[79px]"
                 >
                   <defs>
                     <motion.linearGradient
@@ -113,16 +113,16 @@ const CCS = () => {
                 <p className="absolute -right-0.5 -bottom-0.5 h-[7px] w-[7px] rounded-full bg-blue-300" />
                 CCS{" "}
               </div>
-              <p className="text-md mt-5 w-fit rounded-xl border px-2 py-3 pt-4 font-bold tracking-wide">
+              <p className="mt-3 w-fit rounded-xl border px-2 py-1 text-[8px] font-bold tracking-wide md:mt-5 md:py-3 md:pt-4 md:text-sm">
                 A Self-Managed College Website and Admin Portal
               </p>
-              <p className="text-md mt-14 max-w-4xl leading-6 tracking-wider text-neutral-700">
+              <p className="mt-5 max-w-4xl text-sm leading-6 tracking-wider text-neutral-700 md:mt-14 md:text-lg">
                 A dynamic educational institution website with centralized admin
                 dashboard that empowers non-technical staff to manage all
                 digital content independently, featuring modern responsive
                 design and secure cloud storage
               </p>
-              <div className="mt-8 flex">
+              <div className="mt-4 flex md:mt-8">
                 <motion.div
                   className={`${reactHovered ? "z-10" : ""} flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white px-1`}
                   onMouseEnter={() => setReactHovered(true)}
@@ -140,7 +140,7 @@ const CCS = () => {
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      className="h-4 w-4 stroke-1 text-sky-600 md:h-6 md:w-6"
+                      className="h-4 w-5 stroke-1 text-sky-600 md:h-6 md:w-6"
                     >
                       <path d="M6.306 8.711c-2.602 .723 -4.306 1.926 -4.306 3.289c0 2.21 4.477 4 10 4c.773 0 1.526 -.035 2.248 -.102"></path>
                       <path d="M17.692 15.289c2.603 -.722 4.308 -1.926 4.308 -3.289c0 -2.21 -4.477 -4 -10 -4c-.773 0 -1.526 .035 -2.25 .102"></path>
@@ -166,7 +166,7 @@ const CCS = () => {
                   </AnimatePresence>
                 </motion.div>
                 <motion.div
-                  className={`${expressHovered ? "z-10" : ""} -ml-3 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white px-1`}
+                  className={`${expressHovered ? "z-10" : ""} -ml-2 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white px-1 md:-ml-3`}
                   onMouseEnter={() => setExpressHovered(true)}
                   onMouseLeave={() => setExpressHovered(false)}
                   layout
@@ -174,7 +174,7 @@ const CCS = () => {
                   <div className="flex min-w-[16px] flex-none items-center justify-center md:min-w-[20px]">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-4 w-4 text-green-600 md:h-6 md:w-6"
+                      className="h-4 w-5 text-green-600 md:h-6 md:w-6"
                       viewBox="0 0 128 128"
                     >
                       <path
@@ -199,7 +199,7 @@ const CCS = () => {
                   </AnimatePresence>
                 </motion.div>
                 <motion.div
-                  className={`${tailwindHovered ? "z-10" : ""} -ml-3 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white px-1`}
+                  className={`${tailwindHovered ? "z-10" : ""} -ml-2 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white px-1 md:-ml-3`}
                   onMouseEnter={() => setTailwindHovered(true)}
                   onMouseLeave={() => setTailwindHovered(false)}
                   layout
@@ -210,7 +210,7 @@ const CCS = () => {
                       fill="currentColor"
                       stroke-width="0"
                       viewBox="0 0 24 24"
-                      className="h-4 w-4 text-sky-600 md:h-6 md:w-6"
+                      className="h-4 w-5 text-sky-600 md:h-6 md:w-6"
                       height="1em"
                       width="1em"
                       xmlns="http://www.w3.org/2000/svg"
@@ -233,7 +233,7 @@ const CCS = () => {
                   </AnimatePresence>
                 </motion.div>
                 <motion.div
-                  className={`${awsHovered ? "z-10" : ""} -ml-3 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white px-1`}
+                  className={`${awsHovered ? "z-10" : ""} -ml-2 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white px-1 md:-ml-3`}
                   onMouseEnter={() => setAwsHovered(true)}
                   onMouseLeave={() => setAwsHovered(false)}
                   layout
@@ -243,7 +243,7 @@ const CCS = () => {
                       viewBox="0 -30 150 150"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-4 w-4 pt-1 md:h-6 md:w-6"
+                      className="h-4 w-5 pt-1 md:h-6 md:w-6"
                     >
                       <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                       <g
@@ -283,7 +283,7 @@ const CCS = () => {
                   </AnimatePresence>
                 </motion.div>
                 <motion.div
-                  className={`${motionHovered ? "z-20" : ""} -ml-3 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white p-1.5`}
+                  className={`${motionHovered ? "z-20" : ""} -ml-2 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white p-1.5 md:-ml-3`}
                   onMouseEnter={() => setMotionHovered(true)}
                   onMouseLeave={() => setMotionHovered(false)}
                   layout
@@ -325,7 +325,7 @@ const CCS = () => {
                   </AnimatePresence>
                 </motion.div>
                 <motion.div
-                  className={`${typescriptHovered ? "z-20" : ""} -ml-3 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white p-2`}
+                  className={`${typescriptHovered ? "z-20" : ""} -ml-2 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white p-2 md:-ml-3`}
                   onMouseEnter={() => setTsHovered(true)}
                   onMouseLeave={() => setTsHovered(false)}
                   layout
@@ -389,7 +389,7 @@ const CCS = () => {
                   </AnimatePresence>
                 </motion.div>
                 <motion.div
-                  className={`${postgreSqlHovered ? "z-10" : ""} -ml-3 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white p-2`}
+                  className={`${postgreSqlHovered ? "z-10" : ""} -ml-2 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white p-2 md:-ml-3`}
                   onMouseEnter={() => setPostgreSqlHovered(true)}
                   onMouseLeave={() => setPostgreSqlHovered(false)}
                   layout
@@ -428,7 +428,7 @@ const CCS = () => {
                 </motion.div>
                 {/* cloudflare */}
                 <motion.div
-                  className="-ml-3 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white p-2"
+                  className="-ml-2 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white p-2 md:-ml-3"
                   onMouseEnter={() => setCloudflareHovered(true)}
                   onMouseLeave={() => setCloudflareHovered(false)}
                   layout
@@ -469,25 +469,25 @@ const CCS = () => {
                 </motion.div>
               </div>
             </div>
-            <div>
+            <div className="mt-5 md:mt-0">
               <div className="relative">
-                <div className="relative rounded-tl-xl rounded-tr-xl rounded-br-xs rounded-bl-xs border border-neutral-200 bg-gray-200 p-2 px-3 pb-3 shadow-xl">
-                  <div className="mb-3 flex gap-2 pt-2 pl-4">
-                    <div className="h-3 w-3 rounded-full bg-red-600"></div>
-                    <div className="h-3 w-3 rounded-full bg-yellow-500"></div>
-                    <div className="h-3 w-3 rounded-full bg-green-600"></div>
+                <div className="relative rounded-tl-xl rounded-tr-xl rounded-br-xs rounded-bl-xs border border-neutral-200 bg-gray-200 p-1.5 px-1.5 shadow-xl md:p-2 md:px-3 md:pb-3">
+                  <div className="mb-1 flex gap-2 pl-4 md:mb-3 md:pt-2">
+                    <div className="size-2 rounded-full bg-red-600 md:size-3" />
+                    <div className="size-2 rounded-full bg-yellow-500 md:size-3" />
+                    <div className="size-2 rounded-full bg-green-600 md:size-3" />
                   </div>
                   <img
                     src={mainPage}
                     alt="Nrega Files Dashboard"
-                    className="h-full w-[45rem] overflow-hidden rounded-tl-xl rounded-tr-xl rounded-br-xs rounded-bl-xs border"
+                    className="h-full overflow-hidden rounded-tl-xl rounded-tr-xl rounded-br-xs rounded-bl-xs border md:w-[45rem]"
                   />
                 </div>
               </div>
             </div>
           </section>
-          <section className="flex flex-col items-center justify-center border-red-500 py-12">
-            <h1 className="flex w-full items-center gap-x-3 text-2xl font-semibold tracking-wider text-neutral-700">
+          <section className="flex flex-col items-center justify-center border-red-500 px-5 py-12 md:px-0">
+            <h1 className="flex w-full items-center gap-x-3 text-lg font-semibold tracking-wider text-neutral-700 md:text-2xl">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -496,7 +496,7 @@ const CCS = () => {
                 stroke-width="1"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                className="size-8 text-green-600"
+                className="size-5 text-green-600 md:size-8"
               >
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
@@ -507,16 +507,16 @@ const CCS = () => {
               </svg>
               Client Goal
             </h1>
-            <div className="mt-3 flex justify-center">
-              <div className="max-w-[45rem] border-r border-dashed border-purple-200 pr-16 pl-1">
-                <p className="text-md max-w-7xl leading-6 tracking-wider text-neutral-700">
+            <div className="mt-3 flex flex-col justify-center md:flex-row">
+              <div className="border-r border-dashed border-purple-200 pl-1 md:max-w-[45rem] md:pr-16">
+                <p className="text-md text-sm leading-6 tracking-wider text-neutral-700 md:text-lg">
                   A Educational Institution required a modern digital presence
                   that would serve students, faculty, and visitors, while giving
                   administrators full control over content management
                 </p>
               </div>
-              <div className="max-w-5xl pl-16">
-                <div className="text-md space-y-5 leading-6 tracking-wider text-neutral-700">
+              <div className="mt-4 max-w-5xl md:mt-0 md:pl-16">
+                <div className="text-md space-y-5 text-sm leading-6 tracking-wider text-neutral-700 md:text-lg">
                   <p>
                     The goal was to create a professional website with an
                     easy-to-use backend system so updates could be managed
@@ -532,8 +532,8 @@ const CCS = () => {
               </div>
             </div>
           </section>
-          <section className="flex w-full flex-col items-center justify-center border-black py-12">
-            <h1 className="flex w-full items-center gap-x-3 text-2xl font-semibold tracking-wider text-neutral-700">
+          <section className="flex w-full flex-col items-center justify-center border-black px-5 md:px-0 md:py-12">
+            <h1 className="mb-2 flex w-full items-center gap-x-3 text-lg font-semibold tracking-wider text-neutral-700 md:mb-0 md:text-2xl">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -544,7 +544,7 @@ const CCS = () => {
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                className="size-8 text-red-400"
+                className="size-5 text-red-400 md:size-8"
               >
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <path d="M20 6h-13a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h13" />
@@ -553,13 +553,13 @@ const CCS = () => {
               </svg>
               Project Glimpses
             </h1>
-            <div className="mt-12 grid w-full grid-cols-2 place-items-center gap-5 gap-y-12 border-red-500">
+            <div className="grid w-full grid-cols-1 place-items-center gap-5 gap-y-12 border-red-500 md:mt-12 md:grid-cols-2">
               <div className="flex w-fit flex-col-reverse overflow-hidden rounded-xl border border-neutral-200 p-3 shadow-lg transition duration-300 hover:shadow-2xl">
                 <div className="mt-4 pl-5">
-                  <h1 className="mb-4 text-lg font-semibold tracking-wider">
+                  <h1 className="mb-4 text-sm font-semibold tracking-wider md:text-lg">
                     Admin Dashboard
                   </h1>
-                  <ul className="text-md max-w-2xl list-disc pl-5 leading-8 tracking-wider text-neutral-600">
+                  <ul className="max-w-2xl list-disc pl-5 text-xs tracking-wider text-neutral-600 md:text-sm md:leading-8">
                     <li>
                       Full control over all website content News, Ads, Tenders &
                       more.
@@ -572,15 +572,15 @@ const CCS = () => {
                 <img
                   alt=""
                   src={dashboard}
-                  className="h-[25rem] w-[40rem] rounded-xl transition duration-500 hover:scale-105"
+                  className="rounded-xl transition duration-500 hover:scale-105 md:h-[25rem] md:w-[40rem]"
                 />
               </div>
               <div className="flex w-fit flex-col-reverse overflow-hidden rounded-xl border border-neutral-200 p-3 shadow-lg transition duration-300 hover:shadow-2xl">
                 <div className="mt-4 pl-5">
-                  <h1 className="mb-4 text-lg font-semibold tracking-wider">
+                  <h1 className="mb-4 text-sm font-semibold tracking-wider md:text-lg">
                     Visual Showcase of the Solution
                   </h1>
-                  <ul className="text-md max-w-2xl list-disc pl-5 leading-8 tracking-wider text-neutral-600">
+                  <ul className="max-w-2xl list-disc pl-5 text-xs tracking-wider text-neutral-600 md:text-sm md:leading-8">
                     <li>User friendly interface with filtering options</li>
                     <li>
                       Easy exploration by department, degree, and duration
@@ -590,7 +590,7 @@ const CCS = () => {
                 <img
                   alt=""
                   src={program}
-                  className="h-[25rem] w-[40rem] rounded-xl transition duration-500 hover:scale-105"
+                  className="rounded-xl transition duration-500 hover:scale-105 md:h-[25rem] md:w-[40rem]"
                 />
               </div>
               {/* <div className="flex w-fit flex-col-reverse overflow-hidden rounded-xl border border-neutral-200 p-3 shadow-lg transition duration-300 hover:shadow-2xl">
@@ -628,9 +628,9 @@ const CCS = () => {
             </div> */}
             </div>
           </section>
-          <section className="relative flex flex-col items-center justify-center border-red-500 py-12">
+          <section className="relative flex flex-col items-center justify-center border-red-500 px-5 py-12 md:px-0">
             <div
-              className="absolute -top-px left-[calc(var(--offset)/2*-1)] z-30 h-[var(--height)] w-[calc(100%+var(--offset))] bg-[linear-gradient(to_right,var(--color),var(--color)_50%,transparent_0,transparent)] [background-size:var(--width)_var(--height)] [mask-composite:exclude] [mask:linear-gradient(to_left,var(--background)_var(--fade-stop),transparent),_linear-gradient(to_right,var(--background)_var(--fade-stop),transparent),_linear-gradient(black,black)] dark:bg-[linear-gradient(to_right,var(--color-dark),var(--color-dark)_50%,transparent_0,transparent)]"
+              className="absolute -top-px left-[calc(var(--offset)/2*-1)] z-30 hidden h-[var(--height)] w-[calc(100%+var(--offset))] bg-[linear-gradient(to_right,var(--color),var(--color)_50%,transparent_0,transparent)] [background-size:var(--width)_var(--height)] [mask-composite:exclude] [mask:linear-gradient(to_left,var(--background)_var(--fade-stop),transparent),_linear-gradient(to_right,var(--background)_var(--fade-stop),transparent),_linear-gradient(black,black)] md:block dark:bg-[linear-gradient(to_right,var(--color-dark),var(--color-dark)_50%,transparent_0,transparent)]"
               style={
                 {
                   "--background": "#ffffff",
@@ -644,14 +644,14 @@ const CCS = () => {
                 } as React.CSSProperties
               }
             />
-            <h1 className="flex w-full items-center gap-x-3 text-2xl font-semibold tracking-wider text-neutral-700">
+            <h1 className="flex w-full items-center gap-x-3 text-lg font-semibold tracking-wider text-neutral-700 md:text-2xl">
               <svg
                 viewBox="0 0 60 60"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="#000"
                 stroke="currentColor"
                 stroke-width="1"
-                className="size-8 text-purple-300"
+                className="size-5 text-purple-300 md:size-8"
               >
                 <path d="M56.67,49.88,46.89,36a19.31,19.31,0,1,0-33.9.18L3.33,49.88a1.63,1.63,0,0,0,1.34,2.58H55.33a1.63,1.63,0,0,0,1.34-2.58Zm-40-15.57,3.6,5.11-1.6,2.27-1.3-1.3a1,1,0,0,0-.69-.29h0a1,1,0,0,0-.69.29L13.36,43,11.7,41.37Zm18.58-15-.82,1.1a1,1,0,0,0,0,1.17l.82,1.1H30.87V19.3Zm-5.37,9.86,5.69,8.08-1.95,1.95-2.94-2.94a1,1,0,0,0-1.38,0L26.53,39l-2.11-2.11Zm-6.61,9.38,2.56,2.56a1,1,0,0,0,1.38,0L30,38.32l2.94,2.94a1,1,0,0,0,1.38,0l2.4-2.41,8.22,11.66H14.85Zm16.33,1,3.71-5.26,5,7.06L46.64,43,44,40.39a1,1,0,0,0-.69-.29h0a1,1,0,0,0-.69.29L41.2,41.82ZM12.53,26.85a17.36,17.36,0,1,1,33.09,7.34l-1-1.37a1.7,1.7,0,0,0-2.68,0l-3.56,5.05L31.23,27.67a1.45,1.45,0,0,0-.36-.34V24.62h6.34A1,1,0,0,0,38,23.06L36.43,21,38,18.91a1,1,0,0,0-.78-1.56H29.89a1,1,0,0,0-1,1v9a1.33,1.33,0,0,0-.37.34h0l-7.08,10L18,32.82a1.7,1.7,0,0,0-2.68,0l-1.09,1.54A17.37,17.37,0,0,1,12.53,26.85ZM10.57,43l2.1,2.1a1,1,0,0,0,1.38,0l2.64-2.63.85.85-4.63,6.57a1.65,1.65,0,0,0-.26.63H5.26Zm36.56,7.52a1.63,1.63,0,0,0-.25-.63l-4.54-6.44,1-1L46,45.09a1,1,0,0,0,1.38,0l2.1-2.1,5.31,7.52Z" />
               </svg>
@@ -662,7 +662,7 @@ const CCS = () => {
                 viewBox="0 0 1 272"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="absolute h-[41.5rem] text-red-700"
+                className="absolute h-[55rem] text-red-700 md:h-[41.5rem]"
               >
                 <defs>
                   <motion.linearGradient
@@ -701,18 +701,18 @@ const CCS = () => {
                 <div className="overflow-hidden rounded-xl border-gray-800 bg-white shadow-lg">
                   <div className="grid w-full grid-cols-2">
                     {/* Header */}
-                    <div className="border-r border-b border-gray-200 bg-gradient-to-b from-purple-50 to-transparent p-3 py-5">
+                    <div className="border-r border-b border-gray-200 bg-gradient-to-b from-red-50 to-transparent p-3 py-5">
                       <div className="flex items-center gap-2">
-                        <Zap className="h-5 w-5 text-red-600" />
-                        <h3 className="text-xl font-bold tracking-wide text-red-800">
+                        <Zap className="h-4 w-4 text-red-600 md:h-5 md:w-5" />
+                        <h3 className="text-sm font-bold tracking-wide text-red-800 md:text-xl">
                           Challenges
                         </h3>
                       </div>
                     </div>
                     <div className="border-b border-gray-200 bg-gradient-to-b from-green-50 to-transparent p-3 py-5">
                       <div className="flex items-center gap-2">
-                        <Lightbulb className="h-5 w-5 text-green-600" />
-                        <h3 className="text-xl font-bold tracking-wide text-green-800">
+                        <Lightbulb className="h-4 w-4 text-green-600 md:h-5 md:w-5" />
+                        <h3 className="text-sm font-bold tracking-wide text-green-800 md:text-xl">
                           Solutions
                         </h3>
                       </div>
@@ -720,13 +720,13 @@ const CCS = () => {
 
                     {/* Row 1 */}
                     <div className="from-red-25 border-r border-b border-gray-200 bg-gradient-to-b to-transparent p-3">
-                      <div className="flex items-start gap-2">
-                        <div className="text-lg">🔧</div>
+                      <div className="flex items-start gap-x-1 md:gap-2">
+                        <div className="text-xs md:text-lg">🔧</div>
                         <div>
-                          <h4 className="mb-1 text-lg font-semibold tracking-wide text-gray-900">
+                          <h4 className="mb-1 text-sm font-semibold tracking-wide text-gray-900 md:text-lg">
                             Developer Dependency
                           </h4>
-                          <p className="text-md tracking-wide text-gray-700">
+                          <p className="text-xs tracking-wide text-gray-700 md:text-[16px]">
                             Content updates (news, tenders, staff details)
                             required developer intervention, leading to delays
                           </p>
@@ -734,13 +734,13 @@ const CCS = () => {
                       </div>
                     </div>
                     <div className="from-green-25 border-b border-gray-200 bg-gradient-to-b to-transparent p-3">
-                      <div className="flex items-start gap-2">
-                        <div className="text-lg">🎯</div>
+                      <div className="flex items-start gap-x-1 md:gap-2">
+                        <div className="text-xs md:text-lg">🎯</div>
                         <div>
-                          <h4 className="mb-1 text-lg font-semibold tracking-wide text-gray-900">
+                          <h4 className="mb-1 text-sm font-semibold tracking-wide text-gray-900 md:text-lg">
                             Centralized Admin Dashboard
                           </h4>
-                          <p className="text-md tracking-wide text-gray-700">
+                          <p className="text-xs tracking-wide text-gray-700 md:text-[16px]">
                             Developed an intuitive admin dashboard for full
                             content control without technical expertise.
                           </p>
@@ -750,13 +750,13 @@ const CCS = () => {
 
                     {/* Row 2 */}
                     <div className="from-red-25 border-r border-b border-gray-200 bg-gradient-to-b to-transparent p-3">
-                      <div className="flex items-start gap-2">
-                        <div className="text-lg">📄</div>
+                      <div className="flex items-start gap-x-1 md:gap-2">
+                        <div className="text-xs md:text-lg">📄</div>
                         <div>
-                          <h4 className="mb-1 text-lg font-semibold tracking-wide text-gray-900">
+                          <h4 className="mb-1 text-sm font-semibold tracking-wide text-gray-900 md:text-lg">
                             Scattered Documents
                           </h4>
-                          <p className="text-md tracking-wide text-gray-700">
+                          <p className="text-xs tracking-wide text-gray-700 md:text-[16px]">
                             Official forms, tenders, and documents were
                             scattered and difficult to update or access.
                           </p>
@@ -764,13 +764,13 @@ const CCS = () => {
                       </div>
                     </div>
                     <div className="from-green-25 border-b border-gray-200 bg-gradient-to-b to-transparent p-3">
-                      <div className="flex items-start gap-2">
-                        <div className="text-lg">📁</div>
+                      <div className="flex items-start gap-x-1 md:gap-2">
+                        <div className="text-xs md:text-lg">📁</div>
                         <div>
-                          <h4 className="mb-1 text-lg font-semibold tracking-wide text-gray-900">
+                          <h4 className="mb-1 text-sm font-semibold tracking-wide text-gray-900 md:text-lg">
                             Cloudflare Storage Integration
                           </h4>
-                          <p className="text-md tracking-wide text-gray-700">
+                          <p className="text-xs tracking-wide text-gray-700 md:text-[16px]">
                             Implemented secure cloud storage for centralized
                             document management with fast global delivery.
                           </p>
@@ -780,13 +780,13 @@ const CCS = () => {
 
                     {/* Row 3 */}
                     <div className="from-red-25 border-r border-gray-200 bg-gradient-to-b to-transparent p-3">
-                      <div className="flex items-start gap-2">
-                        <div className="text-lg">🖼️</div>
+                      <div className="flex items-start gap-x-1 md:gap-2">
+                        <div className="text-xs md:text-lg">🖼️</div>
                         <div>
-                          <h4 className="mb-1 text-lg font-semibold tracking-wide text-gray-900">
+                          <h4 className="mb-1 text-sm font-semibold tracking-wide text-gray-900 md:text-lg">
                             Unstructured Gallery
                           </h4>
-                          <p className="text-md tracking-wide text-gray-700">
+                          <p className="text-xs tracking-wide text-gray-700 md:text-[16px]">
                             The gallery lacked structured management for photos
                             and videos.
                           </p>
@@ -794,13 +794,13 @@ const CCS = () => {
                       </div>
                     </div>
                     <div className="from-green-25 border-gray-200 bg-gradient-to-b to-transparent p-3">
-                      <div className="flex items-start gap-2">
-                        <div className="text-lg">🎨</div>
+                      <div className="flex items-start gap-x-1 md:gap-2">
+                        <div className="text-xs md:text-lg">🎨</div>
                         <div>
-                          <h4 className="mb-1 text-lg font-semibold tracking-wide text-gray-900">
+                          <h4 className="mb-1 text-sm font-semibold tracking-wide text-gray-900 md:text-lg">
                             Gallery Management System
                           </h4>
-                          <p className="text-md tracking-wide text-gray-700">
+                          <p className="text-xs tracking-wide text-gray-700 md:text-[16px]">
                             Created structured photo and video organization with
                             easy upload and categorization.
                           </p>
@@ -812,9 +812,9 @@ const CCS = () => {
               </div>
             </div>
           </section>
-          <div className="relative grid grid-cols-2">
+          <div className="relative grid grid-cols-1 md:grid-cols-2">
             <div
-              className="absolute -top-px left-[calc(var(--offset)/2*-1)] z-30 h-[var(--height)] w-[calc(100%+var(--offset))] bg-[linear-gradient(to_right,var(--color),var(--color)_50%,transparent_0,transparent)] [background-size:var(--width)_var(--height)] [mask-composite:exclude] [mask:linear-gradient(to_left,var(--background)_var(--fade-stop),transparent),_linear-gradient(to_right,var(--background)_var(--fade-stop),transparent),_linear-gradient(black,black)] dark:bg-[linear-gradient(to_right,var(--color-dark),var(--color-dark)_50%,transparent_0,transparent)]"
+              className="absolute -top-px left-[calc(var(--offset)/2*-1)] z-30 hidden h-[var(--height)] w-[calc(100%+var(--offset))] bg-[linear-gradient(to_right,var(--color),var(--color)_50%,transparent_0,transparent)] [background-size:var(--width)_var(--height)] [mask-composite:exclude] [mask:linear-gradient(to_left,var(--background)_var(--fade-stop),transparent),_linear-gradient(to_right,var(--background)_var(--fade-stop),transparent),_linear-gradient(black,black)] md:block dark:bg-[linear-gradient(to_right,var(--color-dark),var(--color-dark)_50%,transparent_0,transparent)]"
               style={
                 {
                   "--background": "#ffffff",
@@ -828,8 +828,8 @@ const CCS = () => {
                 } as React.CSSProperties
               }
             />
-            <section className="border-red-600 py-12">
-              <h1 className="flex w-full items-center gap-x-3 text-2xl font-semibold tracking-wider text-neutral-700">
+            <section className="border-black px-3 md:px-0 md:py-12">
+              <h1 className="flex w-full items-center gap-x-3 text-lg font-semibold tracking-wider text-neutral-700 md:text-2xl">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -840,7 +840,7 @@ const CCS = () => {
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  className="size-8 text-yellow-500"
+                  className="size-5 text-yellow-500 md:size-8"
                 >
                   <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                   <path d="M3 17l6 -6l4 4l8 -8" />
@@ -848,8 +848,8 @@ const CCS = () => {
                 </svg>
                 Impact
               </h1>
-              <div className="w-full pl-8">
-                <ul className="text-md mt-5 max-w-xl font-medium tracking-wide text-neutral-600">
+              <div className="w-full md:pl-8">
+                <ul className="mt-5 max-w-xl text-sm font-medium tracking-wide text-neutral-600 md:text-[16px]">
                   {[
                     "Administrators gained independence, updating website content instantly without technical help.",
                     "Staff directories, tenders, and news updates were organized and accessible in real-time.",
@@ -857,7 +857,10 @@ const CCS = () => {
                     "Enabled real-time tracking of project progress and outcomes.",
                     "Cloudflare-backed storage ensured secure, reliable, and scalable hosting for media and documents.",
                   ].map((text, idx) => (
-                    <li key={idx} className="flex items-start gap-2 leading-7">
+                    <li
+                      key={idx}
+                      className="flex items-start gap-2 leading-5 md:leading-7"
+                    >
                       <div className="flex h-5 w-5 items-center justify-center">
                         <CheckCircle className="mt-2.5 h-4 w-4 text-green-600" />
                       </div>
@@ -867,8 +870,8 @@ const CCS = () => {
                 </ul>
               </div>
             </section>
-            <section className="items-center justify-center border-blue-500 py-12">
-              <h1 className="flex w-full items-center gap-x-3 pl-2 text-2xl font-semibold tracking-wider text-neutral-700">
+            <section className="items-center justify-center px-3 pt-6 md:px-0 md:py-12">
+              <h1 className="flex w-full items-center gap-x-3 pl-2 text-lg font-semibold tracking-wider text-neutral-700 md:text-2xl">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -879,7 +882,7 @@ const CCS = () => {
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  className="size-8 text-green-700"
+                  className="size-5 text-green-700 md:size-8"
                 >
                   <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                   <path d="M3 12h1m8 -9v1m8 8h1m-15.4 -6.4l.7 .7m12.1 -.7l-.7 .7" />
@@ -889,7 +892,7 @@ const CCS = () => {
                 Conclusion
               </h1>
               <div className="flex items-center justify-center">
-                <p className="mt-4 max-w-xl pl-5 leading-7 font-medium tracking-wide text-neutral-600">
+                <p className="mt-4 max-w-xl text-sm leading-6 font-medium tracking-wide text-neutral-600 md:pl-5 md:text-[16px] md:leading-7">
                   The new College Website and Admin Dashboard modernized the
                   institution's online presence. Administrators can now manage
                   content easily without technical help, while students and

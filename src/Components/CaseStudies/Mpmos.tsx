@@ -32,7 +32,7 @@ const Mpmos = () => {
         <div className="h-full w-full border-red-700 md:max-w-7xl">
           <section className="relative h-fit w-full justify-center overflow-hidden px-5 py-8 md:flex md:gap-x-32 md:px-0">
             <div className="mt-3 flex flex-col justify-center">
-              <Badge className="mb-2 border-gray-600 bg-gray-800 px-3 py-1 text-xs tracking-wider text-white md:mb-4 md:text-sm">
+              <Badge className="mb-2 border-gray-600 bg-gray-800 px-1.5 md:px-3 py-0.5 md:py-1 text-xs tracking-wider text-white md:mb-4 md:text-sm">
                 Project Monitoring System
               </Badge>
               <div className="relative mt-4 ml-1 w-fit bg-gradient-to-r from-green-100 via-white to-purple-100 px-3 py-2 text-3xl font-bold tracking-wide text-neutral-800 md:text-6xl">
