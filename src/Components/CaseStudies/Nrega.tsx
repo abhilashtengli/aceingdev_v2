@@ -7,7 +7,7 @@ import materialImg from "../../assets/material2_img.webp";
 import reportImg from "../../assets/reports_img.webp";
 import { motion, AnimatePresence } from "motion/react";
 import { useEffect, useState } from "react";
-import CommonNavbar from "../Navbar";
+// import CommonNavbar from "../Navbar";
 import CTA from "../CTA";
 import CommonFooter from "../FooterCommon";
 
@@ -26,16 +26,16 @@ const Nrega = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
   return (
-    <>
-      <CommonNavbar />
-      <div className="mt-24 flex flex-col items-center justify-center">
-        <div className="h-full w-full max-w-7xl border-red-700">
-          <section className="relative flex h-fit w-full justify-center gap-x-32 overflow-hidden py-8">
+    <div className="w-full">
+      {/* <CommonNavbar /> */}
+      <div className="flex w-full flex-col items-center justify-center border-blue-600 md:mt-24">
+        <div className="w-full border-red-700 md:max-w-7xl">
+          <section className="relative h-fit w-full justify-center overflow-hidden border-black px-5 py-8 md:flex md:gap-x-32 md:px-0">
             <div className="mt-3 flex flex-col justify-center">
-              <Badge className="mb-4 border-gray-600 bg-gray-800 px-3 py-1 text-sm tracking-wider text-white">
+              <Badge className="mb-2 border-gray-600 bg-gray-800 px-3 py-1 text-xs tracking-wider text-white md:mb-4 md:text-sm">
                 SaaS
               </Badge>
-              <div className="relative mt-4 ml-1 w-fit bg-gradient-to-r from-red-100 via-white to-yellow-100 px-3 py-2 text-6xl font-bold tracking-wide text-neutral-800">
+              <div className="relative mt-4 ml-1 w-fit bg-gradient-to-r from-red-100 via-white to-yellow-100 px-1.5 py-1 text-3xl font-bold tracking-wide text-neutral-800 md:px-3 md:py-2 md:text-6xl">
                 <svg
                   viewBox="0 0 357 1"
                   fill="none"
@@ -114,17 +114,17 @@ const Nrega = () => {
                 <p className="absolute -right-0.5 -bottom-0.5 h-1.5 w-1.5 rounded-full bg-blue-300" />
                 Nrega
               </div>
-              <p className="text-md mt-5 w-fit rounded-xl border px-2 py-3 pt-4 font-bold tracking-wide">
+              <p className="mt-3 w-fit rounded-xl border px-2 py-1 text-[8px] font-bold tracking-wide md:mt-5 md:py-3 md:pt-4 md:text-sm">
                 From 6 Hours of Manual Reporting → to 30 Seconds for Report
                 Generation
               </p>
-              <p className="text-md mt-14 max-w-4xl leading-6 tracking-wider text-neutral-700">
+              <p className="mt-5 max-w-4xl text-sm leading-6 tracking-wider text-neutral-700 md:mt-14 md:text-lg">
                 A centralized SaaS platform where contractors and vendors can
                 access structured data sourced from government portals and
                 instantly download 20+ professional reports, all under a
                 subscription-based model.
               </p>
-              <div className="mt-8 flex">
+              <div className="mt-4 flex md:mt-8">
                 <motion.div
                   className={`${reactHovered ? "z-10" : ""} flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white px-1`}
                   onMouseEnter={() => setReactHovered(true)}
@@ -142,7 +142,7 @@ const Nrega = () => {
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      className="h-4 w-4 stroke-1 text-sky-600 md:h-6 md:w-6"
+                      className="h-4 w-5 stroke-1 text-sky-600 md:h-6 md:w-6"
                     >
                       <path d="M6.306 8.711c-2.602 .723 -4.306 1.926 -4.306 3.289c0 2.21 4.477 4 10 4c.773 0 1.526 -.035 2.248 -.102"></path>
                       <path d="M17.692 15.289c2.603 -.722 4.308 -1.926 4.308 -3.289c0 -2.21 -4.477 -4 -10 -4c-.773 0 -1.526 .035 -2.25 .102"></path>
@@ -168,7 +168,7 @@ const Nrega = () => {
                   </AnimatePresence>
                 </motion.div>
                 <motion.div
-                  className={`${expressHovered ? "z-10" : ""} -ml-3 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white px-1`}
+                  className={`${expressHovered ? "z-10" : ""} -ml-2 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white px-1 md:-ml-3`}
                   onMouseEnter={() => setExpressHovered(true)}
                   onMouseLeave={() => setExpressHovered(false)}
                   layout
@@ -176,7 +176,7 @@ const Nrega = () => {
                   <div className="flex min-w-[16px] flex-none items-center justify-center md:min-w-[20px]">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-4 w-4 text-green-600 md:h-6 md:w-6"
+                      className="h-4 w-5 text-green-600 md:h-6 md:w-6"
                       viewBox="0 0 128 128"
                     >
                       <path
@@ -201,7 +201,7 @@ const Nrega = () => {
                   </AnimatePresence>
                 </motion.div>
                 <motion.div
-                  className={`${tailwindHovered ? "z-10" : ""} -ml-3 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white px-1`}
+                  className={`${tailwindHovered ? "z-10" : ""} -ml-2 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white px-1 md:-ml-3`}
                   onMouseEnter={() => setTailwindHovered(true)}
                   onMouseLeave={() => setTailwindHovered(false)}
                   layout
@@ -212,7 +212,7 @@ const Nrega = () => {
                       fill="currentColor"
                       stroke-width="0"
                       viewBox="0 0 24 24"
-                      className="h-4 w-4 text-sky-600 md:h-6 md:w-6"
+                      className="h-4 w-5 text-sky-600 md:h-6 md:w-6"
                       height="1em"
                       width="1em"
                       xmlns="http://www.w3.org/2000/svg"
@@ -235,7 +235,7 @@ const Nrega = () => {
                   </AnimatePresence>
                 </motion.div>
                 <motion.div
-                  className={`${awsHovered ? "z-10" : ""} -ml-3 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white px-1`}
+                  className={`${awsHovered ? "z-10" : ""} -ml-2 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white px-1 md:-ml-3`}
                   onMouseEnter={() => setAwsHovered(true)}
                   onMouseLeave={() => setAwsHovered(false)}
                   layout
@@ -245,7 +245,7 @@ const Nrega = () => {
                       viewBox="0 -30 150 150"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-4 w-4 pt-1 md:h-6 md:w-6"
+                      className="h-4 w-5 pt-1 md:h-6 md:w-6"
                     >
                       <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                       <g
@@ -285,7 +285,7 @@ const Nrega = () => {
                   </AnimatePresence>
                 </motion.div>
                 <motion.div
-                  className={`${motionHovered ? "z-20" : ""} -ml-3 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white p-1.5`}
+                  className={`${motionHovered ? "z-20" : ""} -ml-2 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white p-1.5 md:-ml-3`}
                   onMouseEnter={() => setMotionHovered(true)}
                   onMouseLeave={() => setMotionHovered(false)}
                   layout
@@ -327,7 +327,7 @@ const Nrega = () => {
                   </AnimatePresence>
                 </motion.div>
                 <motion.div
-                  className={`${typescriptHovered ? "z-20" : ""} -ml-3 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white p-2`}
+                  className={`${typescriptHovered ? "z-20" : ""} -ml-2 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white p-2 md:-ml-3`}
                   onMouseEnter={() => setTsHovered(true)}
                   onMouseLeave={() => setTsHovered(false)}
                   layout
@@ -391,7 +391,7 @@ const Nrega = () => {
                   </AnimatePresence>
                 </motion.div>
                 <motion.div
-                  className={`${postgreSqlHovered ? "z-10" : ""} -ml-3 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white p-2`}
+                  className={`${postgreSqlHovered ? "z-10" : ""} -ml-2 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white p-2 md:-ml-3`}
                   onMouseEnter={() => setPostgreSqlHovered(true)}
                   onMouseLeave={() => setPostgreSqlHovered(false)}
                   layout
@@ -430,25 +430,25 @@ const Nrega = () => {
                 </motion.div>
               </div>
             </div>
-            <div>
-              <div className="relative">
-                <div className="relative rounded-tl-xl rounded-tr-xl rounded-br-xs rounded-bl-xs border border-neutral-200 bg-gray-200 p-2 px-3 pb-3 shadow-xl">
-                  <div className="mb-3 flex gap-2 pt-2 pl-4">
-                    <div className="h-3 w-3 rounded-full bg-red-600"></div>
-                    <div className="h-3 w-3 rounded-full bg-yellow-500"></div>
-                    <div className="h-3 w-3 rounded-full bg-green-600"></div>
+            <div className="mt-5 md:mt-0">
+              <div className="relative border-black">
+                <div className="relative rounded-tl-xl rounded-tr-xl rounded-br-xs rounded-bl-xs border border-neutral-200 bg-gray-200 p-1.5 px-1.5 shadow-xl md:p-2 md:px-3 md:pb-3">
+                  <div className="mb-1 flex gap-2 pl-4 md:mb-3 md:pt-2">
+                    <div className="size-2 rounded-full bg-red-600 md:size-3"></div>
+                    <div className="size-2 rounded-full bg-yellow-500 md:size-3"></div>
+                    <div className="size-2 rounded-full bg-green-600 md:size-3"></div>
                   </div>
                   <img
                     src={nregaImg}
                     alt="Nrega Files Dashboard"
-                    className="h-full w-[45rem] overflow-hidden rounded-tl-xl rounded-tr-xl rounded-br-xs rounded-bl-xs border"
+                    className="h-full overflow-hidden rounded-tl-xl rounded-tr-xl rounded-br-xs rounded-bl-xs border md:w-[45rem]"
                   />
                 </div>
               </div>
             </div>
           </section>
-          <section className="flex flex-col items-center justify-center border-red-500 py-12">
-            <h1 className="flex w-full items-center gap-x-3 text-2xl font-semibold tracking-wider text-neutral-700">
+          <section className="flex flex-col items-center justify-center border-red-500 px-5 py-12 md:px-0">
+            <h1 className="flex w-full items-center gap-x-3 text-lg font-semibold tracking-wider text-neutral-700 md:text-2xl">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -457,7 +457,7 @@ const Nrega = () => {
                 stroke-width="1"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                className="size-8 text-green-600"
+                className="size-5 text-green-600 md:size-8"
               >
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
@@ -468,16 +468,16 @@ const Nrega = () => {
               </svg>
               Client Goal
             </h1>
-            <div className="mt-3 flex justify-center">
-              <div className="max-w-[45rem] border-r border-dashed border-purple-200 pr-16 pl-1">
-                <p className="text-md leading-6 tracking-wider text-neutral-700">
+            <div className="mt-3 flex flex-col justify-center md:flex-row">
+              <div className="border-r border-dashed border-purple-200 pr-16 pl-1 md:max-w-[45rem]">
+                <p className="text-md text-sm leading-6 tracking-wider text-neutral-700 md:text-lg">
                   The client required a SaaS-based reporting platform to
                   streamline how officials, contractors, and vendors access and
                   generate government compliance reports.
                 </p>
               </div>
-              <div className="max-w-5xl pl-16">
-                <div className="text-md space-y-5 leading-6 tracking-wider text-neutral-700">
+              <div className="mt-4 max-w-5xl md:mt-0 md:pl-16">
+                <div className="text-md space-y-5 text-sm leading-6 tracking-wider text-neutral-700 md:text-lg">
                   <p>
                     Before this system, users had to spend hours manually
                     collecting data, piecing together information from multiple
@@ -495,8 +495,8 @@ const Nrega = () => {
               </div>
             </div>
           </section>
-          <section className="flex w-full flex-col items-center justify-center border-black py-12">
-            <h1 className="flex w-full items-center gap-x-3 text-2xl font-semibold tracking-wider text-neutral-700">
+          <section className="flex w-full flex-col items-center justify-center border-black px-5 md:px-0 md:py-12">
+            <h1 className="mb-2 flex w-full items-center gap-x-3 text-lg font-semibold tracking-wider text-neutral-700 md:mb-0 md:text-2xl">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -507,7 +507,7 @@ const Nrega = () => {
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                className="size-8 text-red-400"
+                className="size-5 text-red-400 md:size-8"
               >
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <path d="M20 6h-13a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h13" />
@@ -516,13 +516,13 @@ const Nrega = () => {
               </svg>
               Project Glimpses
             </h1>
-            <div className="mt-12 grid w-full grid-cols-2 place-items-center gap-5 gap-y-12 border-red-500">
+            <div className="grid w-full grid-cols-1 place-items-center gap-5 gap-y-12 border-red-500 md:mt-12 md:grid-cols-2">
               <div className="flex w-fit flex-col-reverse overflow-hidden rounded-xl border border-neutral-200 p-3 shadow-lg transition duration-300 hover:shadow-2xl">
                 <div className="mt-4 pl-5">
-                  <h1 className="mb-4 text-lg font-semibold tracking-wider">
+                  <h1 className="mb-4 text-sm font-semibold tracking-wider md:text-lg">
                     Admin Dashboard
                   </h1>
-                  <ul className="text-md max-w-2xl list-disc pl-5 leading-8 tracking-wider text-neutral-600">
+                  <ul className="max-w-2xl list-disc pl-5 text-xs tracking-wider text-neutral-600 md:text-sm md:leading-8">
                     <li>Admin can manage user roles and accessibility.</li>
                     <li>
                       Full control over platform operations from one place.
@@ -532,15 +532,15 @@ const Nrega = () => {
                 <img
                   alt=""
                   src={adminImge}
-                  className="h-[25rem] w-[40rem] rounded-xl transition duration-500 hover:scale-105"
+                  className="rounded-xl transition duration-500 hover:scale-105 md:h-[25rem] md:w-[40rem]"
                 />
               </div>
               <div className="flex w-fit flex-col-reverse overflow-hidden rounded-xl border border-neutral-200 p-3 shadow-lg transition duration-300 hover:shadow-2xl">
                 <div className="mt-4 pl-5">
-                  <h1 className="mb-4 text-lg font-semibold tracking-wider">
+                  <h1 className="md:text-lgfont-semibold mb-4 text-sm tracking-wider">
                     Work Code Dashboard
                   </h1>
-                  <ul className="text-md max-w-2xl list-disc pl-5 leading-8 tracking-wider text-neutral-600">
+                  <ul className="max-w-2xl list-disc pl-5 text-xs tracking-wider text-neutral-600 md:text-sm md:leading-8">
                     <li>
                       Enter Work Code and Financial Year to fetch project
                       details.
@@ -553,42 +553,42 @@ const Nrega = () => {
                 <img
                   alt=""
                   src={dashboardImg}
-                  className="h-[25rem] w-[40rem] rounded-xl transition duration-500 hover:scale-105"
+                  className="rounded-xl transition duration-500 hover:scale-105 md:h-[25rem] md:w-[40rem]"
                 />
               </div>
               <div className="flex w-fit flex-col-reverse overflow-hidden rounded-xl border border-neutral-200 p-3 shadow-lg transition duration-300 hover:shadow-2xl">
                 <div className="mt-4 pl-5">
-                  <h1 className="mb-4 text-lg font-semibold tracking-wider">
+                  <h1 className="mb-4 text-sm font-semibold tracking-wider md:text-lg">
                     Vendor Management
                   </h1>
-                  <ul className="text-md max-w-2xl list-disc pl-5 leading-8 tracking-wider text-neutral-600">
+                  <ul className="max-w-2xl list-disc pl-5 text-xs tracking-wider text-neutral-600 md:text-sm md:leading-8">
                     <li>Modify scraped vendor and material data.</li>
                   </ul>
                 </div>
                 <img
                   alt=""
                   src={materialImg}
-                  className="h-[25rem] w-[40rem] rounded-xl transition duration-500 hover:scale-105"
+                  className="rounded-xl transition duration-500 hover:scale-105 md:h-[25rem] md:w-[40rem]"
                 />
               </div>
               <div className="flex w-fit flex-col-reverse overflow-hidden rounded-xl border border-neutral-200 p-3 shadow-lg transition duration-300 hover:shadow-2xl">
                 <div className="mt-4 pl-5">
-                  <h1 className="mb-4 text-lg font-semibold tracking-wider">
+                  <h1 className="mb-4 text-sm font-semibold tracking-wider md:text-lg">
                     Reports
                   </h1>
-                  <ul className="text-md max-w-2xl list-disc pl-5 leading-8 tracking-wider text-neutral-600">
+                  <ul className="max-w-2xl list-disc pl-5 text-xs tracking-wider text-neutral-600 md:text-sm md:leading-8">
                     <li>Access reports quickly without navigating away.</li>
                   </ul>
                 </div>
                 <img
                   alt=""
                   src={reportImg}
-                  className="h-[25rem] w-[40rem] rounded-xl transition duration-500 hover:scale-105"
+                  className="rounded-xl transition duration-500 hover:scale-105 md:h-[25rem] md:w-[40rem]"
                 />
               </div>
             </div>
           </section>
-          <section className="relative flex flex-col items-center justify-center border-red-500 py-12">
+          <section className="relative flex flex-col items-center justify-center border-red-500 px-5 py-12 md:px-0">
             <div
               className="absolute -top-px left-[calc(var(--offset)/2*-1)] z-30 h-[var(--height)] w-[calc(100%+var(--offset))] bg-[linear-gradient(to_right,var(--color),var(--color)_50%,transparent_0,transparent)] [background-size:var(--width)_var(--height)] [mask-composite:exclude] [mask:linear-gradient(to_left,var(--background)_var(--fade-stop),transparent),_linear-gradient(to_right,var(--background)_var(--fade-stop),transparent),_linear-gradient(black,black)] dark:bg-[linear-gradient(to_right,var(--color-dark),var(--color-dark)_50%,transparent_0,transparent)]"
               style={
@@ -604,14 +604,14 @@ const Nrega = () => {
                 } as React.CSSProperties
               }
             />
-            <h1 className="flex w-full items-center gap-x-3 text-2xl font-semibold tracking-wider text-neutral-700">
+            <h1 className="flex w-full items-center gap-x-3 text-lg font-semibold tracking-wider text-neutral-700 md:text-2xl">
               <svg
                 viewBox="0 0 60 60"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="#000"
                 stroke="currentColor"
                 stroke-width="1"
-                className="size-8 text-purple-300"
+                className="size-5 text-purple-300 md:size-8"
               >
                 <path d="M56.67,49.88,46.89,36a19.31,19.31,0,1,0-33.9.18L3.33,49.88a1.63,1.63,0,0,0,1.34,2.58H55.33a1.63,1.63,0,0,0,1.34-2.58Zm-40-15.57,3.6,5.11-1.6,2.27-1.3-1.3a1,1,0,0,0-.69-.29h0a1,1,0,0,0-.69.29L13.36,43,11.7,41.37Zm18.58-15-.82,1.1a1,1,0,0,0,0,1.17l.82,1.1H30.87V19.3Zm-5.37,9.86,5.69,8.08-1.95,1.95-2.94-2.94a1,1,0,0,0-1.38,0L26.53,39l-2.11-2.11Zm-6.61,9.38,2.56,2.56a1,1,0,0,0,1.38,0L30,38.32l2.94,2.94a1,1,0,0,0,1.38,0l2.4-2.41,8.22,11.66H14.85Zm16.33,1,3.71-5.26,5,7.06L46.64,43,44,40.39a1,1,0,0,0-.69-.29h0a1,1,0,0,0-.69.29L41.2,41.82ZM12.53,26.85a17.36,17.36,0,1,1,33.09,7.34l-1-1.37a1.7,1.7,0,0,0-2.68,0l-3.56,5.05L31.23,27.67a1.45,1.45,0,0,0-.36-.34V24.62h6.34A1,1,0,0,0,38,23.06L36.43,21,38,18.91a1,1,0,0,0-.78-1.56H29.89a1,1,0,0,0-1,1v9a1.33,1.33,0,0,0-.37.34h0l-7.08,10L18,32.82a1.7,1.7,0,0,0-2.68,0l-1.09,1.54A17.37,17.37,0,0,1,12.53,26.85ZM10.57,43l2.1,2.1a1,1,0,0,0,1.38,0l2.64-2.63.85.85-4.63,6.57a1.65,1.65,0,0,0-.26.63H5.26Zm36.56,7.52a1.63,1.63,0,0,0-.25-.63l-4.54-6.44,1-1L46,45.09a1,1,0,0,0,1.38,0l2.1-2.1,5.31,7.52Z" />
               </svg>
@@ -622,7 +622,7 @@ const Nrega = () => {
                 viewBox="0 0 1 272"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="absolute h-[41.5rem] text-red-700"
+                className="absolute h-[55rem] text-red-700 md:h-[41.5rem]"
               >
                 <defs>
                   <motion.linearGradient
@@ -663,16 +663,16 @@ const Nrega = () => {
                     {/* Header */}
                     <div className="border-r border-b border-gray-200 bg-gradient-to-b from-red-50 to-transparent p-3 py-5">
                       <div className="flex items-center gap-2">
-                        <Zap className="h-5 w-5 text-red-600" />
-                        <h3 className="text-xl font-bold tracking-wide text-red-800">
+                        <Zap className="h-4 w-4 text-red-600 md:h-5 md:w-5" />
+                        <h3 className="text-sm font-bold tracking-wide text-red-800 md:text-xl">
                           Challenges
                         </h3>
                       </div>
                     </div>
                     <div className="border-b border-gray-200 bg-gradient-to-b from-green-50 to-transparent p-3 py-5">
                       <div className="flex items-center gap-2">
-                        <Lightbulb className="h-5 w-5 text-green-600" />
-                        <h3 className="text-xl font-bold tracking-wide text-green-800">
+                        <Lightbulb className="h-4 w-4 text-green-600 md:h-5 md:w-5" />
+                        <h3 className="text-sm font-bold tracking-wide text-green-800 md:text-xl">
                           Solutions
                         </h3>
                       </div>
@@ -680,13 +680,13 @@ const Nrega = () => {
 
                     {/* Row 1 */}
                     <div className="from-red-25 border-r border-b border-gray-200 bg-gradient-to-b to-transparent p-3">
-                      <div className="flex items-start gap-2">
-                        <div className="text-lg">⏰</div>
+                      <div className="flex items-start gap-x-1 md:gap-2">
+                        <div className="text-xs md:text-lg">⏰</div>
                         <div>
-                          <h4 className="mb-1 text-lg font-semibold tracking-wide text-gray-900">
+                          <h4 className="mb-1 text-sm font-semibold tracking-wide text-gray-900 md:text-lg">
                             Time-Consuming Reporting
                           </h4>
-                          <p className="text-md tracking-wide text-gray-700">
+                          <p className="text-xs tracking-wide text-gray-700 md:text-[16px]">
                             Contractors and vendors spent hours manually
                             preparing reports, delaying decision-making.
                           </p>
@@ -694,13 +694,13 @@ const Nrega = () => {
                       </div>
                     </div>
                     <div className="from-green-25 border-b border-gray-200 bg-gradient-to-b to-transparent p-3">
-                      <div className="flex items-start gap-2">
-                        <div className="text-lg">🤖</div>
+                      <div className="flex items-start gap-x-1 md:gap-2">
+                        <div className="text-xs md:text-lg">🤖</div>
                         <div>
-                          <h4 className="mb-1 text-lg font-semibold tracking-wide text-gray-900">
+                          <h4 className="mb-1 text-sm font-semibold tracking-wide text-gray-900 md:text-lg">
                             Automated Data Fetching
                           </h4>
-                          <p className="text-md tracking-wide text-gray-700">
+                          <p className="text-xs tracking-wide text-gray-700 md:text-[16px]">
                             Integrated a robust scraping system that pulled
                             structured data reliably.
                           </p>
@@ -710,13 +710,13 @@ const Nrega = () => {
 
                     {/* Row 2 */}
                     <div className="from-red-25 border-r border-b border-gray-200 bg-gradient-to-b to-transparent p-3">
-                      <div className="flex items-start gap-2">
-                        <div className="text-lg">📊</div>
+                      <div className="flex items-start gap-x-1 md:gap-2">
+                        <div className="text-xs md:text-lg">📊</div>
                         <div>
-                          <h4 className="mb-1 text-lg font-semibold tracking-wide text-gray-900">
+                          <h4 className="mb-1 text-sm font-semibold tracking-wide text-gray-900 md:text-lg">
                             Inconsistent & Scattered Data
                           </h4>
-                          <p className="text-md tracking-wide text-gray-700">
+                          <p className="text-xs tracking-wide text-gray-700 md:text-[16px]">
                             Data across government portals was fragmented,
                             making reports error-prone and unreliable.
                           </p>
@@ -724,13 +724,13 @@ const Nrega = () => {
                       </div>
                     </div>
                     <div className="from-green-25 border-b border-gray-200 bg-gradient-to-b to-transparent p-3">
-                      <div className="flex items-start gap-2">
-                        <div className="text-lg">📄</div>
+                      <div className="flex items-start gap-x-1 md:gap-2">
+                        <div className="text-xs md:text-lg">📄</div>
                         <div>
-                          <h4 className="mb-1 text-lg font-semibold tracking-wide text-gray-900">
+                          <h4 className="mb-1 text-sm font-semibold tracking-wide text-gray-900 md:text-lg">
                             Dynamic PDF Reports
                           </h4>
-                          <p className="text-md tracking-wide text-gray-700">
+                          <p className="text-xs tracking-wide text-gray-700 md:text-[16px]">
                             Built a modular engine to generate 20+ professional
                             reports in seconds.
                           </p>
@@ -740,13 +740,13 @@ const Nrega = () => {
 
                     {/* Row 3 */}
                     <div className="from-red-25 border-r border-b border-gray-200 bg-gradient-to-b to-transparent p-3">
-                      <div className="flex items-start gap-2">
-                        <div className="text-lg">🔗</div>
+                      <div className="flex items-start gap-x-1 md:gap-2">
+                        <div className="text-xs md:text-lg">🔗</div>
                         <div>
-                          <h4 className="mb-1 text-lg font-semibold tracking-wide text-gray-900">
+                          <h4 className="mb-1 text-sm font-semibold tracking-wide text-gray-900 md:text-lg">
                             No Centralized Access
                           </h4>
-                          <p className="text-md tracking-wide text-gray-700">
+                          <p className="text-xs tracking-wide text-gray-700 md:text-[16px]">
                             Users had to juggle multiple portals and formats
                             instead of having a single reporting hub.
                           </p>
@@ -754,13 +754,13 @@ const Nrega = () => {
                       </div>
                     </div>
                     <div className="from-green-25 border-b border-gray-200 bg-gradient-to-b to-transparent p-3">
-                      <div className="flex items-start gap-2">
-                        <div className="text-lg">⚡</div>
+                      <div className="flex items-start gap-x-1 md:gap-2">
+                        <div className="text-xs md:text-lg">⚡</div>
                         <div>
-                          <h4 className="mb-1 text-lg font-semibold tracking-wide text-gray-900">
+                          <h4 className="mb-1 text-sm font-semibold tracking-wide text-gray-900 md:text-lg">
                             One-Click Access
                           </h4>
-                          <p className="text-md tracking-wide text-gray-700">
+                          <p className="text-xs tracking-wide text-gray-700 md:text-[16px]">
                             Users could instantly download individual reports or
                             generate a combined PDF with all reports merged.
                           </p>
@@ -770,13 +770,13 @@ const Nrega = () => {
 
                     {/* Row 4 */}
                     <div className="from-red-25 border-r border-b border-gray-200 bg-gradient-to-b to-transparent p-3">
-                      <div className="flex items-start gap-2">
-                        <div className="text-lg">🔒</div>
+                      <div className="flex items-start gap-x-1 md:gap-2">
+                        <div className="text-xs md:text-lg">🔒</div>
                         <div>
-                          <h4 className="mb-1 text-lg font-semibold tracking-wide text-gray-900">
+                          <h4 className="mb-1 text-sm font-semibold tracking-wide text-gray-900 md:text-lg">
                             Limited Control & Accessibility
                           </h4>
-                          <p className="text-md tracking-wide text-gray-700">
+                          <p className="text-xs tracking-wide text-gray-700 md:text-[16px]">
                             Without role-based systems, there was no secure way
                             for different users to manage their data and access.
                           </p>
@@ -784,13 +784,13 @@ const Nrega = () => {
                       </div>
                     </div>
                     <div className="from-green-25 border-b border-gray-200 bg-gradient-to-b to-transparent p-3">
-                      <div className="flex items-start gap-2">
-                        <div className="text-lg">👥</div>
+                      <div className="flex items-start gap-x-1 md:gap-2">
+                        <div className="text-xs md:text-lg">👥</div>
                         <div>
-                          <h4 className="mb-1 text-lg font-semibold tracking-wide text-gray-900">
+                          <h4 className="mb-1 text-sm font-semibold tracking-wide text-gray-900 md:text-lg">
                             Role-Based Dashboards
                           </h4>
-                          <p className="text-md tracking-wide text-gray-700">
+                          <p className="text-xs tracking-wide text-gray-700 md:text-[16px]">
                             Implemented RBAC (user, admin, super-admin) to
                             ensure secure, permission-based access.
                           </p>
@@ -800,13 +800,13 @@ const Nrega = () => {
 
                     {/* Row 5 */}
                     <div className="from-red-25 border-r border-gray-200 bg-gradient-to-b to-transparent p-3">
-                      <div className="flex items-start gap-2">
-                        <div className="text-lg">📈</div>
+                      <div className="flex items-start gap-x-1 md:gap-2">
+                        <div className="text-xs md:text-lg">📈</div>
                         <div>
-                          <h4 className="mb-1 text-lg font-semibold tracking-wide text-gray-900">
+                          <h4 className="mb-1 text-sm font-semibold tracking-wide text-gray-900 md:text-lg">
                             Scaling Problems
                           </h4>
-                          <p className="text-md tracking-wide text-gray-700">
+                          <p className="text-xs tracking-wide text-gray-700 md:text-[16px]">
                             As reporting demands grew, manual processes could
                             not keep pace with the workload.
                           </p>
@@ -814,13 +814,13 @@ const Nrega = () => {
                       </div>
                     </div>
                     <div className="from-green-25 bg-gradient-to-b to-transparent p-3">
-                      <div className="flex items-start gap-2">
-                        <div className="text-lg">🚀</div>
+                      <div className="flex items-start gap-x-1 md:gap-2">
+                        <div className="text-xs md:text-lg">🚀</div>
                         <div>
-                          <h4 className="mb-1 text-lg font-semibold tracking-wide text-gray-900">
+                          <h4 className="mb-1 text-sm font-semibold tracking-wide text-gray-900 md:text-lg">
                             Seamless Onboarding & Optimized Performance
                           </h4>
-                          <p className="text-md tracking-wide text-gray-700">
+                          <p className="text-xs tracking-wide text-gray-700 md:text-[16px]">
                             Added subscription-based login, email verification,
                             OTP reset, and admin approval flows. Enabled fast
                             batch processing.
@@ -833,7 +833,7 @@ const Nrega = () => {
               </div>
             </div>
           </section>
-          <div className="relative grid grid-cols-2">
+          <div className="relative grid grid-cols-1 md:grid-cols-2">
             <div
               className="absolute -top-px left-[calc(var(--offset)/2*-1)] z-30 h-[var(--height)] w-[calc(100%+var(--offset))] bg-[linear-gradient(to_right,var(--color),var(--color)_50%,transparent_0,transparent)] [background-size:var(--width)_var(--height)] [mask-composite:exclude] [mask:linear-gradient(to_left,var(--background)_var(--fade-stop),transparent),_linear-gradient(to_right,var(--background)_var(--fade-stop),transparent),_linear-gradient(black,black)] dark:bg-[linear-gradient(to_right,var(--color-dark),var(--color-dark)_50%,transparent_0,transparent)]"
               style={
@@ -849,8 +849,8 @@ const Nrega = () => {
                 } as React.CSSProperties
               }
             />
-            <section className="border-red-600 py-12">
-              <h1 className="flex w-full items-center gap-x-3 text-2xl font-semibold tracking-wider text-neutral-700">
+            <section className="px-3 md:px-0 md:py-12">
+              <h1 className="flex w-full items-center gap-x-3 text-lg font-semibold tracking-wider text-neutral-700 md:text-2xl">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -861,7 +861,7 @@ const Nrega = () => {
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  className="size-8 text-yellow-500"
+                  className="size-6 text-yellow-500 md:size-8"
                 >
                   <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                   <path d="M3 17l6 -6l4 4l8 -8" />
@@ -869,8 +869,8 @@ const Nrega = () => {
                 </svg>
                 Business Impact
               </h1>
-              <div className="w-full pl-8">
-                <ul className="text-md mt-5 max-w-xl font-medium tracking-wide text-neutral-600">
+              <div className="w-full md:pl-8">
+                <ul className="mt-5 max-w-xl text-sm font-medium tracking-wide text-neutral-600 md:text-[16px]">
                   {[
                     "Reduced report preparation time from hours to minutes.",
                     "Provided contractors and vendors with one centralized hub for all reporting needs.",
@@ -878,7 +878,10 @@ const Nrega = () => {
                     "Improved accuracy and consistency of reports with automated data workflows.",
                     "Delivered an enterprise-ready SaaS product that scales with growing demand.",
                   ].map((text, idx) => (
-                    <li key={idx} className="flex items-start gap-2 leading-7">
+                    <li
+                      key={idx}
+                      className="flex items-start gap-2 leading-5 md:leading-7"
+                    >
                       <div className="flex h-5 w-5 items-center justify-center">
                         <CheckCircle className="mt-2.5 h-4 w-4 text-green-600" />
                       </div>
@@ -888,8 +891,8 @@ const Nrega = () => {
                 </ul>
               </div>
             </section>
-            <section className="items-center justify-center border-blue-500 py-12">
-              <h1 className="flex w-full items-center gap-x-3 pl-2 text-2xl font-semibold tracking-wider text-neutral-700">
+            <section className="items-center justify-center border-blue-500 px-3 pt-6 md:px-0 md:py-12">
+              <h1 className="flex w-full items-center gap-x-3 pl-2 text-lg font-semibold tracking-wider text-neutral-700 md:text-2xl">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -910,7 +913,7 @@ const Nrega = () => {
                 Conclusion
               </h1>
               <div className="flex items-center justify-center">
-                <p className="mt-4 max-w-xl pl-5 leading-7 font-medium tracking-wide text-neutral-600">
+                <p className="mt-4 max-w-xl text-sm leading-7 font-medium tracking-wide text-neutral-600 md:pl-5 md:text-[16px]">
                   The Nrega platform transformed government reporting for
                   contractors and govt officials by providing a centralized,
                   automated, and subscription driven solution. Through automated
@@ -928,7 +931,7 @@ const Nrega = () => {
       </div>
       <CTA />
       <CommonFooter />
-    </>
+    </div>
   );
 };
 
