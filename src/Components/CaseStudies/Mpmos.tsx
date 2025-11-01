@@ -6,7 +6,7 @@ import mpmosProject from "@/assets/mpmos_project.webp";
 import mpmosReport from "@/assets/mpmos_report.webp";
 import mpmosCms from "@/assets/mpmos_cms.webp";
 import { useEffect, useState } from "react";
-import CommonNavbar from "../Navbar";
+// import CommonNavbar from "../Navbar";
 import CTA from "../CTA";
 import CommonFooter from "../FooterCommon";
 
@@ -27,20 +27,20 @@ const Mpmos = () => {
   }, []);
   return (
     <>
-      <CommonNavbar />
-      <div className="mt-24 flex flex-col items-center justify-center">
-        <div className="h-full w-full max-w-7xl border-red-700">
-          <section className="relative flex h-fit w-full justify-center gap-x-32 overflow-hidden py-8">
+      {/* <CommonNavbar /> */}
+      <div className="flex flex-col items-center justify-center md:mt-24">
+        <div className="h-full w-full border-red-700 md:max-w-7xl">
+          <section className="relative h-fit w-full justify-center overflow-hidden px-5 py-8 md:flex md:gap-x-32 md:px-0">
             <div className="mt-3 flex flex-col justify-center">
-              <Badge className="mb-4 border-gray-600 bg-gray-800 px-3 py-1 text-sm tracking-wider text-white">
+              <Badge className="mb-2 border-gray-600 bg-gray-800 px-3 py-1 text-xs tracking-wider text-white md:mb-4 md:text-sm">
                 Project Monitoring System
               </Badge>
-              <div className="relative mt-4 ml-1 w-fit bg-gradient-to-r from-green-100 via-white to-purple-100 px-3 py-2 text-6xl font-bold tracking-wide text-neutral-800">
+              <div className="relative mt-4 ml-1 w-fit bg-gradient-to-r from-green-100 via-white to-purple-100 px-3 py-2 text-3xl font-bold tracking-wide text-neutral-800 md:text-6xl">
                 <svg
                   viewBox="0 0 357 1"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="absolute bottom-0 left-0 w-[120px]"
+                  className="absolute bottom-0 left-0 w-[67px] md:w-[120px]"
                 >
                   <defs>
                     <motion.linearGradient
@@ -77,7 +77,7 @@ const Mpmos = () => {
                   viewBox="0 0 357 1"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="absolute right-0 bottom-0 w-[120px]"
+                  className="absolute right-0 bottom-0 w-[67px] md:w-[120px]"
                 >
                   <defs>
                     <motion.linearGradient
@@ -114,16 +114,16 @@ const Mpmos = () => {
                 <p className="absolute -right-0.5 -bottom-0.5 h-1.5 w-1.5 rounded-full bg-blue-300" />
                 MpMos
               </div>
-              <p className="text-md mt-5 w-fit rounded-xl border px-2 py-3 pt-4 font-bold tracking-wide">
+              <p className="mt-3 w-fit rounded-xl border px-2 py-1 text-[8px] font-bold tracking-wide md:mt-5 md:py-3 md:pt-4 md:text-sm">
                 A Single Platform for Data Collection, Monitoring, and Reports
               </p>
-              <p className="text-md mt-14 max-w-4xl leading-6 tracking-wider text-neutral-700">
+              <p className="mt-5 max-w-4xl text-sm leading-6 tracking-wider text-neutral-700 md:mt-14 md:text-lg">
                 A centralized digital platform where project incharges and
                 administrators can access structured data for field projects and
                 instantly generate professional quarterly and annual reports
                 with automated workflows.
               </p>
-              <div className="mt-8 flex">
+              <div className="mt-4 flex md:mt-8">
                 <motion.div
                   className={`${reactHovered ? "z-10" : ""} flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white px-1`}
                   onMouseEnter={() => setReactHovered(true)}
@@ -141,7 +141,7 @@ const Mpmos = () => {
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      className="h-4 w-4 stroke-1 text-sky-600 md:h-6 md:w-6"
+                      className="h-4 w-5 stroke-1 text-sky-600 md:h-6 md:w-6"
                     >
                       <path d="M6.306 8.711c-2.602 .723 -4.306 1.926 -4.306 3.289c0 2.21 4.477 4 10 4c.773 0 1.526 -.035 2.248 -.102"></path>
                       <path d="M17.692 15.289c2.603 -.722 4.308 -1.926 4.308 -3.289c0 -2.21 -4.477 -4 -10 -4c-.773 0 -1.526 .035 -2.25 .102"></path>
@@ -167,7 +167,7 @@ const Mpmos = () => {
                   </AnimatePresence>
                 </motion.div>
                 <motion.div
-                  className={`${expressHovered ? "z-10" : ""} -ml-3 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white px-1`}
+                  className={`${expressHovered ? "z-10" : ""} -ml-2 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white px-1 md:-ml-3`}
                   onMouseEnter={() => setExpressHovered(true)}
                   onMouseLeave={() => setExpressHovered(false)}
                   layout
@@ -175,7 +175,7 @@ const Mpmos = () => {
                   <div className="flex min-w-[16px] flex-none items-center justify-center md:min-w-[20px]">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-4 w-4 text-green-600 md:h-6 md:w-6"
+                      className="h-4 w-5 text-green-600 md:h-6 md:w-6"
                       viewBox="0 0 128 128"
                     >
                       <path
@@ -200,7 +200,7 @@ const Mpmos = () => {
                   </AnimatePresence>
                 </motion.div>
                 <motion.div
-                  className={`${tailwindHovered ? "z-10" : ""} -ml-3 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white px-1`}
+                  className={`${tailwindHovered ? "z-10" : ""} -ml-2 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white px-1 md:-ml-3`}
                   onMouseEnter={() => setTailwindHovered(true)}
                   onMouseLeave={() => setTailwindHovered(false)}
                   layout
@@ -211,7 +211,7 @@ const Mpmos = () => {
                       fill="currentColor"
                       stroke-width="0"
                       viewBox="0 0 24 24"
-                      className="h-4 w-4 text-sky-600 md:h-6 md:w-6"
+                      className="h-4 w-5 text-sky-600 md:h-6 md:w-6"
                       height="1em"
                       width="1em"
                       xmlns="http://www.w3.org/2000/svg"
@@ -234,7 +234,7 @@ const Mpmos = () => {
                   </AnimatePresence>
                 </motion.div>
                 <motion.div
-                  className={`${awsHovered ? "z-10" : ""} -ml-3 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white px-1`}
+                  className={`${awsHovered ? "z-10" : ""} -ml-2 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white px-1 md:-ml-3`}
                   onMouseEnter={() => setAwsHovered(true)}
                   onMouseLeave={() => setAwsHovered(false)}
                   layout
@@ -244,7 +244,7 @@ const Mpmos = () => {
                       viewBox="0 -30 150 150"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-4 w-4 pt-1 md:h-6 md:w-6"
+                      className="h-4 w-5 pt-1 md:h-6 md:w-6"
                     >
                       <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                       <g
@@ -284,7 +284,7 @@ const Mpmos = () => {
                   </AnimatePresence>
                 </motion.div>
                 <motion.div
-                  className={`${motionHovered ? "z-20" : ""} -ml-3 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white p-1.5`}
+                  className={`${motionHovered ? "z-20" : ""} -ml-2 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white p-1.5 md:-ml-3`}
                   onMouseEnter={() => setMotionHovered(true)}
                   onMouseLeave={() => setMotionHovered(false)}
                   layout
@@ -326,7 +326,7 @@ const Mpmos = () => {
                   </AnimatePresence>
                 </motion.div>
                 <motion.div
-                  className={`${typescriptHovered ? "z-20" : ""} -ml-3 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white p-2`}
+                  className={`${typescriptHovered ? "z-20" : ""} -ml-2 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white p-2 md:-ml-3`}
                   onMouseEnter={() => setTsHovered(true)}
                   onMouseLeave={() => setTsHovered(false)}
                   layout
@@ -390,7 +390,7 @@ const Mpmos = () => {
                   </AnimatePresence>
                 </motion.div>
                 <motion.div
-                  className={`${postgreSqlHovered ? "z-10" : ""} -ml-3 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white p-2`}
+                  className={`${postgreSqlHovered ? "z-10" : ""} -ml-2 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white p-2 md:-ml-3`}
                   onMouseEnter={() => setPostgreSqlHovered(true)}
                   onMouseLeave={() => setPostgreSqlHovered(false)}
                   layout
@@ -429,7 +429,7 @@ const Mpmos = () => {
                 </motion.div>
                 {/* cloudflare */}
                 <motion.div
-                  className="-ml-3 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white p-2"
+                  className="-ml-2 flex h-8 shrink-0 cursor-pointer items-center rounded-full border border-neutral-300 bg-white p-2 md:-ml-3"
                   onMouseEnter={() => setCloudflareHovered(true)}
                   onMouseLeave={() => setCloudflareHovered(false)}
                   layout
@@ -470,13 +470,13 @@ const Mpmos = () => {
                 </motion.div>
               </div>
             </div>
-            <div>
+            <div className="mt-5 md:mt-0">
               <div className="relative">
-                <div className="relative rounded-tl-xl rounded-tr-xl rounded-br-xs rounded-bl-xs border border-neutral-200 bg-gray-200 p-2 px-3 pb-3 shadow-xl">
-                  <div className="mb-3 flex gap-2 pt-2 pl-4">
-                    <div className="h-3 w-3 rounded-full bg-red-600"></div>
-                    <div className="h-3 w-3 rounded-full bg-yellow-500"></div>
-                    <div className="h-3 w-3 rounded-full bg-green-600"></div>
+                <div className="relative rounded-tl-xl rounded-tr-xl rounded-br-xs rounded-bl-xs border border-neutral-200 bg-gray-200 p-1.5 px-1.5 shadow-xl md:p-2 md:px-3 md:pb-3">
+                  <div className="mb-1 flex gap-2 pl-4 md:mb-3 md:pt-2">
+                    <div className="size-2 rounded-full bg-red-600 md:size-3" />
+                    <div className="size-2 rounded-full bg-yellow-500 md:size-3" />
+                    <div className="size-2 rounded-full bg-green-600 md:size-3" />
                   </div>
                   <img
                     src={mpmos01}
@@ -487,8 +487,8 @@ const Mpmos = () => {
               </div>
             </div>
           </section>
-          <section className="flex flex-col items-center justify-center border-red-500 py-12">
-            <h1 className="flex w-full items-center gap-x-3 text-2xl font-semibold tracking-wider text-neutral-700">
+          <section className="flex flex-col items-center justify-center border-red-500 px-5 py-12 md:px-0">
+            <h1 className="flex w-full items-center gap-x-3 text-lg font-semibold tracking-wider text-neutral-700 md:text-2xl">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -508,9 +508,9 @@ const Mpmos = () => {
               </svg>
               Client Goal
             </h1>
-            <div className="mt-3 flex justify-center">
-              <div className="max-w-[45rem] border-r border-dashed border-purple-200 pr-16 pl-1">
-                <p className="text-md max-w-7xl leading-6 tracking-wider text-neutral-700">
+            <div className="mt-3 flex flex-col justify-center md:flex-row">
+              <div className="border-r border-dashed border-purple-200 pl-1 md:max-w-[45rem] md:pr-16">
+                <p className="text-md text-sm leading-6 tracking-wider text-neutral-700 md:text-lg">
                   The Central Agricultural University (CAU), Imphal, in
                   collaboration with the Indian Institute of Millets Research
                   (IIMR), Hyderabad, required a centralized digital platform to
@@ -518,8 +518,8 @@ const Mpmos = () => {
                   region.
                 </p>
               </div>
-              <div className="max-w-5xl pl-16">
-                <div className="text-md space-y-5 leading-6 tracking-wider text-neutral-700">
+              <div className="mt-4 max-w-5xl md:mt-0 md:pl-16">
+                <div className="text-md space-y-5 text-sm leading-6 tracking-wider text-neutral-700 md:text-lg">
                   <p>
                     The goal was to simplify data collection, improve
                     transparency, and replace scattered spreadsheets with a
@@ -535,8 +535,8 @@ const Mpmos = () => {
               </div>
             </div>
           </section>
-          <section className="flex w-full flex-col items-center justify-center border-black py-12">
-            <h1 className="flex w-full items-center gap-x-3 text-2xl font-semibold tracking-wider text-neutral-700">
+          <section className="flex w-full flex-col items-center justify-center border-black px-5 md:px-0 md:py-12">
+            <h1 className="mb-2 flex w-full items-center gap-x-3 text-lg font-semibold tracking-wider text-neutral-700 md:mb-0 md:text-2xl">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -556,13 +556,13 @@ const Mpmos = () => {
               </svg>
               Project Glimpses
             </h1>
-            <div className="mt-12 grid w-full grid-cols-2 place-items-center gap-5 gap-y-12 border-red-500">
+            <div className="grid w-full grid-cols-1 place-items-center gap-5 gap-y-12 border-red-500 md:mt-12 md:grid-cols-2">
               <div className="flex w-fit flex-col-reverse overflow-hidden rounded-xl border border-neutral-200 p-3 shadow-lg transition duration-300 hover:shadow-2xl">
                 <div className="mt-4 pl-5">
-                  <h1 className="mb-4 text-lg font-semibold tracking-wider">
+                  <h1 className="mb-4 text-sm font-semibold tracking-wider md:text-lg">
                     Project Management Dashboard
                   </h1>
-                  <ul className="text-md max-w-2xl list-disc pl-5 leading-8 tracking-wider text-neutral-600">
+                  <ul className="max-w-2xl list-disc pl-5 text-xs tracking-wider text-neutral-600 md:text-sm md:leading-8">
                     <li>
                       Unified all project details (title, budget, agency) in one
                       place..
@@ -575,15 +575,15 @@ const Mpmos = () => {
                 <img
                   alt=""
                   src={mpmosProject}
-                  className="h-[25rem] w-[40rem] rounded-xl transition duration-500 hover:scale-105"
+                  className="rounded-xl transition duration-500 hover:scale-105 md:h-[25rem] md:w-[40rem]"
                 />
               </div>
               <div className="flex w-fit flex-col-reverse overflow-hidden rounded-xl border border-neutral-200 p-3 shadow-lg transition duration-300 hover:shadow-2xl">
                 <div className="mt-4 pl-5">
-                  <h1 className="mb-4 text-lg font-semibold tracking-wider">
+                  <h1 className="mb-4 text-sm font-semibold tracking-wider md:text-lg">
                     Automated Reporting System
                   </h1>
-                  <ul className="text-md max-w-2xl list-disc pl-5 leading-8 tracking-wider text-neutral-600">
+                  <ul className="max-w-2xl list-disc pl-5 text-xs tracking-wider text-neutral-600 md:text-sm md:leading-8">
                     <li>Quick Access to Quarterly & Consolidated Reports</li>
                     <li>
                       Securely stored in Cloudflare for quick audit or sharing
@@ -593,15 +593,15 @@ const Mpmos = () => {
                 <img
                   alt=""
                   src={mpmosReport}
-                  className="h-[25rem] w-[40rem] rounded-xl transition duration-500 hover:scale-105"
+                  className="rounded-xl transition duration-500 hover:scale-105 md:h-[25rem] md:w-[40rem]"
                 />
               </div>
               <div className="flex w-fit flex-col-reverse overflow-hidden rounded-xl border border-neutral-200 p-3 shadow-lg transition duration-300 hover:shadow-2xl">
                 <div className="mt-4 pl-5">
-                  <h1 className="mb-4 text-lg font-semibold tracking-wider">
+                  <h1 className="mb-4 text-sm font-semibold tracking-wider md:text-lg">
                     Content Management Hub
                   </h1>
-                  <ul className="text-md max-w-2xl list-disc pl-5 leading-8 tracking-wider text-neutral-600">
+                  <ul className="max-w-2xl list-disc pl-5 text-xs tracking-wider text-neutral-600 md:text-sm md:leading-8">
                     <li>
                       Publish events, publications, and galleries for
                       stakeholder visibility.
@@ -611,29 +611,14 @@ const Mpmos = () => {
                 <img
                   alt=""
                   src={mpmosCms}
-                  className="h-[25rem] w-[40rem] rounded-xl transition duration-500 hover:scale-105"
+                  className="rounded-xl transition duration-500 hover:scale-105 md:h-[25rem] md:w-[40rem]"
                 />
               </div>
-              {/* <div className="flex w-fit flex-col-reverse overflow-hidden rounded-xl border border-neutral-200 p-3 shadow-lg transition duration-300 hover:shadow-2xl">
-              <div className="mt-4 pl-5">
-                <h1 className="mb-4 text-lg font-semibold tracking-wider">
-                  Reports
-                </h1>
-                <ul className="text-md max-w-2xl list-disc pl-5 leading-8 tracking-wider text-neutral-600">
-                  <li>Access reports quickly without navigating away.</li>
-                </ul>
-              </div>
-              <img
-                alt=""
-                src={reportImg}
-                className="h-[25rem] w-[40rem] rounded-xl transition duration-500 hover:scale-105"
-              />
-            </div> */}
             </div>
           </section>
-          <section className="relative flex flex-col items-center justify-center border-red-500 py-12">
+          <section className="relative flex flex-col items-center justify-center border-red-500 px-5 py-12 md:px-0">
             <div
-              className="absolute -top-px left-[calc(var(--offset)/2*-1)] z-30 h-[var(--height)] w-[calc(100%+var(--offset))] bg-[linear-gradient(to_right,var(--color),var(--color)_50%,transparent_0,transparent)] [background-size:var(--width)_var(--height)] [mask-composite:exclude] [mask:linear-gradient(to_left,var(--background)_var(--fade-stop),transparent),_linear-gradient(to_right,var(--background)_var(--fade-stop),transparent),_linear-gradient(black,black)] dark:bg-[linear-gradient(to_right,var(--color-dark),var(--color-dark)_50%,transparent_0,transparent)]"
+              className="absolute -top-px left-[calc(var(--offset)/2*-1)] z-30 hidden h-[var(--height)] w-[calc(100%+var(--offset))] bg-[linear-gradient(to_right,var(--color),var(--color)_50%,transparent_0,transparent)] [background-size:var(--width)_var(--height)] [mask-composite:exclude] [mask:linear-gradient(to_left,var(--background)_var(--fade-stop),transparent),_linear-gradient(to_right,var(--background)_var(--fade-stop),transparent),_linear-gradient(black,black)] md:block dark:bg-[linear-gradient(to_right,var(--color-dark),var(--color-dark)_50%,transparent_0,transparent)]"
               style={
                 {
                   "--background": "#ffffff",
@@ -647,7 +632,7 @@ const Mpmos = () => {
                 } as React.CSSProperties
               }
             />
-            <h1 className="flex w-full items-center gap-x-3 text-2xl font-semibold tracking-wider text-neutral-700">
+            <h1 className="flex w-full items-center gap-x-3 text-lg font-semibold tracking-wider text-neutral-700 md:text-2xl">
               <svg
                 viewBox="0 0 60 60"
                 xmlns="http://www.w3.org/2000/svg"
@@ -665,7 +650,7 @@ const Mpmos = () => {
                 viewBox="0 0 1 272"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="absolute h-[41.5rem] text-red-700"
+                className="absolute h-[55rem] text-red-700 md:h-[41.5rem]"
               >
                 <defs>
                   <motion.linearGradient
@@ -704,18 +689,18 @@ const Mpmos = () => {
                 <div className="overflow-hidden rounded-xl border-gray-800 bg-white shadow-lg">
                   <div className="grid w-full grid-cols-2">
                     {/* Header */}
-                    <div className="border-r border-b border-gray-200 bg-gradient-to-b from-purple-50 to-transparent p-3 py-5">
+                    <div className="border-r border-b border-gray-200 bg-gradient-to-b from-red-50 to-transparent p-3 py-5">
                       <div className="flex items-center gap-2">
-                        <Zap className="h-5 w-5 text-red-600" />
-                        <h3 className="text-xl font-bold tracking-wide text-red-800">
+                        <Zap className="h-4 w-4 text-red-600 md:h-5 md:w-5" />
+                        <h3 className="text-sm font-bold tracking-wide text-red-800 md:text-xl">
                           Challenges
                         </h3>
                       </div>
                     </div>
                     <div className="border-b border-gray-200 bg-gradient-to-b from-green-50 to-transparent p-3 py-5">
                       <div className="flex items-center gap-2">
-                        <Lightbulb className="h-5 w-5 text-green-600" />
-                        <h3 className="text-xl font-bold tracking-wide text-green-800">
+                        <Lightbulb className="h-4 w-4 text-green-600 md:h-5 md:w-5" />
+                        <h3 className="text-sm font-bold tracking-wide text-green-800 md:text-xl">
                           Solutions
                         </h3>
                       </div>
@@ -724,12 +709,12 @@ const Mpmos = () => {
                     {/* Row 1 */}
                     <div className="from-red-25 border-r border-b border-gray-200 bg-gradient-to-b to-transparent p-3">
                       <div className="flex items-start gap-2">
-                        <div className="text-lg">📊</div>
+                        <div className="text-xs md:text-lg">📊</div>
                         <div>
-                          <h4 className="mb-1 text-lg font-semibold tracking-wide text-gray-900">
+                          <h4 className="mb-1 text-sm font-semibold tracking-wide text-gray-900 md:text-lg">
                             Fragmented Data Management
                           </h4>
-                          <p className="text-md tracking-wide text-gray-700">
+                          <p className="text-xs tracking-wide text-gray-700 md:text-[16px]">
                             Project and activity details were scattered across
                             spreadsheets, making monitoring complex and
                             error-prone.
@@ -739,12 +724,12 @@ const Mpmos = () => {
                     </div>
                     <div className="from-green-25 border-b border-gray-200 bg-gradient-to-b to-transparent p-3">
                       <div className="flex items-start gap-2">
-                        <div className="text-lg">🎯</div>
+                        <div className="text-xs md:text-lg">🎯</div>
                         <div>
-                          <h4 className="mb-1 text-lg font-semibold tracking-wide text-gray-900">
+                          <h4 className="mb-1 text-sm font-semibold tracking-wide text-gray-900 md:text-lg">
                             Centralized Platform
                           </h4>
-                          <p className="text-md tracking-wide text-gray-700">
+                          <p className="text-xs tracking-wide text-gray-700 md:text-[16px]">
                             Developed a unified monitoring platform that
                             streamlined project management and reporting
                           </p>
@@ -755,12 +740,12 @@ const Mpmos = () => {
                     {/* Row 2 */}
                     <div className="from-red-25 border-r border-b border-gray-200 bg-gradient-to-b to-transparent p-3">
                       <div className="flex items-start gap-2">
-                        <div className="text-lg">📝</div>
+                        <div className="text-xs md:text-lg">📝</div>
                         <div>
-                          <h4 className="mb-1 text-lg font-semibold tracking-wide text-gray-900">
+                          <h4 className="mb-1 text-sm font-semibold tracking-wide text-gray-900 md:text-lg">
                             Manual Reporting Delays
                           </h4>
-                          <p className="text-md tracking-wide text-gray-700">
+                          <p className="text-xs tracking-wide text-gray-700 md:text-[16px]">
                             Preparing quarterly and annual reports took weeks
                             and was prone to inaccuracies.
                           </p>
@@ -769,12 +754,12 @@ const Mpmos = () => {
                     </div>
                     <div className="from-green-25 border-b border-gray-200 bg-gradient-to-b to-transparent p-3">
                       <div className="flex items-start gap-2">
-                        <div className="text-lg">⚡</div>
+                        <div className="text-xs md:text-lg">⚡</div>
                         <div>
-                          <h4 className="mb-1 text-lg font-semibold tracking-wide text-gray-900">
+                          <h4 className="mb-1 text-sm font-semibold tracking-wide text-gray-900 md:text-lg">
                             Automated Reporting
                           </h4>
-                          <p className="text-md tracking-wide text-gray-700">
+                          <p className="text-xs tracking-wide text-gray-700 md:text-[16px]">
                             One-click generation of standardized reports in Docx
                             format, reducing time from weeks to minutes.
                           </p>
@@ -785,12 +770,12 @@ const Mpmos = () => {
                     {/* Row 3 */}
                     <div className="from-red-25 border-r border-b border-gray-200 bg-gradient-to-b to-transparent p-3">
                       <div className="flex items-start gap-2">
-                        <div className="text-lg">🔄</div>
+                        <div className="text-xs md:text-lg">🔄</div>
                         <div>
-                          <h4 className="mb-1 text-lg font-semibold tracking-wide text-gray-900">
+                          <h4 className="mb-1 text-sm font-semibold tracking-wide text-gray-900 md:text-lg">
                             Inconsistent Activity Tracking
                           </h4>
-                          <p className="text-md tracking-wide text-gray-700">
+                          <p className="text-xs tracking-wide text-gray-700 md:text-[16px]">
                             Each activity type required different tracking
                             methods, leading to inconsistency.
                           </p>
@@ -799,12 +784,12 @@ const Mpmos = () => {
                     </div>
                     <div className="from-green-25 border-b border-gray-200 bg-gradient-to-b to-transparent p-3">
                       <div className="flex items-start gap-2">
-                        <div className="text-lg">📋</div>
+                        <div className="text-xs md:text-lg">📋</div>
                         <div>
-                          <h4 className="mb-1 text-lg font-semibold tracking-wide text-gray-900">
+                          <h4 className="mb-1 text-sm font-semibold tracking-wide text-gray-900 md:text-lg">
                             Dedicated Activity Modules
                           </h4>
-                          <p className="text-md tracking-wide text-gray-700">
+                          <p className="text-xs tracking-wide text-gray-700 md:text-[16px]">
                             Created specialized dashboards for training,
                             awareness, infrastructure, and input distribution.
                           </p>
@@ -815,12 +800,12 @@ const Mpmos = () => {
                     {/* Row 4 */}
                     <div className="from-red-25 border-r bg-gradient-to-b to-transparent p-3">
                       <div className="flex items-start gap-2">
-                        <div className="text-lg">🔒</div>
+                        <div className="text-xs md:text-lg">🔒</div>
                         <div>
-                          <h4 className="mb-1 text-lg font-semibold tracking-wide text-gray-900">
+                          <h4 className="mb-1 text-sm font-semibold tracking-wide text-gray-900 md:text-lg">
                             Access & Security Issues
                           </h4>
-                          <p className="text-md tracking-wide text-gray-700">
+                          <p className="text-xs tracking-wide text-gray-700 md:text-[16px]">
                             Sensitive project and financial data needed
                             controlled access between different user roles.
                           </p>
@@ -829,12 +814,12 @@ const Mpmos = () => {
                     </div>
                     <div className="from-green-25 bg-gradient-to-b to-transparent p-3">
                       <div className="flex items-start gap-2">
-                        <div className="text-lg">👥</div>
+                        <div className="text-xs md:text-lg">👥</div>
                         <div>
-                          <h4 className="mb-1 text-lg font-semibold tracking-wide text-gray-900">
+                          <h4 className="mb-1 text-sm font-semibold tracking-wide text-gray-900 md:text-lg">
                             Role-Based Access Control
                           </h4>
-                          <p className="text-md tracking-wide text-gray-700">
+                          <p className="text-xs tracking-wide text-gray-700 md:text-[16px]">
                             Implemented RBAC ensuring admins generated reports
                             while project incharges managed their respective
                             data.
@@ -847,9 +832,9 @@ const Mpmos = () => {
               </div>
             </div>
           </section>
-          <div className="relative grid grid-cols-2">
+          <div className="relative grid grid-cols-1 md:grid-cols-2">
             <div
-              className="absolute -top-px left-[calc(var(--offset)/2*-1)] z-30 h-[var(--height)] w-[calc(100%+var(--offset))] bg-[linear-gradient(to_right,var(--color),var(--color)_50%,transparent_0,transparent)] [background-size:var(--width)_var(--height)] [mask-composite:exclude] [mask:linear-gradient(to_left,var(--background)_var(--fade-stop),transparent),_linear-gradient(to_right,var(--background)_var(--fade-stop),transparent),_linear-gradient(black,black)] dark:bg-[linear-gradient(to_right,var(--color-dark),var(--color-dark)_50%,transparent_0,transparent)]"
+              className="absolute -top-px left-[calc(var(--offset)/2*-1)] z-30 hidden h-[var(--height)] w-[calc(100%+var(--offset))] bg-[linear-gradient(to_right,var(--color),var(--color)_50%,transparent_0,transparent)] [background-size:var(--width)_var(--height)] [mask-composite:exclude] [mask:linear-gradient(to_left,var(--background)_var(--fade-stop),transparent),_linear-gradient(to_right,var(--background)_var(--fade-stop),transparent),_linear-gradient(black,black)] md:block dark:bg-[linear-gradient(to_right,var(--color-dark),var(--color-dark)_50%,transparent_0,transparent)]"
               style={
                 {
                   "--background": "#ffffff",
@@ -863,8 +848,8 @@ const Mpmos = () => {
                 } as React.CSSProperties
               }
             />
-            <section className="border-red-600 py-12">
-              <h1 className="flex w-full items-center gap-x-3 text-2xl font-semibold tracking-wider text-neutral-700">
+            <section className="border-black px-3 md:px-0 md:py-12">
+              <h1 className="flex w-full items-center gap-x-3 text-lg font-semibold tracking-wider text-neutral-700 md:text-2xl">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -875,7 +860,7 @@ const Mpmos = () => {
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  className="size-8 text-yellow-500"
+                  className="size-6 text-yellow-500 md:size-8"
                 >
                   <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                   <path d="M3 17l6 -6l4 4l8 -8" />
@@ -883,8 +868,8 @@ const Mpmos = () => {
                 </svg>
                 Impact
               </h1>
-              <div className="w-full pl-8">
-                <ul className="text-md mt-5 max-w-xl font-medium tracking-wide text-neutral-600">
+              <div className="w-full md:pl-8">
+                <ul className="mt-5 max-w-xl text-sm font-medium tracking-wide text-neutral-600 md:text-[16px]">
                   {[
                     "Centralized monitoring replaced scattered spreadsheets.",
                     "Report preparation time reduced from weeks to minutes.",
@@ -892,7 +877,11 @@ const Mpmos = () => {
                     "Enabled real-time tracking of project progress and outcomes.",
                     "Established a scalable foundation for future project expansion.",
                   ].map((text, idx) => (
-                    <li key={idx} className="flex items-start gap-2 leading-7">
+                    <li
+                      key={idx}
+                      className="flex items-start gap-2 leading-5 md:leading-7"
+                    >
+                      {" "}
                       <div className="flex h-5 w-5 items-center justify-center">
                         <CheckCircle className="mt-2.5 h-4 w-4 text-green-600" />
                       </div>
@@ -902,8 +891,8 @@ const Mpmos = () => {
                 </ul>
               </div>
             </section>
-            <section className="items-center justify-center border-blue-500 py-12">
-              <h1 className="flex w-full items-center gap-x-3 pl-2 text-2xl font-semibold tracking-wider text-neutral-700">
+            <section className="items-center justify-center px-3 pt-6 md:px-0 md:py-12">
+              <h1 className="flex w-full items-center gap-x-3 pl-2 text-lg font-semibold tracking-wider text-neutral-700 md:text-2xl">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -924,7 +913,7 @@ const Mpmos = () => {
                 Conclusion
               </h1>
               <div className="flex items-center justify-center">
-                <p className="mt-4 max-w-xl pl-5 leading-7 font-medium tracking-wide text-neutral-600">
+                <p className="mt-4 max-w-xl text-sm leading-6 md:leading-7 font-medium tracking-wide text-neutral-600 md:pl-5 md:text-[16px]">
                   The Project Monitoring System transformed program oversight by
                   introducing a centralized, real-time platform for data
                   management and reporting. With intuitive dashboards, automated

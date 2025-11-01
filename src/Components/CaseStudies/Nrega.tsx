@@ -29,7 +29,7 @@ const Nrega = () => {
     <div className="w-full">
       {/* <CommonNavbar /> */}
       <div className="flex w-full flex-col items-center justify-center border-blue-600 md:mt-24">
-        <div className="w-full border-red-700 md:max-w-7xl">
+        <div className="w-full md:max-w-7xl">
           <section className="relative h-fit w-full justify-center overflow-hidden border-black px-5 py-8 md:flex md:gap-x-32 md:px-0">
             <div className="mt-3 flex flex-col justify-center">
               <Badge className="mb-2 border-gray-600 bg-gray-800 px-3 py-1 text-xs tracking-wider text-white md:mb-4 md:text-sm">
@@ -40,7 +40,7 @@ const Nrega = () => {
                   viewBox="0 0 357 1"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="absolute bottom-0 left-0 w-[102px]"
+                  className="absolute bottom-0 left-0 w-[51px] md:w-[102px]"
                 >
                   <defs>
                     <motion.linearGradient
@@ -77,7 +77,7 @@ const Nrega = () => {
                   viewBox="0 0 357 1"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="absolute right-0 bottom-0 w-[102px]"
+                  className="absolute right-0 bottom-0 w-[51px] md:w-[102px]"
                 >
                   <defs>
                     <motion.linearGradient
@@ -434,9 +434,9 @@ const Nrega = () => {
               <div className="relative border-black">
                 <div className="relative rounded-tl-xl rounded-tr-xl rounded-br-xs rounded-bl-xs border border-neutral-200 bg-gray-200 p-1.5 px-1.5 shadow-xl md:p-2 md:px-3 md:pb-3">
                   <div className="mb-1 flex gap-2 pl-4 md:mb-3 md:pt-2">
-                    <div className="size-2 rounded-full bg-red-600 md:size-3"></div>
-                    <div className="size-2 rounded-full bg-yellow-500 md:size-3"></div>
-                    <div className="size-2 rounded-full bg-green-600 md:size-3"></div>
+                    <div className="size-2 rounded-full bg-red-600 md:size-3" />
+                    <div className="size-2 rounded-full bg-yellow-500 md:size-3" />
+                    <div className="size-2 rounded-full bg-green-600 md:size-3" />
                   </div>
                   <img
                     src={nregaImg}
@@ -469,7 +469,7 @@ const Nrega = () => {
               Client Goal
             </h1>
             <div className="mt-3 flex flex-col justify-center md:flex-row">
-              <div className="border-r border-dashed border-purple-200 pr-16 pl-1 md:max-w-[45rem]">
+              <div className="border-r border-dashed border-purple-200 pl-1 md:max-w-[45rem] md:pr-16">
                 <p className="text-md text-sm leading-6 tracking-wider text-neutral-700 md:text-lg">
                   The client required a SaaS-based reporting platform to
                   streamline how officials, contractors, and vendors access and
@@ -537,7 +537,7 @@ const Nrega = () => {
               </div>
               <div className="flex w-fit flex-col-reverse overflow-hidden rounded-xl border border-neutral-200 p-3 shadow-lg transition duration-300 hover:shadow-2xl">
                 <div className="mt-4 pl-5">
-                  <h1 className="md:text-lgfont-semibold mb-4 text-sm tracking-wider">
+                  <h1 className="mb-4 text-sm font-semibold tracking-wider md:text-lg">
                     Work Code Dashboard
                   </h1>
                   <ul className="max-w-2xl list-disc pl-5 text-xs tracking-wider text-neutral-600 md:text-sm md:leading-8">
@@ -590,7 +590,7 @@ const Nrega = () => {
           </section>
           <section className="relative flex flex-col items-center justify-center border-red-500 px-5 py-12 md:px-0">
             <div
-              className="absolute -top-px left-[calc(var(--offset)/2*-1)] z-30 h-[var(--height)] w-[calc(100%+var(--offset))] bg-[linear-gradient(to_right,var(--color),var(--color)_50%,transparent_0,transparent)] [background-size:var(--width)_var(--height)] [mask-composite:exclude] [mask:linear-gradient(to_left,var(--background)_var(--fade-stop),transparent),_linear-gradient(to_right,var(--background)_var(--fade-stop),transparent),_linear-gradient(black,black)] dark:bg-[linear-gradient(to_right,var(--color-dark),var(--color-dark)_50%,transparent_0,transparent)]"
+              className="absolute -top-px left-[calc(var(--offset)/2*-1)] z-30 hidden h-[var(--height)] w-[calc(100%+var(--offset))] border border-violet-500 bg-[linear-gradient(to_right,var(--color),var(--color)_50%,transparent_0,transparent)] [background-size:var(--width)_var(--height)] [mask-composite:exclude] [mask:linear-gradient(to_left,var(--background)_var(--fade-stop),transparent),_linear-gradient(to_right,var(--background)_var(--fade-stop),transparent),_linear-gradient(black,black)] md:block dark:bg-[linear-gradient(to_right,var(--color-dark),var(--color-dark)_50%,transparent_0,transparent)]"
               style={
                 {
                   "--background": "#ffffff",
@@ -835,7 +835,7 @@ const Nrega = () => {
           </section>
           <div className="relative grid grid-cols-1 md:grid-cols-2">
             <div
-              className="absolute -top-px left-[calc(var(--offset)/2*-1)] z-30 h-[var(--height)] w-[calc(100%+var(--offset))] bg-[linear-gradient(to_right,var(--color),var(--color)_50%,transparent_0,transparent)] [background-size:var(--width)_var(--height)] [mask-composite:exclude] [mask:linear-gradient(to_left,var(--background)_var(--fade-stop),transparent),_linear-gradient(to_right,var(--background)_var(--fade-stop),transparent),_linear-gradient(black,black)] dark:bg-[linear-gradient(to_right,var(--color-dark),var(--color-dark)_50%,transparent_0,transparent)]"
+              className="absolute -top-px left-[calc(var(--offset)/2*-1)] z-30 hidden h-[var(--height)] w-[calc(100%+var(--offset))] bg-[linear-gradient(to_right,var(--color),var(--color)_50%,transparent_0,transparent)] [background-size:var(--width)_var(--height)] [mask-composite:exclude] [mask:linear-gradient(to_left,var(--background)_var(--fade-stop),transparent),_linear-gradient(to_right,var(--background)_var(--fade-stop),transparent),_linear-gradient(black,black)] md:block dark:bg-[linear-gradient(to_right,var(--color-dark),var(--color-dark)_50%,transparent_0,transparent)]"
               style={
                 {
                   "--background": "#ffffff",
@@ -849,7 +849,7 @@ const Nrega = () => {
                 } as React.CSSProperties
               }
             />
-            <section className="px-3 md:px-0 md:py-12">
+            <section className="border-black px-3 md:px-0 md:py-12">
               <h1 className="flex w-full items-center gap-x-3 text-lg font-semibold tracking-wider text-neutral-700 md:text-2xl">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -891,7 +891,7 @@ const Nrega = () => {
                 </ul>
               </div>
             </section>
-            <section className="items-center justify-center border-blue-500 px-3 pt-6 md:px-0 md:py-12">
+            <section className="items-center justify-center px-3 pt-6 md:px-0 md:py-12">
               <h1 className="flex w-full items-center gap-x-3 pl-2 text-lg font-semibold tracking-wider text-neutral-700 md:text-2xl">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -913,7 +913,7 @@ const Nrega = () => {
                 Conclusion
               </h1>
               <div className="flex items-center justify-center">
-                <p className="mt-4 max-w-xl text-sm leading-7 font-medium tracking-wide text-neutral-600 md:pl-5 md:text-[16px]">
+                <p className="mt-4 max-w-xl text-sm leading-6 font-medium tracking-wide text-neutral-600 md:pl-5 md:text-[16px] md:leading-7">
                   The Nrega platform transformed government reporting for
                   contractors and govt officials by providing a centralized,
                   automated, and subscription driven solution. Through automated

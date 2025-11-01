@@ -34,7 +34,7 @@ const CommonFooter = () => {
     "https://wa.me/6362566003?text=Hello%20I%20am%20interested%20in%20your%20services";
   return (
     <>
-      <div className="relative md:mt-12 md:flex w-full justify-between bg-white md:px-12 md:pt-24 md:pb-12">
+      <div className="relative w-full justify-between border-red-400 bg-white md:mt-12 md:flex md:px-12 md:pt-24 md:pb-12">
         <div className="w-fit space-y-3 border-black pt-5 md:pt-0">
           <Link to="/">
             <div className="flex w-fit items-center justify-center gap-x-5 px-12">
@@ -119,7 +119,7 @@ const CommonFooter = () => {
 
         <div className="absolute top-0 left-0 w-full border border-neutral-200 mask-r-from-50% mask-l-from-50%" />
       </div>
-      <p className="bg-gradient-to-t from-red-50 via-white to-white py-6 text-center text-[9px] tracking-wider text-neutral-700 md:text-[17px]">
+      <p className="border bg-gradient-to-t from-red-50 via-white to-white py-6 text-center text-[9px] tracking-wider text-neutral-700 md:text-[17px]">
         © 2025 Aceingdev - Registered in India. All rights reserved.
       </p>
     </>
